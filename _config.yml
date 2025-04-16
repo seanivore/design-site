@@ -1,0 +1,9 @@
+permalink: /:basename/
+title: Sean August Horvath | @seanivore
+description: Systematically designing reusable patterns & concise documentation. Vector-brained designer, Claude's sidekick. 
+baseurl: ""
+url: "https://design.august.style/"
+collections:
+  pages:
+    output: true
+    permalink: /:basename/
