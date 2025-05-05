@@ -1,6 +1,8 @@
 # Development Map 
 --> design.august.style/ 
 
+[Overview](#overview) • [Design Brief](#design-brief) • [Development](#development) • [Directory Structure](#directory-structure)
+
 ## Overview 
 
 We're building a professional web developer's portfolio. I have old websites from Webflow, Framer, and Adobe Portfolio that have been pulled from the depths of the Internet over the past few months, made local, then deployed to GitHub Pages/Jekyll. I never expected I'd be able to showcase these. They're all custom designed, covered in my own artwork, and have hand drawn curvaceous lottie animations. All very pretty. 
@@ -29,54 +31,46 @@ When you see other web design portfolios, unless it is for an agency, there is a
 
 When going through my websites I'd like to do the same. Some just straight up do need some fixes, but we should look at them as themes that can be crafted into whatever type of websites will be most sought after by companies hiring designers. We might include a URL to see the full site for some of them, but in general I think I'd like to try to avoid needing to do that. The real URLs will be somewhere if someone is really digging, meaning this website can be nothing but perfect examples of work. Make up fictional companies to fill out the projects. 
 
-## Design Briefing 
-
-I need to show them moving without using videos. And after seeing some other portfolios, I'm must less focused on deep story telling, and more focused on created a gut check for the viewer. They should see the work and either feel like they need to know more, or the site is exactly what they need. 
-
-This project started as a way to upgrade my portfolio. I have my old websites for the first time ever. My first portfolio was more of a project in coding a website than it was a showcase of work. I need to show them moving without using videos. And after seeing some other portfolios, I'm 
-
-
-
-It still is on some level, as I still want to showcase the website design, but I would like to consider if any of them would serve me better adjusted to be a template, like a SaaS product landing page for a made-up product. This could help me show off my work but in a way that might seem more cohesive and professional. 
-
- After seeing that site, I'm even less concerned about the viewers need to click through if -- **PULL A SINGLE PAGE FROM EACH WEBSITE** -- let the viewer scroll up and down that page. Line those up with icons, and that is my portfolio. Those icons will be the navigation, fixed to stay with the viewport even as the next project page moves in from the right and the old one slides out to the left, just like video transition effects. 
-
-Not all sites need to be literal. Let's make them into templates that hiring companies would be looking for when hiring a designer. 
+## Design Brief 
 
 ### Projects Section 
 
-- Each project is a full viewport width and height visual 
-- A single web project is presented as a page from a website where the vertical scroll still works 
-- When you go to the next project, it slides in from the right as the previous one slides out to the left 
-- The portfolio navigation is a series small glass circles at the bottom left of the screen 
+We need to show movement, but cannot use bulky video files that lack any interactivity. Much like the example, each project will be a full page visual. We'll achieve this by pulling a single page from each website example. The viewer will be able to scroll up and down on the actual project page, without leaving the walled garden that is our showcase. 
 
-### Navigation UI 
+The navigation will use trendy glass-effect circles with a touch of the project's aesthetic. When clicked, the project will slide in from the right as the previous one slides out to the left, just like video transition effects, and the navigation will remain fixed to the viewport. The selected project will have a larger circle with a bit of title and description text just above it. The text and the navigation disappear when the viewer scrolls up and down the project. 
 
-The row of projects and ability to navigate through them is shown using a series of small glass-effect circles at the bottom left of the screen. When you click on one of the circles, it will take you to that project. The circle for the project you are viewing is enlarged. For some projects, above the enlarged circle is a series of very small circles representing how many visuals of that same project are available; a UI/UX design much like how Apple depicts how many pages are on the home screen of an iPhone, and which page you are currently on. Not every project has multiple visuals; this is only included on those that do. 
+In short: 
 
-When viewing a project and not scrolling up and down to see the webpage content being displayed, the circles and a block of header and paragraph text are displayed telling you about the project. When you scroll up and down to see the webpage content being displayed, the circles and text are hidden. 
+  - Each project is a full viewport width and height visual 
+  - A single web project is presented as a page from a website where the vertical scroll still works 
+  - When you go to the next project, it slides in from the right as the previous one slides out to the left 
+  - The portfolio navigation is a series small glass circles at the bottom left of the screen 
 
-This entire navigation is fixed with the viewport no matter what project or where you are in viewing a project. When the circle to go to the next project is clicked, the project slides in from the right as the previous one slides out to the left, but the navigation is still fixed with the viewport. 
+And I created a visual example of the navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
 
-There is a visual example of this navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
+### About Section (Homepage)
 
-### Interactive Homepage  
+Written in the middle of a 100vw x 100vh panel is my bio. The font is bold and black, and the background is off white. This is covered completely by a grid of rectangles that make up an interactive CSS animation. 
 
-Sean August Horvath 
+  - Sean August Horvath 
+  - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
+  - [LinkedIn Icon](https://linkedin.com/in/seanivore) | [GitHub Icon](https://github.com/seanivore) | [Envelope Icon](mailto:sean@august.style) 
 
-Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
+#### Interactive CSS Animation 
 
-[LinkedIn Icon](https://linkedin.com/in/seanivore)
-[GitHub Icon](https://github.com/seanivore)
-[Envelope Icon](mailto:sean@august.style) 
+From edge to edge, top to bottom, a grid of small rectangles; about 200 of them across and 100 of them tall. Clicking anywhere on one of them and they ripple outwards in a circle, moving like "The Wave" that people do sitting in a stadium, the cards "flipping" in succession. The flip is a visual illusion. Each side of the rectangle is different, meaning when the rectangle narrows to a line, then expands back out to a full rectangle, the illusion is created. The cards "flip" 360º with them reaching 180º at wave "peak", before going back to the original position as the wave passes. 
 
-The information about me above is written on in the middle of a 100vw x 100vh panel. Imagine a CSS animation on top that consists of a grid of small rectangles, 200 of them across and 100 of them tall. Click on one and they ripple outwards in a circle, moving like "The Wave" that people do sitting in a stadium. The cards "flip" 360º with them reaching 180º at wave peak. The illusion of it flipping can be created by the rectangle narrowing to a line, then expanding back out to a full rectangle, if each "side" is different' 
+On the normal side the rectangles are a heavily blurred transparent foggy shade, which has the inverted background filter applied to it so that the text behind is visible, though cloudy and unclear. This makes the it look like the background is black with blurry white text. The viewer can't see what it says, but they can tell there is something there. On the other side, they are closer to 100% opacity and have the trendy glass effect. When they click, by clicking enough, they could clear enough of the rectangles at once to see what it says. 
 
-These cards are normally heavily blurred transparent with an inverted background filter. On the other side, they are closer to 100% opacity and have the trendy glass effect. The blur is set high. They shouldn't know what is behind the cards, but they can tell there is something there. When they click, if they click enough, they'll be able to see what it says. Button at bottom right says CLEAR; essentially the accessibility option to turn off the interactive visual animation, but when clicked a wave comes from the button that is of a magnitude bigger, more like a tsunami, and when they flip with this button the cards do not flip back. 
+#### UI Navigation 
 
-Only other elements on the page are the ABOUT and PROJECTS links at the top right. ABOUT is already depressed. PROJECTS, when clicked, shows the PROJECTS page, and it reacts just like the CLEAR button, but instead of showing what is behind the cards, it serves as the transition to the PROJECTS page. 
+Not including the three icons for the LinkedIn, GitHub, and Email links, there are just three other link buttons, all of which have a 11px radius curved edges on a stroke that matches the font color. 
 
-I was playing with some math and logic that should help define the pattern: `/Users/seanivore/Development/design-site/assets/docs/MATH_LOGIC_HOME_ANIM.md` 
+At the bottom right there is a CLEAR button. This acts as the accessibility option which turns "off" the interactive visual animation. When clicked, a wave expands from the button that is of a bigger magnitude than the ripple, more like a tsunami. When they flip with this button the cards do not flip back, which is what gives the CLEAR button that "off" type accessibility option. 
+
+At the top right, there are two buttons. One for PROJECTS and the other, which is already depressed, says ABOUT. PROJECTS, when clicked, reacts just like the CLEAR button, but instead of showing what is behind the cards, the cards flip to show the PROJECTS page. 
+
+I was playing with some math trying to figure out how the sequence of flipping cards could create the desired wave effect. Hopefully it will help define the JS for the CSS animation: `./assets/docs/CSS_WAVE_ANIMATION.md` 
 
 ## Development 
 
@@ -96,7 +90,7 @@ I was playing with some math and logic that should help define the pattern: `/Us
 
 ----
 
-## Design Sites 
+## Sites 
 
 ### 1. CSS Animation Product Feature Landing Page 
 `/Users/seanivore/Development/design-site/projects/animated-product-landing.html`
@@ -180,7 +174,7 @@ https://www.illustration-animation.august.style/
 https://www.developer-technologist.august.style/
 `/Users/seanivore/Development/portfolio-seanivore`
 
-## Project Directory Structure 
+## Directory Structure 
 
 ```plaintext
 /Users/seanivore/Development/design-site/
