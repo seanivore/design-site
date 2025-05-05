@@ -1,5 +1,17 @@
 # Project Sites 
 
+```plaintext
+so i guess #1 is what i was imagining too, but i just assumed that having HTML and all the linked assets would be a head start and that we'd just need to tweak some thing to make it prettier lol.   
+
+I guess the only thing i'm getting stuck over with donig this route is that the nav for this site was the only other wow part other than the images. because it was so compact but that little oval there are so many menus lol  
+
+okay let's just do it. the background on this ressurected site is blah anyway -- just FYI this is def the worst of them all because it was so big and hard to put back togther. 
+
+but i think to pull of showing off this section and being all Webflow Ecommerce Shop Legit, we should try to do an aesthetic page and a product page as well. I attached images and they both have a TON of related photos but we can just not do that many lol. 
+
+But so I added the URL and HTML absolute path for that print series page, a print product page, and an aesthetic page all to the PROJECT_SITES.md -- But we can start with one and see how it goes. 
+``` 
+
 1. Choose which to do next and have Sean take screenshots of the page so that we can decide how to adjust it to be showcased. 
 2. Gather assets for the project page entry pulling from the live site or old directory
 3. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
