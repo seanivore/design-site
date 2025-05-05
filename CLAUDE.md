@@ -55,9 +55,9 @@ Written in the middle of a 100vw x 100vh panel is my bio. The font is bold and b
 
   - Sean August Horvath 
   - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
-  - [LinkedIn Icon](https://linkedin.com/in/seanivore) | [GitHub Icon](https://github.com/seanivore) | [Envelope Icon](mailto:sean@august.style) 
+  - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
 
-#### Interactive CSS Animation 
+#### Interactive CSS Ripple Animation 
 
 From edge to edge, top to bottom, a grid of small rectangles; about 200 of them across and 100 of them tall. Clicking anywhere on one of them and they ripple outwards in a circle, moving like "The Wave" that people do sitting in a stadium, the cards "flipping" in succession. The flip is a visual illusion. Each side of the rectangle is different, meaning when the rectangle narrows to a line, then expands back out to a full rectangle, the illusion is created. The cards "flip" 360º with them reaching 180º at wave "peak", before going back to the original position as the wave passes. 
 
@@ -71,7 +71,7 @@ At the bottom right there is a CLEAR button. This acts as the accessibility opti
 
 At the top right, there are two buttons. One for PROJECTS and the other, which is already depressed, says ABOUT. PROJECTS, when clicked, reacts just like the CLEAR button, but instead of showing what is behind the cards, the cards flip to show the PROJECTS page. 
 
-I was playing with some math trying to figure out how the sequence of flipping cards could create the desired wave effect. Hopefully it will help define the JS for the CSS animation: `./assets/docs/CSS_WAVE_ANIMATION.md` 
+I was playing with some math trying to figure out how the sequence of flipping cards could create the desired wave effect. Hopefully it will help define the JS for the CSS animation: `./assets/docs/CSS_RIPPLE_ANIMATION.md` 
 
 ## Development 
 Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
@@ -79,14 +79,23 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 ### PHASE 1: Preparing Project Files 
 
 - Preparing project pages 
-  - Review possible sites to include and
+  - Review possible sites to include
   - Identify which to include and how to include them 
   - Pull together all their assets 
   - Organize their assets into the project directory 
 
+- Adjust project pages to better fit portfolio entry concept  
+
 ### PHASE 2: Building the Project Section 
 
+- Build the project section navigation 
+- Piece together collected project pages 
+- Add details to project pages 
+
 ### PHASE 3: Building the Homepage 
+
+- Review the CSS animation idea for the homepage 
+- Build the homepage 
 
 ### PHASE 4: Finalize, polish, and publish 
 
