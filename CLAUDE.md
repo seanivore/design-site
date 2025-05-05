@@ -54,61 +54,81 @@ There is a visual example of this navigation UI here: `/Users/seanivore/Developm
 
 ## Projects 
 
-----
+### 1. CSS Animation Product Feature Landing Page 
+1 — `https://www.sfagent.august.style/`
+Love this homepage. Actually, adding this one made me wonder if and by how much we might want to edit the projects. Like this one could be tweaked into a template for an actual SaaS product landing page. We could do that for a bunch of these sites to create a really comprehensive portfolio. Particularly because so many of the Webflow custom art sites have SO much art that another section could be made into something else for project entry and no one would even know it is from the same site. 
+- This might help: `/Users/seanivore/Development/presentation-decks`
 
-- Print Shop & Fashion Lookbook Webflow Site 
-https://print-shop-fashion.august.style/
-https://github.com/seanivore/webflow-store/blob/webflow-store/README.md
-`/Users/seanivore/Development/webflow-store` 
+### 2. Presentation Slideshow Strategy Deck Website 
+1 — `https://presenting.august.style/ai-voice-sales-development` 
+2 — `https://presenting.august.style/implement-ai-voice-marketing` 
+I wasn't even thinking about adding these until I wrote the note above about adjusting the content to fit bigger picture sales stuff that hiring managers and companies and clients might want to see, might be better to see because some people can't imagine seeing something else when looking at sites. 
+- This might help: `/Users/seanivore/Development/presentation-decks`
 
-- Astrofluenced Art Deco Webflow Site 
-https://generative-horoscopes.august.style/
-200+ Weekly Automated Blog Generation 
-`/Users/seanivore/Development/astrofluenced`
+### 3. Webflow 800+ Product Store 
+1 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
+2 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/exhilarating-bauhaus-geometric-abstract-art-minimalist-mid-century-design.html`
+3 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/pattern-mash-mid-century-modern-emotive-geometric-abstract-grow-into-detailed-cities-art-history-print-shop.html`
+Might want to downsize the images a bit more. There are so many prints and this is from 3 different sections of the site. I didn't do the actual store front because of load times. But This is one they probably can have the URL in the project description to click through to. 
 
-- Client Healing Webflow Site Custom Art
-https://www.online-pt-trainer.august.style/
-Digital Art Custom Client Site
-`/Users/seanivore/Development/webflow-client-ckheals`
+### 4. Framer Autumn Lookbook AI Generated In-Painted Fashion Photos 
+1 — `https://ai-generated-content.august.style/lookbook`
+This is good for one long page. 
+- This if we need: `/Users/seanivore/Development/framer-cms-lookbook`
 
-- Framer Lookbook and ASD Playlist Blogs 
-https://www.ai-generated-content.august.style/
-Comprehensive AI-Content Portfolio 
-`/Users/seanivore/Development/framer-cms-lookbook`
+### 5. Webflow Custom Art 200+ Blog/Week Automated 
+1 — `https://generative-horoscopes.august.style/`
+This is one really long homepage. It has a lot to see. I could add other pages to this project as well, but I think I'll just add a different page as a different project. The site has so many custom drawn lottie animations that are really pretty. 
 
-- Building Effective Agents 
-https://www.sfagent.august.style/
-`/Users/seanivore/Development/presentation-decks`
+### 6. Webflow Summer Fashion Lookbook
+`https://print-shop-fashion.august.style/`
+Maybe for context: `https://github.com/seanivore/webflow-store/blob/webflow-store/README.md`
 
-### Generative Productions 
+### 7. Webflow CMS AI Generated Weekend Horoscopes 
+1 — `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
 
-- AI Philosophy by AI 
-https://www.ai-philosophy.august.style/
-`/Users/seanivore/Development/non-bio-life`
+Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local. 
 
-- Adobe Gallery of Prints
-https://www.art-history.august.style/
+### 8. Custom Hand Illustrated Client Site 
+1 — `https://www.online-pt-trainer.august.style/`
 
+Small site and URL can be provided to probably good with just one page. 
+This is here in case we need: `/Users/seanivore/Development/webflow-client-ckheals` 
+
+### 9. Webflow Professional Portfolio 
+1 — `https://www.visual-producer.august.style/`
+Hand Illustrated, 3D Motion, NFTs; But this might be another one that could be made into more of a template. 
+
+All the stuff is here: `/Users/seanivore/Development/webflow-2023`
+
+### 10. Reference & Technical Documentation Website 
+1 — `https://www.ai-philosophy.august.style/`
+2 — `https://sfagent.august.style/ai-voice-marketing-case-study/index-section-site-map/` 
+
+In the same vein as turning these into templates, making them more than just actual projects. This one and the one about SFA are both Markdown > HTML GitHub Pages Jekyll sites which illustrate the reference and technical documentation for the projects perfectly. 
+
+All the stuff is here: `/Users/seanivore/Development/non-bio-life`
+
+### Additional Project Options 
+
+#### Two Potential Project Posts that Aren't Only Web Design
 - 10+ Weekly AI Research & Produced Videos 
 (A.S. Polytechnic Updates,68 episodes, aired 10/6/24) 
 https://automated-podcasts.august.style/ --> embed playlist 
+https://ai-generated-content.august.style/briefings --> AI generated blogs 
 
 - AI-Generated Automated Daily Podcast 
 (Astrofluenced,48 episodes, aired 2/5/24) 
 https://astrofluenced-podcasts.august.style/ --> embed playlist 
 
-### Illustration & Animation
-
-- Graphic Design and Animation Webflow Portfolio 
-https://www.visual-producer.august.style/
-Hand Illustrated, 3D Motion, NFTs
-`/Users/seanivore/Development/webflow-2023`
+#### Possible Options To Pull 
+- Adobe Gallery of Prints
+https://www.art-history.august.style/
 
 - Illustration Adobe Portfolio 
 https://www.illustration-animation.august.style/
 
-## Projects
-
-- Old Portfolio 
+#### Projects In Old Portfolio 
+- And of course, anything from old portfolio that might work 
 https://www.developer-technologist.august.style/
 `/Users/seanivore/Development/portfolio-seanivore`
