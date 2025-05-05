@@ -1,10 +1,11 @@
 # Project Sites 
 
-1. Gather assets for the project page entry pulling from the live site or old directory
-2. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
-3. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
-4. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
-5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
+1. Choose which to do next and have Sean take screenshots of the page so that we can decide how to adjust it to be showcased. 
+2. Gather assets for the project page entry pulling from the live site or old directory
+3. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
+4. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
+5. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
+6. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
 
 ## 1. CSS Animation Product Feature Landing Page 
 `./projects/animated-product-landing.html`: This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
@@ -26,37 +27,64 @@ This could be turned into some kind of template. We would need to adjust them so
 - Project: `./assets/docs/02-scrolling-presentations`
 
 ## 3. Webflow Store 
-There are a few different potential options here. The homepage is the most comprehensive and impressive, as a place to start. But the other pages would be great if we adjust them a bit to make them look like serious web store project pages with the cost, description, quantity, add to card, and other details. 
+Goal with showing these off would be that this was a massive store built on Webflow. I have below a Print Series page, a single Product Page, and a Shop by Aesthetic page. I made a copy of each of the HTML files and noted the path below. 
 
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+1. Create a new, clean HTML file in the projects directory
+2. Extract just the images needed using a script to find all image paths
+3. Build a simplified version of the page that focuses on the visual aesthetics
 
-- Homepage: `https://print-shop-fashion.august.style`
-- Vintage Prints: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
-- One print's product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/exhilarating-bauhaus-geometric-abstract-art-minimalist-mid-century-design.html`
-- Print series product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/pattern-mash-mid-century-modern-emotive-geometric-abstract-grow-into-detailed-cities-art-history-print-shop.html`
-- Project directory: `/Users/seanivore/Development/webflow-store` 
+**'Retro Futurism Realized' Mid-Century Modern Print Series**
+- 03-webflow-store-print-series.html
+  - `./assets/docs/03-webflow-store/print-series/03-webflow-store-print-series.html`
 
-- Project: `./assets/docs/03-webflow-store`
+  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html)
+  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html`
+
+
+**'Speed Limits Enforced By Aircraft' Print Product Page**
+- 03-webflow-store-product-page.html
+  - `./assets/docs/03-webflow-store/product-page/03-webflow-store-product-page.html`
+
+  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html)
+  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html`
+
+**Shop By Vintage Aesthetic**
+- 03-webflow-store-aesthetic.html
+  - `./assets/docs/03-webflow-store/aesthetic/03-webflow-store-aesthetic.html`
+
+  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html)
+  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
 
 ## 4. Autumn Lookbook 
-Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos; This is a long page but it is probably almost perfect as it is, once separated from the rest of the site. We could add more robust descriptions and pricing information next to each image. 
+Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos; This is a long page but it is probably almost perfect as it is, once separated from the rest of the site. We could add more robust descriptions and pricing information next to each image. Wow, so I copied the HTML file to this project directory and it is all self-contained; CSS and everything. Ah, but I see, the images are still on the framer CDN server, but at least they're all there. 
 
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+**Autumn Fashion Lookbook** 
+- 04-autumn-lookbook.html
+  - `./assets/docs/04-autumn-lookbook/04-autumn-lookbook.html`
 
-- Lookbook: `https://ai-generated-content.august.style/lookbook`
-- Project directory: `/Users/seanivore/Development/framer-cms-lookbook`
-
-- Project: `./assets/docs/04-autumn-lookbook`
+  - [Live webpage](https://ai-generated-content.august.style/lookbook)
+  - `/Users/seanivore/Development/framer-cms-lookbook/lookbook.html`
 
 ## 5. Webflow Blog 
-Webflow Custom Art 200+ Blog/Week Automated; This has a good, long homepage with timely information and a lot of images. We could adjust the images a bit more to make them look more like content tiles with headlines and descriptions. 
+Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+**Internal Catalysts**
+- 05-blog-1-internal-catalysts.html
+  - `./assets/docs/05-weekly-holistic-alignment/1-internal-catalysts/05-blog-1-internal-catalysts.html`
+  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/growth-through-introspection.html)
+  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/growth-through-introspection.html`
 
-- Homepage: `https://generative-horoscopes.august.style/`
-- Project directory: `/Users/seanivore/Development/astrofluenced`
+**Interpersonal Catalysts**
+- 05-blog-2-interpersonal-catalysts.html
+  - `./assets/docs/05-weekly-holistic-alignment/2-interpersonal-catalysts/05-blog-2-interpersonal-catalysts.html`
+  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/change-your-outlook.html)
+  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/change-your-outlook.html`
 
-- Project: `./assets/docs/05-webflow-blog`
+**Holistic Alignment**
+- 05-blog-3-personal-development.html
+  - `./assets/docs/05-weekly-holistic-alignment/3-personal-development/05-blog-3-personal-development.html`
+  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
+  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
 ## 6. Summer Lookbook 
 Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
