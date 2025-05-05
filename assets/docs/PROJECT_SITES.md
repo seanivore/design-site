@@ -1,5 +1,11 @@
 # Project Sites 
 
+1. Gather assets for the project page entry pulling from the live site or old directory
+2. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
+3. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
+4. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
+5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
+
 ## 1. CSS Animation Product Feature Landing Page 
 `./projects/animated-product-landing.html`: This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
 
@@ -16,6 +22,7 @@ This could be turned into some kind of template. We would need to adjust them so
 
 - Charcoal: `https://presenting.august.style/ai-voice-sales-development` 
 - Blue: `https://presenting.august.style/implement-ai-voice-marketing`
+
 - Project: `./assets/docs/02-scrolling-presentations`
 
 ## 3. Webflow Store 
@@ -28,6 +35,7 @@ There are a few different potential options here. The homepage is the most compr
 - One print's product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/exhilarating-bauhaus-geometric-abstract-art-minimalist-mid-century-design.html`
 - Print series product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/pattern-mash-mid-century-modern-emotive-geometric-abstract-grow-into-detailed-cities-art-history-print-shop.html`
 - Project directory: `/Users/seanivore/Development/webflow-store` 
+
 - Project: `./assets/docs/03-webflow-store`
 
 ## 4. Autumn Lookbook 
@@ -37,6 +45,7 @@ Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos; This is a long p
 
 - Lookbook: `https://ai-generated-content.august.style/lookbook`
 - Project directory: `/Users/seanivore/Development/framer-cms-lookbook`
+
 - Project: `./assets/docs/04-autumn-lookbook`
 
 ## 5. Webflow Blog 
@@ -46,6 +55,7 @@ Webflow Custom Art 200+ Blog/Week Automated; This has a good, long homepage with
 
 - Homepage: `https://generative-horoscopes.august.style/`
 - Project directory: `/Users/seanivore/Development/astrofluenced`
+
 - Project: `./assets/docs/05-webflow-blog`
 
 ## 6. Summer Lookbook 
@@ -55,6 +65,7 @@ Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book 
 
 - Lookbook: `https://print-shop-fashion.august.style/fashion/lookbook/summer-2024-cover.html`
 - Project directory: `/Users/seanivore/Development/webflow-store`
+
 - Project: `./assets/docs/06-summer-lookbook`
 
 ## 7. Weekend Horoscopes 
@@ -64,6 +75,7 @@ Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because 
 
 - Blog: `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
 - Project directory: `/Users/seanivore/Development/astrofluenced`
+
 - Project: `./assets/docs/07-weekend-horoscopes`
 
 ## 8. Yoga Services 
@@ -73,6 +85,7 @@ Custom Hand Illustrated Client Site; Small site and URL can be provided to proba
 
 - Homepage: `https://www.online-pt-trainer.august.style/`
 - Project directory: `/Users/seanivore/Development/webflow-client-ckheals`
+
 - Project: `./assets/docs/08-yoga-services`
 
 ## 9. Webflow Portfolio 
@@ -82,6 +95,7 @@ Webflow Professional Portfolio; Hand Illustrated, 3D Motion, NFTs; But this migh
 
 - Homepage: `https://www.visual-producer.august.style/`
 - Project directory: `/Users/seanivore/Development/webflow-2023`
+
 - Project: `./assets/docs/09-webflow-portfolio`
 
 ## 10. Technical Documentation 
