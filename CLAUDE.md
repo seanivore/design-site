@@ -3,30 +3,31 @@
 
 ## Overview 
 
-I have all of my old websites for the first time ever meaning my 'HIRE ME' assets need to be updated. In hindsight, my first portfolio was a project in coding. It is comprehensive, but doesn't showcase work well for anyone not already digging. I forgot my forever rules. 
+We're building a professional web developer's portfolio. I have old websites from Webflow, Framer, and Adobe Portfolio that have been pulled from the depths of the Internet over the past few months, made local, then deployed to GitHub Pages/Jekyll. I never expected I'd be able to showcase these. They're all custom designed, covered in my own artwork, and have hand drawn curvaceous lottie animations. All very pretty. 
+
+### Inspiration 
+
+In deciding how to showcase these, I've had this website saved, `https://www.alex-moulinneuf.fr/about`, simplistically powerful `./assets/images/DESIGN_INSPO/`. It is just two pages, PROJECTS and ABOUT, which is where you start.
+
+  - Beams of light move slightly as you scroll down the long page 
+  - The 2D profile picture responds to your mouse using perspective 3D styling 
+  - The bio is no longer than what you'd put on your instagram 
+  - "🇫🇷 Based in Paris, France — 💼 Open to full-time opportunities"
+  - Then a two sentence highlight, much like what reads off the top of a resume 
+  - Nothing else except icons for LinkedIn, GitHub, and Email 
+  - The projects section is a full 100vw x 100vh visual for each project 
+  - The navigation is a row of logo-type icons at the bottom left of the screen 
+
+It has made me realize that my old portfolio was a project in coding. It is comprehensive, but doesn't showcase the work well. This is clear now because I broke my cardinal rules. We will be bringing them back in this new website. 
 
   - Visuals before everything --> they're always the real story 
   - Highest bar --> pass the gut check 
 
-### The Inspiration
+### The Caveat 
 
-This website is simplistically powerful, for [Creative Developer](https://www.alex-moulinneuf.fr/about). 
+When you see other web design portfolios, unless it is for an agency, there is always a common theme: They have been scrubbed and polished after the fact. They are not the real story. They are examples of the designer's ability to code and implement design, sure, but they are being used to create a new story. 
 
-Just pages, you start on ABOUT. 
-  
-  - Visual of beams of light passing in, fixed in your view, they move as you scroll down 
-  - Trendy 3D interactive effect makes it look like the 2D image is facing your mouse 
-  - Bio is short as a twitter or instagram bio: 
-      > 🇫🇷 Based in Paris, France — 💼 Open to full-time opportunities. 
-  - Two sentences highlight themselves as you scroll down: 
-      > I'm a French creative web developer with 6+ years of experience working with companies like Shadow.tech and TF1. I'm also a teacher and senior lecturer, passionate about experimenting and pushing the boundaries of web development.
-  - Nothing else except icon, no text, for LinkedIn, GitHub, and Email 
-
-Then on PROJECTS. 
-
-  - Each project is a full viewport visual 
-  - The navigation is a row of small icons at the bottom left of the screen 
-      > If you can't picture it, see the 6 screenshots: `./assets/images/DESIGN_INSPO/` 
+When going through my websites I'd like to do the same. Some just straight up do need some fixes, but we should look at them as themes that can be crafted into whatever type of websites will be most sought after by companies hiring designers. We might include a URL to see the full site for some of them, but in general I think I'd like to try to avoid needing to do that. The real URLs will be somewhere if someone is really digging, meaning this website can be nothing but perfect examples of work. Make up fictional companies to fill out the projects. 
 
 ## Design Briefing 
 
