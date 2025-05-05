@@ -1,17 +1,12 @@
-# Design Portfolio Vision 
---> design.august.style/ 
+# Design Portfolio 
 
-## Overview 
+## Project Overview 
 
-Fresh website highlighting a collection of my design work that this developed thinking visuals-first and curated with a more selective approach.
+Fresh website highlighting a collection of my design work that this developed thinking visuals-first and curated with a more selective approach. **More Story, Less Words** - this is how the idea was born: `/Users/seanivore/Development/design-site/assets/docs/ABOUT_SITE_INSPO.md` 
 
-### Inspiration 
+The site will be designed HTML/CSS/JS and then published using GitHub Pages and Jekyll with a custom domain --> design.august.style/
 
-This is how the idea was born: `/Users/seanivore/Development/design-site/assets/docs/ABOUT_SITE_INSPO.md` 
-
-**More Story, Less Words** 
-
-## Homepage  
+## Homepage Overview 
 
 ### Contact & Bio 
 
@@ -37,7 +32,7 @@ There is no other navigation or information on the ABOUT homepage.
 
 The mathematical logic of the interactive visual is detailed here: `/Users/seanivore/Development/design-site/assets/docs/MATH_LOGIC_HOME_ANIM.md` 
 
-## Projects 
+## Projects Section Overview 
 
 ### Basic Summary 
 
@@ -49,36 +44,47 @@ The mathematical logic of the interactive visual is detailed here: `/Users/seani
 
 ### Navigation UI 
 
+The row of projects and ability to navigate through them is shown using a series of small glass-effect circles at the bottom left of the screen. When you click on one of the circles, it will take you to that project, and the circle for the project you are viewing is enlarged. Above the selected circle will be a series of very small circle representing how many visuals of that same project are available; this is much like how Apple depicts how many pages are on the home screen of an iPhone, and which page you are currently on. Not every project has multiple visuals; this is only included on those that do. 
 
+When viewing a project and not scrolling up and down to see the webpage content being displayed, the circles and a block of header and paragraph text are displayed telling you about the project. When you scroll up and down to see the webpage content being displayed, the circles and text are hidden. Otherwise, this entire navigation is fixed with the viewport no matter what project or where you are in viewing a project. When the circle to go to the next project is clicked, the project slides in from the right as the previous one slides out to the left, but the navigation is still fixed with the viewport. 
 
+Note that most of the projects will be pages from a website, but it is not necessary for them to be for a project to still be displayed in this manner. 
 
+There is a visual example of this navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
 
+## Projects 
 
 ----
 
 - Print Shop & Fashion Lookbook Webflow Site 
 https://print-shop-fashion.august.style/
 https://github.com/seanivore/webflow-store/blob/webflow-store/README.md
+`/Users/seanivore/Development/webflow-store` 
 
 - Astrofluenced Art Deco Webflow Site 
 https://generative-horoscopes.august.style/
 200+ Weekly Automated Blog Generation 
+`/Users/seanivore/Development/astrofluenced`
 
 - Client Healing Webflow Site Custom Art
 https://www.online-pt-trainer.august.style/
 Digital Art Custom Client Site
+`/Users/seanivore/Development/webflow-client-ckheals`
 
 - Framer Lookbook and ASD Playlist Blogs 
 https://www.ai-generated-content.august.style/
 Comprehensive AI-Content Portfolio 
+`/Users/seanivore/Development/framer-cms-lookbook`
 
 - Building Effective Agents 
 https://www.sfagent.august.style/
+`/Users/seanivore/Development/presentation-decks`
 
 ### Generative Productions 
 
 - AI Philosophy by AI 
 https://www.ai-philosophy.august.style/
+`/Users/seanivore/Development/non-bio-life`
 
 - Adobe Gallery of Prints
 https://www.art-history.august.style/
@@ -96,6 +102,7 @@ https://astrofluenced-podcasts.august.style/ --> embed playlist
 - Graphic Design and Animation Webflow Portfolio 
 https://www.visual-producer.august.style/
 Hand Illustrated, 3D Motion, NFTs
+`/Users/seanivore/Development/webflow-2023`
 
 - Illustration Adobe Portfolio 
 https://www.illustration-animation.august.style/
@@ -104,3 +111,4 @@ https://www.illustration-animation.august.style/
 
 - Old Portfolio 
 https://www.developer-technologist.august.style/
+`/Users/seanivore/Development/portfolio-seanivore`
