@@ -1,4 +1,4 @@
-## Interactive Homepage Animation Mathematics & Logic  
+# Interactive Homepage Animation Mathematics & Logic Sketch 
 
 - Small rectangles in rows; more than you can count 
 - Each rectangle moves in a specific way at a specific time
