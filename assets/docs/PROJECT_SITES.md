@@ -89,12 +89,23 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
 ## 6. Summer Lookbook 
 Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
 
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+**Art Nouveau Outfit Elegance** 
+- 06-summer-lookbook-art-nouveau.html
+  - `./assets/docs/06-summer-lookbook/art-nouveau/06-summer-lookbook-art-nouveau.html`
+  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html)
+  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html`
 
-- Lookbook: `https://print-shop-fashion.august.style/fashion/lookbook/summer-2024-cover.html`
-- Project directory: `/Users/seanivore/Development/webflow-store`
+**Tranquil Impressionist Garments** 
+- 06-summer-lookbook-impressionist.html
+  - `./assets/docs/06-summer-lookbook/impressionist/06-summer-lookbook-impressionist.html`
+  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/futurism-propelling-fashion-into-the-future.html)
+  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/futurism-propelling-fashion-into-the-future.html`
 
-- Project: `./assets/docs/06-summer-lookbook`
+**Flowing Romanticism Looks**
+- 06-summer-lookbook-romanticism.html
+  - `./assets/docs/06-summer-lookbook/romanticism/06-summer-lookbook-romanticism.html`
+  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html)
+  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html`
 
 ## 7. Weekend Horoscopes 
 Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local, but they have really pretty animated lottie illustrations, and the blog posts are all there. 
