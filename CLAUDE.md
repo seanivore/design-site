@@ -133,3 +133,5 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 ├── _config.yml
 └── README.md
 ```
+
+Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
