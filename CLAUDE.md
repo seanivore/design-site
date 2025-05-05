@@ -55,11 +55,10 @@ There is a visual example of this navigation UI here: `/Users/seanivore/Developm
 ## Projects 
 
 ### 1. CSS Animation Product Feature Landing Page 
-1 — `https://www.sfagent.august.style/`
-Love this homepage. Actually, adding this one made me wonder if and by how much we might want to edit the projects. Like this one could be tweaked into a template for an actual SaaS product landing page. We could do that for a bunch of these sites to create a really comprehensive portfolio. Particularly because so many of the Webflow custom art sites have SO much art that another section could be made into something else for project entry and no one would even know it is from the same site. 
-- This might help: `/Users/seanivore/Development/presentation-decks`
+`/Users/seanivore/Development/design-site/projects/animated-product-landing.html`
+Love this homepage. Let's make it into a template for a SaaS product landing page. 
 
-### 2. Presentation Slideshow Strategy Deck Website 
+### 2. MAYBE can turn these into some kind of template; need to be made vertically scrollable instead.  
 1 — `https://presenting.august.style/ai-voice-sales-development` 
 2 — `https://presenting.august.style/implement-ai-voice-marketing` 
 I wasn't even thinking about adding these until I wrote the note above about adjusting the content to fit bigger picture sales stuff that hiring managers and companies and clients might want to see, might be better to see because some people can't imagine seeing something else when looking at sites. 
@@ -133,3 +132,41 @@ https://www.illustration-animation.august.style/
 - And of course, anything from old portfolio that might work 
 https://www.developer-technologist.august.style/
 `/Users/seanivore/Development/portfolio-seanivore`
+
+## Project Directory Structure 
+
+```plaintext
+.
+├── CLAUDE.md        <-- You are here 
+├── projects
+│   └── animated-product-landing.html
+├── _config.yml
+├── assets
+│   ├── css
+│   │   ├── animated-product-landing.css
+│   │   └── wave-animation.css
+│   ├── docs
+│   │   ├── ABOUT_SITE_INSPO.md
+│   │   ├── EMOTION_DRIVEN_COPYWRITING.md
+│   │   ├── MATH_LOGIC_HOME_ANIM.md
+│   │   ├── MY_PROFESSIONAL_EVOLUTION.md
+│   │   ├── OLD_PORTFOLIO_PROJECTS.md
+│   │   └── RESUME.md
+│   ├── images
+│   │   ├── DESIGN_INSPO
+│   │   │   ├── INSPO_DESIGN_1.png
+│   │   │   ├── INSPO_DESIGN_10.png
+│   │   │   ├── INSPO_DESIGN_2.png
+│   │   │   ├── INSPO_DESIGN_3.png
+│   │   │   ├── INSPO_DESIGN_4.png
+│   │   │   ├── INSPO_DESIGN_5.png
+│   │   │   ├── INSPO_DESIGN_6.png
+│   │   │   ├── INSPO_DESIGN_7.png
+│   │   │   ├── INSPO_DESIGN_8.png
+│   │   │   └── INSPO_DESIGN_9.png
+│   │   └── NAV_INSPO.png
+│   └── js
+│       └── wave-animation.js
+├── CNAME
+└── README.md
+```
