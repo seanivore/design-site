@@ -113,6 +113,15 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   ├── animated-product-landing.css  <-- *First project page's assets*
 │   │   └── wave-animation.css            <-- *First project page's assets*
 │   ├── docs
+│   │   ├── 02-scrolling-presentations    <-- *Temp. folder for project page prep.*
+│   │   ├── 03-webflow-store              <-- *Temp. folder for project page prep.*
+│   │   ├── 04-autumn-lookbook            <-- *Temp. folder for project page prep.*
+│   │   ├── 05-webflow-blog               <-- *Temp. folder for project page prep.*
+│   │   ├── 06-summer-lookbook            <-- *Temp. folder for project page prep.*
+│   │   ├── 07-weekend-horoscopes         <-- *Temp. folder for project page prep.*
+│   │   ├── 08-yoga-services              <-- *Temp. folder for project page prep.*
+│   │   ├── 09-webflow-portfolio          <-- *Temp. folder for project page prep.*
+│   │   ├── 10-technical-documentation    <-- *Temp. folder for project page prep.*
 │   │   ├── CSS_RIPPLE_ANIMATION.md       <-- *CSS animation idea for homepage*
 │   │   └── PROJECT_SITES.md              <-- *Content for the projects section*
 │   ├── images
