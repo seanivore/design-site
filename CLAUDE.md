@@ -93,64 +93,79 @@ I was playing with some math trying to figure out how the sequence of flipping c
 ## Sites 
 
 ### 1. CSS Animation Product Feature Landing Page 
-`/Users/seanivore/Development/design-site/projects/animated-product-landing.html`
-Love this homepage. Let's make it into a template for a SaaS product landing page. It includes: 
-- JS animation: /Users/seanivore/Development/design-site/assets/js/wave-animation.js
-- Page CSS: /Users/seanivore/Development/design-site/assets/css/animated-product-landing.css
-- Animation CSS: /Users/seanivore/Development/design-site/assets/css/wave-animation.css 
+`./projects/animated-product-landing.html`: This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
 
-### 2. MAYBE can turn these into some kind of template; need to be made vertically scrollable instead.  
-1 — `https://presenting.august.style/ai-voice-sales-development` 
-2 — `https://presenting.august.style/implement-ai-voice-marketing` 
-I wasn't even thinking about adding these until I wrote the note above about adjusting the content to fit bigger picture sales stuff that hiring managers and companies and clients might want to see, might be better to see because some people can't imagine seeing something else when looking at sites. 
-- This might help: `/Users/seanivore/Development/presentation-decks`
-*Actually these are both horizontally scrolling site which would be sort of difficult to fit in with the planned UX of this actual site* 
+**Good to go for now**
+
+- JS animation: `./assets/js/wave-animation.js`
+- Page CSS: `./assets/css/animated-product-landing.css`
+- Animation CSS: `./assets/css/wave-animation.css` 
+
+### 2. Horizontally Scrolling Presentations 
+This could be turned into some kind of template. We would need to adjust them so that they are vertically scrollable instead, but the design and slide panels are all there. 
+
+**Two that are ready to be adjusted and moved into this directory**
+
+- Charcoal: `https://presenting.august.style/ai-voice-sales-development` 
+- Blue: `https://presenting.august.style/implement-ai-voice-marketing`
+- Project directory: `/Users/seanivore/Development/presentation-decks`
 
 ### 3. Webflow 800+ Product Store 
-I guess the homepage is the most comprehensive and impressive, as a place to start. `https://print-shop-fashion.august.style`
+There are a few different potential options here. The homepage is the most comprehensive and impressive, as a place to start. But the other pages would be great if we adjust them a bit to make them look like serious web store project pages with the cost, description, quantity, add to card, and other details. 
+
+- Homepage: `https://print-shop-fashion.august.style`
+- Vintage Prints: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
+- One print's product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/exhilarating-bauhaus-geometric-abstract-art-minimalist-mid-century-design.html`
+- Print series product page: `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/pattern-mash-mid-century-modern-emotive-geometric-abstract-grow-into-detailed-cities-art-history-print-shop.html`
 - Project directory: `/Users/seanivore/Development/webflow-store` 
 
-1 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
-2 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/exhilarating-bauhaus-geometric-abstract-art-minimalist-mid-century-design.html`
-3 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/pattern-mash-mid-century-modern-emotive-geometric-abstract-grow-into-detailed-cities-art-history-print-shop.html`
-Might want to downsize the images a bit more. There are so many prints and this is from 3 different sections of the site. I didn't do the actual store front because of load times. But This is one they probably can have the URL in the project description to click through to. 
+### 4. Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos 
+This is a long page but it is probably almost perfect as it is, once separated from the rest of the site. We could add more robust descriptions and pricing information next to each image. 
 
-### 4. Framer Autumn Lookbook AI Generated In-Painted Fashion Photos 
-1 — `https://ai-generated-content.august.style/lookbook`
-This is good for one long page. 
-- This if we need: `/Users/seanivore/Development/framer-cms-lookbook`
+- Lookbook: `https://ai-generated-content.august.style/lookbook`
+- Project directory: `/Users/seanivore/Development/framer-cms-lookbook`
 
 ### 5. Webflow Custom Art 200+ Blog/Week Automated 
-1 — `https://generative-horoscopes.august.style/`
-- Project directory: `/Users/seanivore/Development/astrofluenced`
-This is one really long homepage. It has a lot to see. I could add other pages to this project as well, but I think I'll just add a different page as a different project. The site has so many custom drawn lottie animations that are really pretty. 
+This has a good, long homepage with timely information and a lot of images. We could adjust the images a bit more to make them look more like content tiles with headlines and descriptions. 
 
-### 6. Webflow Summer Fashion Lookbook
-`https://print-shop-fashion.august.style/fashion/lookbook/summer-2024-cover.html`
-This is a book that you page through. We should either find a few pages to make into one page, or just have them in sequence. 
+- Homepage: `https://generative-horoscopes.august.style/`
+- Project directory: `/Users/seanivore/Development/astrofluenced`
+
+### 6. Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos 
+This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
+
+- Lookbook: `https://print-shop-fashion.august.style/fashion/lookbook/summer-2024-cover.html`
+- Project directory: `/Users/seanivore/Development/webflow-store`
 
 ### 7. Webflow CMS AI Generated Weekend Horoscopes 
-1 — `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
+Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local, but they have really pretty animated lottie illustrations, and the blog posts are all there. 
 
-Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local. 
+- Blog: `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
+- Project directory: `/Users/seanivore/Development/astrofluenced`
 
 ### 8. Custom Hand Illustrated Client Site 
-1 — `https://www.online-pt-trainer.august.style/`
+Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
+
+- Homepage: `https://www.online-pt-trainer.august.style/`
 - Project directory: `/Users/seanivore/Development/webflow-client-ckheals`
-Small site and URL can be provided to probably good with just one page. 
 
 ### 9. Webflow Professional Portfolio 
-1 — `https://www.visual-producer.august.style/`
 Hand Illustrated, 3D Motion, NFTs; But this might be another one that could be made into more of a template. 
+
+- Homepage: `https://www.visual-producer.august.style/`
 - Project directory: `/Users/seanivore/Development/webflow-2023`
 
 ### 10. Reference & Technical Documentation Website 
-1 — `https://www.ai-philosophy.august.style/`
-2 — `https://sfagent.august.style/ai-voice-marketing-case-study/index-section-site-map/` 
-
 In the same vein as turning these into templates, making them more than just actual projects. This one and the one about SFA are both Markdown > HTML GitHub Pages Jekyll sites which illustrate the reference and technical documentation for the projects perfectly. 
 
+- Homepage: `https://www.ai-philosophy.august.style/`
+- Project directory: `/Users/seanivore/Development/non-bio-life`
+
+- Homepage: `https://sfagent.august.style/ai-voice-marketing-case-study/index-section-site-map/` 
+- Project directory: `/Users/seanivore/Development/voice-mkt-sfa`
+
 ### Additional Project Options 
+Though honestly if we did all 10 above, it would be pretty solid. 
 
 #### Two Potential Project Posts that Aren't Only Web Design
 - 10+ Weekly AI Research & Produced Videos 
