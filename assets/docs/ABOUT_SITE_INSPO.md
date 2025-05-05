@@ -32,6 +32,8 @@ On the project page, the entire viewport is a single project. There is a row of 
 
 It employs what I always say when we redesign my resume. I pull out all the words like "exceptional" and say "Just let the work, or stats, speak for themselves. Well here is a big heads up that I need to do the same for my portfolio. And why not? It makes it easier to create. 
 
+> 10 screenshots of the inspo project are found in this directory: `/Users/seanivore/Development/design-site/assets/images/DESIGN_INSPO/` 
+
 ### The Upgrade 
 
 This is the first time I've ever had all my previous website builds be made still available because we pulled them from Webflow and Framer, made them work locally, and then published them to GitHub Pages. 
