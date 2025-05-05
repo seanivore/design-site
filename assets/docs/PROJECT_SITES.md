@@ -33,101 +33,90 @@ Goal with showing these off would be that this was a massive store built on Webf
 2. Extract just the images needed using a script to find all image paths
 3. Build a simplified version of the page that focuses on the visual aesthetics
 
-**'Retro Futurism Realized' Mid-Century Modern Print Series**
-- 03-webflow-store-print-series.html
-  - `./assets/docs/03-webflow-store/print-series/03-webflow-store-print-series.html`
+  **'Retro Futurism Realized' Mid-Century Modern Print Series**
+  - 03-webflow-store-print-series.html
+    - `./assets/docs/03-webflow-store/print-series/03-webflow-store-print-series.html`
+    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html)
+    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html`
 
-  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html)
-  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html`
+  **'Speed Limits Enforced By Aircraft' Print Product Page**
+  - 03-webflow-store-product-page.html
+    - `./assets/docs/03-webflow-store/product-page/03-webflow-store-product-page.html`
+    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html)
+    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html`
 
-
-**'Speed Limits Enforced By Aircraft' Print Product Page**
-- 03-webflow-store-product-page.html
-  - `./assets/docs/03-webflow-store/product-page/03-webflow-store-product-page.html`
-
-  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html)
-  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html`
-
-**Shop By Vintage Aesthetic**
-- 03-webflow-store-aesthetic.html
-  - `./assets/docs/03-webflow-store/aesthetic/03-webflow-store-aesthetic.html`
-
-  - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html)
-  - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
+  **Shop By Vintage Aesthetic**
+  - 03-webflow-store-aesthetic.html
+    - `./assets/docs/03-webflow-store/aesthetic/03-webflow-store-aesthetic.html`
+    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html)
+    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
 
 ## 4. Autumn Lookbook 
 Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos; This is a long page but it is probably almost perfect as it is, once separated from the rest of the site. We could add more robust descriptions and pricing information next to each image. Wow, so I copied the HTML file to this project directory and it is all self-contained; CSS and everything. Ah, but I see, the images are still on the framer CDN server, but at least they're all there. 
 
-**Autumn Fashion Lookbook** 
-- 04-autumn-lookbook.html
-  - `./assets/docs/04-autumn-lookbook/04-autumn-lookbook.html`
-
-  - [Live webpage](https://ai-generated-content.august.style/lookbook)
-  - `/Users/seanivore/Development/framer-cms-lookbook/lookbook.html`
+  **Autumn Fashion Lookbook** 
+  - 04-autumn-lookbook.html
+    - `./assets/docs/04-autumn-lookbook/04-autumn-lookbook.html`
+    - [Live webpage](https://ai-generated-content.august.style/lookbook)
+    - `/Users/seanivore/Development/framer-cms-lookbook/lookbook.html`
 
 ## 5. Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
-**Internal Catalysts**
-- 05-blog-1-internal-catalysts.html
-  - `./assets/docs/05-weekly-holistic-alignment/1-internal-catalysts/05-blog-1-internal-catalysts.html`
-  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/growth-through-introspection.html)
-  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/growth-through-introspection.html`
+  **Internal Catalysts**
+  - 05-blog-1-internal-catalysts.html
+    - `./assets/docs/05-weekly-holistic-alignment/1-internal-catalysts/05-blog-1-internal-catalysts.html`
+    - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/growth-through-introspection.html)
+    - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/growth-through-introspection.html`
 
-**Interpersonal Catalysts**
-- 05-blog-2-interpersonal-catalysts.html
-  - `./assets/docs/05-weekly-holistic-alignment/2-interpersonal-catalysts/05-blog-2-interpersonal-catalysts.html`
-  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/change-your-outlook.html)
-  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/change-your-outlook.html`
+  **Interpersonal Catalysts**
+  - 05-blog-2-interpersonal-catalysts.html
+    - `./assets/docs/05-weekly-holistic-alignment/2-interpersonal-catalysts/05-blog-2-interpersonal-catalysts.html`
+    - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/change-your-outlook.html)
+    - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/change-your-outlook.html`
 
-**Holistic Alignment**
-- 05-blog-3-personal-development.html
-  - `./assets/docs/05-weekly-holistic-alignment/3-personal-development/05-blog-3-personal-development.html`
-  - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
-  - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
+  **Holistic Alignment**
+  - 05-blog-3-personal-development.html
+    - `./assets/docs/05-weekly-holistic-alignment/3-personal-development/05-blog-3-personal-development.html`
+    - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
+    - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
 ## 6. Summer Lookbook 
 Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
 
-**Art Nouveau Outfit Elegance** 
-- 06-summer-lookbook-art-nouveau.html
-  - `./assets/docs/06-summer-lookbook/art-nouveau/06-summer-lookbook-art-nouveau.html`
-  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html)
-  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html`
+  **Art Nouveau Outfit Elegance** 
+  - 06-summer-lookbook-art-nouveau.html
+    - `./assets/docs/06-summer-lookbook/art-nouveau/06-summer-lookbook-art-nouveau.html`
+    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html)
+    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html`
 
-**Tranquil Impressionist Garments** 
-- 06-summer-lookbook-impressionist.html
-  - `./assets/docs/06-summer-lookbook/impressionist/06-summer-lookbook-impressionist.html`
-  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/futurism-propelling-fashion-into-the-future.html)
-  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/futurism-propelling-fashion-into-the-future.html`
+  **Tranquil Impressionist Garments** 
+  - 06-summer-lookbook-impressionist.html
+    - `./assets/docs/06-summer-lookbook/impressionist/06-summer-lookbook-impressionist.html`
+    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/futurism-propelling-fashion-into-the-future.html)
+    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/futurism-propelling-fashion-into-the-future.html`
 
-**Flowing Romanticism Looks**
-- 06-summer-lookbook-romanticism.html
-  - `./assets/docs/06-summer-lookbook/romanticism/06-summer-lookbook-romanticism.html`
-  - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html)
-  - `/Users/seanivore/Development/webflow-store/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html`
+  **Flowing Romanticism Looks**
+  - 06-summer-lookbook-romanticism.html
+    - `./assets/docs/06-summer-lookbook/romanticism/06-summer-lookbook-romanticism.html`
+    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html)
+    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html`
 
-## 7. Weekend Horoscopes 
-Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local, but they have really pretty animated lottie illustrations, and the blog posts are all there. 
-
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
-
-- Blog: `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
-- Project directory: `/Users/seanivore/Development/astrofluenced`
-
-- Project: `./assets/docs/07-weekend-horoscopes`
-
-## 8. Yoga Services 
+## 7. Yoga Services 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
 
-**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+**Yoga Services**
+- 07-yoga-services.html
+  - `./assets/docs/07-yoga-services/07-yoga-services.html`
+  - [Live webpage](https://online-pt-trainer.august.style/)
+  - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
 
-- Homepage: `https://www.online-pt-trainer.august.style/`
-- Project directory: `/Users/seanivore/Development/webflow-client-ckheals`
+----
 
-- Project: `./assets/docs/08-yoga-services`
+## Additional Project Options 
+Though honestly if we did all 10 above, it would be pretty solid. 
 
-## 9. Webflow Portfolio 
+## Webflow Portfolio 
 Webflow Professional Portfolio; Hand Illustrated, 3D Motion, NFTs; But this might be another one that could be made into more of a template. 
 
 **Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
@@ -137,7 +126,7 @@ Webflow Professional Portfolio; Hand Illustrated, 3D Motion, NFTs; But this migh
 
 - Project: `./assets/docs/09-webflow-portfolio`
 
-## 10. Technical Documentation 
+## Technical Documentation 
 Reference & Technical Documentation Website; In the same vein as turning these into templates, making them more than just actual projects. This one and the one about SFA are both Markdown > HTML GitHub Pages Jekyll sites which illustrate the reference and technical documentation for the projects perfectly. 
 
 **Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
@@ -150,10 +139,6 @@ Reference & Technical Documentation Website; In the same vein as turning these i
 
 - Project: `./assets/docs/10-technical-documentation`
 
-----
-
-## Additional Project Options 
-Though honestly if we did all 10 above, it would be pretty solid. 
 
 ### Two Potential Project Posts that Aren't Only Web Design
 - 10+ Weekly AI Research & Produced Videos 
@@ -176,3 +161,14 @@ https://www.illustration-animation.august.style/
 - And of course, anything from old portfolio that might work 
 https://www.developer-technologist.august.style/
 `/Users/seanivore/Development/portfolio-seanivore`
+
+
+## Weekend Horoscopes 
+Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because the date filtering is gone and I kept a few weeks in the CMS when we pulled it to local, but they have really pretty animated lottie illustrations, and the blog posts are all there. 
+
+**Ready to be adjusted; could be pulled from old directory but might be easier to pull directly from the live site**
+
+- Blog: `https://generative-horoscopes.august.style/astrology-reading/energy-planning/weekend-perfect.html`
+- Project directory: `/Users/seanivore/Development/astrofluenced`
+
+- Project: `./assets/docs/07-weekend-horoscopes`
