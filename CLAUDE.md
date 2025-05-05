@@ -64,6 +64,7 @@ Love this homepage. Actually, adding this one made me wonder if and by how much 
 2 — `https://presenting.august.style/implement-ai-voice-marketing` 
 I wasn't even thinking about adding these until I wrote the note above about adjusting the content to fit bigger picture sales stuff that hiring managers and companies and clients might want to see, might be better to see because some people can't imagine seeing something else when looking at sites. 
 - This might help: `/Users/seanivore/Development/presentation-decks`
+*Actually these are both horizontally scrolling site which would be sort of difficult to fit in with the planned UX of this actual site* 
 
 ### 3. Webflow 800+ Product Store 
 1 — `https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
