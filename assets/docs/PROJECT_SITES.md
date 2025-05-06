@@ -33,43 +33,9 @@ This could be turned into some kind of template. We would need to adjust them so
 - Project: `./assets/docs/02-scrolling-presentations`
 
 ## 3. Webflow Store 
-Goal with showing these off would be that this was a massive store built on Webflow. I have below a Print Series page, a single Product Page, and a Shop by Aesthetic page. I made a copy of each of the HTML files and noted the path below. 
 
-The images sit on a white background and have the tiniest bit of shadowing to make it look like paper prints. 
-
-  **'Retro Futurism Realized' Mid-Century Modern Print Series**
-  - 03-webflow-store-print-series.html
-    - `./assets/docs/03-webflow-store/print-series/03-webflow-store-print-series.html`
-    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html)
-    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-print-series/iconic-2-dimensional-geometric-abstraction-mid-century-prints.html`
-
-  **'Speed Limits Enforced By Aircraft' Print Product Page**
-  - 03-webflow-store-product-page.html
-
-Very cute, clean -- let's do the other two the same way! -ish. I've described it a bit if we wanted to do similar to what it was on the Project Page next. As long as it is sensible
-
-Product: BRTM-16012
-Staged photos on the page: fr-v1-BRTM-16012 and fr-v2-BRTM-16012
-
-Background image: web-BRTM-16012-30x20.webp that is fixed. Then there is a full viewport of fogged glass that scrolls up over that background image and on the glass is a normal size version of the same image. 
-
-
-For a few related images below, here are the SKU groups: 
-BRTM-16xxx 
-BAHU-24xxx
-BAHU-31xxx 
-BAHU-28xxx
-BAHU-32xxx 
-BAHU-33xxx
-VPWV-137xx
-SNWV-14xxx
-GTCH-117xx 
-GTCH-125xx 
-SURL-49xxx
-
-    - `./assets/docs/03-webflow-store/product-page/03-webflow-store-product-page.html`
-    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html)
-    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html`
+[Print Series Page](../../projects/webflow-print-series.html)
+[Product Page](../../projects/webflow-product-page.html)
 
   **Shop By Vintage Aesthetic**
   - 03-webflow-store-aesthetic.html
@@ -78,13 +44,14 @@ SURL-49xxx
     - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
 
 ## 4. Autumn Lookbook 
-Framer Autumn Fashion Lookbook, AI Generated In-Painted Photos; This is a long page but it is probably almost perfect as it is, once separated from the rest of the site. We could add more robust descriptions and pricing information next to each image. Wow, so I copied the HTML file to this project directory and it is all self-contained; CSS and everything. Ah, but I see, the images are still on the framer CDN server, but at least they're all there. 
 
+[Autumn Fashion Lookbook](../../projects/autumn-lookbook.html)
   **Autumn Fashion Lookbook** 
   - 04-autumn-lookbook.html
     - `./assets/docs/04-autumn-lookbook/04-autumn-lookbook.html`
     - [Live webpage](https://ai-generated-content.august.style/lookbook)
     - `/Users/seanivore/Development/framer-cms-lookbook/lookbook.html`
+
 
 ## 5. Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
