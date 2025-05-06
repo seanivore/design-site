@@ -85,6 +85,53 @@ a:hover {
     padding: var(--spacing-md);
 }
 
+/* Page Introduction */
+.page-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--section-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Archetype Sections */
+.archetype-section {
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--accent-color);
+}
+
+.archetype-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+}
+
+.archetype-title:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
 /* Section Styling */
 .lookbook-section {
     margin-bottom: var(--spacing-xl);
@@ -130,12 +177,28 @@ a:hover {
     background-color: var(--section-background);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.look-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .look-image {
     margin-bottom: var(--spacing-sm);
     border-radius: 4px;
     overflow: hidden;
+}
+
+.look-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.look-item:hover .look-image img {
+    transform: scale(1.02);
 }
 
 .look-caption {
@@ -205,5 +268,13 @@ a:hover {
     .footer-content {
         flex-direction: column;
         gap: var(--spacing-md);
+    }
+
+    .archetype-title {
+        font-size: 1.5rem;
+    }
+
+    .page-intro h1 {
+        font-size: 1.8rem;
     }
 }
