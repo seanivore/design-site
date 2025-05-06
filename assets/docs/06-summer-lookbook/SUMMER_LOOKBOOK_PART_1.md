@@ -136,7 +136,6 @@ Angular statement necklaces, structured clutches in rich jewel tones.
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v1.webp`
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v2.webp`
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v3.webp`
-`./assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v4.webp`
 
 ## Section 3: For Wordsmiths
 
