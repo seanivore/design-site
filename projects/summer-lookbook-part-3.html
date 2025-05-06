@@ -6,26 +6,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Fashion Lookbook: Third Quarter | August Style</title>
     <link rel="stylesheet" href="../assets/css/summer-lookbook.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
     <style>
-        /* Page-specific styles */
+        :root {
+            --primary-color: #D8523A;
+            --secondary-color: #F1BE49;
+            --accent-color: #CC4B24;
+            --text-color: #242424;
+            --background-color: #FFFBEB;
+            --section-background: #F8EDD9;
+            --section7-color: #5E548E;
+            --section8-color: #CD7F32;
+            --section9-color: #38761D;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            --border-radius: 4px;
+        }
+
+        /* Additional summer-specific styles */
+        body {
+            background-color: var(--background-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+        }
+
+        .section-number {
+            font-size: 11rem;
+            opacity: 0.1;
+            position: absolute;
+            top: -6.5rem;
+            left: 58%;
+            transform: translateX(-50%);
+            z-index: 0;
+            font-weight: 900;
+        }
+
+        .section-title {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            font-family: "gothic-open-shaded", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .section-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            font-family: "gimlet-text-narrow", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .archetype-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .art-movements {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .art-movement {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
         .section7-color {
             background-color: rgba(94, 84, 142, 0.2);
             color: #473c6d;
         }
 
-        /* Purple */
         .section8-color {
             background-color: rgba(205, 127, 50, 0.2);
             color: #9e6227;
         }
 
-        /* Bronze */
         .section9-color {
             background-color: rgba(56, 118, 29, 0.2);
             color: #2a5915;
         }
 
-        /* Forest Green */
+        .section-intro-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            padding: 0.5rem;
+        }
+
+        .intro-image img:hover {
+            transform: translateY(-5px);
+        }
+
+        .outfit-section {
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background-color: var(--section-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .outfit-header {
+            margin-bottom: var(--spacing-md);
+            border-left: 4px solid;
+            padding-left: var(--spacing-md);
+        }
+
+        .outfit-header.section7-color {
+            border-color: var(--section7-color);
+        }
+
+        .outfit-header.section8-color {
+            border-color: var(--section8-color);
+        }
+
+        .outfit-header.section9-color {
+            border-color: var(--section9-color);
+        }
+
+        .outfit-title {
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .outfit-details {
+            margin: var(--spacing-lg);
+            max-width: 800px;
+        }
+
+        .outfit-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .accessories {
+            margin-top: var(--spacing-sm);
+            font-style: italic;
+        }
+
+        .outfit-image {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            padding: 0.5rem;
+            width: fit-content;
+        }
+
+        .outfit-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .outfit-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            max-height: 600px;
+        }
+
+        @media (max-width: 768px) {
+
+            .section-intro-images,
+            .outfit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image img,
+            .outfit-image img {
+                height: 400px;
+            }
+        }
     </style>
 </head>
 
@@ -42,10 +234,10 @@
                 </svg>
             </a>
             <nav class="nav-menu">
-                <a href="summer-lookbook-part-1.html" class="nav-link">First Quarter</a>
-                <a href="summer-lookbook-part-2.html" class="nav-link">Second Quarter</a>
-                <a href="summer-lookbook-part-3.html" class="nav-link">Third Quarter</a>
-                <a href="summer-lookbook-part-4.html" class="nav-link">Fourth Quarter</a>
+                <a href="summer-lookbook-part-1.html" class="nav-link">I</a>
+                <a href="summer-lookbook-part-2.html" class="nav-link">II</a>
+                <a href="summer-lookbook-part-3.html" class="nav-link">III</a>
+                <a href="summer-lookbook-part-4.html" class="nav-link">IV</a>
             </nav>
         </div>
     </header>
