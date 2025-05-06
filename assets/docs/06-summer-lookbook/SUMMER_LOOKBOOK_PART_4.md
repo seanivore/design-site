@@ -199,7 +199,6 @@ Chandelier earrings in abstract, mixed metal designs. Braided leather or cord wa
 
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v1.webp`
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v3.webp`
-`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v4.webp`
 
 **Outfit B**
 Paper bag waist, high-low midi skirt in abstract brushstrokes. Knotted, pointy-toe flats. For him, cropped pleated trousers. Poet's blouse with blouson sleeves in creamy nude. Longline, waterfall cardigan draped over. Or a slip dress under.
@@ -209,6 +208,9 @@ Chandelier earrings in abstract, mixed metal designs. Braided leather or cord wa
 
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v1.webp`
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v2.webp`
+
+MISSING 
+
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v4.webp`
 
