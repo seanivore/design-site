@@ -45,12 +45,12 @@ This could be turned into some kind of template. We would need to adjust them so
 
 ## 4. Autumn Lookbook 
 
-  - Still need to replace the images with local copies instead of the Framer CDN links 
+  - Download images from the URLs 
+  - Replace the Framer CDN links with them locally  
 
 [Autumn Fashion Lookbook Part 1](../../projects/autumn-lookbook-part-1.html)
 [Autumn Fashion Lookbook Part 2](../../projects/autumn-lookbook-part-2.html)
 [Autumn Fashion Lookbook Part 3](../../projects/autumn-lookbook-part-3.html)
-
 
 ## 5. Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
