@@ -1,23 +1,17 @@
 # Project Sites 
 
-```plaintext
-so i guess #1 is what i was imagining too, but i just assumed that having HTML and all the linked assets would be a head start and that we'd just need to tweak some thing to make it prettier lol.   
+## Goal 
 
-I guess the only thing i'm getting stuck over with donig this route is that the nav for this site was the only other wow part other than the images. because it was so compact but that little oval there are so many menus lol  
+1. Simplified HTML recreation: Instead of using the original HTML, we could create a cleaner, simplified version that maintains the visual design but with better structure.
+2. Asset extraction + new page build: Extract just the essential assets (images, fonts, key CSS) and build a more showcase-worthy page.
 
-okay let's just do it. the background on this ressurected site is blah anyway -- just FYI this is def the worst of them all because it was so big and hard to put back togther. 
+## Pages 
 
-but i think to pull of showing off this section and being all Webflow Ecommerce Shop Legit, we should try to do an aesthetic page and a product page as well. I attached images and they both have a TON of related photos but we can just not do that many lol. 
-
-But so I added the URL and HTML absolute path for that print series page, a print product page, and an aesthetic page all to the PROJECT_SITES.md -- But we can start with one and see how it goes. 
-``` 
-
-1. Choose which to do next and have Sean take screenshots of the page so that we can decide how to adjust it to be showcased. 
-2. Gather assets for the project page entry pulling from the live site or old directory
-3. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
-4. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
-5. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
-6. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
+1. Gather assets for the project page entry pulling from the live site or old directory
+2. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
+3. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
+4. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
+5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
 
 ## 1. CSS Animation Product Feature Landing Page 
 `./projects/animated-product-landing.html`: This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
@@ -41,9 +35,7 @@ This could be turned into some kind of template. We would need to adjust them so
 ## 3. Webflow Store 
 Goal with showing these off would be that this was a massive store built on Webflow. I have below a Print Series page, a single Product Page, and a Shop by Aesthetic page. I made a copy of each of the HTML files and noted the path below. 
 
-1. Create a new, clean HTML file in the projects directory
-2. Extract just the images needed using a script to find all image paths
-3. Build a simplified version of the page that focuses on the visual aesthetics
+The images sit on a white background and have the tiniest bit of shadowing to make it look like paper prints. 
 
   **'Retro Futurism Realized' Mid-Century Modern Print Series**
   - 03-webflow-store-print-series.html
@@ -53,6 +45,28 @@ Goal with showing these off would be that this was a massive store built on Webf
 
   **'Speed Limits Enforced By Aircraft' Print Product Page**
   - 03-webflow-store-product-page.html
+
+Very cute, clean -- let's do the other two the same way! -ish. I've described it a bit if we wanted to do similar to what it was on the Project Page next. As long as it is sensible
+
+Product: BRTM-16012
+Staged photos on the page: fr-v1-BRTM-16012 and fr-v2-BRTM-16012
+
+Background image: web-BRTM-16012-30x20.webp that is fixed. Then there is a full viewport of fogged glass that scrolls up over that background image and on the glass is a normal size version of the same image. 
+
+
+For a few related images below, here are the SKU groups: 
+BRTM-16xxx 
+BAHU-24xxx
+BAHU-31xxx 
+BAHU-28xxx
+BAHU-32xxx 
+BAHU-33xxx
+VPWV-137xx
+SNWV-14xxx
+GTCH-117xx 
+GTCH-125xx 
+SURL-49xxx
+
     - `./assets/docs/03-webflow-store/product-page/03-webflow-store-product-page.html`
     - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html)
     - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/original-single-edition-prints/visionary-surreal-abstract-futurism-monochrome-geometry-architectural-sculpture.html`
