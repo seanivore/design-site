@@ -18,7 +18,6 @@
 - Color Palette combines vibrant & energetic hues like electric blue & vivid orange — with sleek, metallic accents.
 - Atypical silhouettes should feature asymmetrical hemlines, unconventional layering, experimental fabrics — defy conventions.
 
-`./assets/images/summer-lookbook/SECTION_01/01-aries-new-1.webp`
 `./assets/images/summer-lookbook/SECTION_01/01-aries-new-2.webp`
 `./assets/images/summer-lookbook/SECTION_01/01-aries-new-3.webp`
 `./assets/images/summer-lookbook/SECTION_01/01-aries-new-4.webp`
@@ -33,8 +32,6 @@ Chunky perspex jewelry. Bold eyewear flaunting avant-garde shapes.
 
 `./assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v1.webp`
 `./assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v2.webp`
-`./assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v3.webp`
-`./assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v4.webp`
 
 **Outfit B**
 Slim cargo pants, vibrant color-blocking. Chunky sneakers. Male: Harem pants. Cropped top showcasing midriff cutouts. Elongated blazer creating dynamic movement. Secondary layered tunic top.
@@ -91,7 +88,6 @@ Delicate nature-inspired jewelry. Embroidered handbags echoing floral tendrils.
 - Seek out elegant accessories that are functional — delicate jewelry and crafted bags — to find meaning in the smallest details.
 
 `./assets/images/summer-lookbook/SECTION_02/02-taurus-new-1.webp`
-`./assets/images/summer-lookbook/SECTION_02/02-taurus-new-2.webp`
 `./assets/images/summer-lookbook/SECTION_02/02-taurus-new-3.webp`
 `./assets/images/summer-lookbook/SECTION_02/02-taurus-new-4.webp`
 
@@ -105,7 +101,6 @@ Delicate gemstone jewelry in soft, organic shapes. Lightweight scarves and wraps
 
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v1.webp`
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v2.webp`
-`./assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -203,7 +198,6 @@ Optical illusion bags, liquid metal jewelry evoking fluidity.
 
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v1.webp`
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v2.webp`
-`./assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v4.webp`
 
 
@@ -216,4 +210,3 @@ Optical illusion bags, liquid metal jewelry evoking fluidity.
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v1.webp`
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v2.webp`
 `./assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v3.webp`
-`./assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v4.webp`

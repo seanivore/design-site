@@ -21,10 +21,9 @@
 - Reflect ability to balance tradition and adaptability with subtle modern updates.
 - Pieces should be easily dressed up or down using layering for versatility.  
 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/10-capricorn-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/10-capricorn-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/10-capricorn-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/10-capricorn-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_10/10-capricorn-new-2.webp` 
+`./assets/images/summer-lookbook/SECTION_10/10-capricorn-new-3.webp` 
+`./assets/images/summer-lookbook/SECTION_10/10-capricorn-new-4.webp`
 
 ### Timeless Neoclassical Elegance 
 
@@ -34,10 +33,8 @@ High-waisted wool trousers in charcoal. Crisp tuxedo shirt, midnight blue velvet
 Accessories
 Vintage brooch or heirloom locket. Structured leather satchel or briefcase.
 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1A-v3.webp`
 
 **Outfit B**
 A-line midi skirt in camel cashmere. Pearl-embellished silk blouse, ivory blazer cinched at waist. Leather loafers. Male: Chinos, sweater. Wide-leg sailor pants alternate.
@@ -45,10 +42,9 @@ A-line midi skirt in camel cashmere. Pearl-embellished silk blouse, ivory blazer
 Accessories
 Vintage brooch or heirloom locket. Structured leather satchel or briefcase.
 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-1B-v3.webp`
 
 ### Art Deco Glow Up 
 
@@ -58,10 +54,9 @@ High-waist palazzo pants in inky blue velvet. Cowl-neck camisole in champagne sa
 Accessories
 Long strand of luminous pearls. Sculptural cuff or headpiece.
 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_10/w10-outfit-2A-v3.webp`
 
 **Outfit B**
 Sheath dress with geometric beading in oxblood. Feather-trimmed cape, slouchy suede boots. Male: Knit henley, trousers with satin stripe. Art deco-inspired cigarette pants alternate.
@@ -95,10 +90,10 @@ Long strand of luminous pearls. Sculptural cuff or headpiece.
 - Trompe l'oeil prints, embroidery, and transformative garments play into blurring reality and fantasy.
 - Use transparency and texture, pieces that reveal and conceal, layer in depth.
 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/11-aquarius-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/11-aquarius-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/11-aquarius-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/11-aquarius-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_11/11-aquarius-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_11/11-aquarius-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_11/11-aquarius-new-3.webp`
+`./assets/images/summer-lookbook/SECTION_11/11-aquarius-new-4.webp`
 
 ### Surrealism Celestial Escape 
 
@@ -108,10 +103,9 @@ Wide-leg palazzo pants, chiffon, watercolor print. Strappy flats. relaxed chinos
 Accessories
 Mismatched celestial jewelry. Statement headpiece blurring fantasy/reality.
 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1A-v4.webp`
 
 **Outfit B**
 Bias-cut slip dress, stretch velvet, jewel tone. Chunky lug-sole boots. Male: cropped trousers, Chelsea boots. Oversized blazer, dramatic shoulders. Languid, dream-like draping. Sheer embroidered scarf.
@@ -119,10 +113,10 @@ Bias-cut slip dress, stretch velvet, jewel tone. Chunky lug-sole boots. Male: cr
 Accessories
 Mismatched celestial jewelry. Statement headpiece blurring fantasy/reality.
 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-1B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1B-v3.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-1B-v4.webp`
 
 ### Pre-Raphaelite Grounding Gear 
 
@@ -132,10 +126,10 @@ Floral brocade maxi skirt, floor-sweeping. Strappy sandals. Male: relaxed linen 
 Accessories
 Botanical-inspired hair adornments. Lush, trailing beaded jewelry.
 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2A-v3.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2A-v4.webp`
 
 **Outfit B**
 Velvet devoré burnout mini dress. Knee-high Victorian boots. Male: embroidered waistcoat, trousers. Dramatic floor-length duster coat, exaggerated sleeves. Otherworldly elegance with a witchy edge. Statement wide-brim hat.
@@ -143,10 +137,8 @@ Velvet devoré burnout mini dress. Knee-high Victorian boots. Male: embroidered 
 Accessories
 Botanical-inspired hair adornments. Lush, trailing beaded jewelry.
 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w11-outfit-2B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_11/w11-outfit-2B-v2.webp`
 
 ## Section 12: For the Empath
 
@@ -170,10 +162,9 @@ Botanical-inspired hair adornments. Lush, trailing beaded jewelry.
 - Choose shawls for comfort and protection.
 - Unstructured silhouettes and ease of movement; dresses, oversized sweaters, loose-fitting trousers.
 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/12-pisces-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/12-pisces-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/12-pisces-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/00 intro pages/web/12-pisces-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_12/12-pisces-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_12/12-pisces-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_12/12-pisces-new-3.webp`
 
 ### Flowing Romanticism Looks 
 
@@ -183,10 +174,10 @@ Billowy, high-waisted linen trousers in soft sage. Delicate, embroidered ballet 
 Accessories
 Delicate, handmade jewelry like beaded bracelets. Layer gauzy, printed scarves for bohemian texture.
 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1A-v3.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1A-v4.webp`
 
 **Outfit B**
 Flowy, tiered maxi dress in watercolor florals. Strappy, woven sandals. Fluid wide-legs and soft knit tee. Romantic, off-shoulder peasant top in cream. Relaxed, kimono jacket. Elevate with ankle boots.
@@ -194,10 +185,9 @@ Flowy, tiered maxi dress in watercolor florals. Strappy, woven sandals. Fluid wi
 Accessories
 Delicate, handmade jewelry like beaded bracelets. Layer gauzy, printed scarves for bohemian texture.
 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-1B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-1B-v3.webp`
 
 ### Adaptable Impressionist Ensembles 
 
@@ -207,10 +197,9 @@ Wide-leg culottes in a soft, washed indigo. Slide sandals or embroidered mules. 
 Accessories
 Chandelier earrings in abstract, mixed metal designs. Braided leather or cord waist belts.
 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v3.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2A-v4.webp`
 
 **Outfit B**
 Paper bag waist, high-low midi skirt in abstract brushstrokes. Knotted, pointy-toe flats. For him, cropped pleated trousers. Poet's blouse with blouson sleeves in creamy nude. Longline, waterfall cardigan draped over. Or a slip dress under.
@@ -218,10 +207,10 @@ Paper bag waist, high-low midi skirt in abstract brushstrokes. Knotted, pointy-t
 Accessories
 Chandelier earrings in abstract, mixed metal designs. Braided leather or cord waist belts.
 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_10/w12-outfit-2B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v3.webp`
+`./assets/images/summer-lookbook/SECTION_12/w12-outfit-2B-v4.webp`
 
 
 

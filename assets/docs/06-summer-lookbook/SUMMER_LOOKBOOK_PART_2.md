@@ -20,10 +20,9 @@
 - Add practical, handcrafted accessories — functional bags, embodied accents or jewelry pieces featuring natural materials and motifs.
 - Heirlooms and bespoke items bring much needed meaning; reminders of cherished connections of theirs.
 
-`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_04/04-cancer-new-3.webp`
 
 ### Craftsman Comfort Clothes 
 
@@ -33,9 +32,7 @@ Flowy linen trousers, earthy olive. Chunky oxfords. Relaxed knit pullover in sof
 Accessories
 Leather tote with embroidered motif. Mixed metal cuff with organic forms.
 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1A-v1.webp`
 `./assets/images/summer-lookbook/SECTION_04/w04-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -44,9 +41,8 @@ A-line cotton skirt, tea rose print. Ankle boots, stacked heel. Boyfriend cardig
 Accessories
 Leather tote with embroidered motif. Mixed metal cuff with organic forms.
 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_04/w04-outfit-1B-v4.webp`
 
 ### Impressionistic Cozy Couture 
@@ -57,9 +53,9 @@ Wide-leg linen pants, washed peach. Slide sandals, cushioned soles. Drapey knit 
 Accessories
 Woven crossbody bag, blush tones. Gemstone pendant on silk cord.
 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_04/w04-outfit-2A-v4.webp`
 
 **Outfit B**
@@ -68,9 +64,9 @@ Pleated midi skirt, delicate watercolor floral. Ballet flats, neutral. Fine gaug
 Accessories
 Woven crossbody bag, blush tones. Gemstone pendant on silk cord.
 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_04/w04-outfit-2B-v4.webp`
 
 ## Section 5: For Enchanters
@@ -94,10 +90,9 @@ Woven crossbody bag, blush tones. Gemstone pendant on silk cord.
 - Loves a daring silhouette with a plunging neckline, a high slit, and figure-hugging fabric.
 - Her attire both celebrates her confidence and sensuality while also hinting at vulnerability and a desire for validation.
 
-`./assets/images/summer-lookbook/SECTION_05/05-leo-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_05/05-leo-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_05/05-leo-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_05/05-leo-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_05/05-leo-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_05/05-leo-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_05/05-leo-new-3.webp`
 
 ### Art Nouveau Allure 
 
@@ -107,9 +102,9 @@ Bias-cut, draped silk pants in jewel tones. Strappy sandals. Sleeveless, cowl-ne
 Accessories
 Dramatic chandelier earrings. Intricate headpiece or beaded hair combs.
 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_05/w05-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -118,9 +113,9 @@ Beaded lace pencil skirt, front slit. Knee-high boots. Bustier camisole, appliqu
 Accessories
 Dramatic chandelier earrings. Intricate headpiece or beaded hair combs.
 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_05/w05-outfit-1B-v4.webp`
 
 ### Rococo High Glamour 
@@ -131,10 +126,9 @@ High-waisted shorts, ornate brocade or damask. Ankle-strap heels. Corset camisol
 Accessories
 Pearl cluster choker necklace. Fingerless lace gloves extending past elbow.
 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2A-v3.webp`
 
 **Outfit B**
 Wide-leg, pleated culottes, powder blue silk. Slingbacks. Ruffled poet's blouse, off-shoulder neckline. Fitted blazer, crystal buttons. Soft, romantic shapes.
@@ -142,10 +136,9 @@ Wide-leg, pleated culottes, powder blue silk. Slingbacks. Ruffled poet's blouse,
 Accessories
 Pearl cluster choker necklace. Fingerless lace gloves extending past elbow.
 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_05/w05-outfit-2B-v3.webp`
 
 ## Section 6: Sanctuary
 
@@ -169,9 +162,9 @@ Pearl cluster choker necklace. Fingerless lace gloves extending past elbow.
 - Pieces should mix easily, making putting together looks on the fly, in transition, simple.
 - Add subtle personal touches to finish things off with a sentimental vibe.  
 
-`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-3.webp` 
+`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_06/06-virgo-new-3.webp`
 `./assets/images/summer-lookbook/SECTION_06/06-virgo-new-4.webp`
 
 ### Elegant Minimalist Outfits 
@@ -182,9 +175,9 @@ Wide-leg trousers, tonal nude. Low heels. Male: straight-leg chinos. Oversized b
 Accessories
 Delicate jewelry, polished leather goods. Handcrafted tactile details.
 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_06/w06-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -193,9 +186,9 @@ Slip skirt, neutral tones. Sleek sandals. Male: drawstring trousers. Fine-gauge 
 Accessories
 Delicate jewelry, polished leather goods. Handcrafted tactile details.
 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_06/w06-outfit-1B-v4.webp`
 
 ### Scandinavian Versatile Vibes 
@@ -206,10 +199,8 @@ High-waisted trousers, earthy hues. Chunky boots. Male: cargo pants. Cable-knit 
 Accessories
 Hand-carved wood pieces, supple leather bags. Organic, textural accents.
 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2A-v3.webp`
 
 **Outfit B**
 Maxi skirt, soft neutrals. Ankle boots. Male: pleated shorts. Relaxed button-down, linen fabrics. Pared-back sophistication, breathable comfort. Alt: longline cardigan.
@@ -217,7 +208,7 @@ Maxi skirt, soft neutrals. Ankle boots. Male: pleated shorts. Relaxed button-dow
 Accessories
 Hand-carved wood pieces, supple leather bags. Organic, textural accents.
 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_06/w06-outfit-2B-v4.webp`

@@ -21,9 +21,9 @@
 - Tailored, precise, silhouettes showcase attention to detail.
 - Layering and adaptability allow Architect to adjust their look to suit changing environments.  
 
-`./assets/images/summer-lookbook/SECTION_07/07-libra-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_07/07-libra-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_07/07-libra-new-3.webp` 
+`./assets/images/summer-lookbook/SECTION_07/07-libra-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_07/07-libra-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_07/07-libra-new-3.webp`
 `./assets/images/summer-lookbook/SECTION_07/07-libra-new-4.webp`
 
 ### Polished Bauhaus Bold 
@@ -34,9 +34,9 @@ High-waisted, wide-leg black trousers, crisp lines. Chunky black leather oxfords
 Accessories
 Sculptural cuff or choker necklace in matte silver. Geometric pendant earrings.
 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_07/w07-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -45,9 +45,9 @@ Olive green pencil skirt, clean tailoring. Matte black Chelsea boots. For him, c
 Accessories
 Sculptural cuff or choker necklace in matte silver. Geometric pendant earrings.
 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_07/w07-outfit-1B-v4.webp`
 
 ### Constructivism Tech Flair 
@@ -58,9 +58,7 @@ Coated black denim skinnies with articulated knees. Lacquered combat boots. For 
 Accessories
 Layered rhodium chain necklaces, various lengths. Articulated cuff with rubberized finish.
 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_07/w07-outfit-2A-v4.webp`
 
 **Outfit B**
@@ -69,10 +67,8 @@ Gray textured culottes, exaggerated flare. Silver prospector boots. For him, rol
 Accessories
 Layered rhodium chain necklaces, various lengths. Articulated cuff with rubberized finish.
 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_07/w07-outfit-2B-v3.webp`
 
 ## Section 8: Metamorphs
 
@@ -95,9 +91,8 @@ Layered rhodium chain necklaces, various lengths. Articulated cuff with rubberiz
 - Conversational starter accessories. Gender-fluid silhouettes challenge expectations. ‍
 - Layering and deconstruction with garments that can be worn in multiple ways or reveal hidden details — a complex, reflection of a multifaceted nature.
 
-`./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-3.webp` 
+`./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-2.webp`
 `./assets/images/summer-lookbook/SECTION_08/08-scorpio-new-4.webp`
 
 ### Neo-Expressionist Evolving Garb 
@@ -108,9 +103,8 @@ Distressed combat boots. Male version: Painted moto jacket. Mesh top. Oversized,
 Accessories
 Sculptural jewelry pieces, raw crystal charms. Bold makeup/hair colors play with identity reinvention.
 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_08/w08-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -119,10 +113,8 @@ Holographic pleated skirt, bright contrasting panels. Metallic sneakers. Male ve
 Accessories
 Sculptural jewelry pieces, raw crystal charms. Bold makeup/hair colors play with identity reinvention.
 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-1B-v3.webp`
 
 ### Dreaming Surreal Outfits 
 
@@ -132,9 +124,9 @@ Tiered mesh maxi skirt with feather inserts. Strappy sandals. Male version: Raw 
 Accessories
 Whimsical headpieces, bags shaped like everyday objects. Audacious makeup accents the surreal.
 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_08/w08-outfit-2A-v4.webp`
 
 **Outfit B**
@@ -143,9 +135,9 @@ Wide-leg jeans with trompe l'oeil print. Chunky platform boots. Male version: Co
 Accessories
 Whimsical headpieces, bags shaped like everyday objects. Audacious makeup accents the surreal.
 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_08/w08-outfit-2B-v4.webp`
 
 ## Section 9: For Voyagers
@@ -170,10 +162,9 @@ Whimsical headpieces, bags shaped like everyday objects. Audacious makeup accent
 - Comfort and ease of movement — with breathable, natural fabrics and relaxed.
 - Bold, statement-making prints and patterns — reflecting willingness to stand out and make a unique impression wherever their journey takes them.  
 
-`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-1.webp` 
-`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-2.webp` 
-`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-3.webp` 
-`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-4.webp`
+`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-1.webp`
+`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-2.webp`
+`./assets/images/summer-lookbook/SECTION_09/09-sagittarius-new-3.webp`
 
 ### Psychedelic Turnout Tripping 
 
@@ -183,9 +174,9 @@ High-waisted flared psychedelic swirl print pants. Platforms. Bootcut trousers, 
 Accessories
 Layered ethnic jewelry like wooden beads, metal tassels. Textured suede fringed crossbody bag, vintage finds.
 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v3.webp`
 `./assets/images/summer-lookbook/SECTION_09/w09-outfit-1A-v4.webp`
 
 **Outfit B**
@@ -194,9 +185,9 @@ Wide-leg rainbow striped pants in silk. Ankle-wrap espadrilles. Male: Linen draw
 Accessories
 Layered ethnic jewelry like wooden beads, metal tassels. Textured suede fringed crossbody bag, vintage finds.
 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v3.webp` 
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v1.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v3.webp`
 `./assets/images/summer-lookbook/SECTION_09/w09-outfit-1B-v4.webp`
 
 ### Art Nouveau Free Flow 
@@ -207,10 +198,9 @@ Slim velvet floral embroidered pants in rich jewel tones. Strappy sandals. Male:
 Accessories
 Floral hair accessories, whimsical nature jewelry pieces cast in leafy shapes.
 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v4.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v1.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v2.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2A-v3.webp`
 
 **Outfit B**
 Flared chiffon maxi skirt, tonal floral burnout print. Gladiator sandals. Male: Relaxed satin botanical joggers. Asymmetric handkerchief top, ruffled accents. Delicate, ethereal layers. Alternate: Embroidered velvet shrug.
@@ -218,7 +208,5 @@ Flared chiffon maxi skirt, tonal floral burnout print. Gladiator sandals. Male: 
 Accessories
 Floral hair accessories, whimsical nature jewelry pieces cast in leafy shapes.
 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v1.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v2.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v3.webp` 
-`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v4.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v2.webp`
+`./assets/images/summer-lookbook/SECTION_09/w09-outfit-2B-v3.webp`
