@@ -1,0 +1,28 @@
+/* Base Styles */
+:root {
+    --primary-color: #317039;
+    /* Emerald Green */
+    --secondary-color: #F1BE49;
+    /* Maximum Yellow */
+    --accent-color: #CC4B24;
+    /* Dark Pastel Red */
+    --text-color: #FFF1D4;
+    /* Papaya Whip */
+    --text-secondary: #FFFBEB;
+    /* Cosmic Latte */
+    --alt-white: #F8EDD9;
+    /* Antique White */
+    --bg-color: #242424;
+    /* Charcoal Gray */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
