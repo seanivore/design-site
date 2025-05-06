@@ -45,12 +45,11 @@ This could be turned into some kind of template. We would need to adjust them so
 
 ## 4. Autumn Lookbook 
 
-[Autumn Fashion Lookbook](../../projects/autumn-lookbook.html)
-  **Autumn Fashion Lookbook** 
-  - 04-autumn-lookbook.html
-    - `./assets/docs/04-autumn-lookbook/04-autumn-lookbook.html`
-    - [Live webpage](https://ai-generated-content.august.style/lookbook)
-    - `/Users/seanivore/Development/framer-cms-lookbook/lookbook.html`
+  - Still need to replace the images with local copies instead of the Framer CDN links 
+
+[Autumn Fashion Lookbook Part 1](../../projects/autumn-lookbook-part-1.html)
+[Autumn Fashion Lookbook Part 2](../../projects/autumn-lookbook-part-2.html)
+[Autumn Fashion Lookbook Part 3](../../projects/autumn-lookbook-part-3.html)
 
 
 ## 5. Webflow Blog 
