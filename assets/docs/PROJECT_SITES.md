@@ -76,23 +76,10 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
 ## 6. Summer Lookbook 
 Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
 
-  **Art Nouveau Outfit Elegance** 
-  - 06-summer-lookbook-art-nouveau.html
-    - `./assets/docs/06-summer-lookbook/art-nouveau/06-summer-lookbook-art-nouveau.html`
-    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html)
-    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/flowy-wide-leg-trousers-botanical-prints-linen-drawstring-pants-corset-inspired-lacework-lightweight-duster.html`
-
-  **Tranquil Impressionist Garments** 
-  - 06-summer-lookbook-impressionist.html
-    - `./assets/docs/06-summer-lookbook/impressionist/06-summer-lookbook-impressionist.html`
-    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/futurism-propelling-fashion-into-the-future.html)
-    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/futurism-propelling-fashion-into-the-future.html`
-
-  **Flowing Romanticism Looks**
-  - 06-summer-lookbook-romanticism.html
-    - `./assets/docs/06-summer-lookbook/romanticism/06-summer-lookbook-romanticism.html`
-    - [Live webpage](https://print-shop-fashion.august.style/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html)
-    - `/Users/seanivore/Development/webflow-store/fashion/lookbook/soft-flowing-styles-pisces-spirit-nurturing.html`
+[Summer Fashion Lookbook Part 1](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_1.md) = 60 portrait IMAGES, in THREE parts, each with TWO looks 
+[Summer Fashion Lookbook Part 2](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_2.md) = 60 portrait IMAGES, in THREE parts, each with TWO looks
+[Summer Fashion Lookbook Part 3](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_3.md) = 60 portrait IMAGES, in THREE parts, each with TWO looks
+[Summer Fashion Lookbook Part 4](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_4.md) = 60 portrait IMAGES, in THREE parts, each with TWO looks
 
 ## 7. Yoga Services 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
