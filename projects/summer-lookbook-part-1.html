@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Fashion Lookbook: First Quarter | August Style</title>
+    <link rel="stylesheet" href="../assets/css/summer-lookbook.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
+    <style>
+        :root {
+            --primary-color: #D8523A;
+            --secondary-color: #F1BE49;
+            --accent-color: #CC4B24;
+            --text-color: #242424;
+            --background-color: #FFFBEB;
+            --section-background: #F8EDD9;
+            --section1-color: #CC4B24;
+            --section2-color: #F1BE49;
+            --section3-color: #D8523A;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            --border-radius: 4px;
+        }
+
+        /* Additional summer-specific styles */
+        body {
+            background-color: var(--background-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+        }
+
+        .section-number {
+            font-size: 11rem;
+            opacity: 0.1;
+            position: absolute;
+            top: -6.5rem;
+            left: 58%;
+            transform: translateX(-50%);
+            z-index: 0;
+            font-weight: 900;
+        }
+
+        .section-title {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            font-family: "gothic-open-shaded", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .section-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            font-family: "gimlet-text-narrow", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .archetype-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .art-movements {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .art-movement {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .futurism {
+            background-color: rgba(255, 107, 74, 0.2);
+            color: #d94c26;
+        }
+
+        .art-nouveau {
+            background-color: rgba(121, 85, 61, 0.2);
+            color: #79553d;
+        }
+
+        .impressionism {
+            background-color: rgba(129, 178, 154, 0.2);
+            color: #3e8764;
+        }
+
+        .art-deco {
+            background-color: rgba(86, 61, 124, 0.2);
+            color: #563d7c;
+        }
+
+        .dadaism {
+            background-color: rgba(255, 222, 85, 0.2);
+            color: #b39d3b;
+        }
+
+        .surrealism {
+            background-color: rgba(106, 137, 204, 0.2);
+            color: #4a629b;
+        }
+
+        .section-intro-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            padding: 0.5rem;
+        }
+
+        .intro-image img:hover {
+            transform: translateY(-5px);
+        }
+
+        .outfit-section {
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background-color: var(--section-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .outfit-header {
+            margin-bottom: var(--spacing-md);
+            border-left: 4px solid;
+            padding-left: var(--spacing-md);
+        }
+
+        .outfit-header.futurism {
+            border-color: var(--section1-color);
+        }
+
+        .outfit-header.art-nouveau {
+            border-color: #79553d;
+        }
+
+        .outfit-header.impressionism {
+            border-color: var(--section2-color);
+        }
+
+        .outfit-header.art-deco {
+            border-color: #563d7c;
+        }
+
+        .outfit-header.dadaism {
+            border-color: #ffde55;
+        }
+
+        .outfit-header.surrealism {
+            border-color: var(--section3-color);
+        }
+
+        .outfit-title {
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .outfit-details {
+            margin: var(--spacing-lg);
+            max-width: 800px;
+        }
+
+        .outfit-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .accessories {
+            margin-top: var(--spacing-sm);
+            font-style: italic;
+        }
+
+        .outfit-image {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            padding: 0.5rem;
+            width: fit-content;
+        }
+
+        .outfit-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .outfit-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            max-height: 600px;
+        }
+
+        @media (max-width: 768px) {
+
+            .section-intro-images,
+            .outfit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image img,
+            .outfit-image img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28" height="28" fill="white" fill-opacity="0.2" />
+                    <path d="M7 7H21V21H7V7Z" stroke="white" stroke-width="2" />
+                    <path d="M14 7V21" stroke="white" stroke-width="2" />
+                    <path d="M7 14H21" stroke="white" stroke-width="2" />
+                </svg>
+            </a>
+            <nav class="nav-menu">
+                <a href="summer-lookbook-part-1.html" class="nav-link">I</a>
+                <a href="summer-lookbook-part-2.html" class="nav-link">II</a>
+                <a href="summer-lookbook-part-3.html" class="nav-link">III</a>
+                <a href="summer-lookbook-part-4.html" class="nav-link">IV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Introduction -->
+        <div class="page-intro">
+            <h1>Summer Fashion Lookbook, Section I</h1>
+            <p class="intro-text">Experience our vibrant summer collection inspired by iconic art movements and personality archetypes. Each piece is designed for real people evolving through life as fast as you do.</p>
+        </div>
+
+        <!-- Section 1: For Trailblazers -->
+        <div class="archetype-section">
+            <div class="section-title-container">
+                <div class="section-number">1</div>
+                <h2 class="section-title">For Trailblazers</h2>
+                <p class="section-subtitle">"DRESSING THE UNSTOPPABLE"</p>
+            </div>
+
+            <div class="archetype-description">
+                <p>Looks for a personality type that needs balance and grounding like woah. They radiate a sense of adventure, both inspiring and UNSETTLING those around them. This personalty type has a palpable energy, driven by curiosity, a strong need for independence, and ultimate freedom. They're always looking to push boundaries in the face of uncertainty. Day-to-day is a management of fluctuating between exhilaration, determinism, and rebelliousness.</p>
+            </div>
+
+            <div class="art-movements">
+                <div class="art-movement futurism">Futurism</div>
+                <div class="art-movement art-nouveau">Art Nouveau</div>
+            </div>
+
+            <div class="section-intro-images">
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_01/01-aries-new-2.webp" alt="Trailblazer style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_01/01-aries-new-3.webp" alt="Trailblazer style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_01/01-aries-new-4.webp" alt="Trailblazer style inspiration">
+                </div>
+            </div>
+
+            <!-- Industrial Edging Futurist Gear -->
+            <div class="outfit-section">
+                <div class="outfit-header futurism">
+                    <h3 class="outfit-title">Industrial Edging Futurist Gear</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">Asymmetrical skirt, neoprene fabric, bold geometric prints. Metallic ankle boots. Male: Drop-crotch trousers (harem). Fitted top accentuating sleek lines. Structured jacket emphasizing angular silhouette. Optional sheer overlay.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Chunky perspex jewelry. Bold eyewear flaunting avant-garde shapes.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v1.webp" alt="Industrial Edging Futurist Gear - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-1A-v2.webp" alt="Industrial Edging Futurist Gear - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">Slim cargo pants, vibrant color-blocking. Chunky sneakers. Male: Harem pants. Cropped top showcasing midriff cutouts. Elongated blazer creating dynamic movement. Secondary layered tunic top.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Chunky perspex jewelry. Bold eyewear with avant-garde shapes.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-1B-v1.webp" alt="Industrial Edging Futurist Gear - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-1B-v2.webp" alt="Industrial Edging Futurist Gear - Outfit B">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Nouveau Outfit Elegance -->
+            <div class="outfit-section">
+                <div class="outfit-header art-nouveau">
+                    <h3 class="outfit-title">Art Nouveau Outfit Elegance</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">Flowy wide-leg trousers, earthy botanical prints. Strappy sandals. Male: Linen drawstring pants. Corset-inspired top with intricate lacework. Lightweight duster coat evoking airy grace.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Delicate nature-inspired jewelry. Embroidered handbags echoing floral tendrils.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-2A-v1.webp" alt="Art Nouveau Outfit Elegance - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-2A-v2.webp" alt="Art Nouveau Outfit Elegance - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">Midi pencil skirt, iridescent fabric mimicking butterfly wings. Pointed-toe stilettos. Male: Cropped tailored trousers. Draped blouse with ruffled accents. Fringed kimono jacket. Ornate hair accessory.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Delicate nature-inspired jewelry. Embroidered handbags echoing floral tendrils.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-2B-v1.webp" alt="Art Nouveau Outfit Elegance - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_01/w01-outfit-2B-v2.webp" alt="Art Nouveau Outfit Elegance - Outfit B">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: For Harmonizers -->
+        <div class="archetype-section">
+            <div class="section-title-container">
+                <div class="section-number">2</div>
+                <h2 class="section-title">For Harmonizers</h2>
+                <p class="section-subtitle">DRESSING EMOTIONS</p>
+            </div>
+
+            <div class="archetype-description">
+                <p>Curating outfits for this personality type centers around the goal of alleviating emotional exhaustion. Keen sensitivity for perceiving emotional needs of others. Delicate balance between empathy, compassion, and a deep-seated desire for peace and tranquility. They possess a deep understanding of underlying emotions and are extremely sensitive to the subtleties of human interaction. Heightened awareness leads to emotional exhaustion and feeling overwhelmed by the complexities of interpersonal dynamics.</p>
+            </div>
+
+            <div class="art-movements">
+                <div class="art-movement impressionism">Impressionism</div>
+                <div class="art-movement art-deco">Art Deco</div>
+            </div>
+
+            <div class="section-intro-images">
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_02/02-taurus-new-1.webp" alt="Harmonizer style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_02/02-taurus-new-3.webp" alt="Harmonizer style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_02/02-taurus-new-4.webp" alt="Harmonizer style inspiration">
+                </div>
+            </div>
+
+            <!-- Tranquil Impressionist Garments -->
+            <div class="outfit-section">
+                <div class="outfit-header impressionism">
+                    <h3 class="outfit-title">Tranquil Impressionist Garments</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">Flowy wide-leg pants in dusty rose linen. Strappy sandals. Men's pleated trousers in pale blue. Gauzy poet blouse in lavender with watercolor florals. Relaxed, enveloping silhouette.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Delicate gemstone jewelry in soft, organic shapes. Lightweight scarves and wraps in ombré pastels.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v1.webp" alt="Tranquil Impressionist Garments - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-1A-v2.webp" alt="Tranquil Impressionist Garments - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">A-line maxi skirt in muted sage green. Woven flats. Men's relaxed shorts in creamy tan. Oversized button-down in buttery yellow, rolled sleeves. Gentle draping, effortless chic.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Delicate gemstone jewelry in soft, organic shapes. Lightweight scarves and wraps in ombré pastels.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-1B-v1.webp" alt="Tranquil Impressionist Garments - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-1B-v2.webp" alt="Tranquil Impressionist Garments - Outfit B">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Deco Structured Chic -->
+            <div class="outfit-section">
+                <div class="outfit-header art-deco">
+                    <h3 class="outfit-title">Art Deco Structured Chic</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">High-waisted tapered pants in jet black with tuxedo stripes. Pointed-toe loafers. Double-breasted vest. Fitted blouse with batwing sleeves in porcelain white. Sculptural, architectural silhouette.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Angular statement necklaces, structured clutches in rich jewel tones.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-2A-v1.webp" alt="Art Deco Structured Chic - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-2A-v2.webp" alt="Art Deco Structured Chic - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">Ankle-length pencil skirt in bold cobalt blue. T-strap heels. Men's slim-fit trousers in charcoal gray. Fitted mock-neck sweater in black with metallic trim. Clean lines, modern elegance.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Angular statement necklaces, structured clutches in rich jewel tones.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v1.webp" alt="Art Deco Structured Chic - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_02/w02-outfit-2B-v2.webp" alt="Art Deco Structured Chic - Outfit B">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: For Wordsmiths -->
+        <div class="archetype-section">
+            <div class="section-title-container">
+                <div class="section-number">3</div>
+                <h2 class="section-title">For Wordsmiths</h2>
+                <p class="section-subtitle">END MENTAL BLOCKS</p>
+            </div>
+
+            <div class="archetype-description">
+                <p>Wardrobes to eliminate frustration or feelings of isolation during moments of expressive difficulty. Infectious energy sparks lively discussion, inspiring others to think outside the box. Their emotional landscape is characterized by a constant interplay between intellectual excitement, curiosity, and a touch of whimsy. Driven by an insatiable desire to explore ideas, challenge conventions, and find new ways to express themselves. Mental exhaustion and general mood fluctuation can create moments of difficulty in conveying thoughts. Frustration and feelings of isolation can overwhelm, spiraling into an inability to express abstract concepts they pride themselves in being able to find the perfect words for.</p>
+            </div>
+
+            <div class="art-movements">
+                <div class="art-movement dadaism">Dadaism</div>
+                <div class="art-movement surrealism">Surrealism</div>
+            </div>
+
+            <div class="section-intro-images">
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_03/03-gemini-new-1.webp" alt="Wordsmith style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_03/03-gemini-new-2.webp" alt="Wordsmith style inspiration">
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/images/summer-lookbook/SECTION_03/03-gemini-new-3.webp" alt="Wordsmith style inspiration">
+                </div>
+            </div>
+
+            <!-- Dressed for Dada Defiance -->
+            <div class="outfit-section">
+                <div class="outfit-header dadaism">
+                    <h3 class="outfit-title">Dressed for Dada Defiance</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">Asymmetric tulle skirt, clashing prints. Lace-up boots. Male: Deconstructed suit trousers. Cutout sweater, oversized blazer. Juxtaposed proportions. Alt: Layered tutu over pants.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Dada jewelry with random objects. Embellished face veils, thought-provoking motifs.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-1A-v1.webp" alt="Dressed for Dada Defiance - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-1A-v2.webp" alt="Dressed for Dada Defiance - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">Graphic wide-leg pants, vivid palette. Platform Mary Janes. Male: Avant-garde jumpsuit. Sheer top, statement coat. Sculptural shapes. Alt: Text-printed accessories.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Dada jewelry with random objects. Embellished face veils, thought-provoking motifs.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-1B-v1.webp" alt="Dressed for Dada Defiance - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-1B-v2.webp" alt="Dressed for Dada Defiance - Outfit B">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surrealist Dressing Sleek -->
+            <div class="outfit-section">
+                <div class="outfit-header surrealism">
+                    <h3 class="outfit-title">Surrealist Dressing Sleek</h3>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit A</h4>
+                    <p class="outfit-description">Bias-cut skirt, organic prints. Pointed flats. Male: Wide-leg trousers. Draped top, cocoon coat. Ethereal silhouette. Alt: Melting accessories.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Optical illusion bags, liquid metal jewelry evoking fluidity.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v1.webp" alt="Surrealist Dressing Sleek - Outfit A">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-2A-v2.webp" alt="Surrealist Dressing Sleek - Outfit A">
+                    </div>
+                </div>
+
+                <div class="outfit-details">
+                    <h4>Outfit B</h4>
+                    <p class="outfit-description">High-waist culottes, muted palette. Sculptural heels. Male: Fluid jumpsuit. Asymmetric knit, exaggerated cape. Playful distortion. Alt: Gravity-defying jewelry.</p>
+                    <p class="accessories"><strong>Accessories:</strong> Optical illusion bags, liquid metal jewelry evoking fluidity.</p>
+                </div>
+
+                <div class="outfit-grid">
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v1.webp" alt="Surrealist Dressing Sleek - Outfit B">
+                    </div>
+                    <div class="outfit-image">
+                        <img src="../assets/images/summer-lookbook/SECTION_03/w03-outfit-2B-v2.webp" alt="Surrealist Dressing Sleek - Outfit B">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Navigation Buttons -->
+    <div class="page-navigation">
+        <div class="nav-container">
+            <div class="nav-placeholder"></div>
+            <a href="summer-lookbook-part-2.html" class="nav-button next-button">
+                <span>Next Quarter</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="copyright">© 2024 August House LLC. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Terms Of Use</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

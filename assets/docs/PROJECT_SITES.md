@@ -74,14 +74,12 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
     - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
 ## 6. Summer Lookbook 
-Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos; This is a book that you page through. It would work best if we pull a few pages and combine them into one new longer page, sort of like the earlier lookbook but maybe this one could be an online store instead of a magazine. 
+Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos. All images are organized by 12 sections that represent the zodiac signs and historical art movements. The number of images per look is not balances because there were so many and I just went on a purge. But they are all in the images directory in subdirectories that match their section names. 
 
-All images are organized by the 12 sections and in the images directory. They are all portrait orientation. 
-
-[Summer Fashion Lookbook Part 1](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_1.md) = 3 of 12 sections, each with 2 looks, each ~18 photos
-[Summer Fashion Lookbook Part 2](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_2.md) = 3 of 12 sections, each with 2 looks, each ~18 photos
-[Summer Fashion Lookbook Part 3](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_3.md) = 3 of 12 sections, each with 2 looks, each ~18 photos
-[Summer Fashion Lookbook Part 4](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_4.md) = 3 of 12 sections, each with 2 looks, each ~18 photos
+[Summer Fashion Lookbook Part 1](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_1.md)
+[Summer Fashion Lookbook Part 2](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_2.md) 
+[Summer Fashion Lookbook Part 3](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_3.md)
+[Summer Fashion Lookbook Part 4](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_4.md) 
 
 ## 7. Yoga Services 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 

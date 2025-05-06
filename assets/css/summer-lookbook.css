@@ -1,0 +1,283 @@
+/* Base Styles */
+/* For other lookbooks, see autumn-lookbook.css */
+:root {
+    --primary-color: #317039;
+    --primary-color-transparent: rgba(49, 112, 57, 0.85);
+    --secondary-color: #F1BE49;
+    --secondary-color-transparent: rgba(241, 190, 73, 0.2);
+    --accent-color: #CC4B24;
+    --text-color: #242424;
+    --background-color: #FFFBEB;
+    --section-background: #F8EDD9;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    --border-radius: 4px;
+}
+
+@font-face {
+    font-family: "gimlet-text-narrow", serif;
+    font-family: "vista-sans", sans-serif;
+    font-family: "agency-fb", sans-serif;
+    font-family: "freightneocnd-pro", sans-serif;
+    font-family: "freight-neo-pro", sans-serif;
+    font-family: "gothic-open-shaded", sans-serif;
+    src: url("https://use.typekit.net/yrt0pwo.css");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Header */
+.site-header {
+    padding: var(--spacing-sm);
+    background-color: var(--primary-color-transparent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 0 var(--secondary-color-transparent), 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-left: 5px solid #f1bf4999;
+    padding-left: var(--spacing-md);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    color: white;
+    font-weight: 500;
+    padding: var(--spacing-xs);
+    stroke: #F8EDD9;
+    border-radius: 10px;
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+    color: var(--secondary-color);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Page Introduction */
+.page-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--section-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-intro:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color-transparent);
+    z-index: 0;
+    border-top-left-radius: 100%;
+}
+
+.page-intro.conclusion {
+    margin-top: var(--spacing-xl);
+    background-color: rgba(49, 112, 57, 0.1);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.page-intro.conclusion:after {
+    background-color: rgba(204, 75, 36, 0.2);
+    width: 150px;
+    height: 150px;
+}
+
+.page-intro.conclusion h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.page-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Archetype Sections */
+.archetype-section {
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--accent-color);
+}
+
+/* Navigation Buttons */
+.page-navigation {
+    margin: var(--spacing-xl) 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary-color-transparent);
+    color: white;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--secondary-color-transparent);
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.prev-button {
+    flex-direction: row-reverse;
+}
+
+.nav-placeholder {
+    width: 140px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary-color-transparent);
+    color: white;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    box-shadow: 0 -2px 0 var(--secondary-color-transparent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.footer-link {
+    color: white;
+}
+
+.footer-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .page-intro h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: var(--spacing-sm);
+    }
+
+    .page-intro h1 {
+        font-size: 1.8rem;
+    }
+}
