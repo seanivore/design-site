@@ -231,6 +231,8 @@ a:hover {
     color: white;
     padding: var(--spacing-md);
     margin-top: var(--spacing-xl);
+    font-family: "system-ui", sans-serif;
+    font-size: 0.8rem;
 }
 
 .footer-content {

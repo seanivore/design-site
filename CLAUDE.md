@@ -101,7 +101,7 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 
 ----
 
-## Directory Structure 
+## Directory Structure *NEEDS TO BE UPDATED* 
 
 ```plaintext
 /Users/seanivore/Development/design-site/

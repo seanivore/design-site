@@ -1,58 +1,51 @@
-# Project Sites 
+# Project Site Project
 
 ## Goal 
-
-1. Simplified HTML recreation: Instead of using the original HTML, we could create a cleaner, simplified version that maintains the visual design but with better structure.
-2. Asset extraction + new page build: Extract just the essential assets (images, fonts, key CSS) and build a more showcase-worthy page.
+To create extremely high-value, polished, B2B/B2C web development designer's showcase. Everything is polished, removed from the original intent if needed, recreated when necessary. The general idea is to use the websites and content I have to either represent the project or to create a more sought-after web design page. The Webflow and Framer sites will likely need to be recreated because of how chaotic the HTML is. Then there are a few other projects that we make from HTML/CSS/JS that should be usable as framework. Let's evaluate a case-by-case basis. 
 
 ## Pages 
 
-1. Gather assets for the project page entry pulling from the live site or old directory
-2. Place unadjusted assets into their own directory in the `./assets/docs` directory listed below 
-3. Adjust entry for project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
-4. Place the adjusted HTML file into the `./projects` directory, again matching the name of the project 
+1. Assets from the project are pulled and organized into their own directory in the `./assets/docs` directory
+2. Close a project name for that directory that will be repeated across all assets of the project  
+3. Adjust entry project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
+4. Finalized pages for the project portfolio section should be placed in the `./projects` directory, again matching the name of the project 
 5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
 
-## 1. CSS Animation Product Feature Landing Page 
-`./projects/animated-product-landing.html`: This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
+----
+# Projects 
 
-**Are in this directory, ready to be adjusted**
-
+## PROJECT I: CSS Animation Product Feature Landing Page 
+This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
+- Page with clean HTML to be adjusted: `./projects/animated-product-landing.html`
 - JS animation: `./assets/js/wave-animation.js`
 - Page CSS: `./assets/css/animated-product-landing.css`
 - Animation CSS: `./assets/css/wave-animation.css` 
 
-## 2. Scrolling Presentations
-This could be turned into some kind of template. We would need to adjust them so that they are vertically scrollable instead, but the design and slide panels are all there. 
-
-**Two that are ready to be adjusted and have been moved into this directory**
-
+## PROJECT II: Scrolling Presentations *TO BE RENAMED* 
+This could be turned into some kind of template. We would need to adjust them so that they are vertically scrollable instead, but the design and slide panels are all there. Two that are ready to be adjusted and have been moved into this directory: 
 - Charcoal: `https://presenting.august.style/ai-voice-sales-development` 
 - Blue: `https://presenting.august.style/implement-ai-voice-marketing`
+- Project directory: `./assets/docs/02-scrolling-presentations`
 
-- Project: `./assets/docs/02-scrolling-presentations`
+## PROJECT III: Webflow Store 
+### Print Series Page `./projects/webflow-print-series.html`
+### Product Page `./projects/webflow-product-page.html`
 
-## 3. Webflow Store 
+**FUTURE UPDATE** 
+- It would be nice ot have more than one series page 
+- Create ~3 different product pages to show the versatility of the design 
+- Use the image of either the original print or the close-up in-frame image when hovering over a project image 
 
-[Print Series Page](../../projects/webflow-print-series.html)
-[Product Page](../../projects/webflow-product-page.html)
+## PROJECT IV: Autumn Lookbook 
+### Project Section I `./projects/autumn-lookbook-part-1.html`
+### Project Section II `./projects/autumn-lookbook-part-2.html`
+### Project Section III `./projects/autumn-lookbook-part-3.html`
 
-  **Shop By Vintage Aesthetic**
-  - 03-webflow-store-aesthetic.html
-    - `./assets/docs/03-webflow-store/aesthetic/03-webflow-store-aesthetic.html`
-    - [Live webpage](https://print-shop-fashion.august.style/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html)
-    - `/Users/seanivore/Development/webflow-store/understand-trends/buy-historic-artwork/shop-prints-by-aesthetic/vintage.html`
+**IMAGES**
+- All of the current images on the page are using Framer CDN links 
+- The local images are in the `./assets/docs/04-autumn-lookbook/images` directory 
 
-## 4. Autumn Lookbook 
-
-  - Download images from the URLs 
-  - Replace the Framer CDN links with them locally  
-
-[Autumn Fashion Lookbook Part 1](../../projects/autumn-lookbook-part-1.html)
-[Autumn Fashion Lookbook Part 2](../../projects/autumn-lookbook-part-2.html)
-[Autumn Fashion Lookbook Part 3](../../projects/autumn-lookbook-part-3.html)
-
-## 5. Webflow Blog 
+## PROJECT V: Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
   **Internal Catalysts**
