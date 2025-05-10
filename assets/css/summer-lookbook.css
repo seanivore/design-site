@@ -236,6 +236,8 @@ a:hover {
     box-shadow: 0 -2px 0 var(--secondary-color-transparent);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    font-family: "system-ui", sans-serif;
+    font-size: 0.8rem;
 }
 
 .footer-content {
