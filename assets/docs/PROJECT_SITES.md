@@ -73,13 +73,11 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
     - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
     - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
-## 6. Summer Lookbook 
-Webflow Summer Fashion Lookbook, AI Generated In-Painted Photos. All images are organized by 12 sections that represent the zodiac signs and historical art movements. The number of images per look is not balances because there were so many and I just went on a purge. But they are all in the images directory in subdirectories that match their section names. 
-
-[Summer Fashion Lookbook Part 1](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_1.md)
-[Summer Fashion Lookbook Part 2](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_2.md) 
-[Summer Fashion Lookbook Part 3](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_3.md)
-[Summer Fashion Lookbook Part 4](./06-summer-lookbook/SUMMER_LOOKBOOK_PART_4.md) 
+## PROJECT VI: Summer Lookbook
+### Project Section I `./projects/summer-lookbook-part-1.html`
+### Project Section II `./projects/summer-lookbook-part-2.html`
+### Project Section III `./projects/summer-lookbook-part-3.html`
+### Project Section IV `./projects/summer-lookbook-part-4.html`
 
 ## 7. Yoga Services 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
