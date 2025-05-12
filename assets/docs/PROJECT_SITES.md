@@ -1,33 +1,63 @@
 # Project Site Project
 
 ## Goal 
-To create extremely high-value, polished, B2B/B2C web development designer's showcase. Everything is polished, removed from the original intent if needed, recreated when necessary. The general idea is to use the websites and content I have to either represent the project or to create a more sought-after web design page. The Webflow and Framer sites will likely need to be recreated because of how chaotic the HTML is. Then there are a few other projects that we make from HTML/CSS/JS that should be usable as framework. Let's evaluate a case-by-case basis. 
+To create extremely high-value, polished, B2B/B2C web development designer's showcase. 
+  - Show common website UX flows through series of instances of a project 
+  - Expand my current design portfolio, while also narrowing it down to specific needs of B2B/B2C tech companies 
+  - In at least one case, create high-fidelity product images for an iPhone app 
+  - For app UX/UI, start with an existing app, recreate UX/UI flow, then adjust to fit needs of imaginary project 
 
-## Pages 
+### Resources 
+Everything is polished, removed from the original intent if needed, recreated when necessary. The general idea is to use the websites and content I have to either represent the project or to create a more sought-after web design. The Webflow and Framer sites will likely need to be recreated because of how chaotic the HTML is. However the first four projects are all clean HTML/CSS/JS and should be easy to adjust into something high value to tech companies and/or those hiring web developers. 
 
-1. Assets from the project are pulled and organized into their own directory in the `./assets/docs` directory
-2. Close a project name for that directory that will be repeated across all assets of the project  
-3. Adjust entry project page, placing their assets in the appropriate assets subdirectory, named to match the HTML files
-4. Finalized pages for the project portfolio section should be placed in the `./projects` directory, again matching the name of the project 
+### Project Directory Organization 
+1. Assets from original projects are pulled and organized into their own directory in the `./assets/docs` directory
+2. Once it is determined what the original project is going to become for the project presentation, choose a naming convention and use it for all assets 
+3. Finalized HTML files for the project should be placed in the `./projects` directory 
+4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
 5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
+
+## Project Planning 
+
+Our next focus is on Projects I-IV. 
+
+The first four project are all good opportunities to recreate something that is commonly hired for in the tech, marketing, and other industries looking for web developers, or perhaps even just a portion of a website's high-fidelity wire frames with each step of whatever process is that we're showcasing. My first thought was a SaaS project landing page with features defined, etc. We should come up with a few other ideas for alternate versions of these pages as they will be easily adaptable. In fact, I'm wondering if project 3-4 might even be able to become UX/UI portfolio websites showing off app prototypes in visual form only. Or perhaps a dashboard or admin page for a SaaS product. The key will be to give enough detail so that the hiring manager can see the value in the project, but not so much that we're ending up developing something from the ground up. 
 
 ----
 # Projects 
 
-## PROJECT I: CSS Animation Product Feature Landing Page 
+## PROJECT I: CSS Animation Page 
 This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
 - Page with clean HTML to be adjusted: `./projects/animated-product-landing.html`
 - JS animation: `./assets/js/wave-animation.js`
 - Page CSS: `./assets/css/animated-product-landing.css`
 - Animation CSS: `./assets/css/wave-animation.css` 
 
-## PROJECT II: Scrolling Presentations *TO BE RENAMED* 
+### Product Feature Landing Page 
+I think we could easily make a few versions of these "high demand page designs" like a product feature landing page. I'm seeing two options: For each one let's use a different aesthetic and different 'high demand' page design. Or we could show a series in the UX flow, altering the design slightly each time in a way that fits together in a smart way. If we go with the latter first and they are only one or two steps in the UX flow, we could easily then also do the first idea.  
+
+### Drafting Value Proposition Copy for Project Section Nav 
+Incredibly versatile, clean, simple, and on trend. Need to show off your brand's color palette? Just swap out the CSS variables. Have a font family that better speaks to your messaging? Swap it out. The HTML is clean enough for someone with basic web design skills to adjust. 
+
+## PROJECT II: CSS Background Animation ALT. VERSION OF PROJECT I
+The project above seems to perfectly clean, simple, easy to adjust not to make it into something else that hiring manager would be impressed by. I think we'd just need to make some key alterations so it isn't obviously just a simple revamp of the original. Some thoughts there: 
+  - Adjust the CSS animation for something equally as mesmerizing and engaging, but different enough. Perhaps like growing and shrinking dots of different sizes. 
+  - When looking into how to wireframe the above, we should also look at other commonly sought after wire frames; this way we don't need to do another 'Project Feature Landing Page' but still create something a company looking for web design would find value in. 
+
+This could be done as a series of checkout pages, with each one slightly different but pulling through the same aesthetic. 
+  - Most companies use Stripe because they're huge and able to pass down savings to their customers 
+  - I also cannot ever get away from 'Shadcn' when it comes to forms, etc. And tailwind, Cursor is saying it is great for CSS. 
+
+## PROJECT III: Scrolling Presentations *TO BE RENAMED* 
 This could be turned into some kind of template. We would need to adjust them so that they are vertically scrollable instead, but the design and slide panels are all there. Two that are ready to be adjusted and have been moved into this directory: 
 - Charcoal: `https://presenting.august.style/ai-voice-sales-development` 
-- Blue: `https://presenting.august.style/implement-ai-voice-marketing`
 - Project directory: `./assets/docs/02-scrolling-presentations`
 
-## PROJECT III: Webflow Store 
+## PROJECT IV: Scrolling Presentations *TO BE RENAMED* 
+- Blue: `https://presenting.august.style/implement-ai-voice-marketing`
+
+
+## PROJECT V: Webflow Store 
 ### Print Series Page `./projects/webflow-print-series.html`
 ### Product Page `./projects/webflow-product-page.html`
 
@@ -36,7 +66,7 @@ This could be turned into some kind of template. We would need to adjust them so
 - Create ~3 different product pages to show the versatility of the design 
 - Use the image of either the original print or the close-up in-frame image when hovering over a project image 
 
-## PROJECT IV: Autumn Lookbook 
+## PROJECT VI: Autumn Lookbook 
 ### Project Section I `./projects/autumn-lookbook-part-1.html`
 ### Project Section II `./projects/autumn-lookbook-part-2.html`
 ### Project Section III `./projects/autumn-lookbook-part-3.html`
@@ -45,7 +75,7 @@ This could be turned into some kind of template. We would need to adjust them so
 - All of the current images on the page are using Framer CDN links 
 - The local images are in the `./assets/docs/04-autumn-lookbook/images` directory 
 
-## PROJECT V: Webflow Blog 
+## PROJECT VII: Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
   **Internal Catalysts**
@@ -66,13 +96,13 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
     - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
     - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
-## PROJECT VI: Summer Lookbook
+## PROJECT VIII: Summer Lookbook
 ### Project Section I `./projects/summer-lookbook-part-1.html`
 ### Project Section II `./projects/summer-lookbook-part-2.html`
 ### Project Section III `./projects/summer-lookbook-part-3.html`
 ### Project Section IV `./projects/summer-lookbook-part-4.html`
 
-## 7. Yoga Services 
+## PROJECT IX: Client Online Service Booking for Yoga Instructor 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
 
 **Yoga Services**
