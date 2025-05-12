@@ -29,25 +29,6 @@ The first four project are all good opportunities to recreate something that is 
 ## PROJECT I: CSS Animation Page 
 This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
 
-```
-~/Development/design-site/assets/docs/01-css-wave/...
-├── assets
-│   ├── css
-│   │   ├── home.css
-│   │   └── wave-animation.css
-│   ├── favicon
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon-96x96.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.svg
-│   │   ├── site.webmanifest
-│   │   ├── web-app-manifest-192x192.png
-│   │   └── web-app-manifest-512x512.png
-│   └── js
-│       └── wave-animation.js
-└── index.html    <-- Page with clean HTML to be adjusted
-```
-
 ### Product Feature Landing Page 
 I think we could easily make a few versions of these "high demand page designs" like a product feature landing page. I'm seeing two options: For each one let's use a different aesthetic and different 'high demand' page design. Or we could show a series in the UX flow, altering the design slightly each time in a way that fits together in a smart way. If we go with the latter first and they are only one or two steps in the UX flow, we could easily then also do the first idea.  
 
@@ -57,7 +38,8 @@ Incredibly versatile, clean, simple, and on trend. Need to show off your brand's
 ## PROJECT II: CSS Background Animation ALT. VERSION OF PROJECT I
 The project above seems to perfectly clean, simple, easy to adjust not to make it into something else that hiring manager would be impressed by. I think we'd just need to make some key alterations so it isn't obviously just a simple revamp of the original. Some thoughts there: 
   - Adjust the CSS animation for something equally as mesmerizing and engaging, but different enough. Perhaps like growing and shrinking dots of different sizes. 
-  - When looking into how to wireframe the above, we should also look at other commonly sought after wire frames; this way we don't need to do another 'Project Feature Landing Page' but still create something a company looking for web design would find value in. 
+  - When looking into how to wireframe the above, we should also look at other commonly sought after wire frames 
+  - This way we don't need to do another 'Project Feature Landing Page' but still create something a company looking for web design would find value in. 
 
 This could be done as a series of checkout pages, with each one slightly different but pulling through the same aesthetic. 
   - Most companies use Stripe because they're huge and able to pass down savings to their customers 

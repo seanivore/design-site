@@ -101,39 +101,13 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 
 ----
 
-## Directory Structure *NEEDS TO BE UPDATED* 
-
-```plaintext
-/Users/seanivore/Development/design-site/
-├── projects
-│   └── animated-product-landing.html     <-- *First project page*
-├── CLAUDE.md                             <-- *You are here*
-├── assets
-│   ├── css                             
-│   │   ├── animated-product-landing.css  <-- *First project page's assets*
-│   │   └── wave-animation.css            <-- *First project page's assets*
-│   ├── docs
-│   │   ├── 02-scrolling-presentations    <-- *Temp. folder for project page prep.*
-│   │   ├── 03-webflow-store              <-- *Temp. folder for project page prep.*
-│   │   ├── 04-autumn-lookbook            <-- *Temp. folder for project page prep.*
-│   │   ├── 05-webflow-blog               <-- *Temp. folder for project page prep.*
-│   │   ├── 06-summer-lookbook            <-- *Temp. folder for project page prep.*
-│   │   ├── 07-yoga-services              <-- *Temp. folder for project page prep.*
-│   │   ├── CSS_RIPPLE_ANIMATION.md       <-- *CSS animation idea for homepage*
-│   │   └── PROJECT_SITES.md              <-- *Content for the projects section*
-│   ├── images
-│   │   ├── DESIGN_INSPO                  <-- *Inspo website*
-│   │   └── NAV_INSPO.png                 <-- *Sketch of navigation UI*
-│   └── js
-│       └── wave-animation.js             <-- *First project page's assets*
-├── CNAME
-├── _config.yml
-└── README.md
-```
+## Directory Structure 
 
 ```plaintext 
-├── projects
-│   ├── animated-product-landing.html
+├── CLAUDE.md  <-- You are here  
+├── _config.yml  <-- Jekyll config file 
+├── CNAME  <-- GitHub Pages URL 
+├── projects  <-- Project HTML files that we have updated or recreated 
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
 │   ├── autumn-lookbook-part-3.html
@@ -143,59 +117,42 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── summer-lookbook-part-4.html
 │   ├── webflow-print-series.html
 │   └── webflow-product-page.html
-├── _config.yml
 ├── assets
-│   ├── css
-│   │   ├── animated-product-landing.css
+│   ├── css  <-- New HTML pages' CSS files
 │   │   ├── autumn-lookbook.css
-│   │   ├── main.css
 │   │   ├── summer-lookbook.css
-│   │   ├── wave-animation.css
 │   │   ├── webflow-print-series.css
 │   │   └── webflow-product-page.css
 │   ├── docs
-│   │   ├── 02-scrolling-presentations
+│   │   ├── 01-css-wave  <-- original HTML with all necessary assets to preview
+│   │   │   ├── assets
+│   │   │   │   ├── css
+│   │   │   │   │   ├── home.css
+│   │   │   │   │   └── wave-animation.css
+│   │   │   │   └── js
+│   │   │   │       └── wave-animation.js
+│   │   │   └── index.html
+│   │   ├── 02-custom-pitch-deck  <-- original HTML with all necessary assets to preview 
 │   │   │   ├── ai-voice-sales-development.html
 │   │   │   ├── assets
 │   │   │   │   ├── css
 │   │   │   │   │   ├── alt-slides.css
 │   │   │   │   │   ├── main.css
-│   │   │   │   │   ├── pixel-animation.css
-│   │   │   │   │   └── wave-animation.css
+│   │   │   │   │   └── pixel-animation.css
 │   │   │   │   ├── favicon
-│   │   │   │   │   ├── apple-touch-icon.png
-│   │   │   │   │   ├── favicon-96x96.png
-│   │   │   │   │   ├── favicon.ico
-│   │   │   │   │   ├── favicon.svg
-│   │   │   │   │   ├── site.webmanifest
-│   │   │   │   │   ├── web-app-manifest-192x192.png
-│   │   │   │   │   └── web-app-manifest-512x512.png
 │   │   │   │   ├── images
 │   │   │   │   │   ├── brand-text-art-1.svg
 │   │   │   │   │   ├── brand-text-art-2.svg
 │   │   │   │   │   └── thumbnail-presentation-1.webp
 │   │   │   │   └── js
 │   │   │   │       ├── pixel-animation.js
-│   │   │   │       ├── slideshow.js
-│   │   │   │       └── wave-animation.js
+│   │   │   │       └── slideshow.js
 │   │   │   └── implement-ai-voice-marketing.html
-│   │   ├── 03-webflow-store
-│   │   │   ├── aesthetic
-│   │   │   │   ├── 03-webflow-store-aesthetic.html
-│   │   │   │   └── 03-webflow-store-aesthetic.jpeg
-│   │   │   ├── print-series
-│   │   │   │   ├── 03-webflow-store-print-series.html
-│   │   │   │   ├── 03-webflow-store-print-series.jpeg
-│   │   │   │   └── original-styles.css
-│   │   │   └── product-page
-│   │   │       ├── 03-webflow-store-product-page.html
-│   │   │       └── 03-webflow-store-product-page.jpeg
-│   │   ├── 04-autumn-lookbook
-│   │   │   ├── 04-autumn-lookbook.html
-│   │   │   ├── 04-autumn-lookbook.jpeg
+│   │   ├── 03-webflow-automated-store  <-- empty because complete for now 
+│   │   ├── 04-framer-autumn-lookbook  <-- breakdown of images for placement, new HTML has Framer CDN images 
 │   │   │   ├── LOOKBOOK_FLOW.md
 │   │   │   └── Lookbook.csv
-│   │   ├── 05-weekly-holistic-alignment
+│   │   ├── 05-webflow-weekly-blogs  <-- three blog pages, each with screenshot of original page and original HTML 
 │   │   │   ├── 1-internal-catalysts
 │   │   │   │   ├── 05-blog-1-internal-catalysts.html
 │   │   │   │   └── 05-blog-1-internal-catalysts.jpeg
@@ -205,539 +162,20 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   │   └── 3-personal-development
 │   │   │       ├── 05-blog-3-personal-development.html
 │   │   │       └── 05-blog-3-personal-development.jpeg
-│   │   ├── 06-summer-lookbook
-│   │   │   ├── IMAGES_MISSING_OR_TO_REPLACE.md
-│   │   │   ├── SUMMER_LOOKBOOK_PART_1.md
-│   │   │   ├── SUMMER_LOOKBOOK_PART_2.md
-│   │   │   ├── SUMMER_LOOKBOOK_PART_3.md
-│   │   │   └── SUMMER_LOOKBOOK_PART_4.md
-│   │   ├── 07-yoga-services
-│   │   │   ├── 07-yoga-services.html
-│   │   │   └── 07-yoga-services.jpeg
-│   │   ├── CSS_RIPPLE_ANIMATION.md
-│   │   └── PROJECT_SITES.md
+│   │   ├── 06-weblfow-summer-lookbook  <-- empty because complete for now 
+│   │   ├── 07-webflow-service-yoga
+│   │   │   ├── 07-yoga-services.html  <-- Original HTML 
+│   │   │   └── 07-yoga-services.jpeg  <-- Long screenshot image of original page page 
+│   │   ├── CSS_RIPPLE_ANIMATION.md  <-- CSS animation idea for homepage 
+│   │   └── PROJECT_SITES.md  <-- Content for the projects section 
 │   ├── images
-│   │   ├── autumn-lookbook
-│   │   │   ├── j-section-1A-v1.webp
-│   │   │   ├── j-section-1A-v2.webp
-│   │   │   ├── j-section-1A-v3.webp
-│   │   │   ├── j-section-1A-v4.webp
-│   │   │   ├── j-section-1B-v1.webp
-│   │   │   ├── j-section-1B-v2.webp
-│   │   │   ├── j-section-1B-v3.webp
-│   │   │   ├── j-section-1C-v1.webp
-│   │   │   ├── j-section-1C-v2.webp
-│   │   │   ├── j-section-1C-v3.webp
-│   │   │   ├── j-section-2A-v1.webp
-│   │   │   ├── j-section-2A-v2.webp
-│   │   │   ├── j-section-2A-v3.webp
-│   │   │   ├── j-section-2B-v1.webp
-│   │   │   ├── j-section-2B-v2.webp
-│   │   │   ├── j-section-2B-v3.webp
-│   │   │   ├── j-section-2B-v4.webp
-│   │   │   ├── j-section-2C-v1.webp
-│   │   │   ├── j-section-2C-v2.webp
-│   │   │   ├── j-section-2C-v3.webp
-│   │   │   ├── j-section-3A-v1.webp
-│   │   │   ├── j-section-3A-v2.webp
-│   │   │   ├── j-section-3A-v3.webp
-│   │   │   ├── j-section-3B-v1.webp
-│   │   │   ├── j-section-3B-v2.webp
-│   │   │   ├── j-section-3B-v3.webp
-│   │   │   ├── j-section-3C-v1.webp
-│   │   │   ├── j-section-3C-v2.webp
-│   │   │   ├── j-section-3C-v3.webp
-│   │   │   ├── j-section-4A-v1.webp
-│   │   │   ├── j-section-4A-v2.webp
-│   │   │   ├── j-section-4A-v3.webp
-│   │   │   ├── j-section-4B-v1.webp
-│   │   │   ├── j-section-4B-v2.webp
-│   │   │   ├── j-section-4B-v3.webp
-│   │   │   ├── j-section-4C-v1.webp
-│   │   │   ├── j-section-4C-v2.webp
-│   │   │   ├── j-section-4C-v3.webp
-│   │   │   ├── j-section-5A-v1.webp
-│   │   │   ├── j-section-5A-v2.webp
-│   │   │   ├── j-section-5A-v3.webp
-│   │   │   ├── j-section-5B-v1.webp
-│   │   │   ├── j-section-5B-v2.webp
-│   │   │   ├── j-section-5B-v3.webp
-│   │   │   ├── j-section-5C-v1.webp
-│   │   │   ├── j-section-5C-v2.webp
-│   │   │   ├── j-section-5C-v3.webp
-│   │   │   ├── j-section-6A-v1.webp
-│   │   │   ├── j-section-6A-v2.webp
-│   │   │   ├── j-section-6A-v3.webp
-│   │   │   ├── j-section-6B-v1.webp
-│   │   │   ├── j-section-6B-v2.webp
-│   │   │   ├── j-section-6B-v3.webp
-│   │   │   ├── j-section-6C-v1.webp
-│   │   │   ├── j-section-6C-v2.webp
-│   │   │   ├── j-section-6C-v3.webp
-│   │   │   ├── j-section-7A-v1.webp
-│   │   │   ├── j-section-7A-v2.webp
-│   │   │   ├── j-section-7A-v3.webp
-│   │   │   ├── j-section-7B-v1.webp
-│   │   │   ├── j-section-7B-v2.webp
-│   │   │   ├── j-section-7B-v3.webp
-│   │   │   ├── j-section-7C-v1.webp
-│   │   │   ├── j-section-7C-v2.webp
-│   │   │   ├── j-section-7C-v3.webp
-│   │   │   ├── j-section-8A-v1.webp
-│   │   │   ├── j-section-8A-v2.webp
-│   │   │   ├── j-section-8A-v3.webp
-│   │   │   ├── j-section-8B-v1.webp
-│   │   │   ├── j-section-8B-v2.webp
-│   │   │   ├── j-section-8B-v3.webp
-│   │   │   ├── j-section-8C-v1.webp
-│   │   │   ├── j-section-8C-v2.webp
-│   │   │   ├── j-section-8C-v3.webp
-│   │   │   ├── j-section-9A-v1.webp
-│   │   │   ├── j-section-9A-v2.webp
-│   │   │   ├── j-section-9A-v3.webp
-│   │   │   ├── j-section-9B-v1.webp
-│   │   │   ├── j-section-9B-v2.webp
-│   │   │   ├── j-section-9B-v3.webp
-│   │   │   ├── j-section-9C-v1.webp
-│   │   │   ├── j-section-9C-v2.webp
-│   │   │   ├── j-section-9C-v3.webp
-│   │   │   ├── jwide-section-1A-v1.webp
-│   │   │   ├── jwide-section-1A-v2.webp
-│   │   │   ├── jwide-section-1A-v3.webp
-│   │   │   ├── jwide-section-1A-v4.webp
-│   │   │   ├── jwide-section-1B-v1.webp
-│   │   │   ├── jwide-section-1B-v2.webp
-│   │   │   ├── jwide-section-1B-v3.webp
-│   │   │   ├── jwide-section-1C-v1.webp
-│   │   │   ├── jwide-section-1C-v2.webp
-│   │   │   ├── jwide-section-1C-v3.webp
-│   │   │   ├── jwide-section-2A-v1.webp
-│   │   │   ├── jwide-section-2A-v2.webp
-│   │   │   ├── jwide-section-2A-v3.webp
-│   │   │   ├── jwide-section-2B-v1.webp
-│   │   │   ├── jwide-section-2B-v2.webp
-│   │   │   ├── jwide-section-2B-v3.webp
-│   │   │   ├── jwide-section-2B-v4.webp
-│   │   │   ├── jwide-section-2C-v1.webp
-│   │   │   ├── jwide-section-2C-v2.webp
-│   │   │   ├── jwide-section-2C-v3.webp
-│   │   │   ├── jwide-section-3A-v1.webp
-│   │   │   ├── jwide-section-3A-v2.webp
-│   │   │   ├── jwide-section-3A-v3.webp
-│   │   │   ├── jwide-section-3B-v1.webp
-│   │   │   ├── jwide-section-3B-v2.webp
-│   │   │   ├── jwide-section-3B-v3.webp
-│   │   │   ├── jwide-section-3C-v1.webp
-│   │   │   ├── jwide-section-3C-v2.webp
-│   │   │   ├── jwide-section-3C-v3.webp
-│   │   │   ├── jwide-section-4A-v1.webp
-│   │   │   ├── jwide-section-4A-v2.webp
-│   │   │   ├── jwide-section-4A-v3.webp
-│   │   │   ├── jwide-section-4B-v1.webp
-│   │   │   ├── jwide-section-4B-v2.webp
-│   │   │   ├── jwide-section-4B-v3.webp
-│   │   │   ├── jwide-section-4C-v1.webp
-│   │   │   ├── jwide-section-4C-v2.webp
-│   │   │   ├── jwide-section-4C-v3.webp
-│   │   │   ├── jwide-section-5A-v1.webp
-│   │   │   ├── jwide-section-5A-v2.webp
-│   │   │   ├── jwide-section-5A-v3.webp
-│   │   │   ├── jwide-section-5B-v1.webp
-│   │   │   ├── jwide-section-5B-v2.webp
-│   │   │   ├── jwide-section-5B-v3.webp
-│   │   │   ├── jwide-section-5C-v1.webp
-│   │   │   ├── jwide-section-5C-v2.webp
-│   │   │   ├── jwide-section-5C-v3.webp
-│   │   │   ├── jwide-section-6A-v1.webp
-│   │   │   ├── jwide-section-6A-v2.webp
-│   │   │   ├── jwide-section-6A-v3.webp
-│   │   │   ├── jwide-section-6B-v1.webp
-│   │   │   ├── jwide-section-6B-v2.webp
-│   │   │   ├── jwide-section-6B-v3.webp
-│   │   │   ├── jwide-section-6C-v1.webp
-│   │   │   ├── jwide-section-6C-v2.webp
-│   │   │   ├── jwide-section-6C-v3.webp
-│   │   │   ├── jwide-section-7A-v1.webp
-│   │   │   ├── jwide-section-7A-v2.webp
-│   │   │   ├── jwide-section-7A-v3.webp
-│   │   │   ├── jwide-section-7B-v1.webp
-│   │   │   ├── jwide-section-7B-v2.webp
-│   │   │   ├── jwide-section-7B-v3.webp
-│   │   │   ├── jwide-section-7C-v1.webp
-│   │   │   ├── jwide-section-7C-v2.webp
-│   │   │   ├── jwide-section-7C-v3.webp
-│   │   │   ├── jwide-section-8A-v1.webp
-│   │   │   ├── jwide-section-8A-v2.webp
-│   │   │   ├── jwide-section-8A-v3.webp
-│   │   │   ├── jwide-section-8B-v1.webp
-│   │   │   ├── jwide-section-8B-v2.webp
-│   │   │   ├── jwide-section-8B-v3.webp
-│   │   │   ├── jwide-section-8C-v1.webp
-│   │   │   ├── jwide-section-8C-v2.webp
-│   │   │   ├── jwide-section-8C-v3.webp
-│   │   │   ├── jwide-section-9A-v1.webp
-│   │   │   ├── jwide-section-9A-v2.webp
-│   │   │   ├── jwide-section-9A-v3.webp
-│   │   │   ├── jwide-section-9B-v1.webp
-│   │   │   ├── jwide-section-9B-v2.webp
-│   │   │   ├── jwide-section-9B-v3.webp
-│   │   │   ├── jwide-section-9C-v1.webp
-│   │   │   ├── jwide-section-9C-v2.webp
-│   │   │   └── jwide-section-9C-v3.webp
-│   │   ├── DESIGN_INSPO
-│   │   │   ├── INSPO_DESIGN_1.png
-│   │   │   ├── INSPO_DESIGN_2.png
-│   │   │   ├── INSPO_DESIGN_3.png
-│   │   │   ├── INSPO_DESIGN_4.png
-│   │   │   └── INSPO_DESIGN_5.png
-│   │   ├── NAV_INSPO.png
-│   │   ├── NAV_INSPO.webp
-│   │   ├── summer-lookbook
-│   │   │   ├── SECTION_01
-│   │   │   │   ├── 01-aries-new-2.webp
-│   │   │   │   ├── 01-aries-new-3.webp
-│   │   │   │   ├── 01-aries-new-4.webp
-│   │   │   │   ├── w01-outfit-1A-v1.webp
-│   │   │   │   ├── w01-outfit-1A-v2.webp
-│   │   │   │   ├── w01-outfit-1B-v1.webp
-│   │   │   │   ├── w01-outfit-1B-v2.webp
-│   │   │   │   ├── w01-outfit-1B-v3.webp
-│   │   │   │   ├── w01-outfit-1B-v4.webp
-│   │   │   │   ├── w01-outfit-2A-v1.webp
-│   │   │   │   ├── w01-outfit-2A-v2.webp
-│   │   │   │   ├── w01-outfit-2A-v3.webp
-│   │   │   │   ├── w01-outfit-2A-v4.webp
-│   │   │   │   ├── w01-outfit-2B-v1.webp
-│   │   │   │   ├── w01-outfit-2B-v2.webp
-│   │   │   │   ├── w01-outfit-2B-v3.webp
-│   │   │   │   └── w01-outfit-2B-v4.webp
-│   │   │   ├── SECTION_02
-│   │   │   │   ├── 02-taurus-new-1.webp
-│   │   │   │   ├── 02-taurus-new-3.webp
-│   │   │   │   ├── 02-taurus-new-4.webp
-│   │   │   │   ├── w02-outfit-1A-v1.webp
-│   │   │   │   ├── w02-outfit-1A-v2.webp
-│   │   │   │   ├── w02-outfit-1A-v4.webp
-│   │   │   │   ├── w02-outfit-1B-v1.webp
-│   │   │   │   ├── w02-outfit-1B-v2.webp
-│   │   │   │   ├── w02-outfit-1B-v3.webp
-│   │   │   │   ├── w02-outfit-1B-v4.webp
-│   │   │   │   ├── w02-outfit-2A-v1.webp
-│   │   │   │   ├── w02-outfit-2A-v2.webp
-│   │   │   │   ├── w02-outfit-2A-v3.webp
-│   │   │   │   ├── w02-outfit-2A-v4.webp
-│   │   │   │   ├── w02-outfit-2B-v1.webp
-│   │   │   │   ├── w02-outfit-2B-v2.webp
-│   │   │   │   ├── w02-outfit-2B-v3.webp
-│   │   │   │   ├── WIDE-02-outfit-1A-v1.webp
-│   │   │   │   └── WIDE-02-outfit-2B-v3.webp
-│   │   │   ├── SECTION_03
-│   │   │   │   ├── 03-gemini-new-1.webp
-│   │   │   │   ├── 03-gemini-new-2.webp
-│   │   │   │   ├── 03-gemini-new-3.webp
-│   │   │   │   ├── 03-gemini-new-4.webp
-│   │   │   │   ├── w03-outfit-1A-v1.webp
-│   │   │   │   ├── w03-outfit-1A-v2.webp
-│   │   │   │   ├── w03-outfit-1A-v3.webp
-│   │   │   │   ├── w03-outfit-1A-v4.webp
-│   │   │   │   ├── w03-outfit-1B-v1.webp
-│   │   │   │   ├── w03-outfit-1B-v2.webp
-│   │   │   │   ├── w03-outfit-1B-v3.webp
-│   │   │   │   ├── w03-outfit-1B-v4.webp
-│   │   │   │   ├── w03-outfit-2A-v1.webp
-│   │   │   │   ├── w03-outfit-2A-v2.webp
-│   │   │   │   ├── w03-outfit-2A-v4.webp
-│   │   │   │   ├── w03-outfit-2B-v1.webp
-│   │   │   │   ├── w03-outfit-2B-v2.webp
-│   │   │   │   ├── w03-outfit-2B-v3.webp
-│   │   │   │   ├── WIDE-03-outfit-2A-v2.webp
-│   │   │   │   └── WIDE-03-outfit-2B-v1.webp
-│   │   │   ├── SECTION_04
-│   │   │   │   ├── 04-cancer-new-1.webp
-│   │   │   │   ├── 04-cancer-new-2.webp
-│   │   │   │   ├── 04-cancer-new-3.webp
-│   │   │   │   ├── w04-outfit-1A-v1.webp
-│   │   │   │   ├── w04-outfit-1A-v4.webp
-│   │   │   │   ├── w04-outfit-1B-v2.webp
-│   │   │   │   ├── w04-outfit-1B-v3.webp
-│   │   │   │   ├── w04-outfit-1B-v4.webp
-│   │   │   │   ├── w04-outfit-2A-v1.webp
-│   │   │   │   ├── w04-outfit-2A-v2.webp
-│   │   │   │   ├── w04-outfit-2A-v3.webp
-│   │   │   │   ├── w04-outfit-2A-v4.webp
-│   │   │   │   ├── w04-outfit-2B-v1.webp
-│   │   │   │   ├── w04-outfit-2B-v2.webp
-│   │   │   │   ├── w04-outfit-2B-v3.webp
-│   │   │   │   ├── w04-outfit-2B-v4.webp
-│   │   │   │   └── WIDE-04-outfit-1B-v2.webp
-│   │   │   ├── SECTION_05
-│   │   │   │   ├── 05-leo-new-1.webp
-│   │   │   │   ├── 05-leo-new-2.webp
-│   │   │   │   ├── 05-leo-new-3.webp
-│   │   │   │   ├── w05-outfit-1A-v1.webp
-│   │   │   │   ├── w05-outfit-1A-v2.webp
-│   │   │   │   ├── w05-outfit-1A-v3.webp
-│   │   │   │   ├── w05-outfit-1A-v4.webp
-│   │   │   │   ├── w05-outfit-1B-v1.webp
-│   │   │   │   ├── w05-outfit-1B-v2.webp
-│   │   │   │   ├── w05-outfit-1B-v3.webp
-│   │   │   │   ├── w05-outfit-1B-v4.webp
-│   │   │   │   ├── w05-outfit-2A-v1.webp
-│   │   │   │   ├── w05-outfit-2A-v2.webp
-│   │   │   │   ├── w05-outfit-2A-v3.webp
-│   │   │   │   ├── w05-outfit-2B-v1.webp
-│   │   │   │   ├── w05-outfit-2B-v2.webp
-│   │   │   │   ├── w05-outfit-2B-v3.webp
-│   │   │   │   ├── WIDE-05-outfit-2A-v2.webp
-│   │   │   │   └── WIDE-05-outfit-2B-v1.webp
-│   │   │   ├── SECTION_06
-│   │   │   │   ├── 06-virgo-new-1.webp
-│   │   │   │   ├── 06-virgo-new-2.webp
-│   │   │   │   ├── 06-virgo-new-3.webp
-│   │   │   │   ├── 06-virgo-new-4.webp
-│   │   │   │   ├── w06-outfit-1A-v1.webp
-│   │   │   │   ├── w06-outfit-1A-v2.webp
-│   │   │   │   ├── w06-outfit-1A-v3.webp
-│   │   │   │   ├── w06-outfit-1A-v4.webp
-│   │   │   │   ├── w06-outfit-1B-v1.webp
-│   │   │   │   ├── w06-outfit-1B-v2.webp
-│   │   │   │   ├── w06-outfit-1B-v3.webp
-│   │   │   │   ├── w06-outfit-1B-v4.webp
-│   │   │   │   ├── w06-outfit-2A-v1.webp
-│   │   │   │   ├── w06-outfit-2A-v3.webp
-│   │   │   │   ├── w06-outfit-2B-v1.webp
-│   │   │   │   ├── w06-outfit-2B-v2.webp
-│   │   │   │   ├── w06-outfit-2B-v3.webp
-│   │   │   │   └── w06-outfit-2B-v4.webp
-│   │   │   ├── SECTION_07
-│   │   │   │   ├── 07-libra-new-1.webp
-│   │   │   │   ├── 07-libra-new-2.webp
-│   │   │   │   ├── 07-libra-new-3.webp
-│   │   │   │   ├── 07-libra-new-4.webp
-│   │   │   │   ├── w07-outfit-1A-v1.webp
-│   │   │   │   ├── w07-outfit-1A-v2.webp
-│   │   │   │   ├── w07-outfit-1A-v3.webp
-│   │   │   │   ├── w07-outfit-1A-v4.webp
-│   │   │   │   ├── w07-outfit-1B-v1.webp
-│   │   │   │   ├── w07-outfit-1B-v2.webp
-│   │   │   │   ├── w07-outfit-1B-v3.webp
-│   │   │   │   ├── w07-outfit-1B-v4.webp
-│   │   │   │   ├── w07-outfit-2A-v3.webp
-│   │   │   │   ├── w07-outfit-2A-v4.webp
-│   │   │   │   ├── w07-outfit-2B-v1.webp
-│   │   │   │   └── w07-outfit-2B-v3.webp
-│   │   │   ├── SECTION_08
-│   │   │   │   ├── 08-scorpio-new-1.webp
-│   │   │   │   ├── 08-scorpio-new-2.webp
-│   │   │   │   ├── 08-scorpio-new-4.webp
-│   │   │   │   ├── w08-outfit-1A-v1.webp
-│   │   │   │   ├── w08-outfit-1A-v3.webp
-│   │   │   │   ├── w08-outfit-1A-v4.webp
-│   │   │   │   ├── w08-outfit-1B-v1.webp
-│   │   │   │   ├── w08-outfit-1B-v3.webp
-│   │   │   │   ├── w08-outfit-2A-v1.webp
-│   │   │   │   ├── w08-outfit-2A-v2.webp
-│   │   │   │   ├── w08-outfit-2A-v3.webp
-│   │   │   │   ├── w08-outfit-2A-v4.webp
-│   │   │   │   ├── w08-outfit-2B-v1.webp
-│   │   │   │   ├── w08-outfit-2B-v2.webp
-│   │   │   │   ├── w08-outfit-2B-v3.webp
-│   │   │   │   ├── w08-outfit-2B-v4.webp
-│   │   │   │   └── WIDE-08-outfit-1A-v3.webp
-│   │   │   ├── SECTION_09
-│   │   │   │   ├── 09-sagittarius-new-1.webp
-│   │   │   │   ├── 09-sagittarius-new-2.webp
-│   │   │   │   ├── 09-sagittarius-new-3.webp
-│   │   │   │   ├── w09-outfit-1A-v1.webp
-│   │   │   │   ├── w09-outfit-1A-v2.webp
-│   │   │   │   ├── w09-outfit-1A-v3.webp
-│   │   │   │   ├── w09-outfit-1A-v4.webp
-│   │   │   │   ├── w09-outfit-1B-v1.webp
-│   │   │   │   ├── w09-outfit-1B-v2.webp
-│   │   │   │   ├── w09-outfit-1B-v3.webp
-│   │   │   │   ├── w09-outfit-1B-v4.webp
-│   │   │   │   ├── w09-outfit-2A-v1.webp
-│   │   │   │   ├── w09-outfit-2A-v2.webp
-│   │   │   │   ├── w09-outfit-2A-v3.webp
-│   │   │   │   ├── w09-outfit-2B-v2.webp
-│   │   │   │   ├── w09-outfit-2B-v3.webp
-│   │   │   │   └── WIDE-09-outfit-2A-v2.webp
-│   │   │   ├── SECTION_10
-│   │   │   │   ├── 10-capricorn-new-2.webp
-│   │   │   │   ├── 10-capricorn-new-3.webp
-│   │   │   │   ├── 10-capricorn-new-4.webp
-│   │   │   │   ├── w10-outfit-1A-v1.webp
-│   │   │   │   ├── w10-outfit-1A-v3.webp
-│   │   │   │   ├── w10-outfit-1B-v1.webp
-│   │   │   │   ├── w10-outfit-1B-v2.webp
-│   │   │   │   ├── w10-outfit-1B-v3.webp
-│   │   │   │   ├── w10-outfit-2A-v1.webp
-│   │   │   │   ├── w10-outfit-2A-v2.webp
-│   │   │   │   ├── w10-outfit-2A-v3.webp
-│   │   │   │   ├── w10-outfit-2A-v4.webp
-│   │   │   │   ├── w10-outfit-2B-v1.webp
-│   │   │   │   ├── w10-outfit-2B-v2.webp
-│   │   │   │   ├── w10-outfit-2B-v3.webp
-│   │   │   │   ├── w10-outfit-2B-v4.webp
-│   │   │   │   ├── WIDE-10-outfit-1B-v1.webp
-│   │   │   │   └── WIDE-10-outfit-2A-v2.webp
-│   │   │   ├── SECTION_11
-│   │   │   │   ├── 11-aquarius-new-1.webp
-│   │   │   │   ├── 11-aquarius-new-2.webp
-│   │   │   │   ├── 11-aquarius-new-3.webp
-│   │   │   │   ├── 11-aquarius-new-4.webp
-│   │   │   │   ├── w11-outfit-1A-v1.webp
-│   │   │   │   ├── w11-outfit-1A-v2.webp
-│   │   │   │   ├── w11-outfit-1A-v4.webp
-│   │   │   │   ├── w11-outfit-1B-v1.webp
-│   │   │   │   ├── w11-outfit-1B-v2.webp
-│   │   │   │   ├── w11-outfit-1B-v3.webp
-│   │   │   │   ├── w11-outfit-1B-v4.webp
-│   │   │   │   ├── w11-outfit-2A-v1.webp
-│   │   │   │   ├── w11-outfit-2A-v2.webp
-│   │   │   │   ├── w11-outfit-2A-v3.webp
-│   │   │   │   ├── w11-outfit-2A-v4.webp
-│   │   │   │   ├── w11-outfit-2B-v1.webp
-│   │   │   │   └── w11-outfit-2B-v2.webp
-│   │   │   └── SECTION_12
-│   │   │       ├── 12-pisces-new-1.webp
-│   │   │       ├── 12-pisces-new-2.webp
-│   │   │       ├── 12-pisces-new-3.webp
-│   │   │       ├── w12-outfit-1A-v1.webp
-│   │   │       ├── w12-outfit-1A-v2.webp
-│   │   │       ├── w12-outfit-1A-v3.webp
-│   │   │       ├── w12-outfit-1A-v4.webp
-│   │   │       ├── w12-outfit-1B-v1.webp
-│   │   │       ├── w12-outfit-1B-v2.webp
-│   │   │       ├── w12-outfit-1B-v3.webp
-│   │   │       ├── w12-outfit-2A-v1.webp
-│   │   │       ├── w12-outfit-2A-v3.webp
-│   │   │       ├── w12-outfit-2A-v4.webp
-│   │   │       ├── w12-outfit-2B-v1.webp
-│   │   │       ├── w12-outfit-2B-v2.webp
-│   │   │       ├── w12-outfit-2B-v3.webp
-│   │   │       ├── w12-outfit-2B-v4.webp
-│   │   │       └── WIDE-12-outfit-1B-v3.webp
-│   │   ├── webflow-print-series
-│   │   │   ├── bauhaus-navbar-icon.webp
-│   │   │   ├── MCMD-13001.webp
-│   │   │   ├── MCMD-13002.webp
-│   │   │   ├── MCMD-13003.webp
-│   │   │   ├── MCMD-13004.webp
-│   │   │   ├── MCMD-13005.webp
-│   │   │   ├── MCMD-20001-24x18.webp
-│   │   │   ├── MCMD-20002-24x18.webp
-│   │   │   ├── MCMD-20003-24x18.webp
-│   │   │   ├── MCMD-22001-12x16.webp
-│   │   │   ├── MCMD-22002-18x24.webp
-│   │   │   ├── MCMD-22003-18x24.webp
-│   │   │   ├── MCMD-22004-24x18.webp
-│   │   │   ├── MCMD-22005-24x18.webp
-│   │   │   ├── MCMD-22006-18x24.webp
-│   │   │   ├── MCMD-22007-18x24.webp
-│   │   │   ├── MCMD-22008-18x24.webp
-│   │   │   ├── MCMD-22010-18x24.webp
-│   │   │   ├── MCMD-22011-20x16.webp
-│   │   │   ├── MCMD-22012-24x18.webp
-│   │   │   ├── MCMD-22013-24x18.webp
-│   │   │   ├── MCMD-22014-24x18.webp
-│   │   │   ├── MCMD-34001-18x18.webp
-│   │   │   ├── MCMD-34002-18x18.webp
-│   │   │   ├── MCMD-34003-18x18.webp
-│   │   │   ├── MCMD-35001-24x18.webp
-│   │   │   ├── MCMD-35002-24x18.webp
-│   │   │   ├── MCMD-35003-24x18.webp
-│   │   │   └── MCMD-35004-24x18.webp
-│   │   └── webflow-product-page
-│   │       ├── BRTM-16001-30x20.webp
-│   │       ├── BRTM-16002-30x20.webp
-│   │       ├── BRTM-16012-bg.webp
-│   │       ├── fr-v1-VPWV-13701-20x16.webp
-│   │       ├── fr-v1-VPWV-13702-18x18.webp
-│   │       ├── fr-v1-VPWV-13703-30x20.webp
-│   │       ├── fr-v2-VPWV-13701-20x16.webp
-│   │       ├── fr-v2-VPWV-13702-18x18.webp
-│   │       ├── fr-v2-VPWV-13703-30x20.webp
-│   │       ├── jfr-BAHU-24001-30x20.jpg
-│   │       ├── jfr-BAHU-28001-18x18.webp
-│   │       ├── jfr-BAHU-31001-18x18.webp
-│   │       ├── jfr-BAHU-32001-18x18.webp
-│   │       ├── jfr-BAHU-33001-30x20.webp
-│   │       ├── jfr-BRTM-16001-30x20.webp
-│   │       ├── jfr-BRTM-16002-30x20.webp
-│   │       ├── jfr-BRTM-16003-30x20.webp
-│   │       ├── jfr-BRTM-16004-20x16.webp
-│   │       ├── jfr-BRTM-16012-30x20.webp
-│   │       ├── jfr-BRTM-16020-30x20.webp
-│   │       ├── jfr-GTCH-11701-14x11.webp
-│   │       ├── jfr-GTCH-11702-11x14.webp
-│   │       ├── jfr-GTCH-12501-20x16.jpg
-│   │       ├── jfr-GTCH-12502-20x16.jpg
-│   │       ├── jfr-SNWV-14001-20x16.webp
-│   │       ├── jfr-SNWV-14002-20x16.webp
-│   │       ├── jfr-SNWV-14003-20x16.webp
-│   │       ├── jfr-SURL-49001-20x16.webp
-│   │       ├── jfr-SURL-49003-16x16.webp
-│   │       ├── jfr-v1-BAHU-24001-30x20.webp
-│   │       ├── jfr-v1-BAHU-28001-18x18.webp
-│   │       ├── jfr-v1-BAHU-31001-18x18.webp
-│   │       ├── jfr-v1-BAHU-32001-18x18.webp
-│   │       ├── jfr-v1-BAHU-33001-30x20.webp
-│   │       ├── jfr-v1-BRTM-16001-30x20.webp
-│   │       ├── jfr-v1-BRTM-16002-30x20.webp
-│   │       ├── jfr-v1-BRTM-16003-30x20.webp
-│   │       ├── jfr-v1-BRTM-16004-20x16.webp
-│   │       ├── jfr-v1-BRTM-16012-30x20.webp
-│   │       ├── jfr-v1-BRTM-16020-30x20.webp
-│   │       ├── jfr-v1-GTCH-11701-14x11.webp
-│   │       ├── jfr-v1-GTCH-11702-11x14.webp
-│   │       ├── jfr-v1-GTCH-12501-20x16.webp
-│   │       ├── jfr-v1-GTCH-12502-20x16.webp
-│   │       ├── jfr-v1-SNWV-14001-20x16.webp
-│   │       ├── jfr-v1-SNWV-14002-20x16.webp
-│   │       ├── jfr-v1-SNWV-14003-20x16.webp
-│   │       ├── jfr-v1-SURL-49001-20x16.webp
-│   │       ├── jfr-v1-SURL-49002-18x24..webp
-│   │       ├── jfr-v1-SURL-49002-18x24.webp
-│   │       ├── jfr-v1-SURL-49003-16x16.webp
-│   │       ├── jfr-v2-BAHU-24001-30x20.webp
-│   │       ├── jfr-v2-BAHU-28001-18x18.webp
-│   │       ├── jfr-v2-BAHU-31001-18x18.webp
-│   │       ├── jfr-v2-BAHU-32001-18x18.webp
-│   │       ├── jfr-v2-BAHU-33001-30x20.webp
-│   │       ├── jfr-v2-BRTM-16001-30x20.webp
-│   │       ├── jfr-v2-BRTM-16002-30x20.webp
-│   │       ├── jfr-v2-BRTM-16003-30x20.webp
-│   │       ├── jfr-v2-BRTM-16004-20x16.webp
-│   │       ├── jfr-v2-BRTM-16012-30x20.webp
-│   │       ├── jfr-v2-BRTM-16020-30x20.webp
-│   │       ├── jfr-v2-GTCH-11701-14x11.webp
-│   │       ├── jfr-v2-GTCH-11702-11x14.webp
-│   │       ├── jfr-v2-GTCH-12501-20x16.webp
-│   │       ├── jfr-v2-GTCH-12502-20x16.webp
-│   │       ├── jfr-v2-SNWV-14001-20x16.webp
-│   │       ├── jfr-v2-SNWV-14002-20x16.webp
-│   │       ├── jfr-v2-SNWV-14003-20x16.webp
-│   │       ├── jfr-v2-SURL-49001-20x16.webp
-│   │       ├── jfr-v2-SURL-49002-18x24.webp
-│   │       └── jfr-v2-SURL-49003-16x16.webp
-│   ├── js
-│   │   └── wave-animation.js
-│   └── setup-scripts
-│       ├── convert_webp_to_jpg.py
-│       ├── create_placeholders.py
-│       ├── download-images.sh
-│       ├── download-lookbook-images.sh
-│       ├── download-more-images.sh
-│       ├── download-more-product-images.sh
-│       ├── download-product-images.sh
-│       ├── extract_lookbook_images.py
-│       ├── fix_image_paths.py
-│       ├── fix_missing_images.py
-│       ├── rip_framer_images.py
-│       └── serve.py
-├── CLAUDE.md
-├── CNAME
+│   │   ├── autumn-lookbook  <-- naming structure 'j' is portrait, 'jwide' is landscape; 'v' is 1 of 2 versions of 1(section)A(look) -- 167 WEBPs  
+│   │   ├── DESIGN_INSPO    <-- interesting, simple website inspiration -- 5 PNGs 
+│   │   ├── NAV_INSPO       <-- sketch of navigation UI -- 1 PNG, 1 WEBP
+│   │   ├── summer-lookbook  <-- 12 sections, images depend on section 
+│   │   ├── webflow-print-series  <-- Mid Century Modern prints and icon 
+│   │   └── webflow-product-page  <-- Primary Brutalist staged images and many related images 
+│   └── setup-scripts  <-- utility scripts we used to putting together webflow sites 
 └── README.md
 ```
 
