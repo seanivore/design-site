@@ -28,10 +28,8 @@ The first four project are all good opportunities to recreate something that is 
 
 ## PROJECT I: CSS Animation Page 
 This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
-- Page with clean HTML to be adjusted: `./projects/animated-product-landing.html`
-- JS animation: `./assets/js/wave-animation.js`
-- Page CSS: `./assets/css/animated-product-landing.css`
-- Animation CSS: `./assets/css/wave-animation.css` 
+
+
 
 ### Product Feature Landing Page 
 I think we could easily make a few versions of these "high demand page designs" like a product feature landing page. I'm seeing two options: For each one let's use a different aesthetic and different 'high demand' page design. Or we could show a series in the UX flow, altering the design slightly each time in a way that fits together in a smart way. If we go with the latter first and they are only one or two steps in the UX flow, we could easily then also do the first idea.  
