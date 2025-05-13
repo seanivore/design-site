@@ -78,7 +78,18 @@ The first four project are all good opportunities to recreate something that is 
 
 ----
 
-## PROJECT VI: Webflow Blog 
+## PROJECT VI: Client Online Service Booking for Yoga Instructor 
+Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
+
+**Yoga Services**
+- 07-yoga-services.html
+  - `./assets/docs/07-yoga-services/07-yoga-services.html`
+  - [Live webpage](https://online-pt-trainer.august.style/)
+  - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
+
+
+
+## PROJECT VII: Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
   **Internal Catalysts**
@@ -98,15 +109,6 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
     - `./assets/docs/05-weekly-holistic-alignment/3-personal-development/05-blog-3-personal-development.html`
     - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
     - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
-
-## PROJECT VII: Client Online Service Booking for Yoga Instructor 
-Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
-
-**Yoga Services**
-- 07-yoga-services.html
-  - `./assets/docs/07-yoga-services/07-yoga-services.html`
-  - [Live webpage](https://online-pt-trainer.august.style/)
-  - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
 
 ----
 
