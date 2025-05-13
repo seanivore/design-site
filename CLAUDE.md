@@ -104,10 +104,10 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 ## Directory Structure 
 
 ```plaintext 
-├── CLAUDE.md  <-- You are here  
-├── _config.yml  <-- Jekyll config file 
-├── CNAME  <-- GitHub Pages URL 
-├── projects  <-- Project HTML files that we have updated or recreated 
+├── CLAUDE.md               <-- You are here  
+├── _config.yml             <-- Jekyll config file 
+├── CNAME                   <-- GitHub Pages URL 
+├── projects                <-- Project HTML files that we have updated or recreated 
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
 │   ├── autumn-lookbook-part-3.html
@@ -121,7 +121,7 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── webflow-print-series.html
 │   └── webflow-product-page.html
 ├── assets
-│   ├── css  <-- New HTML pages' CSS files
+│   ├── css                 <-- New HTML pages' CSS files
 │   │   ├── autumn-lookbook.css
 │   │   ├── summer-lookbook.css
 │   │   ├── saas-css-anim.css
@@ -129,19 +129,13 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   ├── saas-css-anim-signup.css
 │   │   ├── webflow-print-series.css
 │   │   └── webflow-product-page.css
-│   ├── js  <-- New HTML pages' JS files 
+│   ├── js                <-- New HTML pages' JS files 
 │   │   ├── saas-css-wave-anim.js
 │   │   └── saas-css-anim-signup.js
 │   ├── docs
-│   │   ├── 01-css-wave  <-- original HTML with all necessary assets to preview
-│   │   │   ├── assets
-│   │   │   │   ├── css
-│   │   │   │   │   ├── home.css
-│   │   │   │   │   └── wave-animation.css
-│   │   │   │   └── js
-│   │   │   │       └── wave-animation.js
-│   │   │   └── index.html
-│   │   ├── 02-custom-pitch-deck  <-- original HTML with all necessary assets to preview 
+│   │   ├── 02-framer-autumn-lookbook
+│   │   ├── 04-weblfow-summer-lookbook
+│   │   ├── 05-app-data-dashboards
 │   │   │   ├── ai-voice-sales-development.html
 │   │   │   ├── assets
 │   │   │   │   ├── css
@@ -149,6 +143,13 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   │   │   │   ├── main.css
 │   │   │   │   │   └── pixel-animation.css
 │   │   │   │   ├── favicon
+│   │   │   │   │   ├── apple-touch-icon.png
+│   │   │   │   │   ├── favicon-96x96.png
+│   │   │   │   │   ├── favicon.ico
+│   │   │   │   │   ├── favicon.svg
+│   │   │   │   │   ├── site.webmanifest
+│   │   │   │   │   ├── web-app-manifest-192x192.png
+│   │   │   │   │   └── web-app-manifest-512x512.png
 │   │   │   │   ├── images
 │   │   │   │   │   ├── brand-text-art-1.svg
 │   │   │   │   │   ├── brand-text-art-2.svg
@@ -157,11 +158,7 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   │   │       ├── pixel-animation.js
 │   │   │   │       └── slideshow.js
 │   │   │   └── implement-ai-voice-marketing.html
-│   │   ├── 03-webflow-automated-store  <-- empty because complete for now 
-│   │   ├── 04-framer-autumn-lookbook  <-- breakdown of images for placement, new HTML has Framer CDN images 
-│   │   │   ├── LOOKBOOK_FLOW.md
-│   │   │   └── Lookbook.csv
-│   │   ├── 05-webflow-weekly-blogs  <-- three blog pages, each with screenshot of original page and original HTML 
+│   │   ├── 06-webflow-weekly-blogs
 │   │   │   ├── 1-internal-catalysts
 │   │   │   │   ├── 05-blog-1-internal-catalysts.html
 │   │   │   │   └── 05-blog-1-internal-catalysts.jpeg
@@ -171,10 +168,17 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   │   └── 3-personal-development
 │   │   │       ├── 05-blog-3-personal-development.html
 │   │   │       └── 05-blog-3-personal-development.jpeg
-│   │   ├── 06-weblfow-summer-lookbook  <-- empty because complete for now 
 │   │   ├── 07-webflow-service-yoga
-│   │   │   ├── 07-yoga-services.html  <-- Original HTML 
-│   │   │   └── 07-yoga-services.jpeg  <-- Long screenshot image of original page page 
+│   │   │   ├── 07-yoga-services.html
+│   │   │   └── 07-yoga-services.jpeg
+│   │   ├── 08-css-wave
+│   │   │   ├── assets
+│   │   │   │   ├── css
+│   │   │   │   │   ├── home.css
+│   │   │   │   │   └── wave-animation.css
+│   │   │   │   └── js
+│   │   │   │       └── wave-animation.js
+│   │   │   └── index.html
 │   │   ├── CSS_RIPPLE_ANIMATION.md  <-- CSS animation idea for homepage 
 │   │   └── PROJECT_SITES.md  <-- Content for the projects section 
 │   ├── images
