@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindflow AI - UX Flow Diagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
     <style>
         body {
             margin: 0;
@@ -70,6 +72,7 @@
             position: relative;
             border: 2px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
+            background-image: linear-gradient(to bottom, #12141A, #0A0B0F);
         }
         
         .screen-preview:hover {
@@ -263,21 +266,45 @@
                 <div class="screen-label">1. AI Conversation</div>
                 <div class="screen-preview">
                     <div class="screen-header">
-                        <div class="screen-title">Chat</div>
+                        <div class="screen-title" style="font-family: 'bitcount-mono-double-circle', sans-serif; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 16px;">mindflow</div>
+                        <div style="display: flex; gap: 2px;">
+                            <div style="width: 6px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 1px;"></div>
+                            <div style="width: 6px; height: 6px; background: #336699; border-radius: 1px;"></div>
+                            <div style="width: 6px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 1px;"></div>
+                        </div>
                     </div>
                     <div class="screen-content">
                         <div class="mock-message ai-message">
-                            Hello! How are you feeling right now?
+                            <p style="margin: 0;">Hello! How are you feeling right now?</p>
                         </div>
                         <div class="mock-message user-message">
-                            I'm feeling stressed from work
+                            <p style="margin: 0;">I'm feeling stressed from work</p>
                         </div>
                         <div class="mock-message ai-message">
-                            I understand. Would you prefer meditation or yoga?
+                            <p style="margin: 0;">I understand. Would you prefer meditation or yoga?</p>
                         </div>
                         <div style="text-align: center; margin-top: 20px;">
-                            <div class="mock-button">🕉️ Meditation</div>
-                            <div class="mock-button">🧘 Yoga Flow</div>
+                            <div class="mock-button" style="display: inline-flex; align-items: center; gap: 8px;">
+                                <span>🕉️</span> Meditation
+                            </div>
+                            <div class="mock-button" style="display: inline-flex; align-items: center; gap: 8px;">
+                                <span>🧘</span> Yoga Flow
+                            </div>
+                        </div>
+                        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-keyboard" style="font-size: 16px;"></i>
+                            </div>
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #B2729F, #336699); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-microphone" style="font-size: 20px; color: white;"></i>
+                            </div>
+                            <div style="display: flex; gap: 3px;">
+                                <div style="width: 3px; height: 12px; background: #336699; border-radius: 2px; opacity: 0.3;"></div>
+                                <div style="width: 3px; height: 18px; background: #336699; border-radius: 2px; opacity: 0.3;"></div>
+                                <div style="width: 3px; height: 24px; background: #336699; border-radius: 2px; opacity: 0.3;"></div>
+                                <div style="width: 3px; height: 16px; background: #336699; border-radius: 2px; opacity: 0.3;"></div>
+                                <div style="width: 3px; height: 20px; background: #336699; border-radius: 2px; opacity: 0.3;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,20 +317,31 @@
                 <div class="screen-label">2. Personalized Session</div>
                 <div class="screen-preview">
                     <div class="screen-header">
+                        <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chevron-left" style="font-size: 18px;"></i>
+                        </div>
                         <div class="screen-title">Meditation</div>
+                        <div style="width: 40px;"></div>
                     </div>
                     <div class="screen-content">
-                        <div style="text-align: center;">
-                            <h3>AI Recommendation</h3>
-                            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">
-                                Based on your stress level, I've created a 10-minute breathing meditation.
-                            </p>
-                            <div style="font-size: 36px; margin: 20px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">10:00</div>
-                            <div class="breathing-circle">
-                                <div>Breathe</div>
+                        <div class="glass-card" style="padding: 16px; background: rgba(255,255,255,0.08); border-radius: 12px; text-align: center;">
+                            <h3 style="margin: 0 0 8px 0; font-size: 16px;">AI Recommendation</h3>
+                            <p style="font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 0;">Based on your stress level, I've created a 10-minute breathing meditation.</p>
+                            <div style="font-size: 36px; margin: 16px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'bitcount-mono-double-circle', sans-serif;">10:00</div>
+                        </div>
+                        <div style="margin: 30px 0; text-align: center;">
+                            <div class="breathing-circle" style="width: 100px; height: 100px; margin: 0 auto;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #B2729F, #336699);"></div>
                             </div>
-                            <div class="mock-button primary-button">▶ Start Session</div>
-                            <div class="mock-button">📺 Cast to TV</div>
+                            <p style="font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 10px;">Guided breathing exercise with calming rain sounds</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="mock-button primary-button" style="display: inline-flex; align-items: center; gap: 8px; margin: 8px 4px;">
+                                <i class="fas fa-play"></i> Start Session
+                            </div>
+                            <div class="mock-button" style="display: inline-flex; align-items: center; gap: 8px; margin: 8px 4px;">
+                                <i class="fas fa-tv"></i> Cast to TV
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,16 +353,37 @@
             <div class="screen-group">
                 <div class="screen-label">3. Active Session</div>
                 <div class="screen-preview" style="background: #0A0B0F;">
-                    <div class="screen-content">
-                        <div style="text-align: center; padding-top: 100px;">
-                            <div class="breathing-circle" style="width: 150px; height: 150px;">
-                                Breathe In
+                    <div class="screen-content" style="position: relative; height: 100%;">
+                        <div style="position: absolute; top: 20px; right: 20px;">
+                            <div style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-times" style="font-size: 16px;"></i>
                             </div>
-                            <div style="font-size: 36px; margin: 30px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">04:32</div>
+                        </div>
+                        <div style="text-align: center; padding-top: 120px;">
+                            <div class="breathing-circle" style="width: 120px; height: 120px; background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;">
+                                <span style="font-size: 14px;">Breathe In</span>
+                            </div>
+                            <div style="font-size: 32px; margin: 25px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'bitcount-mono-double-circle', sans-serif;">04:32</div>
                             <div style="display: flex; gap: 20px; justify-content: center;">
-                                <div class="mock-button">⏮</div>
-                                <div class="mock-button">⏸</div>
-                                <div class="mock-button">⏭</div>
+                                <div class="mock-button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-backward" style="font-size: 14px;"></i>
+                                </div>
+                                <div class="mock-button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-pause" style="font-size: 14px;"></i>
+                                </div>
+                                <div class="mock-button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-forward" style="font-size: 14px;"></i>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 4px; justify-content: center; margin-top: 30px;">
+                                <div style="width: 4px; height: 20px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 30px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 25px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 35px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 28px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 32px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 22px; background: #336699; border-radius: 2px;"></div>
+                                <div style="width: 4px; height: 26px; background: #336699; border-radius: 2px;"></div>
                             </div>
                         </div>
                     </div>
@@ -338,40 +397,64 @@
                 <div class="screen-label">4. Reflection & Tracking</div>
                 <div class="screen-preview">
                     <div class="screen-header">
+                        <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chevron-left" style="font-size: 18px;"></i>
+                        </div>
                         <div class="screen-title">Reflection</div>
+                        <div style="width: 40px; color: #336699; font-weight: 600; text-align: center;">Save</div>
                     </div>
-                    <div class="screen-content">
-                        <h3>Session Complete</h3>
-                        <div class="stat-grid">
-                            <div class="stat">
-                                <div class="stat-value">10:00</div>
-                                <div class="stat-label">Duration</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">72</div>
-                                <div class="stat-label">Avg BPM</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">4.8</div>
-                                <div class="stat-label">Breath Rate</div>
+                    <div class="screen-content" style="padding: 12px;">
+                        <div class="glass-card" style="padding: 12px; margin-bottom: 12px; background: rgba(255,255,255,0.08); border-radius: 12px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 15px;">Session Complete</h3>
+                            <div class="stat-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                                <div class="stat">
+                                    <div class="stat-value" style="font-size: 18px; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'bitcount-mono-double-circle', sans-serif;">10:00</div>
+                                    <div class="stat-label" style="font-size: 10px; color: rgba(255,255,255,0.6);">Duration</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value" style="font-size: 18px; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'bitcount-mono-double-circle', sans-serif;">72</div>
+                                    <div class="stat-label" style="font-size: 10px; color: rgba(255,255,255,0.6);">Avg BPM</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value" style="font-size: 18px; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'bitcount-mono-double-circle', sans-serif;">4.8</div>
+                                    <div class="stat-label" style="font-size: 10px; color: rgba(255,255,255,0.6);">Breath Rate</div>
+                                </div>
                             </div>
                         </div>
                         
-                        <h4>How do you feel now?</h4>
-                        <div style="display: flex; justify-content: space-around; margin: 15px 0;">
-                            <span>😔</span>
-                            <span>😐</span>
-                            <span>🙂</span>
-                            <span style="border: 2px solid #336699; padding: 5px; border-radius: 8px;">😊</span>
-                            <span>😄</span>
+                        <div class="glass-card" style="padding: 12px; margin-bottom: 12px; background: rgba(255,255,255,0.08); border-radius: 12px;">
+                            <h4 style="margin: 0 0 8px 0; font-size: 14px;">How do you feel now?</h4>
+                            <div style="display: flex; justify-content: space-around;">
+                                <span style="font-size: 20px;">😔</span>
+                                <span style="font-size: 20px;">😐</span>
+                                <span style="font-size: 20px;">🙂</span>
+                                <span style="font-size: 20px; border: 2px solid #336699; padding: 2px; border-radius: 8px;">😊</span>
+                                <span style="font-size: 20px;">😄</span>
+                            </div>
                         </div>
                         
-                        <div class="contribution-graph">
-                            GitHub-style mood tracker
-                        </div>
-                        
-                        <div style="text-align: center; margin-top: 20px;">
-                            <div class="mock-button">🎤 Voice Journal</div>
+                        <div class="glass-card" style="padding: 12px; background: rgba(255,255,255,0.08); border-radius: 12px;">
+                            <h4 style="margin: 0 0 8px 0; font-size: 14px;">Your Mindfulness Journey</h4>
+                            <div style="height: 50px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(5, 1fr); gap: 2px; width: 80%; height: 80%;">
+                                    <div style="background: rgba(255,255,255,0.1); border-radius: 1px;"></div>
+                                    <div style="background: #B2729F; border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.4); border-radius: 1px;"></div>
+                                    <div style="background: rgba(255,255,255,0.1); border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.7); border-radius: 1px;"></div>
+                                    <div style="background: #B2729F; border-radius: 1px;"></div>
+                                    <div style="background: rgba(255,255,255,0.1); border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.4); border-radius: 1px;"></div>
+                                    <div style="background: #B2729F; border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.7); border-radius: 1px;"></div>
+                                    <div style="background: rgba(255,255,255,0.1); border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.4); border-radius: 1px;"></div>
+                                    <div style="background: #B2729F; border-radius: 1px;"></div>
+                                    <div style="background: rgba(255,255,255,0.1); border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.7); border-radius: 1px;"></div>
+                                    <div style="background: rgba(178, 114, 159, 0.4); border-radius: 1px;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

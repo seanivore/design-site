@@ -222,8 +222,7 @@ class MindflowApp {
                 this.changeScreen('reflection-screen');
                 break;
             case 'profile':
-                // For now, just show chat screen
-                this.changeScreen('chat-screen');
+                this.changeScreen('profile-screen');
                 break;
         }
     }
@@ -290,6 +289,11 @@ class MindflowApp {
     }
     
     startSession() {
+        // Reset any existing timer
+        if (this.timerInterval) {
+            clearInterval(this.timerInterval);
+        }
+        
         this.sessionActive = true;
         this.changeScreen('session-screen');
         this.setupBreathingAnimation();
@@ -327,8 +331,22 @@ class MindflowApp {
         this.sessionActive = false;
         clearInterval(this.breathingInterval);
         clearInterval(this.timerInterval);
+        clearInterval(this.visualizerInterval);
+        
+        // Reset timer display
+        const timerDisplay = document.querySelector('.session-timer');
+        if (timerDisplay) {
+            timerDisplay.textContent = '00:00';
+        }
+        
         this.changeScreen('reflection-screen');
         this.updateContributionGraph();
+        
+        // Update tab to Progress
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        document.querySelectorAll('.tab-btn')[2].classList.add('active');
     }
     
     startSessionTimer() {
