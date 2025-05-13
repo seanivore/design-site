@@ -87,6 +87,14 @@ Custom Hand Illustrated Client Site; Small site and URL can be provided to proba
   - [Live webpage](https://online-pt-trainer.august.style/)
   - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
 
+Background linear gradient:
+  - "Glare" coming down from top left-off-center to bottom off-center: #425c67 
+  - Darkest just right of center: #1a2a31 
+  - Elephant repeating illustration: `./assets/images/yoga-services/642c3b5414ed791226b4d029_50-transparent-pattern-elephants-red-seanivore-digital-artist-2000-px.png`
+
+Page-break used for CTA form: 
+  - Background color: #231c0d 
+  - Fixed tile repeating illustration: `./assets/images/yoga-services/642c1715a811ffb62f80d0ca_clay-tile-square-500-px.png` 
 
 
 ## PROJECT VII: Webflow Blog 
