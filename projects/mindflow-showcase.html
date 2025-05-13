@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindflow AI - Portfolio Showcase</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0A0B0F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        
+        .showcase-container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .project-title {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #B2729F 0%, #336699 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .project-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        iframe {
+            border: none;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .project-description {
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 40px auto 0;
+            line-height: 1.6;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-container">
+        <h1 class="project-title">Mindflow AI</h1>
+        <p class="project-subtitle">Voice-First Wellness Companion</p>
+        
+        <iframe 
+            src="mindflow-app/index.html" 
+            width="375" 
+            height="812"
+            title="Mindflow AI App">
+        </iframe>
+        
+        <p class="project-description">
+            A premium mobile wellness app demonstrating conversational AI integration, 
+            voice-first interfaces, and sophisticated data visualization. Features 
+            include personalized yoga/meditation sessions, mood tracking with GitHub-style 
+            contribution graphs, and glass morphism UI with pixel art accents.
+        </p>
+        
+        <div class="tech-stack">
+            <span class="tech-badge">Voice UI</span>
+            <span class="tech-badge">AI Chat</span>
+            <span class="tech-badge">Data Viz</span>
+            <span class="tech-badge">Glass UI</span>
+            <span class="tech-badge">Pixel Art</span>
+        </div>
+    </div>
+</body>
+</html>

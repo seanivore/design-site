@@ -2,6 +2,7 @@
 PROJECT: `/Users/seanivore/Development/design-site/`
 THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 PROJECT SCOPE: `./CLAUDE.md` 
+Find project status updates in `memory` MCP at "Portfolio Strategy: Show What They Want", "Sean's Portfolio Vision" 
 
 ## Goal 
 To create extremely high-value, polished, B2B/B2C web development designer's showcase. 

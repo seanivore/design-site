@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mindflow AI - Your Wellness Companion</title>
+
+    <!-- Adobe Typekit Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/mindflow-app.css">
+</head>
+
+<body>
+    <!-- Mobile Frame Container -->
+    <div class="mobile-frame">
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+        <div class="app-content">
+            <!-- Chat Screen -->
+            <div class="screen chat-screen active">
+                <header class="app-header">
+                    <h1 class="app-title pixel-font">mindflow</h1>
+                    <div class="mood-indicator">
+                        <div class="mood-grid">
+                            <div class="mood-cell"></div>
+                            <div class="mood-cell"></div>
+                            <div class="mood-cell active"></div>
+                            <div class="mood-cell"></div>
+                            <div class="mood-cell"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="chat-container">
+                    <div class="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-content glass-card">
+                                <p>Hello! I'm your mindfulness companion. How are you feeling right now?</p>
+                            </div>
+                            <div class="message-time">9:41 AM</div>
+                        </div>
+
+                        <div class="message user-message">
+                            <div class="message-content">
+                                <p>I'm feeling a bit stressed from work</p>
+                            </div>
+                            <div class="message-time">9:42 AM</div>
+                        </div>
+
+                        <div class="message ai-message">
+                            <div class="message-content glass-card">
+                                <p>I understand. Let's help you release that tension. Would you prefer a calming meditation or an energizing yoga flow?</p>
+                                <div class="quick-options">
+                                    <button class="option-btn glass-btn">
+                                        <i class="fas fa-om"></i>
+                                        <span>Meditation</span>
+                                    </button>
+                                    <button class="option-btn glass-btn">
+                                        <i class="fas fa-spa"></i>
+                                        <span>Yoga Flow</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="message-time">9:42 AM</div>
+                        </div>
+                    </div>
+
+                    <div class="input-area glass-card">
+                        <div class="voice-input">
+                            <div class="voice-waves">
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                            </div>
+                            <button class="voice-btn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                        <input type="text" placeholder="Or type your response..." class="text-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Selection Screen -->
+            <div class="screen activity-screen">
+                <header class="app-header">
+                    <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                    <h1 class="screen-title">Meditation</h1>
+                    <div class="header-spacer"></div>
+                </header>
+
+                <div class="activity-content">
+                    <div class="ai-suggestion glass-card">
+                        <h2>AI Recommendation</h2>
+                        <p>Based on your stress level, I've created a 10-minute breathing meditation with nature sounds.</p>
+                        <div class="duration-display pixel-font">10:00</div>
+                    </div>
+
+                    <div class="session-preview">
+                        <div class="preview-visual">
+                            <div class="breathing-circle">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <p class="preview-text">Guided breathing exercise with calming rain sounds</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="primary-btn glass-btn">
+                            <i class="fas fa-play"></i>
+                            <span>Start Session</span>
+                        </button>
+                        <button class="secondary-btn glass-btn">
+                            <i class="fas fa-tv"></i>
+                            <span>Cast to TV</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Session Screen -->
+            <div class="screen session-screen">
+                <div class="session-bg-gradient"></div>
+
+                <div class="session-interface">
+                    <button class="close-session"><i class="fas fa-times"></i></button>
+
+                    <div class="breathing-guide">
+                        <div class="breath-circle">
+                            <div class="breath-inner">
+                                <span class="breath-text">Breathe In</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="session-timer pixel-font">
+                        04:32
+                    </div>
+
+                    <div class="session-controls">
+                        <button class="control-btn glass-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button class="control-btn glass-btn pause-btn">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="control-btn glass-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+
+                    <div class="voice-visualizer">
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                        <div class="frequency-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reflection Screen -->
+            <div class="screen reflection-screen">
+                <header class="app-header">
+                    <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                    <h1 class="screen-title">Reflection</h1>
+                    <button class="save-btn">Save</button>
+                </header>
+
+                <div class="reflection-content">
+                    <div class="session-summary glass-card">
+                        <h2>Session Complete</h2>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-value pixel-font">10:00</span>
+                                <span class="stat-label">Duration</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value pixel-font">72</span>
+                                <span class="stat-label">Avg BPM</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value pixel-font">4.8</span>
+                                <span class="stat-label">Breath Rate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mood-tracker glass-card">
+                        <h3>How do you feel now?</h3>
+                        <div class="mood-selection">
+                            <button class="mood-btn" data-mood="1">😔</button>
+                            <button class="mood-btn" data-mood="2">😐</button>
+                            <button class="mood-btn" data-mood="3">🙂</button>
+                            <button class="mood-btn active" data-mood="4">😊</button>
+                            <button class="mood-btn" data-mood="5">😄</button>
+                        </div>
+                    </div>
+
+                    <div class="contribution-graph glass-card">
+                        <h3>Your Mindfulness Journey</h3>
+                        <div class="contribution-grid">
+                            <!-- GitHub-style contribution cells -->
+                        </div>
+                        <div class="contribution-legend">
+                            <span>Less</span>
+                            <div class="legend-cells">
+                                <div class="cell level-0"></div>
+                                <div class="cell level-1"></div>
+                                <div class="cell level-2"></div>
+                                <div class="cell level-3"></div>
+                                <div class="cell level-4"></div>
+                            </div>
+                            <span>More</span>
+                        </div>
+                    </div>
+
+                    <div class="voice-journal glass-card">
+                        <h3>Voice Journal</h3>
+                        <p class="journal-prompt">What insight did you gain during this session?</p>
+                        <button class="voice-record-btn glass-btn">
+                            <i class="fas fa-microphone"></i>
+                            <span>Hold to Record</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active">
+                <i class="fas fa-comments"></i>
+                <span>Chat</span>
+            </button>
+            <button class="tab-btn">
+                <i class="fas fa-spa"></i>
+                <span>Practice</span>
+            </button>
+            <button class="tab-btn">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </button>
+            <button class="tab-btn">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="../assets/js/mindflow-app.js"></script>
+</body>
+
+</html>
