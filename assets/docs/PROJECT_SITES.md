@@ -1,7 +1,7 @@
-# Project Site Projects
-PROJECT: `/Users/seanivore/Development/design-site/`
+# Showcase Site Projects
+PROJECT DIRECTORY: `/Users/seanivore/Development/design-site/...`
 THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
-PROJECT SCOPE: `./CLAUDE.md` 
+
 Find project status updates in `memory` MCP at "Portfolio Strategy: Show What They Want", "Sean's Portfolio Vision" 
 
 ## Goal 
@@ -11,23 +11,17 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
   - In at least one case, create high-fidelity product images for an iPhone app 
   - For app UX/UI, start with an existing app, recreate UX/UI flow, then adjust to fit needs of imaginary project 
 
-### Resources 
-Everything is polished, removed from the original intent if needed, recreated when necessary. The general idea is to use the websites and content I have to either represent the project or to create a more sought-after web design. The Webflow and Framer sites will likely need to be recreated because of how chaotic the HTML is. However the first four projects are all clean HTML/CSS/JS and should be easy to adjust into something high value to tech companies and/or those hiring web developers. 
+--> Detailed scope, design brief, development overview, and project directory organization: `./CLAUDE.md` 
 
 ### Project Directory Organization 
-1. Assets from original projects are pulled and organized into their own directory in the `./assets/docs` directory
-2. Once it is determined what the original project is going to become for the project presentation, choose a naming convention and use it for all assets 
+1. Assets from original projects or projects in planning state are organized into `./assets/docs` directories 
+2. Determined what the project will be for the showcase, then choose a naming convention for all assets  
 3. Finalized HTML files for the project should be placed in the `./projects` directory 
 4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
 5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
 
-## Project Planning 
-
-Our next focus is on Project V. 
-
-The first four project are all good opportunities to recreate something that is commonly hired for in the tech, marketing, and other industries looking for web developers, or perhaps even just a portion of a website's high-fidelity wire frames with each step of whatever process is that we're showcasing. My first thought was a SaaS project landing page with features defined, etc. We should come up with a few other ideas for alternate versions of these pages as they will be easily adaptable. In fact, I'm wondering if project 3-4 might even be able to become UX/UI portfolio websites showing off app prototypes in visual form only. Or perhaps a dashboard or admin page for a SaaS product. The key will be to give enough detail so that the hiring manager can see the value in the project, but not so much that we're ending up developing something from the ground up. 
-
 ----
+
 # Projects 
 
 ## PROJECT I: CSS Animation Page 
@@ -188,3 +182,8 @@ Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because 
 
 - Project: `./assets/docs/07-weekend-horoscopes`
 
+## Project Planning 
+
+Our next focus is on Project V. 
+
+The first four project are all good opportunities to recreate something that is commonly hired for in the tech, marketing, and other industries looking for web developers, or perhaps even just a portion of a website's high-fidelity wire frames with each step of whatever process is that we're showcasing. My first thought was a SaaS project landing page with features defined, etc. We should come up with a few other ideas for alternate versions of these pages as they will be easily adaptable. In fact, I'm wondering if project 3-4 might even be able to become UX/UI portfolio websites showing off app prototypes in visual form only. Or perhaps a dashboard or admin page for a SaaS product. The key will be to give enough detail so that the hiring manager can see the value in the project, but not so much that we're ending up developing something from the ground up. 
