@@ -713,17 +713,19 @@ a {
 
 .contribution-grid {
     display: grid;
-    grid-template-columns: repeat(52, 1fr); /* One year of weeks */
-    grid-template-rows: repeat(7, 1fr); /* Days of week */
+    grid-template-columns: repeat(52, 8px); /* 52 weeks */
+    grid-template-rows: repeat(7, 8px); /* 7 days */
     gap: 2px;
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 52 / 7;
+    width: max-content; /* Let it expand to natural width */
+    height: auto;
+    overflow-x: auto; /* Horizontal scroll */
+    overflow-y: hidden;
+    max-width: 100%; /* Constrain to parent */
 }
 
 .contribution-grid > div {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 8px;
+    height: 8px;
     background: var(--glass-white);
     border-radius: 2px;
 }
@@ -871,6 +873,8 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--spacing-md);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .profile-avatar i {
@@ -973,6 +977,25 @@ a {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar for contribution graph */
+.contribution-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.contribution-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.contribution-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.contribution-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Accessibility */

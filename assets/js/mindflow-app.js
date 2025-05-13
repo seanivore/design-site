@@ -141,12 +141,12 @@ class MindflowApp {
     }
     
     generateContributionData() {
-        // Generate realistic meditation habit data
+        // Generate realistic meditation habit data for a full year
         const data = [];
         const today = new Date();
-        const daysToShow = 364; // About a year
+        const daysToShow = 364; // Full year (52 weeks × 7 days)
         
-        for (let i = 0; i < daysToShow; i++) {
+        for (let i = daysToShow - 1; i >= 0; i--) { // Start from oldest date
             const date = new Date(today);
             date.setDate(date.getDate() - i);
             
