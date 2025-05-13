@@ -104,16 +104,16 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 ## Directory Structure 
 
 ```plaintext 
-├── CLAUDE.md               <-- You are here  
-├── _config.yml             <-- Jekyll config file 
-├── CNAME                   <-- GitHub Pages URL 
-├── projects                <-- Project HTML files that we have updated or recreated 
+├── CLAUDE.md                                <-- You are here
+├── projects                                 <-- Project HTML files that we have updated or recreated
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
 │   ├── autumn-lookbook-part-3.html
 │   ├── css-anim-saas-landing.html
+│   ├── css-saas-profile-setup.html
+│   ├── mindflow-app.html
+│   ├── mindflow-showcase.html
 │   ├── saas-css-anim-signup.html
-│   ├── saas-css-anim-profile-setup.html
 │   ├── summer-lookbook-part-1.html
 │   ├── summer-lookbook-part-2.html
 │   ├── summer-lookbook-part-3.html
@@ -121,74 +121,38 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── webflow-print-series.html
 │   └── webflow-product-page.html
 ├── assets
-│   ├── css                 <-- New HTML pages' CSS files
+│   ├── css                                   <-- New HTML pages' CSS files
 │   │   ├── autumn-lookbook.css
-│   │   ├── summer-lookbook.css
-│   │   ├── saas-css-anim.css
-│   │   ├── saas-css-anim-profile-setup.css
+│   │   ├── css-anim-saas.css
+│   │   ├── css-saas-profile-setup.css
+│   │   ├── mindflow-app.css
 │   │   ├── saas-css-anim-signup.css
+│   │   ├── summer-lookbook.css
 │   │   ├── webflow-print-series.css
-│   │   └── webflow-product-page.css
-│   ├── js                <-- New HTML pages' JS files 
-│   │   ├── saas-css-wave-anim.js
-│   │   └── saas-css-anim-signup.js
-│   ├── docs
+│   │   ├── webflow-product-page.css
+│   │   └── webflow-weekly-blogs.css
+│   ├── js                                     <-- New HTML pages' JS files
+│   │   ├── mindflow-app.js
+│   │   ├── saas-css-anim-signup.js
+│   │   └── saas-css-wave-anim.jsw
+│   ├── docs                                   <-- Planning projects 
 │   │   ├── 02-framer-autumn-lookbook
 │   │   ├── 04-weblfow-summer-lookbook
 │   │   ├── 05-app-data-dashboards
-│   │   │   ├── ai-voice-sales-development.html
-│   │   │   ├── assets
-│   │   │   │   ├── css
-│   │   │   │   │   ├── alt-slides.css
-│   │   │   │   │   ├── main.css
-│   │   │   │   │   └── pixel-animation.css
-│   │   │   │   ├── favicon
-│   │   │   │   │   ├── apple-touch-icon.png
-│   │   │   │   │   ├── favicon-96x96.png
-│   │   │   │   │   ├── favicon.ico
-│   │   │   │   │   ├── favicon.svg
-│   │   │   │   │   ├── site.webmanifest
-│   │   │   │   │   ├── web-app-manifest-192x192.png
-│   │   │   │   │   └── web-app-manifest-512x512.png
-│   │   │   │   ├── images
-│   │   │   │   │   ├── brand-text-art-1.svg
-│   │   │   │   │   ├── brand-text-art-2.svg
-│   │   │   │   │   └── thumbnail-presentation-1.webp
-│   │   │   │   └── js
-│   │   │   │       ├── pixel-animation.js
-│   │   │   │       └── slideshow.js
-│   │   │   └── implement-ai-voice-marketing.html
-│   │   ├── 06-webflow-weekly-blogs
-│   │   │   ├── 1-internal-catalysts
-│   │   │   │   ├── 05-blog-1-internal-catalysts.html
-│   │   │   │   └── 05-blog-1-internal-catalysts.jpeg
-│   │   │   ├── 2-interpersonal-catalysts
-│   │   │   │   ├── 05-blog-2-interpersonal-catalysts.html
-│   │   │   │   └── 05-blog-2-interpersonal-catalysts.jpeg
-│   │   │   └── 3-personal-development
-│   │   │       ├── 05-blog-3-personal-development.html
-│   │   │       └── 05-blog-3-personal-development.jpeg
-│   │   ├── 07-webflow-service-yoga
-│   │   │   ├── 07-yoga-services.html
-│   │   │   └── 07-yoga-services.jpeg
+│   │   ├── 06-webflow-service-yoga
+│   │   ├── 07-webflow-weekly-blogs
 │   │   ├── 08-css-wave
-│   │   │   ├── assets
-│   │   │   │   ├── css
-│   │   │   │   │   ├── home.css
-│   │   │   │   │   └── wave-animation.css
-│   │   │   │   └── js
-│   │   │   │       └── wave-animation.js
-│   │   │   └── index.html
-│   │   ├── CSS_RIPPLE_ANIMATION.md  <-- CSS animation idea for homepage 
-│   │   └── PROJECT_SITES.md  <-- Content for the projects section 
+│   │   ├── CSS_RIPPLE_ANIMATION.md            <-- CSS animation idea for homepage
+│   │   └── PROJECT_SITES.md                   <-- Content for the projects section
 │   ├── images
-│   │   ├── autumn-lookbook  <-- naming structure 'j' is portrait, 'jwide' is landscape; 'v' is 1 of 2 versions of 1(section)A(look) -- 167 WEBPs  
-│   │   ├── DESIGN_INSPO    <-- interesting, simple website inspiration -- 5 PNGs 
-│   │   ├── NAV_INSPO       <-- sketch of navigation UI -- 1 PNG, 1 WEBP
-│   │   ├── summer-lookbook  <-- 12 sections, images depend on section 
-│   │   ├── webflow-print-series  <-- Mid Century Modern prints and icon 
-│   │   └── webflow-product-page  <-- Primary Brutalist staged images and many related images 
-│   └── setup-scripts  <-- utility scripts we used to putting together webflow sites 
+│   │   ├── autumn-lookbook                    <-- j=portrait, jwide=landscape
+│   │   ├── mindflow-app-avatar-profile.webp   <-- avatar for the mindflow app profile page 
+│   │   ├── summer-lookbook                    <-- 12 sections, images depend on section
+│   │   ├── webflow-print-series               <-- Mid Century Modern prints and icon
+│   │   └── webflow-product-page               <-- Primary Brutalist staged images and many related images
+│   └── setup-scripts                          <-- utility scripts we used to putting together webflow sites
+├── CNAME                                      <-- GitHub Pages URL
+├── _config.yml                                <-- Jekyll config file
 └── README.md
 ```
 
