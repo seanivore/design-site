@@ -16,14 +16,17 @@ body {
 }
 
 /* Typography */
-h1, h2 {
+h1,
+h2 {
     font-family: "swear-display", serif;
     font-weight: 800;
 }
 
-h3, .section-title {
+h3,
+.section-title {
     font-family: "dublin", sans-serif;
     font-weight: 400;
+    font-style: normal;
 }
 
 /* Header Section */
@@ -66,13 +69,13 @@ h3, .section-title {
 .logo {
     width: 80px;
     height: 80px;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .brand-name {
     font-size: 3rem;
     color: #c79325;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Hero Section */
@@ -327,12 +330,12 @@ h3, .section-title {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .value-props {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
