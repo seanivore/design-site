@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sales - StreamlineOps</title>
+    <meta name="description" content="Get in touch with our sales team for custom enterprise solutions.">
+    
+    <!-- Adobe Typekit Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/css-anim-saas.css">
+    <link rel="stylesheet" href="assets/css/saas-css-anim-signup.css">
+    <link rel="stylesheet" href="assets/css/css-saas-profile-setup.css">
+</head>
+<body>
+    <!-- Wave Animation Background -->
+    <div class="wave-container" id="waveContainer"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="css-anim-saas-landing.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                    StreamlineOps
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <div class="container">
+                <div class="signup-container">
+                    <!-- Enterprise Contact Form Card -->
+                    <div class="signup-card glass-card">
+                        <h1>Contact Our Sales Team</h1>
+                        <p class="signup-subtitle">Let's discuss your enterprise needs</p>
+
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john.smith@company.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" name="companyName" required placeholder="Acme Inc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="teamSize">Team Size</label>
+                                <select id="teamSize" name="teamSize" required>
+                                    <option value="">Select team size</option>
+                                    <option value="50-100">50-100 people</option>
+                                    <option value="100-500">100-500 people</option>
+                                    <option value="500-1000">500-1000 people</option>
+                                    <option value="1000+">1000+ people</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry" required>
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="education">Education</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Primary Enterprise Needs</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="needs" value="custom-integrations">
+                                        <span class="checkbox-custom"></span>
+                                        Custom Integrations
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="needs" value="on-premise">
+                                        <span class="checkbox-custom"></span>
+                                        On-Premise Deployment
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="needs" value="sla">
+                                        <span class="checkbox-custom"></span>
+                                        Custom SLA Requirements
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="needs" value="training">
+                                        <span class="checkbox-custom"></span>
+                                        Training & Onboarding
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You Section (Hidden by default, shown after form submission) -->
+        <section class="thank-you-section" style="display: none;">
+            <div class="container">
+                <div class="signup-container">
+                    <div class="thank-you-card glass-card">
+                        <h1>Thank You!</h1>
+                        <p>We've received your request. Our sales team will be in touch within 24 hours.</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>enterprise@streamlineops.com</span>
+                            </div>
+                        </div>
+                        
+                        <a href="css-anim-saas-landing.html" class="btn btn-secondary" style="margin-top: 40px;">
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/saas-css-wave-anim.js"></script>
+    <script>
+        document.querySelector('.profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form section
+            document.querySelector('.signup-section').style.display = 'none';
+            
+            // Show thank you section
+            document.querySelector('.thank-you-section').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>

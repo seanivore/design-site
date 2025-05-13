@@ -1,21 +1,18 @@
-.
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StreamlineOps - Project Management Reimagined</title>
     <meta name="description" content="Automate your workflow, amplify your impact. StreamlineOps brings intelligent automation to project management.">
-
+    
     <!-- Adobe Typekit Font -->
     <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/css-anim-saas.css">
 </head>
-
 <body>
     <!-- Wave Animation Background -->
     <div class="wave-container" id="waveContainer"></div>
@@ -24,7 +21,7 @@
         <div class="container">
             <div class="header-container">
                 <a href="/" class="logo">
-                    <span class="logo-icon">⚡</span>
+                    <span class="logo-icon"><i class="fas fa-bolt"></i></span>
                     StreamlineOps
                 </a>
                 <nav>
@@ -32,7 +29,7 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#" class="nav-signin">Sign In</a></li>
-                        <li><a href="#" class="btn btn-primary">Get Started</a></li>
+                        <li><a href="saas-css-anim-signup.html" class="btn btn-primary">Get Started</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,8 +44,8 @@
                     <h1>Automate Your Workflow,<br>Amplify Your Impact</h1>
                     <p class="hero-subtitle">StreamlineOps brings intelligent automation to project management. Save 10+ hours per week with AI-powered workflows.</p>
                     <div class="hero-cta">
-                        <a href="#" class="btn btn-primary btn-large">Start Free Trial</a>
-                        <a href="#" class="btn btn-secondary btn-large">Watch Demo</a>
+                        <a href="saas-css-anim-signup.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="#demo" class="btn btn-secondary btn-large">Watch Demo</a>
                     </div>
                     <div class="trust-badges">
                         <span class="badge"><i class="fas fa-shield-alt"></i> SOC 2 Certified</span>
@@ -59,12 +56,92 @@
             </div>
         </section>
 
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to streamline your operations</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI-Powered Automation</h3>
+                        <p>Intelligent workflows that learn from your patterns and optimize processes automatically.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-time Analytics</h3>
+                        <p>Deep insights into team performance with customizable dashboards and reports.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Team Collaboration</h3>
+                        <p>Seamless communication and file sharing with integrated chat and video calls.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>1000+ Integrations</h3>
+                        <p>Connect with your favorite tools including Slack, GitHub, Jira, and more.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>Advanced encryption, SSO, and compliance with industry standards.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-background"></div>
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated support team available around the clock to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demo Section -->
+        <section id="demo" class="video-section">
+            <div class="container">
+                <h2 class="section-title">See StreamlineOps in Action</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/yIQd2Ya0Ziw?si=-Bs2Xo4OuIMbBFvb&amp;start=2" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- Pricing Section -->
         <section id="pricing" class="pricing-section">
             <div class="container">
                 <h2 class="section-title">Choose Your Plan</h2>
                 <p class="section-subtitle">Start with a 14-day free trial. No credit card required.</p>
-
+                
                 <div class="pricing-grid">
                     <!-- Starter Plan -->
                     <div class="pricing-card glass-card">
@@ -75,7 +152,7 @@
                             <span class="period">/month</span>
                         </div>
                         <p class="price-description">Perfect for small teams</p>
-
+                        
                         <ul class="features-list">
                             <li><i class="fas fa-check"></i> Up to 10 team members</li>
                             <li><i class="fas fa-check"></i> 50 automated workflows</li>
@@ -83,8 +160,8 @@
                             <li><i class="fas fa-check"></i> 24/7 email support</li>
                             <li><i class="fas fa-check"></i> 10GB storage</li>
                         </ul>
-
-                        <a href="#" class="btn btn-secondary">Start Free Trial</a>
+                        
+                        <a href="saas-css-anim-signup.html" class="btn btn-secondary">Start Free Trial</a>
                     </div>
 
                     <!-- Professional Plan -->
@@ -97,7 +174,7 @@
                             <span class="period">/month</span>
                         </div>
                         <p class="price-description">For growing businesses</p>
-
+                        
                         <ul class="features-list">
                             <li><i class="fas fa-check"></i> Up to 50 team members</li>
                             <li><i class="fas fa-check"></i> Unlimited workflows</li>
@@ -107,8 +184,8 @@
                             <li><i class="fas fa-check"></i> Custom branding</li>
                             <li><i class="fas fa-check"></i> API access</li>
                         </ul>
-
-                        <a href="#" class="btn btn-primary">Start Free Trial</a>
+                        
+                        <a href="saas-css-anim-signup.html" class="btn btn-primary">Start Free Trial</a>
                     </div>
 
                     <!-- Enterprise Plan -->
@@ -118,7 +195,7 @@
                             <span class="custom-price">Custom</span>
                         </div>
                         <p class="price-description">For large organizations</p>
-
+                        
                         <ul class="features-list">
                             <li><i class="fas fa-check"></i> Unlimited team members</li>
                             <li><i class="fas fa-check"></i> Custom workflows</li>
@@ -129,10 +206,28 @@
                             <li><i class="fas fa-check"></i> SLA guarantee</li>
                             <li><i class="fas fa-check"></i> On-premise option</li>
                         </ul>
-
-                        <a href="#" class="btn btn-secondary">Contact Sales</a>
+                        
+                        <a href="css-saas-profile-setup.html" class="btn btn-secondary">Contact Sales</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Client Logos Section -->
+        <section class="client-logos-section">
+            <div class="logo-carousel">
+                <div class="client-logo">TechCorp</div>
+                <div class="client-logo">InnovateLabs</div>
+                <div class="client-logo">DataSync</div>
+                <div class="client-logo">CloudNine</div>
+                <div class="client-logo">QuantumFlow</div>
+                <div class="client-logo">NextGen Systems</div>
+                <div class="client-logo">TechCorp</div>
+                <div class="client-logo">InnovateLabs</div>
+                <div class="client-logo">DataSync</div>
+                <div class="client-logo">CloudNine</div>
+                <div class="client-logo">QuantumFlow</div>
+                <div class="client-logo">NextGen Systems</div>
             </div>
         </section>
 
@@ -174,7 +269,6 @@
         </div>
     </footer>
 
-    <script src="wave-animation.js"></script>
+    <script src="assets/js/saas-css-wave-anim.js"></script>
 </body>
-
 </html>

@@ -9,7 +9,7 @@
     /* Color Palette */
     --primary-dark: #4F6D7A;      /* Muted teal */
     --primary-light: #C0D6DF;     /* Light blue-gray */
-    --accent-warm: #E8DAB2;       /* Warm cream */
+    --accent-warm: #D8A854;       /* Darker warm gold (adjusted for legibility) */
     --accent-hot: #DD5742;        /* Coral red */
     --dark: #2C3E42;              /* Dark blue-gray */
     --light: #F4F4F4;             /* Off-white */
@@ -187,7 +187,9 @@ header {
 }
 
 .logo-icon {
-    font-size: 28px;
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Navigation */
@@ -216,7 +218,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 100px;
+    padding: 120px 0 80px;
     text-align: center;
 }
 
@@ -310,6 +312,92 @@ nav a:hover {
     color: var(--accent-warm);
 }
 
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--accent-warm);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Feature Background Pattern */
+.feature-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.05;
+    background-image: radial-gradient(circle, var(--primary-light) 2px, transparent 2px);
+    background-size: 40px 40px;
+}
+
+/* Video Section */
+.video-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+}
+
 /* Pricing Section */
 .pricing-section {
     padding: 80px 0;
@@ -332,7 +420,7 @@ nav a:hover {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -348,6 +436,9 @@ nav a:hover {
     padding: 40px 30px;
     transition: all 0.3s ease;
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .glass-card:hover {
@@ -421,6 +512,7 @@ nav a:hover {
     list-style: none;
     text-align: left;
     margin-bottom: 30px;
+    flex-grow: 1;
 }
 
 .features-list li {
@@ -435,6 +527,44 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
+/* Client Logo Carousel */
+.client-logos-section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.logo-carousel {
+    display: flex;
+    align-items: center;
+    animation: scroll-logos 30s linear infinite;
+}
+
+.logo-carousel:hover {
+    animation-play-state: paused;
+}
+
+.client-logo {
+    flex: 0 0 auto;
+    padding: 0 60px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    opacity: 0.6;
+    color: var(--primary-light);
+    font-family: var(--font-ui);
+    white-space: nowrap;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Social Proof Section */
 .social-proof {
     padding: 80px 0;
@@ -444,9 +574,11 @@ nav a:hover {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .stat-number {
@@ -467,7 +599,8 @@ footer {
     position: relative;
     z-index: 10;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: var(--font-ui);
+    font-family: system-ui, sans-serif;
+    font-size: 0.8rem;
 }
 
 .footer-content {
@@ -497,6 +630,10 @@ footer {
 @media (max-width: 1200px) {
     .pricing-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
@@ -536,5 +673,9 @@ footer {
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }

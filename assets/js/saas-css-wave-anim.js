@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create wave bands dynamically
     const waveContainer = document.getElementById('waveContainer');
     
-    // Create 8 wave bands
-    for (let i = 0; i < 8; i++) {
-        const waveBand = document.createElement('div');
-        waveBand.className = 'wave-band';
-        waveContainer.appendChild(waveBand);
+    if (waveContainer) {
+        // Create 8 wave bands
+        for (let i = 0; i < 8; i++) {
+            const waveBand = document.createElement('div');
+            waveBand.className = 'wave-band';
+            waveContainer.appendChild(waveBand);
+        }
     }
     
     // Scroll-based animation effect
