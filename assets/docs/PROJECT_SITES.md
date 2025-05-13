@@ -1,4 +1,7 @@
-# Project Site Project
+# Project Site Projects
+PROJECT: `/Users/seanivore/Development/design-site/`
+THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
+PROJECT SCOPE: `./CLAUDE.md` 
 
 ## Goal 
 To create extremely high-value, polished, B2B/B2C web development designer's showcase. 

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - StreamlineOps</title>
+    <meta name="description" content="Create your StreamlineOps account and start automating your workflows today.">
+    
+    <!-- Adobe Typekit Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Wave Animation Background -->
+    <div class="wave-container" id="waveContainer"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    StreamlineOps
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="#" class="nav-signin">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <div class="container">
+                <div class="signup-container">
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-step active">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Create Account</div>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Set Up Profile</div>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Start Building</div>
+                        </div>
+                    </div>
+
+                    <!-- Signup Form Card -->
+                    <div class="signup-card glass-card">
+                        <h1>Create Your Account</h1>
+                        <p class="signup-subtitle">Join 50,000+ teams automating their workflows</p>
+
+                        <!-- Social Auth Options -->
+                        <div class="social-auth">
+                            <button class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                Continue with Google
+                            </button>
+                            <button class="social-btn github-btn">
+                                <i class="fab fa-github"></i>
+                                Continue with GitHub
+                            </button>
+                            <button class="social-btn passkey-btn">
+                                <i class="fas fa-fingerprint"></i>
+                                Use Passkey
+                            </button>
+                        </div>
+
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+
+                        <!-- Email/Password Form -->
+                        <form class="signup-form">
+                            <div class="form-group">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" required placeholder="you@company.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                                <div class="password-requirements">
+                                    <p class="requirement" data-valid="false">
+                                        <i class="fas fa-circle"></i> At least 8 characters
+                                    </p>
+                                    <p class="requirement" data-valid="false">
+                                        <i class="fas fa-circle"></i> One uppercase letter
+                                    </p>
+                                    <p class="requirement" data-valid="false">
+                                        <i class="fas fa-circle"></i> One number
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Create Account
+                            </button>
+                        </form>
+
+                        <p class="signin-link">
+                            Already have an account? <a href="#">Sign in</a>
+                        </p>
+                    </div>
+
+                    <!-- Security Features -->
+                    <div class="security-features">
+                        <div class="security-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SOC 2 Compliant</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-lock"></i>
+                            <span>End-to-end Encryption</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-user-shield"></i>
+                            <span>GDPR Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="wave-animation.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>

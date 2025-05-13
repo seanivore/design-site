@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setup - StreamlineOps</title>
+    <meta name="description" content="Complete your StreamlineOps profile setup to get started.">
+    
+    <!-- Adobe Typekit Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="profile-setup.css">
+</head>
+<body>
+    <!-- Wave Animation Background -->
+    <div class="wave-container" id="waveContainer"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    StreamlineOps
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <div class="container">
+                <div class="signup-container">
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-step completed">
+                            <div class="step-number">✓</div>
+                            <div class="step-label">Create Account</div>
+                        </div>
+                        <div class="progress-line completed"></div>
+                        <div class="progress-step active">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Set Up Profile</div>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Start Building</div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Setup Card -->
+                    <div class="signup-card glass-card">
+                        <h1>Set Up Your Profile</h1>
+                        <p class="signup-subtitle">Tell us about yourself and your team</p>
+
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="John Smith">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" name="companyName" required placeholder="Acme Inc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="teamSize">Team Size</label>
+                                <select id="teamSize" name="teamSize" required>
+                                    <option value="">Select team size</option>
+                                    <option value="1">Just me</option>
+                                    <option value="2-5">2-5 people</option>
+                                    <option value="6-10">6-10 people</option>
+                                    <option value="11-25">11-25 people</option>
+                                    <option value="26-50">26-50 people</option>
+                                    <option value="50+">50+ people</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry" required>
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="education">Education</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Primary Use Case</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="useCase" value="project-management">
+                                        Project Management
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="useCase" value="task-automation">
+                                        Task Automation
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="useCase" value="team-collaboration">
+                                        Team Collaboration
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="useCase" value="reporting">
+                                        Reporting & Analytics
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Complete Setup
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="wave-animation.js"></script>
+    <script>
+        document.querySelector('.profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Profile setup completed');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
