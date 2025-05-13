@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindflow AI - Portfolio Showcase</title>
+    <title>Mindflow AI - UX Flow Diagram</title>
     <style>
         body {
             margin: 0;
             background: #0A0B0F;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            color: #FFFFFF;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: auto;
+            min-height: 100vh;
         }
         
-        .showcase-container {
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
             text-align: center;
-            padding: 20px;
+            margin-bottom: 60px;
         }
         
         .project-title {
-            color: white;
-            font-size: 32px;
+            font-size: 48px;
             margin-bottom: 10px;
             background: linear-gradient(135deg, #B2729F 0%, #336699 100%);
             -webkit-background-clip: text;
@@ -31,29 +35,209 @@
         }
         
         .project-subtitle {
+            font-size: 24px;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 18px;
             margin-bottom: 40px;
         }
         
-        iframe {
-            border: none;
-            border-radius: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        .flow-diagram {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
         }
         
-        .project-description {
+        .screen-group {
+            text-align: center;
+        }
+        
+        .screen-label {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+        
+        .screen-preview {
+            width: 250px;
+            height: 542px;
+            background: #12141A;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screen-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+        
+        .screen-header {
+            background: var(--surface);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .screen-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .screen-content {
+            padding: 20px;
+        }
+        
+        .mock-message {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, #B2729F 0%, #336699 100%);
+            color: white;
+            margin-left: auto;
+            max-width: 70%;
+        }
+        
+        .ai-message {
+            max-width: 70%;
+        }
+        
+        .mock-button {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-size: 13px;
+            margin: 8px 4px;
+            display: inline-block;
+        }
+        
+        .primary-button {
+            background: linear-gradient(135deg, #B2729F 0%, #336699 100%);
+            color: white;
+            border: none;
+        }
+        
+        .breathing-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            background: linear-gradient(135deg, #B2729F 0%, #336699 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 11px;
             color: rgba(255, 255, 255, 0.6);
-            max-width: 600px;
-            margin: 40px auto 0;
-            line-height: 1.6;
+        }
+        
+        .contribution-graph {
+            height: 60px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .flow-arrow {
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 542px;
+        }
+        
+        .features {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .features-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .feature-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
         }
         
         .tech-stack {
             display: flex;
             gap: 10px;
             justify-content: center;
-            margin-top: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
         
         .tech-badge {
@@ -62,36 +246,185 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 8px 16px;
             border-radius: 20px;
-            color: rgba(255, 255, 255, 0.9);
             font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="showcase-container">
-        <h1 class="project-title">Mindflow AI</h1>
-        <p class="project-subtitle">Voice-First Wellness Companion</p>
+    <div class="container">
+        <div class="header">
+            <h1 class="project-title">Mindflow AI</h1>
+            <p class="project-subtitle">Voice-First Wellness Companion</p>
+        </div>
         
-        <iframe 
-            src="mindflow-app.html" 
-            width="375" 
-            height="812"
-            title="Mindflow AI App">
-        </iframe>
+        <div class="flow-diagram">
+            <!-- Chat Screen -->
+            <div class="screen-group">
+                <div class="screen-label">1. AI Conversation</div>
+                <div class="screen-preview">
+                    <div class="screen-header">
+                        <div class="screen-title">Chat</div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="mock-message ai-message">
+                            Hello! How are you feeling right now?
+                        </div>
+                        <div class="mock-message user-message">
+                            I'm feeling stressed from work
+                        </div>
+                        <div class="mock-message ai-message">
+                            I understand. Would you prefer meditation or yoga?
+                        </div>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <div class="mock-button">🕉️ Meditation</div>
+                            <div class="mock-button">🧘 Yoga Flow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flow-arrow">→</div>
+            
+            <!-- Activity Screen -->
+            <div class="screen-group">
+                <div class="screen-label">2. Personalized Session</div>
+                <div class="screen-preview">
+                    <div class="screen-header">
+                        <div class="screen-title">Meditation</div>
+                    </div>
+                    <div class="screen-content">
+                        <div style="text-align: center;">
+                            <h3>AI Recommendation</h3>
+                            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">
+                                Based on your stress level, I've created a 10-minute breathing meditation.
+                            </p>
+                            <div style="font-size: 36px; margin: 20px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">10:00</div>
+                            <div class="breathing-circle">
+                                <div>Breathe</div>
+                            </div>
+                            <div class="mock-button primary-button">▶ Start Session</div>
+                            <div class="mock-button">📺 Cast to TV</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flow-arrow">→</div>
+            
+            <!-- Active Session -->
+            <div class="screen-group">
+                <div class="screen-label">3. Active Session</div>
+                <div class="screen-preview" style="background: #0A0B0F;">
+                    <div class="screen-content">
+                        <div style="text-align: center; padding-top: 100px;">
+                            <div class="breathing-circle" style="width: 150px; height: 150px;">
+                                Breathe In
+                            </div>
+                            <div style="font-size: 36px; margin: 30px 0; background: linear-gradient(135deg, #B2729F 0%, #336699 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">04:32</div>
+                            <div style="display: flex; gap: 20px; justify-content: center;">
+                                <div class="mock-button">⏮</div>
+                                <div class="mock-button">⏸</div>
+                                <div class="mock-button">⏭</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flow-arrow">→</div>
+            
+            <!-- Reflection Screen -->
+            <div class="screen-group">
+                <div class="screen-label">4. Reflection & Tracking</div>
+                <div class="screen-preview">
+                    <div class="screen-header">
+                        <div class="screen-title">Reflection</div>
+                    </div>
+                    <div class="screen-content">
+                        <h3>Session Complete</h3>
+                        <div class="stat-grid">
+                            <div class="stat">
+                                <div class="stat-value">10:00</div>
+                                <div class="stat-label">Duration</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">72</div>
+                                <div class="stat-label">Avg BPM</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.8</div>
+                                <div class="stat-label">Breath Rate</div>
+                            </div>
+                        </div>
+                        
+                        <h4>How do you feel now?</h4>
+                        <div style="display: flex; justify-content: space-around; margin: 15px 0;">
+                            <span>😔</span>
+                            <span>😐</span>
+                            <span>🙂</span>
+                            <span style="border: 2px solid #336699; padding: 5px; border-radius: 8px;">😊</span>
+                            <span>😄</span>
+                        </div>
+                        
+                        <div class="contribution-graph">
+                            GitHub-style mood tracker
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 20px;">
+                            <div class="mock-button">🎤 Voice Journal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <p class="project-description">
-            A premium mobile wellness app demonstrating conversational AI integration, 
-            voice-first interfaces, and sophisticated data visualization. Features 
-            include personalized yoga/meditation sessions, mood tracking with GitHub-style 
-            contribution graphs, and glass morphism UI with pixel art accents.
-        </p>
+        <div class="features">
+            <h2 class="features-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎙️</div>
+                    <div class="feature-title">Voice-First Interface</div>
+                    <div class="feature-description">
+                        Natural conversation with AI through voice commands, eliminating complex navigation and button hunting.
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">AI Personalization</div>
+                    <div class="feature-description">
+                        Dynamically generated meditation and yoga sessions based on user's current emotional state and preferences.
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Progress Visualization</div>
+                    <div class="feature-description">
+                        GitHub-style contribution graph shows meditation consistency, making mindfulness practice visually rewarding.
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <div class="feature-title">Pixelated Luxury Design</div>
+                    <div class="feature-description">
+                        Unique aesthetic combining glass morphism with pixel art accents, creating a premium yet playful experience.
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="tech-stack">
             <span class="tech-badge">Voice UI</span>
-            <span class="tech-badge">AI Chat</span>
-            <span class="tech-badge">Data Viz</span>
-            <span class="tech-badge">Glass UI</span>
-            <span class="tech-badge">Pixel Art</span>
+            <span class="tech-badge">AI Integration</span>
+            <span class="tech-badge">Data Visualization</span>
+            <span class="tech-badge">Glass Morphism</span>
+            <span class="tech-badge">Pixel Typography</span>
+            <span class="tech-badge">Mobile-First Design</span>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="mindflow-app.html" style="color: #336699; text-decoration: none; font-size: 18px;">
+                View Interactive Demo →
+            </a>
         </div>
     </div>
 </body>

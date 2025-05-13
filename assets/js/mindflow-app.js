@@ -89,7 +89,7 @@ class MindflowApp {
     
     setupVoiceInput() {
         const voiceBtn = document.querySelector('.voice-btn');
-        const textInput = document.querySelector('.text-input');
+        const keyboardBtn = document.querySelector('.keyboard-btn');
         
         if (voiceBtn) {
             voiceBtn.addEventListener('click', () => {
@@ -97,12 +97,24 @@ class MindflowApp {
             });
         }
         
-        if (textInput) {
-            textInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    this.sendMessage(e.target.value);
-                    e.target.value = '';
-                }
+        if (keyboardBtn) {
+            keyboardBtn.addEventListener('click', () => {
+                // Just send a preset message when keyboard is clicked
+                this.addMessage("I'd like to meditate", 'user');
+                
+                setTimeout(() => {
+                    this.addMessage("Perfect choice. I'll prepare a personalized session for you.", 'ai');
+                    
+                    // Auto-navigate to activity screen
+                    setTimeout(() => {
+                        this.changeScreen('activity-screen');
+                        // Update the tab
+                        document.querySelectorAll('.tab-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                    }, 1000);
+                }, 500);
             });
         }
     }
@@ -196,9 +208,24 @@ class MindflowApp {
         // Add active class to clicked tab
         tab.classList.add('active');
         
-        // Handle screen changes
+        // Handle screen changes based on tab
         const tabText = tab.querySelector('span').textContent.toLowerCase();
-        this.changeScreen(`${tabText}-screen`);
+        
+        switch(tabText) {
+            case 'chat':
+                this.changeScreen('chat-screen');
+                break;
+            case 'practice':
+                this.changeScreen('activity-screen');
+                break;
+            case 'progress':
+                this.changeScreen('reflection-screen');
+                break;
+            case 'profile':
+                // For now, just show chat screen
+                this.changeScreen('chat-screen');
+                break;
+        }
     }
     
     changeScreen(screenId) {
@@ -222,18 +249,19 @@ class MindflowApp {
         // Add user message
         this.addMessage(optionText, 'user');
         
-        // Simulate AI response
+        // Always go to meditation activity screen for demo
         setTimeout(() => {
-            if (optionText === 'Meditation') {
-                this.addMessage("Perfect choice. I'll prepare a personalized session for you.", 'ai');
-                
-                // Switch to activity screen after delay
-                setTimeout(() => {
-                    this.changeScreen('activity-screen');
-                }, 1000);
-            } else {
-                this.addMessage("Let's energize your body with a gentle flow.", 'ai');
-            }
+            this.addMessage("Perfect choice. I'll prepare a personalized session for you.", 'ai');
+            
+            // Switch to activity screen after delay
+            setTimeout(() => {
+                this.changeScreen('activity-screen');
+                // Update the tab to Practice
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+            }, 1000);
         }, 500);
     }
     
@@ -365,44 +393,46 @@ class MindflowApp {
     }
     
     toggleVoiceInput() {
-        if (!this.isRecording) {
-            this.startRecording();
-        } else {
-            this.stopRecording();
-        }
+        // Always do a quick recording simulation
+        this.quickRecord();
     }
     
-    startRecording() {
-        this.isRecording = true;
+    quickRecord() {
         const voiceBtn = document.querySelector('.voice-btn');
+        const waves = document.querySelectorAll('.wave');
+        
+        // Start recording animation
         voiceBtn.classList.add('recording');
         
-        // Show voice waves animation
-        const waves = document.querySelectorAll('.wave');
-        waves.forEach(wave => {
-            wave.style.animation = 'wave 1s ease-in-out infinite';
-        });
-    }
-    
-    stopRecording() {
-        this.isRecording = false;
-        const voiceBtn = document.querySelector('.voice-btn');
-        voiceBtn.classList.remove('recording');
-        
-        // Stop voice waves animation
-        const waves = document.querySelectorAll('.wave');
-        waves.forEach(wave => {
-            wave.style.animation = 'none';
-        });
-        
-        // Simulate transcription
+        // Simulate recording for 1.5 seconds
         setTimeout(() => {
-            this.addMessage("I need to release some stress", 'user');
+            // Stop recording animation
+            voiceBtn.classList.remove('recording');
             
+            // Add user message
+            const messages = [
+                "I'd like to try meditation",
+                "I need to relax",
+                "Let's do some breathing"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            this.addMessage(randomMessage, 'user');
+            
+            // AI response after a moment
             setTimeout(() => {
-                this.addMessage("I understand. Let's help you find calm. Would you prefer meditation or movement?", 'ai');
-            }, 500);
-        }, 300);
+                this.addMessage("Perfect choice. I'll prepare a personalized session for you.", 'ai');
+                
+                // Auto-navigate to activity screen
+                setTimeout(() => {
+                    this.changeScreen('activity-screen');
+                    // Update the tab
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                }, 1000);
+            }, 800);
+        }, 1500);
     }
     
     startVoiceJournal() {

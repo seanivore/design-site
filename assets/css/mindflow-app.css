@@ -71,11 +71,13 @@ body {
 .mobile-frame {
     width: 375px;
     height: 812px;
+    max-height: 90vh;
     background: var(--surface);
     border-radius: 40px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
 }
 
 /* Status Bar */
@@ -113,6 +115,7 @@ body {
     height: calc(100% - 88px); /* Minus status bar and tab nav */
     padding-top: 44px; /* Account for status bar */
     position: relative;
+    overflow: hidden;
 }
 
 /* Screens */
@@ -284,37 +287,66 @@ body {
     padding: var(--spacing-sm);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-md);
+    height: 64px; /* Fixed height to prevent shifting */
 }
 
-.voice-input {
+.keyboard-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    font-size: 20px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    justify-content: center;
+    transition: all var(--transition-fast);
 }
 
 .voice-waves {
     display: flex;
     align-items: center;
     gap: 3px;
+    flex: 1;
+    max-width: 150px;
 }
 
+/* Remove any accidental links or external navigation */
+a {
+    pointer-events: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Wave animation adjustments */
 .wave {
     width: 3px;
     height: 20px;
     background: var(--primary-light);
     border-radius: 3px;
-    animation: wave 1s ease-in-out infinite;
+    opacity: 0.3;
+    transition: all var(--transition-fast);
 }
 
-.wave:nth-child(2) { animation-delay: 0.1s; height: 15px; }
-.wave:nth-child(3) { animation-delay: 0.2s; height: 25px; }
-.wave:nth-child(4) { animation-delay: 0.3s; height: 18px; }
-.wave:nth-child(5) { animation-delay: 0.4s; height: 22px; }
+.wave:nth-child(1) { height: 12px; }
+.wave:nth-child(2) { height: 18px; }
+.wave:nth-child(3) { height: 24px; }
+.wave:nth-child(4) { height: 16px; }
+.wave:nth-child(5) { height: 20px; }
+
+.voice-btn.recording ~ .voice-waves .wave {
+    animation: wave 0.6s ease-in-out infinite;
+    opacity: 1;
+}
 
 @keyframes wave {
     0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
-    50% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(1.2); opacity: 1; }
 }
 
 .voice-btn {
@@ -575,11 +607,12 @@ body {
 /* Reflection Screen */
 .reflection-content {
     padding: var(--spacing-lg);
+    padding-bottom: 100px; /* Account for tab navigation */
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
     overflow-y: auto;
-    height: 100%;
+    height: calc(100% - 60px); /* Account for header */
 }
 
 .screen-title {

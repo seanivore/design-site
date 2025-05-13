@@ -177,3 +177,4 @@ Webflow CMS AI Generated Weekend Horoscopes; Will need to edit it a bit because 
 - Project directory: `/Users/seanivore/Development/astrofluenced`
 
 - Project: `./assets/docs/07-weekend-horoscopes`
+
