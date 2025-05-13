@@ -111,6 +111,9 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
 │   ├── autumn-lookbook-part-3.html
+│   ├── css-anim-saas-landing.html
+│   ├── saas-css-anim-signup.html
+│   ├── saas-css-anim-profile-setup.html
 │   ├── summer-lookbook-part-1.html
 │   ├── summer-lookbook-part-2.html
 │   ├── summer-lookbook-part-3.html
@@ -121,8 +124,14 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── css  <-- New HTML pages' CSS files
 │   │   ├── autumn-lookbook.css
 │   │   ├── summer-lookbook.css
+│   │   ├── saas-css-anim.css
+│   │   ├── saas-css-anim-profile-setup.css
+│   │   ├── saas-css-anim-signup.css
 │   │   ├── webflow-print-series.css
 │   │   └── webflow-product-page.css
+│   ├── js  <-- New HTML pages' JS files 
+│   │   ├── saas-css-wave-anim.js
+│   │   └── saas-css-anim-signup.js
 │   ├── docs
 │   │   ├── 01-css-wave  <-- original HTML with all necessary assets to preview
 │   │   │   ├── assets

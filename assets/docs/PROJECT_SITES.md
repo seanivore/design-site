@@ -22,7 +22,7 @@ Everything is polished, removed from the original intent if needed, recreated wh
 
 ## Project Planning 
 
-Our next focus is on Projects I-IV. 
+Our next focus is on Project V. 
 
 The first four project are all good opportunities to recreate something that is commonly hired for in the tech, marketing, and other industries looking for web developers, or perhaps even just a portion of a website's high-fidelity wire frames with each step of whatever process is that we're showcasing. My first thought was a SaaS project landing page with features defined, etc. We should come up with a few other ideas for alternate versions of these pages as they will be easily adaptable. In fact, I'm wondering if project 3-4 might even be able to become UX/UI portfolio websites showing off app prototypes in visual form only. Or perhaps a dashboard or admin page for a SaaS product. The key will be to give enough detail so that the hiring manager can see the value in the project, but not so much that we're ending up developing something from the ground up. 
 
@@ -30,52 +30,52 @@ The first four project are all good opportunities to recreate something that is 
 # Projects 
 
 ## PROJECT I: CSS Animation Page 
-This was a HTML/CSS/JS project created recently. I love the home page with it's glass buttons and CSS motion background. Let's make it into a template for a SaaS product landing page or something similar. I've already moved the essentials for the page to function in this directory. It includes: 
+### CSS Animation SaaS Landing Page `./projects/css-anim-saas-landing.html` 
+### CSS Animation SaaS Signup Page `./projects/saas-css-anim-signup.html` 
+### CSS Animation SaaS Profile Setup Page `./projects/saas-css-anim-profile-setup.html` 
 
-### Product Feature Landing Page 
-I think we could easily make a few versions of these "high demand page designs" like a product feature landing page. I'm seeing two options: For each one let's use a different aesthetic and different 'high demand' page design. Or we could show a series in the UX flow, altering the design slightly each time in a way that fits together in a smart way. If we go with the latter first and they are only one or two steps in the UX flow, we could easily then also do the first idea.  
-
-### Drafting Value Proposition Copy for Project Section Nav 
-Incredibly versatile, clean, simple, and on trend. Need to show off your brand's color palette? Just swap out the CSS variables. Have a font family that better speaks to your messaging? Swap it out. The HTML is clean enough for someone with basic web design skills to adjust. 
-
-## PROJECT II: CSS Background Animation ALT. VERSION OF PROJECT I
-The project above seems to perfectly clean, simple, easy to adjust not to make it into something else that hiring manager would be impressed by. I think we'd just need to make some key alterations so it isn't obviously just a simple revamp of the original. Some thoughts there: 
-  - Adjust the CSS animation for something equally as mesmerizing and engaging, but different enough. Perhaps like growing and shrinking dots of different sizes. 
-  - When looking into how to wireframe the above, we should also look at other commonly sought after wire frames 
-  - This way we don't need to do another 'Project Feature Landing Page' but still create something a company looking for web design would find value in. 
-
-This could be done as a series of checkout pages, with each one slightly different but pulling through the same aesthetic. 
-  - Most companies use Stripe because they're huge and able to pass down savings to their customers 
-  - I also cannot ever get away from 'Shadcn' when it comes to forms, etc. And tailwind, Cursor is saying it is great for CSS. 
-
-## PROJECT III: Scrolling Presentations *TO BE RENAMED* 
-This could be turned into some kind of template. We would need to adjust them so that they are vertically scrollable instead, but the design and slide panels are all there. Two that are ready to be adjusted and have been moved into this directory: 
-- Charcoal: `https://presenting.august.style/ai-voice-sales-development` 
-- Project directory: `./assets/docs/02-scrolling-presentations`
-
-## PROJECT IV: Scrolling Presentations *TO BE RENAMED* 
-- Blue: `https://presenting.august.style/implement-ai-voice-marketing`
-
-
-## PROJECT V: Webflow Store 
-### Print Series Page `./projects/webflow-print-series.html`
-### Product Page `./projects/webflow-product-page.html`
-
-**FUTURE UPDATE** 
-- It would be nice ot have more than one series page 
-- Create ~3 different product pages to show the versatility of the design 
-- Use the image of either the original print or the close-up in-frame image when hovering over a project image 
-
-## PROJECT VI: Autumn Lookbook 
-### Project Section I `./projects/autumn-lookbook-part-1.html`
-### Project Section II `./projects/autumn-lookbook-part-2.html`
-### Project Section III `./projects/autumn-lookbook-part-3.html`
+## PROJECT II: Autumn Lookbook 
+### Part 1 `./projects/autumn-lookbook-part-1.html`
+### Part 2 `./projects/autumn-lookbook-part-2.html`
+### Part 3 `./projects/autumn-lookbook-part-3.html`
 
 **IMAGES**
 - All of the current images on the page are using Framer CDN links 
 - The local images are in the `./assets/docs/04-autumn-lookbook/images` directory 
 
-## PROJECT VII: Webflow Blog 
+## PROJECT III: Webflow Store 
+### Print Series Page `./projects/webflow-print-series.html`
+### Product Page `./projects/webflow-product-page.html`
+
+**UPDATES** 
+- Add a 'Checkout' page that has the form and a 'Pay Now' button 
+- Add a 'Cart' page that has the cart items 
+- Add a 'Login' page that has the login form 
+- Add a 'Forgot Password' page that has the forgot password form 
+- It would be nice ot have more than one series page 
+- Create ~3 different product pages to show the versatility of the design 
+- Use the image of either the original print or the close-up in-frame image when hovering over a project image 
+
+## PROJECT IV: Summer Lookbook
+### Part 1 `./projects/summer-lookbook-part-1.html`
+### Part 2 `./projects/summer-lookbook-part-2.html`
+### Part 3 `./projects/summer-lookbook-part-3.html`
+### Part 4 `./projects/summer-lookbook-part-4.html`
+
+**UPDATES**
+- It would be rad if we had tooltips for the images 
+- In Adobe Illustrator I can get exact X/Y coordinates for the image 
+- Then it could be more of a high-end magazine style lookbook, like Abercrombie & Fitch 
+
+----
+
+## PROJECT V: iOS App 
+The current horizontal scrolling page won't work with our UX/UI when the page(s) are placed in the projects section of the portfolio. Scrolling up and down is okay, and clicking if it goes to another portfolio display page is okay, otherwise we don't want them leaving our walled garden, and so I'm not sure how else they could scroll. Unless it was a walk through intro of how to use an app with actual next page buttons and some pages could have text input fields to choose a name or enter other information, and then also the note for turning on notifications and geo-location. That might work well with this. 
+  - Charcoal, perfect for design aesthetic: `https://presenting.august.style/ai-voice-sales-development` 
+  - Project directory: `./assets/docs/02-scrolling-presentations`
+  - Blue but a little too playful: `https://presenting.august.style/implement-ai-voice-marketing`
+
+## PROJECT VI: Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
 
   **Internal Catalysts**
@@ -96,13 +96,7 @@ Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignme
     - [Live webpage](https://generative-horoscopes.august.style/astrology-reading/improve-life/internal-external-personal-growth.html)
     - `/Users/seanivore/Development/astrofluenced/astrology-reading/improve-life/internal-external-personal-growth.html`
 
-## PROJECT VIII: Summer Lookbook
-### Project Section I `./projects/summer-lookbook-part-1.html`
-### Project Section II `./projects/summer-lookbook-part-2.html`
-### Project Section III `./projects/summer-lookbook-part-3.html`
-### Project Section IV `./projects/summer-lookbook-part-4.html`
-
-## PROJECT IX: Client Online Service Booking for Yoga Instructor 
+## PROJECT VII: Client Online Service Booking for Yoga Instructor 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
 
 **Yoga Services**
@@ -110,6 +104,16 @@ Custom Hand Illustrated Client Site; Small site and URL can be provided to proba
   - `./assets/docs/07-yoga-services/07-yoga-services.html`
   - [Live webpage](https://online-pt-trainer.august.style/)
   - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
+
+## PROJECT POTENTIAL: CSS Background Animation ALT. VERSION OF PROJECT I could be an admin data dashboard. 
+The project above seems to perfectly clean, simple, easy to adjust not to make it into something else that hiring manager would be impressed by. I think we'd just need to make some key alterations so it isn't obviously just a simple revamp of the original. Some thoughts there: 
+  - Adjust the CSS animation for something equally as mesmerizing and engaging, but different enough. Perhaps like growing and shrinking dots of different sizes. 
+  - When looking into how to wireframe the above, we should also look at other commonly sought after wire frames 
+  - This way we don't need to do another 'Project Feature Landing Page' but still create something a company looking for web design would find value in. 
+
+
+
+
 
 ----
 
