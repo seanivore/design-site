@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Sales - StreamlineOps</title>
     <meta name="description" content="Get in touch with our sales team for custom enterprise solutions.">
-    
+
     <!-- Adobe Typekit Font -->
     <link rel="stylesheet" href="https://use.typekit.net/yrt0pwo.css">
     <!-- Font Awesome -->
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="../assets/css/saas-css-anim-signup.css">
     <link rel="stylesheet" href="../assets/css/css-saas-profile-setup.css">
 </head>
+
 <body>
     <!-- Wave Animation Background -->
     <div class="wave-container" id="waveContainer"></div>
@@ -45,7 +47,7 @@
                                     <label for="firstName">First Name</label>
                                     <input type="text" id="firstName" name="firstName" required placeholder="John">
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label for="lastName">Last Name</label>
                                     <input type="text" id="lastName" name="lastName" required placeholder="Smith">
@@ -129,7 +131,7 @@
                     <div class="thank-you-card glass-card">
                         <h1>Thank You!</h1>
                         <p>We've received your request. Our sales team will be in touch within 24 hours.</p>
-                        
+
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -144,7 +146,7 @@
                                 <span>enterprise@streamlineops.com</span>
                             </div>
                         </div>
-                        
+
                         <a href="css-anim-saas-landing.html" class="btn btn-secondary" style="margin-top: 40px;">
                             Back to Home
                         </a>
@@ -156,18 +158,19 @@
 
     <script src="../assets/js/saas-css-wave-anim.js"></script>
     <script>
-        document.querySelector('.profile-form').addEventListener('submit', function(e) {
+        document.querySelector('.profile-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Hide form section
             document.querySelector('.signup-section').style.display = 'none';
-            
+
             // Show thank you section
             document.querySelector('.thank-you-section').style.display = 'block';
-            
+
             // Scroll to top
             window.scrollTo(0, 0);
         });
     </script>
 </body>
+
 </html>

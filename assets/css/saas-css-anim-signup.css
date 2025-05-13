@@ -262,12 +262,12 @@
     background: rgba(255, 255, 255, 0.05);
 }
 
-.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+.checkbox-label input[type="checkbox"]:checked+.checkbox-custom {
     background: var(--accent-warm);
     border-color: var(--accent-warm);
 }
 
-.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+.checkbox-label input[type="checkbox"]:checked+.checkbox-custom::after {
     content: '\2714';
     color: var(--dark);
     font-weight: bold;
@@ -330,16 +330,16 @@
     .signup-card {
         padding: 30px 20px;
     }
-    
+
     .progress-line {
         width: 60px;
         margin: 0 10px;
     }
-    
+
     .step-label {
         font-size: 0.8rem;
     }
-    
+
     .security-features {
         gap: 20px;
     }
