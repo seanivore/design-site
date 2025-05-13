@@ -68,13 +68,15 @@ The first four project are all good opportunities to recreate something that is 
 - In Adobe Illustrator I can get exact X/Y coordinates for the image 
 - Then it could be more of a high-end magazine style lookbook, like Abercrombie & Fitch 
 
-----
+## PROJECT V: Interactive AI-Led Yoga & Meditation App 
+### Interactive App `./projects/mindflow-app.html`
+### Wireframe Showcase `./projects/mindflow-showcase.html` 
 
-## PROJECT V: iOS App 
-The current horizontal scrolling page won't work with our UX/UI when the page(s) are placed in the projects section of the portfolio. Scrolling up and down is okay, and clicking if it goes to another portfolio display page is okay, otherwise we don't want them leaving our walled garden, and so I'm not sure how else they could scroll. Unless it was a walk through intro of how to use an app with actual next page buttons and some pages could have text input fields to choose a name or enter other information, and then also the note for turning on notifications and geo-location. That might work well with this. 
-  - Charcoal, perfect for design aesthetic: `https://presenting.august.style/ai-voice-sales-development` 
-  - Project directory: `./assets/docs/02-scrolling-presentations`
-  - Blue but a little too playful: `https://presenting.august.style/implement-ai-voice-marketing`
+**UPDATES**
+- The app page is good to go 
+- The showcase page needs to be cleaned up and better organized 
+
+----
 
 ## PROJECT VI: Webflow Blog 
 Webflow Custom Art 200+ Blog/Week Automated. The weekly series "Holistic Alignment" was a three-blog series for finding personal growth internally, externally, and then finding the intersection of the two. The pages have pretty animated lottie animations and I illustrated all the background jungle-core art deco. The bottom "Read More" section is messy but we can skip that and just keep the rest. 
@@ -105,6 +107,14 @@ Custom Hand Illustrated Client Site; Small site and URL can be provided to proba
   - `./assets/docs/07-yoga-services/07-yoga-services.html`
   - [Live webpage](https://online-pt-trainer.august.style/)
   - `/Users/seanivore/Development/webflow-client-ckheals/index.html`
+
+----
+
+## PROJECT 
+The current horizontal scrolling page won't work with our UX/UI when the page(s) are placed in the projects section of the portfolio. Scrolling up and down is okay, and clicking if it goes to another portfolio display page is okay, otherwise we don't want them leaving our walled garden, and so I'm not sure how else they could scroll. Unless it was a walk through intro of how to use an app with actual next page buttons and some pages could have text input fields to choose a name or enter other information, and then also the note for turning on notifications and geo-location. That might work well with this. 
+  - Charcoal, perfect for design aesthetic: `https://presenting.august.style/ai-voice-sales-development` 
+  - Project directory: `./assets/docs/02-scrolling-presentations`
+  - Blue but a little too playful: `https://presenting.august.style/implement-ai-voice-marketing`
 
 ## PROJECT POTENTIAL: CSS Background Animation ALT. VERSION OF PROJECT I could be an admin data dashboard. 
 The project above seems to perfectly clean, simple, easy to adjust not to make it into something else that hiring manager would be impressed by. I think we'd just need to make some key alterations so it isn't obviously just a simple revamp of the original. Some thoughts there: 
