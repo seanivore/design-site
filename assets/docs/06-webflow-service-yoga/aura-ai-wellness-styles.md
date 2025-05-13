@@ -8,7 +8,25 @@
 
 *Main Combo* 
 Gold: #c79325
-On Brown: #221907
+On Brown:#221907
+
+```CSS 
+:root {
+    --primary-gold: #c79325;
+    --primary-brown: #221907;
+    --bg-teal-light: #415a65;
+    --bg-teal-dark: #1a2a31;
+    --bg-red-light: #612f25;
+    --bg-red-dark: #512119;
+    --text-ivory: #cecfcf;
+    --accent-blue: #214472;
+    --accent-clay: #d8a361;
+    --elephant-cocoa-on-teal: #2f201f;
+    --elephant-woody-brown-on-teal: #3c3031;
+    --elephant-stencil-on-red: #2b0d08;
+    --accent-purple: #382947;
+}
+```
 
 *Accent Combo* 
 Floral Red: #9a1b2f
