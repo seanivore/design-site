@@ -1,4 +1,4 @@
-// Portfolio Navigation - Complete fresh rewrite
+// Portfolio Navigation - Simplified
 const portfolioProjects = [
     {
         id: 'saas-landing',
@@ -48,14 +48,16 @@ const portfolioProjects = [
     }
 ];
 
-let portfolioCurrentProject = null;
+let portfolioCurrentProject = 0;
 let portfolioCurrentPage = 0;
-let portfolioNavCollapsed = false;
 
 function initPortfolioNav() {
     // Create shade overlay
     const shade = document.createElement('div');
     shade.className = 'portfolio-shade';
+    shade.addEventListener('click', () => {
+        shade.classList.add('hidden');
+    });
     document.body.appendChild(shade);
     
     // Create navigation container
@@ -84,34 +86,14 @@ function initPortfolioNav() {
             project.pages.forEach((_, pageIndex) => {
                 const dot = document.createElement('div');
                 dot.className = 'portfolio-nav-dot';
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    switchToPage(index, pageIndex);
+                });
                 dots.appendChild(dot);
             });
             
             navItem.appendChild(dots);
-            
-            // Add navigation arrows
-            const arrows = document.createElement('div');
-            arrows.className = 'portfolio-nav-arrows';
-            
-            const leftArrow = document.createElement('div');
-            leftArrow.className = 'portfolio-nav-arrow';
-            leftArrow.innerHTML = '←';
-            leftArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navigatePage(-1);
-            });
-            
-            const rightArrow = document.createElement('div');
-            rightArrow.className = 'portfolio-nav-arrow';
-            rightArrow.innerHTML = '→';
-            rightArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navigatePage(1);
-            });
-            
-            arrows.appendChild(leftArrow);
-            arrows.appendChild(rightArrow);
-            navItem.appendChild(arrows);
         }
         
         navItem.addEventListener('click', () => handleNavClick(index));
@@ -123,55 +105,26 @@ function initPortfolioNav() {
 }
 
 function handleNavClick(index) {
-    const nav = document.querySelector('.portfolio-nav');
     const shade = document.querySelector('.portfolio-shade');
+    shade.classList.add('hidden');
     
-    if (!portfolioNavCollapsed) {
-        // Nav is ON, clicking any project collapses nav and goes to that project
-        portfolioCurrentProject = index;
-        portfolioCurrentPage = 0;
-        portfolioNavCollapsed = true;
-        nav.classList.add('collapsed');
-        shade.classList.add('hidden');
-        
-        // Update active states
-        updateActiveStates();
-        
-        // Navigate to project
-        const project = portfolioProjects[index];
-        window.location.href = `projects/${project.pages[0]}`;
-    } else if (index === portfolioCurrentProject) {
-        // Nav is OFF, clicking the giant circle turns nav back ON
-        portfolioNavCollapsed = false;
-        nav.classList.remove('collapsed');
-        shade.classList.remove('hidden');
+    if (index !== portfolioCurrentProject) {
+        switchToProject(index);
     }
 }
 
-function navigatePage(direction) {
-    const project = portfolioProjects[portfolioCurrentProject];
-    const arrows = document.querySelectorAll('.portfolio-nav-arrow');
-    
-    if (project.pages.length > 1) {
-        const newPage = portfolioCurrentPage + direction;
-        
-        // Check boundaries
-        if (newPage < 0) {
-            // At beginning, bounce left arrow
-            arrows[0].classList.add('bounce-left');
-            setTimeout(() => arrows[0].classList.remove('bounce-left'), 400);
-            return;
-        } else if (newPage >= project.pages.length) {
-            // At end, bounce right arrow
-            arrows[1].classList.add('bounce-right');
-            setTimeout(() => arrows[1].classList.remove('bounce-right'), 400);
-            return;
-        }
-        
-        // Navigate to valid page
-        portfolioCurrentPage = newPage;
-        window.location.href = `projects/${project.pages[newPage]}`;
-    }
+function switchToProject(index) {
+    portfolioCurrentProject = index;
+    portfolioCurrentPage = 0;
+    const project = portfolioProjects[index];
+    window.location.href = project.pages[0];
+}
+
+function switchToPage(projectIndex, pageIndex) {
+    portfolioCurrentProject = projectIndex;
+    portfolioCurrentPage = pageIndex;
+    const project = portfolioProjects[projectIndex];
+    window.location.href = project.pages[pageIndex];
 }
 
 function parsePortfolioLocation() {
@@ -183,14 +136,6 @@ function parsePortfolioLocation() {
         if (pageIndex !== -1) {
             portfolioCurrentProject = projectIndex;
             portfolioCurrentPage = pageIndex;
-            
-            // Set collapsed state on page load
-            portfolioNavCollapsed = true;
-            const nav = document.querySelector('.portfolio-nav');
-            const shade = document.querySelector('.portfolio-shade');
-            nav.classList.add('collapsed');
-            shade.classList.add('hidden');
-            
             updateActiveStates();
         }
     });
@@ -204,18 +149,12 @@ function updateActiveStates() {
     });
     
     // Update dots for active project
-    updatePortfolioDots();
-}
-
-function updatePortfolioDots() {
-    if (portfolioCurrentProject !== null) {
-        const navItem = document.querySelectorAll('.portfolio-nav-item')[portfolioCurrentProject];
-        const dots = navItem.querySelectorAll('.portfolio-nav-dot');
-        
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === portfolioCurrentPage);
-        });
-    }
+    const navItem = navItems[portfolioCurrentProject];
+    const dots = navItem.querySelectorAll('.portfolio-nav-dot');
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === portfolioCurrentPage);
+    });
 }
 
 // Initialize on page load

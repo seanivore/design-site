@@ -1,4 +1,4 @@
-/* Portfolio Navigation - Complete fresh rewrite */
+/* Portfolio Navigation - Simplified */
 .portfolio-nav {
     position: fixed;
     bottom: 40px;
@@ -9,31 +9,19 @@
     transition: all 0.4s ease;
 }
 
-.portfolio-nav.collapsed {
-    bottom: 0;
-    left: 0;
-}
-
 .portfolio-nav-item {
     position: relative;
     cursor: pointer;
-    transition: all 0.4s ease;
 }
 
-/* Hide non-active items when collapsed */
-.portfolio-nav.collapsed .portfolio-nav-item:not(.active) {
-    transform: translateX(-300px);
-    opacity: 0;
-}
-
-/* Base circle style - all same size */
+/* Base circle style */
 .portfolio-nav-circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
-    border: 2px solid rgba(0, 255, 0, 0.6); /* All green when nav is ON */
+    border: 2px solid rgba(255, 255, 255, 0.4);
     transition: all 0.4s ease;
     position: relative;
     box-shadow: 
@@ -45,22 +33,19 @@
 /* Hover state */
 .portfolio-nav-item:hover .portfolio-nav-circle {
     background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(0, 255, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Giant collapsed circle - mostly off screen */
-.portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-circle {
-    width: 400px;
-    height: 400px;
-    transform: translate(-70%, 70%); /* Mostly off viewport */
-    border-color: rgba(255, 0, 0, 0.4);
-    background: rgba(255, 200, 200, 0.15);
+/* Active state - green border */
+.portfolio-nav-item.active .portfolio-nav-circle {
+    border-color: rgba(0, 255, 0, 0.6);
+    border-width: 3px;
 }
 
-/* Project titles - only show on hover */
+/* Project titles */
 .portfolio-nav-title {
     position: absolute;
-    top: -50px;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -74,31 +59,22 @@
     color: #fff;
     font-family: system-ui, -apple-system, sans-serif;
     font-weight: 500;
+    margin-bottom: 20px;
 }
 
-/* Only show title on hover, never by default */
+/* Show title on hover */
 .portfolio-nav-item:hover .portfolio-nav-title {
     opacity: 1;
 }
 
-.portfolio-nav.collapsed .portfolio-nav-title {
-    display: none;
-}
-
-/* Page dots - positioned above title */
+/* Page dots */
 .portfolio-nav-dots {
     position: absolute;
-    top: -20px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 6px;
-    transition: opacity 0.3s ease;
-}
-
-/* Hide dots when collapsed */
-.portfolio-nav.collapsed .portfolio-nav-dots {
-    display: none;
 }
 
 .portfolio-nav-dot {
@@ -107,70 +83,11 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .portfolio-nav-dot.active {
     background: rgba(255, 255, 255, 0.8);
-}
-
-/* Navigation arrows - positioned on visible part of giant circle */
-.portfolio-nav-arrows {
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    display: none;
-    gap: 20px;
-    transform: translate(-50%, -50%);
-}
-
-.portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-arrows {
-    display: flex;
-}
-
-.portfolio-nav-arrow {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    border: 2px solid rgba(0, 255, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: rgba(0, 255, 0, 0.8);
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 
-        0 6px 24px rgba(0, 0, 0, 0.3),
-        inset 0 2px 4px rgba(255, 255, 255, 0.5),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-nav-arrow:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(0, 255, 0, 0.8);
-    color: rgba(0, 255, 0, 1);
-}
-
-/* Bounce animation */
-@keyframes bounceLeft {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-10px); }
-}
-
-@keyframes bounceRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(10px); }
-}
-
-.portfolio-nav-arrow.bounce-left {
-    animation: bounceLeft 0.4s ease;
-}
-
-.portfolio-nav-arrow.bounce-right {
-    animation: bounceRight 0.4s ease;
 }
 
 /* Shade overlay */
@@ -184,9 +101,10 @@
     z-index: 9998;
     opacity: 1;
     transition: opacity 0.5s ease;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .portfolio-shade.hidden {
     opacity: 0;
+    pointer-events: none;
 }
