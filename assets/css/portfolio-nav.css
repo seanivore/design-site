@@ -1,40 +1,81 @@
-/* Portfolio Navigation - Simplified */
+/* Portfolio Navigation */
 .portfolio-nav {
     position: fixed;
-    bottom: 40px;
-    left: 40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
     z-index: 9999;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
+    height: 10rem;
+}
+
+/* Navigation state classes */
+.portfolio-nav.nav-on {
+    /* ON state - show all icons centered */
+}
+
+.portfolio-nav.nav-off {
+    /* OFF state - show only selected icon */
+    justify-content: flex-start;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 .portfolio-nav-item {
     position: relative;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/* Hide all nav items except active one in OFF state */
+.portfolio-nav.nav-off .portfolio-nav-item:not(.active) {
+    display: none;
 }
 
 /* Base circle style */
 .portfolio-nav-circle {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 0, 0.6);
+    /* GREEN border by default */
+    transition: all 0.5s ease;
     position: relative;
 }
 
 /* Hover state */
 .portfolio-nav-item:hover .portfolio-nav-circle {
     background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
-/* Active state - green border */
-.portfolio-nav-item.active .portfolio-nav-circle {
-    border-color: rgba(0, 255, 0, 0.6);
+/* Active state in ON mode - green border */
+.portfolio-nav.nav-on .portfolio-nav-item.active .portfolio-nav-circle {
+    border-color: rgba(0, 255, 0, 0.8);
     border-width: 3px;
+}
+
+/* Active state in OFF mode - red border and large size */
+.portfolio-nav.nav-off .portfolio-nav-item.active .portfolio-nav-circle {
+    width: 20rem;
+    height: 20rem;
+    border-color: rgba(255, 0, 0, 0.8);
+    /* RED border for active */
+    border-width: 3px;
+    /* Position 1/3 off screen */
+    position: relative;
+    left: -6.66rem;
+    /* 1/3 of 20rem */
+    bottom: -6.66rem;
+    /* 1/3 of 20rem */
 }
 
 /* Project titles */
@@ -44,45 +85,91 @@
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    background: rgba(0, 0, 0, 0.9);
+    background: transparent;
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    font-size: 18px;
+    font-size: 2.5rem;
     color: #fff;
     font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
 }
 
-/* Show title on hover */
-.portfolio-nav-item:hover .portfolio-nav-title {
+/* Show title on hover in ON state */
+.portfolio-nav.nav-on .portfolio-nav-item:hover .portfolio-nav-title {
     opacity: 1;
+}
+
+/* Smaller title in OFF state */
+.portfolio-nav.nav-off .portfolio-nav-item .portfolio-nav-title {
+    font-size: 1rem;
+    opacity: 1;
+    bottom: calc(100% + 1.5rem);
+    margin-bottom: 0;
 }
 
 /* Page dots */
 .portfolio-nav-dots {
     position: absolute;
-    bottom: -20px;
+    top: -1.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 6px;
+    gap: 0.5rem;
+    z-index: 10000;
 }
 
 .portfolio-nav-dot {
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     transition: background 0.3s ease;
-    cursor: pointer;
 }
 
 .portfolio-nav-dot.active {
     background: rgba(255, 255, 255, 0.8);
+}
+
+/* Page navigation circles for OFF state */
+.page-nav-circles {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-nav.nav-off .page-nav-circles {
+    opacity: 1;
+}
+
+.page-nav-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0, 255, 0, 0.6);
+    /* GREEN border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+}
+
+.page-nav-circle:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Shade overlay */
@@ -92,14 +179,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 9998;
     opacity: 1;
     transition: opacity 0.5s ease;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
 .portfolio-shade.hidden {
     opacity: 0;
-    pointer-events: none;
 }
