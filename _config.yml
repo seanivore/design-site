@@ -1,7 +1,7 @@
 permalink: /:basename/
-title: Sean August Horvath | @seanivore
-description: Systematically designing reusable patterns & concise documentation. Vector-brained designer, Claude's sidekick. 
-baseurl: ""
+title: High-Demand Digital Asset Showcase | Sean August Horvath 
+description: Highly-polished collection of in-demand digital products illustrating technical & creative abilities in a more intentional way than typical portfolios. 
+baseurl: "/"
 url: "https://design.august.style/"
 collections:
   pages:
