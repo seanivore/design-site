@@ -1,0 +1,106 @@
+/* Portfolio Navigation - Add to all project pages */
+.portfolio-nav {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 9999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-nav.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+}
+
+.portfolio-nav-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-nav-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.portfolio-nav-item:hover .portfolio-nav-circle {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-nav-item.active .portfolio-nav-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-nav-title {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.portfolio-nav-item:hover .portfolio-nav-title,
+.portfolio-nav-item.active .portfolio-nav-title {
+    opacity: 1;
+}
+
+.portfolio-nav-item.active .portfolio-nav-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.portfolio-nav-dots {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-nav-item.active .portfolio-nav-dots {
+    opacity: 1;
+}
+
+.portfolio-nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-nav-dot.active {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide nav on scroll */
+body.portfolio-scrolling .portfolio-nav {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+}
