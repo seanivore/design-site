@@ -1,0 +1,1 @@
+Talk nerdy to me. Sharer of travel secrets. Independent. Spontaneous. Open to living around this or other countries. Pontificate. Energizer.

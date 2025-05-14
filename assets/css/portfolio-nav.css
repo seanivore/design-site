@@ -2,7 +2,7 @@
 .portfolio-nav {
     position: fixed;
     bottom: 40px;
-    right: 40px;
+    left: 40px;
     display: flex;
     gap: 20px;
     z-index: 9999;
@@ -12,7 +12,7 @@
 .portfolio-nav.collapsed {
     gap: 0;
     bottom: 0;
-    right: 0;
+    left: 0;
 }
 
 .portfolio-nav-item {
@@ -22,7 +22,7 @@
 }
 
 .portfolio-nav.collapsed .portfolio-nav-item:not(.active) {
-    transform: translateX(200px);
+    transform: translateX(-200px);
     opacity: 0;
 }
 
@@ -74,7 +74,7 @@
     height: 33vh;
     max-width: 300px;
     max-height: 300px;
-    transform: translate(-33%, 33%);
+    transform: translate(33%, -33%);
 }
 
 .portfolio-nav-title {
@@ -120,6 +120,10 @@
     opacity: 1;
 }
 
+.portfolio-nav.collapsed .portfolio-nav-dots {
+    display: none;
+}
+
 .portfolio-nav-dot {
     width: 8px;
     height: 8px;
@@ -140,7 +144,7 @@
     transform: translateY(-50%);
     display: none;
     gap: 20px;
-    left: -80px;
+    right: 110%;
 }
 
 .portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-arrows {
@@ -172,6 +176,25 @@
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(0, 255, 0, 0.8);
     color: rgba(0, 255, 0, 1);
+}
+
+/* Bounce animation for boundary hit */
+@keyframes bounceLeft {
+    0%, 100% { transform: translateX(0) translateY(-50%); }
+    50% { transform: translateX(-10px) translateY(-50%); }
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0) translateY(-50%); }
+    50% { transform: translateX(10px) translateY(-50%); }
+}
+
+.portfolio-nav-arrow.bounce-left {
+    animation: bounceLeft 0.4s ease;
+}
+
+.portfolio-nav-arrow.bounce-right {
+    animation: bounceRight 0.4s ease;
 }
 
 /* Shade overlay */

@@ -146,8 +146,26 @@ function handleNavClick(index) {
 
 function navigatePage(direction) {
     const project = portfolioProjects[portfolioCurrentProject];
+    const arrows = document.querySelectorAll('.portfolio-nav-arrow');
+    
     if (project.pages.length > 1) {
-        portfolioCurrentPage = (portfolioCurrentPage + direction + project.pages.length) % project.pages.length;
+        const newPage = portfolioCurrentPage + direction;
+        
+        // Check boundaries
+        if (newPage < 0) {
+            // At beginning, bounce left arrow
+            arrows[0].classList.add('bounce-left');
+            setTimeout(() => arrows[0].classList.remove('bounce-left'), 400);
+            return;
+        } else if (newPage >= project.pages.length) {
+            // At end, bounce right arrow
+            arrows[1].classList.add('bounce-right');
+            setTimeout(() => arrows[1].classList.remove('bounce-right'), 400);
+            return;
+        }
+        
+        // Navigate to valid page
+        portfolioCurrentPage = newPage;
         switchPortfolioPage(portfolioCurrentProject, portfolioCurrentPage);
     }
 }
