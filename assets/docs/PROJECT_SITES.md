@@ -50,6 +50,9 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 **IMAGES**
 - All of the current images on the page are using Framer CDN links 
 - The local images are in the `./assets/docs/04-autumn-lookbook/images` directory 
+- If an image is used, say of just a model's shoes, to get a page token from SerpAPI: `https://serpapi.com/google-lens-api`
+- Then that token can be used to get the image in Google Lens "Visually Similar" image search: `https://serpapi.com/google-lens-visual-matches-api`
+- This would automate clicking part of the image and finding similar results in that style but for all different price points and shipping locations 
 
 ## PROJECT III: Webflow Store 
 ### Print Series Page `./projects/webflow-print-series.html`
