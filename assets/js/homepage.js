@@ -1,8 +1,8 @@
 // Homepage JavaScript - Ripple Animation
-const GRID_COLS = 200;
-const GRID_ROWS = 100;
-const WAVE_SPEED = 3; // milliseconds per unit distance
-const WAVE_RADIUS = 6; // how many cards wide the wave is
+const GRID_COLS = 40;
+const GRID_ROWS = 20;
+const WAVE_SPEED = 10; // milliseconds per unit distance
+const WAVE_RADIUS = 8; // how many cards wide the wave is
 
 class RippleGrid {
     constructor() {
@@ -23,7 +23,9 @@ class RippleGrid {
     }
     
     createGrid() {
-        // Create all the grid cards
+        // Create all cards in a document fragment for better performance
+        const fragment = document.createDocumentFragment();
+        
         for (let row = 0; row < GRID_ROWS; row++) {
             for (let col = 0; col < GRID_COLS; col++) {
                 const card = document.createElement('div');
@@ -31,7 +33,7 @@ class RippleGrid {
                 card.dataset.row = row;
                 card.dataset.col = col;
                 
-                this.gridOverlay.appendChild(card);
+                fragment.appendChild(card);
                 this.cards.push({
                     element: card,
                     row: row,
@@ -40,6 +42,9 @@ class RippleGrid {
                 });
             }
         }
+        
+        // Add all cards at once
+        this.gridOverlay.appendChild(fragment);
     }
     
     attachEventListeners() {
@@ -98,11 +103,15 @@ class RippleGrid {
         card.element.classList.add('flipping');
         card.isFlipped = true;
         
+        // Add a visual indicator
+        card.element.style.transform = 'rotateY(180deg)';
+        
         // Reset after animation completes
         setTimeout(() => {
             card.element.classList.remove('flipping');
+            card.element.style.transform = '';
             card.isFlipped = false;
-        }, 600);
+        }, 1000);
     }
     
     clearGrid() {

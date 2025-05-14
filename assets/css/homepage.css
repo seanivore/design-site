@@ -1,11 +1,11 @@
 /* Homepage CSS - Ripple Animation Grid */
 :root {
-    --grid-cols: 200;
-    --grid-rows: 100;
+    --grid-cols: 40;
+    --grid-rows: 20;
     --card-width: calc(100vw / var(--grid-cols));
     --card-height: calc(100vh / var(--grid-rows));
-    --transition-duration: 0.6s;
-    --wave-speed: 0.003s;
+    --transition-duration: 1s;
+    --wave-speed: 0.01s;
     --bg-color: #f5f5f5;
     --text-color: #000;
 }
@@ -80,18 +80,40 @@ body {
 .grid-card {
     width: 100%;
     height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-duration) ease;
+    cursor: pointer;
+}
+
+/* Card front face */
+.grid-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px) invert(1);
     -webkit-backdrop-filter: blur(10px) invert(1);
     border: 0.5px solid rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform var(--transition-duration) ease;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
 }
 
-.grid-card:hover {
-    background-color: rgba(255, 255, 255, 0.85);
+/* Card back face */
+.grid-card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 150, 255, 0.8);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.grid-card:hover::before {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Card states during animation */
@@ -169,8 +191,8 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     :root {
-        --grid-cols: 50;
-        --grid-rows: 30;
+        --grid-cols: 20;
+        --grid-rows: 15;
     }
     
     .content-layer h1 {
