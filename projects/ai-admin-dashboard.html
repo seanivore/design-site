@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Analytics Dashboard | Mindflow Pro</title>
+    <meta name="description" content="Advanced AI-powered analytics dashboard for tracking user engagement, sentiment dynamics, and behavioral patterns.">
+    
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/buj2frf.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jao3exf.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/admin-dashboard.css">
+</head>
+<body>
+    <!-- Morphing Blob Background -->
+    <div class="blob-container" id="blobContainer"></div>
+    
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="brand">
+                    <h1>Mindflow<span>Pro</span></h1>
+                    <span class="tagline">AI-Powered Activity Intelligence</span>
+                </div>
+                <nav class="dashboard-nav">
+                    <a href="#" class="nav-item active">Overview</a>
+                    <a href="#" class="nav-item">Analytics</a>
+                    <a href="#" class="nav-item">Users</a>
+                    <a href="#" class="nav-item">Settings</a>
+                </nav>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="../assets/images/avatar-placeholder.png" alt="User">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Real-time Metrics Bar -->
+            <section class="metrics-bar glass-card">
+                <div class="metric">
+                    <span class="metric-value">8,432</span>
+                    <span class="metric-label">Active Users</span>
+                    <span class="metric-change positive">+12%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">92%</span>
+                    <span class="metric-label">Sentiment Score</span>
+                    <span class="metric-change positive">+3%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">147k</span>
+                    <span class="metric-label">Interactions</span>
+                    <span class="metric-change positive">+28%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">3.2s</span>
+                    <span class="metric-label">Avg Response</span>
+                    <span class="metric-change negative">-0.4s</span>
+                </div>
+            </section>
+            
+            <!-- Main Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- User Engagement Chart -->
+                <section class="dashboard-card glass-card chart-card">
+                    <header class="card-header">
+                        <h2>User Engagement & Behavioral Rhythms</h2>
+                        <div class="card-controls">
+                            <button class="control-btn active">Day</button>
+                            <button class="control-btn">Week</button>
+                            <button class="control-btn">Month</button>
+                        </div>
+                    </header>
+                    <div class="card-content">
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                </section>
+                
+                <!-- Sentiment Gauge -->
+                <section class="dashboard-card glass-card gauge-card">
+                    <header class="card-header">
+                        <h2>Real-time Sentiment Analysis</h2>
+                    </header>
+                    <div class="card-content">
+                        <div class="gauge-container">
+                            <canvas id="sentimentGauge"></canvas>
+                            <div class="gauge-center">
+                                <span class="gauge-value">92%</span>
+                                <span class="gauge-label">Positive</span>
+                            </div>
+                        </div>
+                        <div class="sentiment-breakdown">
+                            <div class="sentiment-item">
+                                <span class="dot positive"></span>
+                                <span>Positive: 68%</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="dot neutral"></span>
+                                <span>Neutral: 24%</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="dot negative"></span>
+                                <span>Negative: 8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Activity Heatmap -->
+                <section class="dashboard-card glass-card heatmap-card">
+                    <header class="card-header">
+                        <h2>Venue Activity Heatmap</h2>
+                        <select class="venue-select">
+                            <option>Downtown Hub</option>
+                            <option>Westside Complex</option>
+                            <option>North Point Plaza</option>
+                        </select>
+                    </header>
+                    <div class="card-content">
+                        <div class="heatmap-container">
+                            <div class="heatmap-grid" id="activityHeatmap"></div>
+                        </div>
+                        <div class="heatmap-legend">
+                            <span class="legend-label">Low</span>
+                            <div class="legend-gradient"></div>
+                            <span class="legend-label">High</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Social Network Graph -->
+                <section class="dashboard-card glass-card network-card">
+                    <header class="card-header">
+                        <h2>Social Influence Network</h2>
+                        <i class="fas fa-expand"></i>
+                    </header>
+                    <div class="card-content">
+                        <div id="networkGraph"></div>
+                    </div>
+                </section>
+                
+                <!-- Trending Topics -->
+                <section class="dashboard-card glass-card trends-card">
+                    <header class="card-header">
+                        <h2>Trending Topics & Keywords</h2>
+                    </header>
+                    <div class="card-content">
+                        <div class="trend-list">
+                            <div class="trend-item">
+                                <span class="trend-rank">1</span>
+                                <span class="trend-name">sustainable fashion</span>
+                                <span class="trend-change">↑ 245%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="trend-rank">2</span>
+                                <span class="trend-name">ai-powered wellness</span>
+                                <span class="trend-change">↑ 189%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="trend-rank">3</span>
+                                <span class="trend-name">virtual experiences</span>
+                                <span class="trend-change">↑ 167%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="trend-rank">4</span>
+                                <span class="trend-name">mindful consumption</span>
+                                <span class="trend-change">↑ 132%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="trend-rank">5</span>
+                                <span class="trend-name">artisanal cocktails</span>
+                                <span class="trend-change">↑ 98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Predictive Insights -->
+                <section class="dashboard-card glass-card insights-card">
+                    <header class="card-header">
+                        <h2>Predictive Insights</h2>
+                        <span class="ai-badge">AI-Powered</span>
+                    </header>
+                    <div class="card-content">
+                        <div class="insight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="insight-text">
+                                <h3>Weekend Activity Surge Expected</h3>
+                                <p>85% probability of 3x activity increase at Downtown Hub this Saturday evening</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="insight-text">
+                                <h3>Anomaly Detected</h3>
+                                <p>Unusual sentiment pattern in North sector - investigate potential service issue</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <i class="fas fa-users"></i>
+                            <div class="insight-text">
+                                <h3>Emerging User Segment</h3>
+                                <p>New cluster identified: "Tech-Forward Wellness Enthusiasts" - 2.3k users</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Custom JavaScript -->
+    <script src="../assets/js/admin-dashboard.js"></script>
+</body>
+</html>
