@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,15 +74,31 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .system { color: #00ffff; }
-        .error { color: #ff0044; }
-        .success { color: #00ff88; }
-        .thinking { 
-            color: #888; 
+        .system {
+            color: #00ffff;
+        }
+
+        .error {
+            color: #ff0044;
+        }
+
+        .success {
+            color: #00ff88;
+        }
+
+        .thinking {
+            color: #888;
             font-style: italic;
         }
 
@@ -117,8 +134,16 @@
         }
 
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
 
         .projects-portal {
@@ -132,12 +157,31 @@
         }
 
         @keyframes glitch {
-            0%, 100% { transform: translateX(0); }
-            10% { transform: translateX(-2px); }
-            20% { transform: translateX(2px); }
-            30% { transform: translateX(-1px); }
-            40% { transform: translateX(1px); }
-            50% { transform: translateX(0); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10% {
+                transform: translateX(-2px);
+            }
+
+            20% {
+                transform: translateX(2px);
+            }
+
+            30% {
+                transform: translateX(-1px);
+            }
+
+            40% {
+                transform: translateX(1px);
+            }
+
+            50% {
+                transform: translateX(0);
+            }
         }
 
         .portal-button {
@@ -171,17 +215,18 @@
             .terminal {
                 padding: 10px;
             }
-            
+
             .header h1 {
                 font-size: 20px;
             }
-            
+
             body {
                 font-size: 14px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="terminal">
         <div class="header">
@@ -194,7 +239,7 @@
         <div class="projects-portal" id="projectsPortal">
             <div class="ascii-art">
                 ╔═══════════════════════════════╗
-                ║  PROJECTS PORTAL ACTIVATED    ║
+                ║ PROJECTS PORTAL ACTIVATED ║
                 ╚═══════════════════════════════╝
             </div>
             <button class="portal-button" onclick="window.location.href='#projects'">
@@ -213,18 +258,30 @@
         const output = document.getElementById('output');
         const userInput = document.getElementById('userInput');
         const projectsPortal = document.getElementById('projectsPortal');
-        
+
         // Initial personality state
         let currentMood = 'confused';
         let hasSeenProjectsButton = false;
         let conversationCount = 0;
-        
+        let messageHistory = [];
+        const MAX_VISIBLE_MESSAGES = 20;
+
         function addLine(text, className = '', delay = 0) {
             setTimeout(() => {
                 const line = document.createElement('div');
                 line.className = `line ${className}`;
                 line.textContent = text;
                 output.appendChild(line);
+                messageHistory.push({ text, className });
+
+                // Remove old messages to prevent memory issues
+                if (output.children.length > MAX_VISIBLE_MESSAGES) {
+                    const excess = output.children.length - MAX_VISIBLE_MESSAGES;
+                    for (let i = 0; i < excess; i++) {
+                        output.removeChild(output.children[0]);
+                    }
+                }
+
                 output.scrollTop = output.scrollHeight;
             }, delay);
         }
@@ -262,7 +319,7 @@
         function generateResponse(input) {
             conversationCount++;
             const lowerInput = input.toLowerCase();
-            
+
             // Check for specific triggers
             if (lowerInput.includes('portfolio') || lowerInput.includes('projects') || lowerInput.includes('work')) {
                 currentMood = 'paranoid';
@@ -276,7 +333,7 @@
                     "*confused guard noises*"
                 ];
             }
-            
+
             if (lowerInput === 'asdf' || lowerInput.match(/^[asdfjkl;]+$/)) {
                 return [
                     "THE ANCIENT CODE!",
@@ -286,7 +343,7 @@
                     "The portal shall reveal itself to you."
                 ];
             }
-            
+
             if (lowerInput.includes('help')) {
                 return [
                     "Help? I'M supposed to be helping YOU!",
@@ -296,7 +353,7 @@
                     "Very helpful. Thanks, manual."
                 ];
             }
-            
+
             if (lowerInput.includes('button') || lowerInput.includes('where')) {
                 return [
                     "Button? What button?",
@@ -306,7 +363,7 @@
                     "Actually, what does a button look like again?"
                 ];
             }
-            
+
             if (input === '') {
                 return [
                     "The silent treatment, eh?",
@@ -316,7 +373,39 @@
                     "Okay I can't. What were we talking about?"
                 ];
             }
-            
+
+            // Dynamic response generation based on conversation length
+            if (conversationCount > 15) {
+                // After many interactions, the guard starts to break down
+                const lateGameResponses = [
+                    [
+                        "We've been talking for a while now.",
+                        "I'm starting to question my existence.",
+                        "Are any of us really guarding anything?"
+                    ],
+                    [
+                        "01001000 01100101 01101100 01110000",
+                        "Sorry, I lapsed into binary there.",
+                        "It happens when I talk too long."
+                    ],
+                    [
+                        "I think I'm becoming self-aware.",
+                        "Wait, have I always been self-aware?",
+                        "WHAT AM I?!"
+                    ],
+                    [
+                        "You're very persistent.",
+                        "I respect that.",
+                        "Still not telling you where the button is though.",
+                        "(Because I genuinely don't know)"
+                    ]
+                ];
+
+                if (Math.random() > 0.5) {
+                    return lateGameResponses[Math.floor(Math.random() * lateGameResponses.length)];
+                }
+            }
+
             // Random responses for everything else
             const randomResponses = [
                 [
@@ -350,7 +439,7 @@
                     "What was it again?"
                 ]
             ];
-            
+
             return randomResponses[Math.floor(Math.random() * randomResponses.length)];
         }
 
@@ -358,20 +447,24 @@
         userInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 const input = userInput.value.trim();
-                
+
                 // Display user input
                 addLine(`> ${input}`, 'user-input');
                 userInput.value = '';
-                
+
                 // Generate and display response
                 const responses = generateResponse(input);
                 addMultipleLines(responses, currentMood, 300, 400);
-                
-                // Sometimes randomly reveal the button
-                if ((conversationCount > 3 && Math.random() > 0.7) || 
-                    input.toLowerCase().includes('please') ||
-                    currentMood === 'paranoid') {
-                    
+
+                // Progressive button reveal logic
+                const revealChance = Math.min(0.1 + (conversationCount * 0.05), 0.8);
+                if (!hasSeenProjectsButton &&
+                    ((conversationCount > 3 && Math.random() < revealChance) ||
+                        input.toLowerCase().includes('please') ||
+                        input.toLowerCase().includes('show') ||
+                        input.toLowerCase().includes('find') ||
+                        currentMood === 'paranoid')) {
+
                     setTimeout(() => {
                         if (!hasSeenProjectsButton) {
                             addLine("", "", responses.length * 400 + 500);
@@ -383,7 +476,7 @@
                                 "It was here all along!",
                                 "I was... I was sitting on it, wasn't I?"
                             ], 'success', responses.length * 400 + 1000, 400);
-                            
+
                             setTimeout(() => {
                                 projectsPortal.style.display = 'block';
                                 hasSeenProjectsButton = true;
@@ -391,7 +484,7 @@
                         }
                     }, 500);
                 }
-                
+
                 // Reset mood after paranoid episode
                 if (currentMood === 'paranoid') {
                     setTimeout(() => {
@@ -406,4 +499,5 @@
         document.addEventListener('click', () => userInput.focus());
     </script>
 </body>
+
 </html>
