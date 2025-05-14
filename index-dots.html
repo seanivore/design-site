@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean August Horvath | Creative Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+            color: #000;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        .content-layer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .content-layer h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .content-layer p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .dots-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(50, 1fr);
+            grid-template-rows: repeat(25, 1fr);
+            gap: 0;
+            z-index: 10;
+            font-size: 1.2rem;
+            font-family: monospace;
+            line-height: 1;
+        }
+
+        .dot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px) invert(1);
+            -webkit-backdrop-filter: blur(10px) invert(1);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .dot::before {
+            content: '●';
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .dot.flipping {
+            animation: flip 0.8s ease;
+        }
+
+        .dot.clearing {
+            animation: clear 0.8s ease forwards;
+        }
+
+        @keyframes flip {
+            0% { transform: rotateY(0deg) scale(1); }
+            50% { transform: rotateY(90deg) scale(0.1); color: #0099ff; }
+            100% { transform: rotateY(180deg) scale(1); }
+        }
+
+        @keyframes clear {
+            0% { transform: rotateY(0deg) scale(1); opacity: 1; }
+            50% { transform: rotateY(90deg) scale(0.1); opacity: 1; }
+            100% { transform: rotateY(180deg) scale(1); opacity: 0; display: none; }
+        }
+
+        .nav-btn {
+            position: fixed;
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: 2px solid #000;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        #projectsBtn { top: 2rem; left: 2rem; }
+        #aboutBtn { top: 2rem; right: 8rem; background: #000; color: #fff; }
+        #clearBtn { bottom: 2rem; right: 2rem; }
+
+        .social-links a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-layer">
+        <h1>Sean August Horvath</h1>
+        <p>Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.</p>
+        
+        <div class="social-links">
+            <a href="https://linkedin.com/in/seanivore" target="_blank">LinkedIn</a>
+            <span>|</span>
+            <a href="https://github.com/seanivore" target="_blank">GitHub</a>
+            <span>|</span>
+            <a href="mailto:sean@august.style">Email</a>
+        </div>
+    </div>
+
+    <div class="dots-grid" id="dotsGrid"></div>
+
+    <button class="nav-btn" id="projectsBtn">PROJECTS</button>
+    <button class="nav-btn" id="aboutBtn">ABOUT</button>
+    <button class="nav-btn" id="clearBtn">CLEAR</button>
+
+    <script>
+        const GRID_COLS = 50;
+        const GRID_ROWS = 25;
+        const WAVE_SPEED = 25;
+        const WAVE_RADIUS = 5;
+
+        class DotsGrid {
+            constructor() {
+                this.container = document.getElementById('dotsGrid');
+                this.dots = [];
+                this.isClearing = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.createGrid();
+                this.attachEventListeners();
+            }
+            
+            createGrid() {
+                const fragment = document.createDocumentFragment();
+                
+                for (let row = 0; row < GRID_ROWS; row++) {
+                    for (let col = 0; col < GRID_COLS; col++) {
+                        const dot = document.createElement('div');
+                        dot.className = 'dot';
+                        dot.dataset.row = row;
+                        dot.dataset.col = col;
+                        
+                        fragment.appendChild(dot);
+                        this.dots.push({
+                            element: dot,
+                            row: row,
+                            col: col,
+                            isFlipped: false
+                        });
+                    }
+                }
+                
+                this.container.appendChild(fragment);
+            }
+            
+            attachEventListeners() {
+                this.container.addEventListener('click', (e) => {
+                    if (this.isClearing || !e.target.classList.contains('dot')) return;
+                    
+                    const row = parseInt(e.target.dataset.row);
+                    const col = parseInt(e.target.dataset.col);
+                    
+                    this.createRipple(row, col);
+                });
+                
+                document.getElementById('clearBtn').addEventListener('click', () => {
+                    this.clearGrid();
+                });
+                
+                document.getElementById('projectsBtn').addEventListener('click', () => {
+                    this.showProjects();
+                });
+            }
+            
+            createRipple(centerRow, centerCol) {
+                this.dots.forEach(dot => {
+                    const distance = Math.sqrt(
+                        Math.pow(dot.row - centerRow, 2) + 
+                        Math.pow(dot.col - centerCol, 2)
+                    );
+                    
+                    if (distance <= WAVE_RADIUS) {
+                        const delay = distance * WAVE_SPEED;
+                        
+                        setTimeout(() => {
+                            this.flipDot(dot);
+                        }, delay);
+                    }
+                });
+            }
+            
+            flipDot(dot) {
+                if (dot.isFlipped) return;
+                
+                dot.element.classList.add('flipping');
+                dot.isFlipped = true;
+                
+                setTimeout(() => {
+                    dot.element.classList.remove('flipping');
+                    dot.isFlipped = false;
+                }, 800);
+            }
+            
+            clearGrid() {
+                this.isClearing = true;
+                
+                this.dots.forEach((dot, index) => {
+                    const delay = index * 2;
+                    
+                    setTimeout(() => {
+                        dot.element.classList.add('clearing');
+                    }, delay);
+                });
+            }
+            
+            showProjects() {
+                this.isClearing = true;
+                
+                this.dots.forEach((dot, index) => {
+                    const delay = (GRID_ROWS * GRID_COLS - index) * 2;
+                    
+                    setTimeout(() => {
+                        dot.element.classList.add('clearing');
+                    }, delay);
+                });
+                
+                setTimeout(() => {
+                    window.location.href = '#projects';
+                }, (GRID_ROWS * GRID_COLS) * 2 + 800);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new DotsGrid();
+        });
+    </script>
+</body>
+</html>

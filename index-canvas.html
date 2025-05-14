@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean August Horvath | Creative Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+            color: #000;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        .content-layer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .content-layer h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .content-layer p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        canvas {
+            mix-blend-mode: difference;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .nav-btn {
+            position: fixed;
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: 2px solid #000;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        #projectsBtn { top: 2rem; left: 2rem; }
+        #aboutBtn { top: 2rem; right: 8rem; background: #000; color: #fff; }
+        #clearBtn { bottom: 2rem; right: 2rem; }
+
+        .social-links a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-layer">
+        <h1>Sean August Horvath</h1>
+        <p>Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.</p>
+        
+        <div class="social-links">
+            <a href="https://linkedin.com/in/seanivore" target="_blank">LinkedIn</a>
+            <span>|</span>
+            <a href="https://github.com/seanivore" target="_blank">GitHub</a>
+            <span>|</span>
+            <a href="mailto:sean@august.style">Email</a>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <button class="nav-btn" id="projectsBtn">PROJECTS</button>
+    <button class="nav-btn" id="aboutBtn">ABOUT</button>
+    <button class="nav-btn" id="clearBtn">CLEAR</button>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        
+        // Grid settings
+        const COLS = Math.floor(width / 20); // Dynamic sizing
+        const ROWS = Math.floor(height / 20); // Makes squares!
+        const CELL_SIZE = Math.min(width / COLS, height / ROWS);
+        const CELL_WIDTH = CELL_SIZE;
+        const CELL_HEIGHT = CELL_SIZE;
+        
+        // Card states
+        const cards = [];
+        const waves = [];
+        
+        // Initialize cards
+        for (let row = 0; row < ROWS; row++) {
+            for (let col = 0; col < COLS; col++) {
+                cards.push({
+                    x: col * CELL_WIDTH,
+                    y: row * CELL_HEIGHT,
+                    width: CELL_WIDTH,
+                    height: CELL_HEIGHT,
+                    row: row,
+                    col: col,
+                    rotation: 0,
+                    scale: 1,
+                    opacity: 1,
+                    isFlipping: false,
+                    flipProgress: 0,
+                    color: 'rgba(255, 255, 255, 1)'
+                });
+            }
+        }
+        
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Update waves
+            for (let i = waves.length - 1; i >= 0; i--) {
+                const wave = waves[i];
+                wave.radius += wave.speed;
+                wave.opacity -= 0.02;
+                
+                if (wave.opacity <= 0) {
+                    waves.splice(i, 1);
+                    continue;
+                }
+                
+                // Affect cards
+                cards.forEach(card => {
+                    const dx = card.col - wave.col;
+                    const dy = card.row - wave.row;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < wave.radius && distance > wave.radius - wave.thickness) {
+                        if (!card.isFlipping) {
+                            card.isFlipping = true;
+                            card.flipProgress = 0;
+                        }
+                    }
+                });
+            }
+            
+            // Draw and update cards
+            cards.forEach(card => {
+                ctx.save();
+                
+                // Position
+                ctx.translate(card.x + card.width / 2, card.y + card.height / 2);
+                
+                // Flip animation
+                if (card.isFlipping) {
+                    card.flipProgress += 0.05;
+                    if (card.flipProgress >= 1) {
+                        card.isFlipping = false;
+                        card.flipProgress = 0;
+                    }
+                    
+                    const angle = card.flipProgress * Math.PI;
+                    card.scale = Math.abs(Math.cos(angle));
+                    card.color = card.flipProgress > 0.5 ? 
+                        'rgba(0, 150, 255, 1)' : 
+                        'rgba(255, 255, 255, 1)';
+                }
+                
+                // Scale
+                ctx.scale(card.scale, 1);
+                
+                // Draw card with inverted colors
+                ctx.fillStyle = card.color;
+                ctx.fillRect(-card.width / 2, -card.height / 2, card.width - 1, card.height - 1);
+                
+                // Add invert filter to cards that haven't flipped
+                if (!card.isFlipping && card.color.includes('255, 255, 255')) {
+                    ctx.globalCompositeOperation = 'difference';
+                    ctx.fillStyle = 'white';
+                    ctx.fillRect(-card.width / 2, -card.height / 2, card.width - 1, card.height - 1);
+                    ctx.globalCompositeOperation = 'source-over';
+                }
+                
+                // Apply blur effect for foggy glass look
+                if (!card.isFlipping) {
+                    ctx.filter = 'blur(3px)';
+                }
+                
+                ctx.restore();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // Click handler
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const col = Math.floor(x / CELL_WIDTH);
+            const row = Math.floor(y / CELL_HEIGHT);
+            
+            waves.push({
+                col: col,
+                row: row,
+                radius: 0,
+                speed: 0.5,
+                thickness: 5,
+                opacity: 1
+            });
+        });
+        
+        // Clear button
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            waves.push({
+                col: COLS,
+                row: ROWS,
+                radius: 0,
+                speed: 2,
+                thickness: 100,
+                opacity: 1
+            });
+        });
+        
+        // Start animation
+        animate();
+        
+        // Handle resize
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            
+            // Reinitialize cards with new dimensions
+            const newCols = Math.floor(width / 20);
+            const newRows = Math.floor(height / 20);
+            const newCellSize = Math.min(width / newCols, height / newRows);
+            
+            cards.length = 0;
+            for (let row = 0; row < newRows; row++) {
+                for (let col = 0; col < newCols; col++) {
+                    cards.push({
+                        x: col * newCellSize,
+                        y: row * newCellSize,
+                        width: newCellSize,
+                        height: newCellSize,
+                        row: row,
+                        col: col,
+                        rotation: 0,
+                        scale: 1,
+                        opacity: 1,
+                        isFlipping: false,
+                        flipProgress: 0,
+                        color: 'rgba(255, 255, 255, 1)'
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
