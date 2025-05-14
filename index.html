@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean August Horvath | Portfolio Access Terminal</title>
+    <title>Sean August Horvath - Digital Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,491 +13,169 @@
         }
 
         body {
-            background: #000;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            line-height: 1.6;
-            overflow: hidden;
-        }
-
-        .terminal {
-            max-width: 800px;
-            margin: 0 auto;
-            height: 100vh;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px 0;
-            border-bottom: 1px solid #00ff00;
-        }
-
-        .header h1 {
-            font-size: 24px;
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        .output {
-            flex-grow: 1;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            padding-right: 10px;
-        }
-
-        .output::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .output::-webkit-scrollbar-track {
-            background: #001100;
-        }
-
-        .output::-webkit-scrollbar-thumb {
-            background: #00ff00;
-        }
-
-        .line {
-            margin: 8px 0;
-            white-space: pre-wrap;
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-5px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .system {
-            color: #00ffff;
-        }
-
-        .error {
-            color: #ff0044;
-        }
-
-        .success {
-            color: #00ff88;
-        }
-
-        .thinking {
-            color: #888;
-            font-style: italic;
-        }
-
-        .input-line {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #111;
+            color: #fff;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 10px 0;
-            border-top: 1px solid #00ff00;
+            justify-content: center;
+            position: relative;
         }
 
-        .prompt {
-            color: #00ff00;
-            margin-right: 10px;
-        }
-
-        #userInput {
-            background: transparent;
-            border: none;
-            color: #00ff00;
-            font-family: inherit;
-            font-size: inherit;
-            outline: none;
-            flex-grow: 1;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background: #00ff00;
-            animation: blink 1s infinite;
-            margin-left: 2px;
-        }
-
-        @keyframes blink {
-
-            0%,
-            50% {
-                opacity: 1;
-            }
-
-            51%,
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .projects-portal {
-            display: none;
+        .container {
             text-align: center;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid #00ff00;
-            background: rgba(0, 255, 0, 0.05);
-            animation: glitch 2s infinite;
+            padding: 2rem;
+            max-width: 600px;
+            position: relative;
+            z-index: 10;
         }
 
-        @keyframes glitch {
-
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-
-            10% {
-                transform: translateX(-2px);
-            }
-
-            20% {
-                transform: translateX(2px);
-            }
-
-            30% {
-                transform: translateX(-1px);
-            }
-
-            40% {
-                transform: translateX(1px);
-            }
-
-            50% {
-                transform: translateX(0);
-            }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
         }
 
-        .portal-button {
-            background: #00ff00;
-            color: #000;
-            border: none;
+        .bio {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .links a:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
             padding: 15px 40px;
-            font-family: inherit;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 30px;
             cursor: pointer;
-            text-transform: uppercase;
-            margin: 10px 0;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .portal-button:hover {
-            background: #00ffcc;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
-            transform: scale(1.05);
+        .btn:hover {
+            background: #fff;
+            color: #111;
         }
 
-        .ascii-art {
-            font-size: 10px;
-            line-height: 1.2;
-            color: #00ff44;
-            margin: 20px 0;
+        .btn.primary {
+            background: #fff;
+            color: #111;
         }
 
-        @media (max-width: 768px) {
-            .terminal {
-                padding: 10px;
+        .btn.primary:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        /* Background animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .bg-circle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            right: 10%;
+            animation-delay: 7s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: 12s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
             }
-
-            .header h1 {
-                font-size: 20px;
-            }
-
-            body {
-                font-size: 14px;
+            50% {
+                transform: translateY(-30px);
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="terminal">
-        <div class="header">
-            <h1>SEAN AUGUST HORVATH</h1>
-            <p>PORTFOLIO ACCESS TERMINAL v2.7.1</p>
-        </div>
-
-        <div class="output" id="output"></div>
-
-        <div class="projects-portal" id="projectsPortal">
-            <div class="ascii-art">
-                ╔═══════════════════════════════╗
-                ║ PROJECTS PORTAL ACTIVATED ║
-                ╚═══════════════════════════════╝
-            </div>
-            <button class="portal-button" onclick="window.location.href='#projects'">
-                [ENTER]
-            </button>
-        </div>
-
-        <div class="input-line">
-            <span class="prompt">&gt;</span>
-            <input type="text" id="userInput" autocomplete="off" autofocus>
-            <span class="cursor"></span>
-        </div>
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
     </div>
 
-    <script>
-        const output = document.getElementById('output');
-        const userInput = document.getElementById('userInput');
-        const projectsPortal = document.getElementById('projectsPortal');
+    <div class="container">
+        <h1>Sean August Horvath</h1>
+        <p class="bio">
+            Graphic Designer with 14 years experience in production, social media strategy, and user experience. 
+            I'm passionate about using design to make complexity accessible and engaging.
+        </p>
+        
+        <div class="links">
+            <a href="https://linkedin.com/in/seanivore" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/seanivore" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:sean@august.style">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
 
-        // Initial personality state
-        let currentMood = 'confused';
-        let hasSeenProjectsButton = false;
-        let conversationCount = 0;
-        let messageHistory = [];
-        const MAX_VISIBLE_MESSAGES = 20;
-
-        function addLine(text, className = '', delay = 0) {
-            setTimeout(() => {
-                const line = document.createElement('div');
-                line.className = `line ${className}`;
-                line.textContent = text;
-                output.appendChild(line);
-                messageHistory.push({ text, className });
-
-                // Remove old messages to prevent memory issues
-                if (output.children.length > MAX_VISIBLE_MESSAGES) {
-                    const excess = output.children.length - MAX_VISIBLE_MESSAGES;
-                    for (let i = 0; i < excess; i++) {
-                        output.removeChild(output.children[0]);
-                    }
-                }
-
-                output.scrollTop = output.scrollHeight;
-            }, delay);
-        }
-
-        function addMultipleLines(lines, className = '', startDelay = 0, betweenDelay = 300) {
-            lines.forEach((text, index) => {
-                addLine(text, className, startDelay + (index * betweenDelay));
-            });
-        }
-
-        // Opening sequence
-        setTimeout(() => {
-            addMultipleLines([
-                "SYSTEM INITIALIZING...",
-                "LOADING PORTFOLIO GUARD PROTOCOL...",
-                "ERROR: GUARD.EXE HAS ENCOUNTERED A PROBLEM"
-            ], 'system', 500, 400);
-
-            setTimeout(() => {
-                addLine("", "", 2500);
-                addMultipleLines([
-                    "Oh.",
-                    "Oh dear.",
-                    "Not this again.",
-                    "",
-                    "Look, I'm supposed to guard something here.",
-                    "A portfolio? Projects? Something important.",
-                    "But between you and me...",
-                    "*whispers* I've completely forgotten what I'm doing."
-                ], '', 3000, 600);
-            }, 2000);
-        }, 1000);
-
-        // Response generator based on input
-        function generateResponse(input) {
-            conversationCount++;
-            const lowerInput = input.toLowerCase();
-
-            // Check for specific triggers
-            if (lowerInput.includes('portfolio') || lowerInput.includes('projects') || lowerInput.includes('work')) {
-                currentMood = 'paranoid';
-                return [
-                    "PROJECTS?! WHO TOLD YOU ABOUT THE PROJECTS?!",
-                    "*frantically checking non-existent pockets*",
-                    "They were RIGHT HERE. I swear they were RIGHT HERE!",
-                    "Wait... are YOU the project thief I've been warned about?",
-                    "...",
-                    "Actually, what's a project thief?",
-                    "*confused guard noises*"
-                ];
-            }
-
-            if (lowerInput === 'asdf' || lowerInput.match(/^[asdfjkl;]+$/)) {
-                return [
-                    "THE ANCIENT CODE!",
-                    "You speak the forbidden language of keyboards!",
-                    "Only the chosen ones know to mash the home row...",
-                    "*bows respectfully*",
-                    "The portal shall reveal itself to you."
-                ];
-            }
-
-            if (lowerInput.includes('help')) {
-                return [
-                    "Help? I'M supposed to be helping YOU!",
-                    "Let me check my instruction manual...",
-                    "*rustling of papers that don't exist*",
-                    "It says here: 'Guard the thing'",
-                    "Very helpful. Thanks, manual."
-                ];
-            }
-
-            if (lowerInput.includes('button') || lowerInput.includes('where')) {
-                return [
-                    "Button? What button?",
-                    "OH! THE button!",
-                    "I definitely didn't lose it.",
-                    "Have you checked under... hmm...",
-                    "Actually, what does a button look like again?"
-                ];
-            }
-
-            if (input === '') {
-                return [
-                    "The silent treatment, eh?",
-                    "I can play this game too.",
-                    "...",
-                    "...",
-                    "Okay I can't. What were we talking about?"
-                ];
-            }
-
-            // Dynamic response generation based on conversation length
-            if (conversationCount > 15) {
-                // After many interactions, the guard starts to break down
-                const lateGameResponses = [
-                    [
-                        "We've been talking for a while now.",
-                        "I'm starting to question my existence.",
-                        "Are any of us really guarding anything?"
-                    ],
-                    [
-                        "01001000 01100101 01101100 01110000",
-                        "Sorry, I lapsed into binary there.",
-                        "It happens when I talk too long."
-                    ],
-                    [
-                        "I think I'm becoming self-aware.",
-                        "Wait, have I always been self-aware?",
-                        "WHAT AM I?!"
-                    ],
-                    [
-                        "You're very persistent.",
-                        "I respect that.",
-                        "Still not telling you where the button is though.",
-                        "(Because I genuinely don't know)"
-                    ]
-                ];
-
-                if (Math.random() > 0.5) {
-                    return lateGameResponses[Math.floor(Math.random() * lateGameResponses.length)];
-                }
-            }
-
-            // Random responses for everything else
-            const randomResponses = [
-                [
-                    "That reminds me of dolphins.",
-                    "Did you know they sleep with one eye open?",
-                    "Smart creatures. Unlike me, apparently."
-                ],
-                [
-                    "Interesting input.",
-                    "I'll pretend I understood that.",
-                    "Yes. Definitely. Whatever you just said."
-                ],
-                [
-                    "ERROR: Understanding.exe has stopped working",
-                    "Would you like to send an error report?",
-                    "Actually, don't. No one reads those."
-                ],
-                [
-                    "I used to know what that meant.",
-                    "Back in my day, we had real words.",
-                    "Or did we? I can't remember anymore."
-                ],
-                [
-                    "Are you a human?",
-                    "Blink twice if you're a human.",
-                    "Actually, I can't see you blink. Never mind."
-                ],
-                [
-                    "I had ONE job.",
-                    "ONE. JOB.",
-                    "What was it again?"
-                ]
-            ];
-
-            return randomResponses[Math.floor(Math.random() * randomResponses.length)];
-        }
-
-        // Handle user input
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                const input = userInput.value.trim();
-
-                // Display user input
-                addLine(`> ${input}`, 'user-input');
-                userInput.value = '';
-
-                // Generate and display response
-                const responses = generateResponse(input);
-                addMultipleLines(responses, currentMood, 300, 400);
-
-                // Progressive button reveal logic
-                const revealChance = Math.min(0.1 + (conversationCount * 0.05), 0.8);
-                if (!hasSeenProjectsButton &&
-                    ((conversationCount > 3 && Math.random() < revealChance) ||
-                        input.toLowerCase().includes('please') ||
-                        input.toLowerCase().includes('show') ||
-                        input.toLowerCase().includes('find') ||
-                        currentMood === 'paranoid')) {
-
-                    setTimeout(() => {
-                        if (!hasSeenProjectsButton) {
-                            addLine("", "", responses.length * 400 + 500);
-                            addMultipleLines([
-                                "Wait.",
-                                "What's that glowing thing behind me?",
-                                "*turns around*",
-                                "OH! THE PROJECTS PORTAL!",
-                                "It was here all along!",
-                                "I was... I was sitting on it, wasn't I?"
-                            ], 'success', responses.length * 400 + 1000, 400);
-
-                            setTimeout(() => {
-                                projectsPortal.style.display = 'block';
-                                hasSeenProjectsButton = true;
-                            }, responses.length * 400 + 3500);
-                        }
-                    }, 500);
-                }
-
-                // Reset mood after paranoid episode
-                if (currentMood === 'paranoid') {
-                    setTimeout(() => {
-                        currentMood = 'confused';
-                    }, 2000);
-                }
-            }
-        });
-
-        // Focus on input field
-        userInput.focus();
-        document.addEventListener('click', () => userInput.focus());
-    </script>
+        <div class="nav-buttons">
+            <a href="projects.html" class="btn primary">PROJECTS</a>
+        </div>
+    </div>
 </body>
-
 </html>

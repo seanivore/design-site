@@ -249,23 +249,27 @@ body {
     color: var(--text-secondary);
 }
 
-.badge {
+.notifications .badge {
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: -8px;
+    right: -8px;
     background: var(--pink);
     color: white;
     font-size: 0.7rem;
-    padding: 2px 6px;
+    padding: 2px 5px;
     border-radius: 10px;
     font-family: var(--font-mono);
+    min-width: 16px;
+    text-align: center;
 }
 
-.user-avatar img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--glass-border);
+.user-avatar {
+    cursor: pointer;
+}
+
+.user-avatar i {
+    font-size: 32px;
+    color: var(--text-secondary);
 }
 
 /* Dashboard Main */
