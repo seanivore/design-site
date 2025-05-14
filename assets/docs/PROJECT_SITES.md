@@ -51,13 +51,6 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 ### Print Series Page `./projects/webflow-print-series.html`
 ### Product Page `./projects/webflow-product-page.html`
 
-#### Feedback 
-- When you click one of the other product images, of the three, the main image disappears but the lower two stay the same. You can't get back to the first image unless you refresh the page: `./projects/webflow-product-page.html`
-- Add a Bauhaus Icon to the left side of the header to mirror the print-series page: `./projects/webflow-product-page.html` --> `./assets/images/webflow-print-shop-nav-icons/bauhaus-navbar-icon-03-400px.webp`
-- Put the 'Shop' button on the left side of the header, to the right of the Bauhaus Icon, on both pages: `./projects/webflow-print-series.html` and `./projects/webflow-product-page.html` 
-- On both page's nav bar remove 'Lookbook' and replace it with a Cart icon. 
-- There is an 'About' link on the bottom of the pages; do we want to do a Login link instead? If so, should we make an simple login page? Login with Google, Apple, Stripe (or Link is that what they use now?) -- oh actually that makes me think about the fact that most checkout pages these days ARE stripe. `https://docs.stripe.com/checkout/quickstart?lang=python` maybe that helps? 
-
 ## PROJECT IV: Summer Lookbook
 ### Part 1 `./projects/summer-lookbook-part-1.html`
 ### Part 2 `./projects/summer-lookbook-part-2.html`
