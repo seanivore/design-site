@@ -1,90 +1,44 @@
-# High-Demand Digital Asset Showcase
---> design.august.style/ 
+# High-Demand Digital Asset Showcase Maintenance 
 
 ## Summary 
 
-The goal is to create a super-polished collection of high-demand digital assets that showcase web development, design, and user experience capabilities. This professional web developer's portfolio features one-page versions of websites, carefully curated and adjusted to fulfill job marketing needs. Within the portfolio's horizontal navigation, pages scroll vertically in a "walled garden" environment where links and inputs are simulated for display purposes. The collection emphasizes commonly sought-after elements like SaaS product landing pages, high-fidelity iOS apps, and administrative dashboards. Each project entry presents either a complete UX flow or selected key pages from the digital project.
+We've created a highly-polished collection of in-demand digital products to showcase technical and creative abilities in a more intentional way than a typical portfolio website. 
 
-### Design Theme 
+`design.august.style` takes a project, cuts out the best parts, places it in a walled garden, and then puts it on display. 
 
-Lean into "simple" to capitalize on making it impressive. Include interactive elements that wow because of smart design, not overly technical development demands. 
+Find the original project state updates in `memory` MCP at "Portfolio Strategy: Show What They Want", "Sean's Portfolio Vision".
 
-Show what they want to see. Think only visually. 
+## Upkeep 
 
-  - Visuals before everything --> they're always the real story 
-  - Highest bar --> pass the gut check 
+There are just two sections of the site. Projects and About. 
 
-### Logic 
+### Projects 
 
-When you come across web design portfolios online, unless it is for an agency, there is always a common theme: They have been scrubbed and polished after the fact. They are not the real story. They are examples of the designer's ability to code and implement design, sure, but they are being used to create a new story. 
+The `./projects` directory contains the HTML files for each project. 
 
-When going through my websites I'd like to do the same. Some just straight up do need some fixes, but we should look at them as themes that can be crafted into whatever type of websites will be most sought after by companies hiring designers. We might include a URL to see the full site for some of them, but in general I think I'd like to try to avoid needing to do that. The real URLs will be somewhere if someone is really digging, meaning this website can be nothing but perfect examples of work. Make up fictional companies to fill out the projects. 
+Each project has a `./assets` directory that contains the CSS, JS, and images for the project. 
 
-## Design Brief 
+### Adding New Projects 
 
-### Projects Section 
+*High-demand means always changing. We'll need to update, and curate, the project entries over time. Once the section is built, protocol for updating it will be outlined here.* 
 
-We need to show movement, but cannot use bulky video files that lack any interactivity. Much like the example, each project will be a full page visual. We'll achieve this by pulling a single page from each website example. The viewer will be able to scroll up and down on the actual project page, without leaving the walled garden that is our showcase. 
+### About 
 
-The navigation will use trendy glass-effect circles with a touch of the project's aesthetic. When clicked, the project will slide in from the right as the previous one slides out to the left, just like video transition effects, and the navigation will remain fixed to the viewport. The selected project will have a larger circle with a bit of title and description text just above it. The text and the navigation disappear when the viewer scrolls up and down the project. 
+The `index.html` serves as an interactive homepage with about information and just a bit of fun that leads the viewer to the project section. 
 
-In short: 
+Our homepage is a simple chat UI that calls Claude, presents them with a role to play as a riddle-master, or paranoid gatekeeper, or one of many other personas that create a brief moment of `gut check` fun, hopefully laughter, before admitting the viewer into the project section. 
 
-  - Each project is a full viewport width and height visual 
-  - A single web project is presented as a page from a website where the vertical scroll still works 
-  - When you go to the next project, it slides in from the right as the previous one slides out to the left 
-  - The portfolio navigation is a series small glass circles at the bottom left of the screen 
+### Updating the (About) Homepage 
 
-And I created a visual example of the navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
+*The homepage AI character is built in a modular way that allows for easy updates to adjusting behavior and personality. The process for updating these details will be outlined here.* 
 
-### About Section (Homepage)
+## Project Directory Structure 
 
-Written in the middle of a 100vw x 100vh panel is my bio. The font is bold and black, and the background is off white. This is covered completely by a grid of rectangles that make up an interactive CSS animation. 
-
-  - Sean August Horvath 
-  - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
-  - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
-
-#### Interactive CSS Ripple Animation 
-
-From edge to edge, top to bottom, a grid of small rectangles; about 200 of them across and 100 of them tall. Clicking anywhere on one of them and they ripple outwards in a circle, moving like "The Wave" that people do sitting in a stadium, the cards "flipping" in succession. The flip is a visual illusion. Each side of the rectangle is different, meaning when the rectangle narrows to a line, then expands back out to a full rectangle, the illusion is created. The cards "flip" 360º with them reaching 180º at wave "peak", before going back to the original position as the wave passes. 
-
-On the normal side the rectangles are a heavily blurred transparent foggy shade, which has the inverted background filter applied to it so that the text behind is visible, though cloudy and unclear. This makes the it look like the background is black with blurry white text. The viewer can't see what it says, but they can tell there is something there. On the other side, they are closer to 100% opacity and have the trendy glass effect. When they click, by clicking enough, they could clear enough of the rectangles at once to see what it says. 
-
-#### UI Navigation 
-
-Not including the three icons for the LinkedIn, GitHub, and Email links, there are just three other link buttons, all of which have a 11px radius curved edges on a stroke that matches the font color. 
-
-At the bottom right there is a CLEAR button. This acts as the accessibility option which turns "off" the interactive visual animation. When clicked, a wave expands from the button that is of a bigger magnitude than the ripple, more like a tsunami. When they flip with this button the cards do not flip back, which is what gives the CLEAR button that "off" type accessibility option. 
-
-At the top right, there are two buttons. One for PROJECTS and the other, which is already depressed, says ABOUT. PROJECTS, when clicked, reacts just like the CLEAR button, but instead of showing what is behind the cards, the cards flip to show the PROJECTS page. 
-
-I was playing with some math trying to figure out how the sequence of flipping cards could create the desired wave effect. Hopefully it will help define the JS for the CSS animation: `./assets/docs/CSS_RIPPLE_ANIMATION.md` 
-
-## Development 
-Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
-
-### PHASE 1 PROJECT PAGE ENTRIES COMPLETE  
-### PHASE 2: Building the Project Section 
-
-- Build the project section navigation 
-- Piece together collected project pages 
-- Add details to project pages 
-
-### PHASE 3: Building the Homepage 
-
-- Review the CSS animation idea for the homepage 
-- Build the homepage 
-
-### PHASE 4: Finalize, polish, and publish 
-
-----
-
-## Directory Structure 
-
-```plaintext 
-├── CLAUDE.md                                <-- You are here
-├── projects                                 <-- Project HTML files that we have updated or recreated
+```plaintext
+├── CLAUDE.md                        <-- You are here
+├── README.md                        <-- Project overview 
+├── index.html                       <-- Interactive AI gatekeeper homepage
+├── projects                         <-- Showcase projects 
 │   ├── ai-admin-dashboard.html
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
@@ -99,8 +53,8 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   ├── summer-lookbook-part-4.html
 │   ├── webflow-print-series.html
 │   └── webflow-product-page.html
-├── assets
-│   ├── css                                   <-- New HTML pages' CSS files
+├── assets                           <-- Showcase project assets 
+│   ├── css                          <-- New HTML Projects' CSS files 
 │   │   ├── admin-dashboard.css
 │   │   ├── autumn-lookbook.css
 │   │   ├── css-anim-saas.css
@@ -111,30 +65,27 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   ├── webflow-print-series.css
 │   │   ├── webflow-product-page.css
 │   │   └── webflow-weekly-blogs.css
-│   ├── js                                     <-- New HTML pages' JS files
-│   │   ├── admin-dashboard.js
-│   │   ├── mindflow-app.js
-│   │   ├── saas-css-anim-signup.js
-│   │   └── saas-css-wave-anim.js
-│   ├── docs                                   <-- Planning projects 
-│   │   ├── 02-framer-autumn-lookbook
-│   │   ├── 04-weblfow-summer-lookbook
-│   │   ├── 05-app-data-dashboards
-│   │   ├── 06-webflow-service-yoga
-│   │   ├── 07-webflow-weekly-blogs
-│   │   ├── 08-css-wave
-│   │   ├── CSS_RIPPLE_ANIMATION.md            <-- CSS animation idea for homepage
-│   │   └── PROJECT_SITES.md                   <-- Content for the projects section
+│   ├── docs
+│   │   ├── css-animated-wave         <-- CSS wave animation landing page 
+│   │   ├── DEV_PLAN.md               <-- Project planning document 
+│   │   ├── slideshow-decks           <-- two horizontally scrolling slideshows 
+│   │   ├── weekly-blog-webflow       <-- holistic alignment blog series  
+│   │   └── yoga-service-webflow      <-- yoga service website 
 │   ├── images
-│   │   ├── autumn-lookbook                    <-- j=portrait, jwide=landscape
-│   │   ├── mindflow-app-avatar-profile.webp   <-- avatar for the mindflow app profile page 
-│   │   ├── summer-lookbook                    <-- 12 sections, images depend on section
-│   │   ├── webflow-print-series               <-- Mid Century Modern prints and icon
-│   │   └── webflow-product-page               <-- Primary Brutalist staged images and many related images
-│   └── setup-scripts                          <-- utility scripts we used to putting together webflow sites
-├── CNAME                                      <-- GitHub Pages URL
-├── _config.yml                                <-- Jekyll config file
-└── README.md
+│   │   ├── autumn-lookbook
+│   │   ├── DESIGN_INSPO              <-- Conceptual inspo.
+│   │   ├── mindflow-profile.webp
+│   │   ├── NAV_INSPO                 <-- Navigation inspiration images 
+│   │   ├── summer-lookbook 
+│   │   ├── webflow-print-series      <-- Webflow print series images 
+│   │   ├── bauhaus-nav-icons 
+│   │   ├── webflow-product-page      <-- Webflow product page images 
+│   │   └── yoga-services             <-- Yoga services images 
+│   └── js                            <-- New HTML Projects' JS files 
+│       ├── admin-dashboard.js
+│       ├── mindflow-app.js
+│       ├── saas-css-anim-signup.js
+│       └── saas-css-wave-anim.js
+├── _config.yml                       <-- Config file for Jekyll 
+└── CNAME                             <-- GitHub Pages custom domain name
 ```
-
-Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md` 
