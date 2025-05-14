@@ -7,16 +7,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding-bottom: 3rem;
+    gap: 3rem;
+    /* More spacing between icons */
+    height: 33.33vh;
+    /* Take up bottom third of viewport */
     z-index: 9999;
     transition: all 0.5s ease;
-    height: 10rem;
 }
 
 /* Navigation state classes */
 .portfolio-nav.nav-on {
-    /* ON state - show all icons centered */
+    /* ON state - show all icons centered in bottom third */
 }
 
 .portfolio-nav.nav-off {
@@ -78,45 +79,74 @@
     /* 1/3 of 20rem */
 }
 
-/* Project titles */
+/* Main title display for ON state hover */
+.portfolio-title-display {
+    position: fixed;
+    top: 33.33vh;
+    /* Position in middle third */
+    left: 0;
+    width: 100%;
+    height: 33.33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9997;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.portfolio-title-display.visible {
+    opacity: 1;
+}
+
+.portfolio-hover-title {
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.portfolio-hover-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 1rem 0 0;
+    max-width: 60%;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Project titles for OFF state */
 .portfolio-nav-title {
     position: absolute;
-    bottom: 100%;
+    top: -3rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    background: transparent;
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: #fff;
     font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
-    margin-bottom: 2rem;
-    width: 100%;
 }
 
-/* Show title on hover in ON state */
-.portfolio-nav.nav-on .portfolio-nav-item:hover .portfolio-nav-title {
-    opacity: 1;
-}
-
-/* Smaller title in OFF state */
+/* Show title in OFF state */
 .portfolio-nav.nav-off .portfolio-nav-item .portfolio-nav-title {
-    font-size: 1rem;
     opacity: 1;
-    bottom: calc(100% + 1.5rem);
-    margin-bottom: 0;
 }
 
 /* Page dots */
 .portfolio-nav-dots {
     position: absolute;
-    top: -1.5rem;
+    top: -2rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -172,15 +202,16 @@
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Shade overlay */
+/* Shade overlay - darker */
 .portfolio-shade {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 9998;
+    background: rgba(0, 0, 0, 0.85);
+    /* Darker shade */
+    z-index: 9996;
     opacity: 1;
     transition: opacity 0.5s ease;
     pointer-events: none;
