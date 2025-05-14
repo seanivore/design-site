@@ -35,7 +35,6 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 
 ----
 
-
 ## Project Concept 
 
 The goal is to create a super-polished collection of high-demand digital assets that showcase web development, design, and user experience capabilities. This professional web developer's portfolio features one-page versions of websites, carefully curated and adjusted to fulfill job marketing needs. Within the portfolio's horizontal navigation, pages scroll vertically in a "walled garden" environment where links and inputs are simulated for display purposes. The collection emphasizes commonly sought-after elements like SaaS product landing pages, high-fidelity iOS apps, and administrative dashboards. Each project entry presents either a complete UX flow or selected key pages from the digital project.
@@ -59,16 +58,120 @@ When going through my websites I'd like to do the same. Some just straight up do
 
 ### Projects Section 
 
-We need to show movement, but cannot use bulky video files that lack any interactivity. Much like the example, each project will be a full page visual. We'll achieve this by pulling a single page from each website example. The viewer will be able to scroll up and down on the actual project page, without leaving the walled garden that is our showcase. 
+This has been constructed but I was having trouble communicating the Project Navigation logic through chat and needed to write it all out as I did below. Aside from some size changes, the aesthetics are pretty solid. 
 
-The navigation will use trendy glass-effect circles with a touch of the project's aesthetic. When clicked, the project will slide in from the right as the previous one slides out to the left, just like video transition effects, and the navigation will remain fixed to the viewport. The selected project will have a larger circle with a bit of title and description text just above it. The text and the navigation disappear when the viewer scrolls up and down the project. 
+#### Displayed Project Information 
 
-In short: 
+Nothing but the title and a subtitle. We are sticking to our ALL VISUAL roots. No description should be necessary otherwise we should rethink the project's inclusion. The names should cut straight to the high-value digital asset; call it out. 
 
-  - Each project is a full viewport width and height visual 
-  - A single web project is presented as a page from a website where the vertical scroll still works 
-  - When you go to the next project, it slides in from the right as the previous one slides out to the left 
-  - The portfolio navigation is a series small glass circles at the bottom left of the screen 
+`/Users/seanivore/Development/design-site/projects.html`
+`/Users/seanivore/Development/design-site/assets/js/portfolio-nav.js`
+`/Users/seanivore/Development/design-site/assets/css/portfolio-nav.css`
+
+Every project page has this in the head: 
+
+```html
+<link rel="stylesheet" href="../assets/css/portfolio-nav.css">
+``` 
+
+And this at the bottom of the body. 
+
+```html
+<script src="../assets/js/portfolio-nav.js"></script>
+```
+
+#### Ready Project Pages 
+
+1. SaaS Product Sales 
+   CSS Animation & Micro-Interactions with a Modular, Versatile Design 
+  - Landing Page `./projects/css-anim-saas-landing.html` 
+  - Signup Page `./projects/saas-css-anim-signup.html` 
+  - Profile Setup Page `./projects/saas-css-anim-profile-setup.html` 
+
+2. AI Generated Fashion Magazine
+   Luxury Looks Pull From Historic Art Movements & Are Designed for Relatable Archetypes
+  - Part 1 `./projects/autumn-lookbook-part-1.html`
+  - Part 2 `./projects/autumn-lookbook-part-2.html`
+  - Part 3 `./projects/autumn-lookbook-part-3.html`
+
+3. Webflow E-Commerce 500+ Product Store 
+   Single-Edition Prints Showcasing 30+ Art Movements with AI Staged Photographs 
+  - Mid-Century Modern Print Series Page `./projects/webflow-print-series.html`
+  - Bauhaus Print Product Page `./projects/webflow-product-page.html`
+
+4. Fashion Guide With Solution Oriented Styles 
+   Google Lens API Integration Is Steps Away from Implementation
+  - Section 1 `./projects/summer-lookbook-part-1.html`
+  - Section 2 `./projects/summer-lookbook-part-2.html`
+  - Section 3 `./projects/summer-lookbook-part-3.html`
+  - Section 4 `./projects/summer-lookbook-part-4.html`
+
+5. AI-Guided Yoga & Meditation App 
+   Interaction Is Handled By the AI & No Typing Required 
+  - Interactive App `./projects/mindflow-app.html`
+
+6. AI-Data Visualization Dashboard 
+   CSS Animated Charts For Rarely Captured Data Before AI-Led Teen Planning App 
+  - `./projects/ai-admin-dashboard.html`
+
+#### Project Section Navigation 
+
+PROJECT NAVIGATION BAR 
+  - Contains icons for each project 
+  - Extends 100% width 
+  - Fixed in viewport even when projects are changed via the icons 
+  - There is a PROJECT NAVIGATION BAR "ON" and "OFF" state for UX purposes
+
+PROJECT ICONS 
+  - 6 round, glass-effect circles 
+  - Each circle represents a project 
+
+PROJECT NAVIGATION BAR "ON" STATE
+  - Black 70% opacity layer over first project; entire viewport
+  - Project icons are about 6rem x 6rem 
+  - They are vertically in the middle of the lower half of the view portfolio; prominent 
+  - They are centered horizontally with a few REM spacing between them; enough to still have decent padding on the sides 
+  - They all have a GREEN stroke boarder 
+  - When you hover over an icon, it grows a tiny bit and brightens and the name of the project appears above it 
+  - The project name is prominent, bold, taking up the 2nd fourth of the viewport vertically with text almost as large as that space 
+
+PAGE LOAD 
+  - The Project Navigation Bar is "ON" 
+
+SELECT A PROJECT 
+  - When an icon is clicked that project is selected
+  - The user can choose any of the six projects 
+  - The Project Navigation Bar is "OFF" 
+
+PROJECT NAVIGATION BAR "OFF" STATE 
+  - All other 5 icons disappear completely 
+  - The black 70% opacity layer is gone so the user can now see the project they have selected 
+  - The selected icon is now 20rem x 20rem; very large 
+  - The selected icon now has a red stroke boarder
+  - The selected icon is positioned so that the left 1/3 and bottom 1/3 of the circle is bleed off screen helping manage the size 
+  - On top of the selected icon are two small 3rem x 3rem round circles 
+  - These are project page navigation circles 
+  - These circles have arrow icons left and right 
+  - Obviously these are only present if the project has more than one page 
+  - The project page navigation circles have a GREEN stroke boarder 
+  - The altering of green and red indicates to the user which element to use at that time 
+  - the project page navigation circles are mostly on top of the large selected icon, with maybe half of the right circle off the right edge of the selected icon 
+  - Above the large selected icon are small circular dots that represent the pages of the project, they are 0.5rem x 0.5rem 
+  - Since the project was just selected the first dot is bright white, while the others are faded and semi transparent still 
+  - In small 1rem font, the name of the project is displayed above the project page indicator dots 
+  - Since the large selected icon is now in red stroke, it is intuitively the option to click to END the viewing of the project and END the OFF state of the Project Navigation Bar; the user can click anywhere on the large selected icon to end the project 
+
+EXITING A PROJECT 
+  - The use has clicked the large selected icon with the red stroke this is partially off screen 
+  - Red is to END the project view which means 
+  - The project navigation bar is now "ON" 
+  - The icons, page shade, and everything returns to the original state from when the page loaded 
+
+WHY THIS IS LOGICAL AND ERROR PROOF 
+  - The user cannot change projects while in a project 
+  - While in the project the user can scroll up and down and click the buttons of the project or use the navigation circles to go to the next or previous page 
+  - The red and green are intuitive and make it easy to understand which element to use 
+  - The change is size of icons is dramatic indicating what is happening 
 
 And I created a visual example of the navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
 
@@ -80,21 +183,11 @@ Written in the middle of a 100vw x 100vh panel is my bio. The font is bold and b
   - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
   - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
 
-#### Interactive CSS Ripple Animation 
-
-From edge to edge, top to bottom, a grid of small rectangles; about 200 of them across and 100 of them tall. Clicking anywhere on one of them and they ripple outwards in a circle, moving like "The Wave" that people do sitting in a stadium, the cards "flipping" in succession. The flip is a visual illusion. Each side of the rectangle is different, meaning when the rectangle narrows to a line, then expands back out to a full rectangle, the illusion is created. The cards "flip" 360º with them reaching 180º at wave "peak", before going back to the original position as the wave passes. 
-
-On the normal side the rectangles are a heavily blurred transparent foggy shade, which has the inverted background filter applied to it so that the text behind is visible, though cloudy and unclear. This makes the it look like the background is black with blurry white text. The viewer can't see what it says, but they can tell there is something there. On the other side, they are closer to 100% opacity and have the trendy glass effect. When they click, by clicking enough, they could clear enough of the rectangles at once to see what it says. 
-
 #### UI Navigation 
 
-Not including the three icons for the LinkedIn, GitHub, and Email links, there are just three other link buttons, all of which have a 11px radius curved edges on a stroke that matches the font color. 
+This is fine for now. I just need the website functional to use in applications 
 
-At the bottom right there is a CLEAR button. This acts as the accessibility option which turns "off" the interactive visual animation. When clicked, a wave expands from the button that is of a bigger magnitude than the ripple, more like a tsunami. When they flip with this button the cards do not flip back, which is what gives the CLEAR button that "off" type accessibility option. 
-
-At the top right, there are two buttons. One for PROJECTS and the other, which is already depressed, says ABOUT. PROJECTS, when clicked, reacts just like the CLEAR button, but instead of showing what is behind the cards, the cards flip to show the PROJECTS page. 
-
-I was playing with some math trying to figure out how the sequence of flipping cards could create the desired wave effect. Hopefully it will help define the JS for the CSS animation: `./assets/docs/CSS_RIPPLE_ANIMATION.md` 
+----
 
 ## Development 
 Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
@@ -178,31 +271,6 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 
 # Projects Ready For Showcase
 
-## PROJECT I: CSS Animation Page 
-### CSS Animation SaaS Landing Page `./projects/css-anim-saas-landing.html` 
-### CSS Animation SaaS Signup Page `./projects/saas-css-anim-signup.html` 
-### CSS Animation SaaS Profile Setup Page `./projects/saas-css-anim-profile-setup.html` 
-
-## PROJECT II: Autumn Lookbook 
-### Part 1 `./projects/autumn-lookbook-part-1.html`
-### Part 2 `./projects/autumn-lookbook-part-2.html`
-### Part 3 `./projects/autumn-lookbook-part-3.html`
-
-## PROJECT III: Webflow Store 
-### Print Series Page `./projects/webflow-print-series.html`
-### Product Page `./projects/webflow-product-page.html`
-
-## PROJECT IV: Summer Lookbook
-### Part 1 `./projects/summer-lookbook-part-1.html`
-### Part 2 `./projects/summer-lookbook-part-2.html`
-### Part 3 `./projects/summer-lookbook-part-3.html`
-### Part 4 `./projects/summer-lookbook-part-4.html`
-
-## PROJECT V: Interactive AI-Led Yoga & Meditation App 
-### Interactive App `./projects/mindflow-app.html`
-
-## PROJECT VI: CSS Animation Data Visualization Dashboard 
-### AI App Data Feed Dashboard `./projects/ai-admin-dashboard.html`
 
 
 ----
