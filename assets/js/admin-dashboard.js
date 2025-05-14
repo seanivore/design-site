@@ -3,17 +3,60 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create morphing blobs
     createBlobs();
     
-    // Initialize charts
+    // Initialize all visualizations
+    initAllVisualizations();
+    
+    // Setup tab navigation
+    setupTabNavigation();
+    
+    // Add real-time updates
+    startRealTimeUpdates();
+});
+
+// Setup tab navigation
+function setupTabNavigation() {
+    const navItems = document.querySelectorAll('.nav-item');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active class from all items and panes
+            navItems.forEach(nav => nav.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            
+            // Add active class to clicked item
+            item.classList.add('active');
+            
+            // Show corresponding tab content
+            const tabName = item.getAttribute('data-tab');
+            const activePane = document.getElementById(`${tabName}-tab`);
+            if (activePane) {
+                activePane.classList.add('active');
+                
+                // Re-initialize charts when switching tabs (for proper sizing)
+                if (tabName === 'analytics') {
+                    setTimeout(() => {
+                        initEngagementChart();
+                        initSentimentGauge();
+                        initNetworkGraph();
+                    }, 100);
+                }
+            }
+        });
+    });
+}
+
+// Initialize all visualizations
+function initAllVisualizations() {
     initMetricSparklines();
     initEngagementChart();
     initSentimentGauge();
     initHeatmap();
     initNetworkGraph();
     initTrendSparklines();
-    
-    // Add real-time updates
-    startRealTimeUpdates();
-});
+}
 
 // Create morphing blob animation
 function createBlobs() {

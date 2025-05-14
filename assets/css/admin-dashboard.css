@@ -117,8 +117,9 @@ body {
 
 /* Dashboard Header */
 .dashboard-header {
-    background: rgba(10, 10, 11, 0.8);
+    background: rgba(10, 10, 11, 0.9);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
@@ -162,28 +163,27 @@ body {
     gap: 2rem;
 }
 
+/* Tab Navigation */
 .nav-item {
     font-family: var(--font-ui);
     font-size: 0.9rem;
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.nav-item:hover,
+.nav-item:hover {
+    color: var(--cyan);
+    background: var(--glass-white);
+}
+
 .nav-item.active {
     color: var(--cyan);
-}
-
-.nav-item.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--cyan);
+    background: var(--glass-white);
 }
 
 /* User Menu */
@@ -229,6 +229,31 @@ body {
     max-width: 1600px;
     margin: 0 auto;
     width: 100%;
+}
+
+/* Tab Content */
+.tab-content {
+    width: 100%;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Metrics Bar */
@@ -697,15 +722,481 @@ body {
     color: var(--bg-dark);
 }
 
+/* Journey Timeline */
+.journey-card {
+    grid-column: span 2;
+}
+
+.journey-badge {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--magenta);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+}
+
+.journey-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.journey-phase {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.journey-phase::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--glass-border);
+}
+
+.journey-phase h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--cyan);
+}
+
+.touchpoint {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.touchpoint .time {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    min-width: 80px;
+}
+
+.touchpoint-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.touchpoint-content i {
+    font-size: 1.2rem;
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+}
+
+.touchpoint-content .action {
+    font-family: var(--font-mono);
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+.touchpoint-content .data-collected {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--glass-white);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border-left: 2px solid var(--cyan);
+}
+
+/* Analytics Grid */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    grid-auto-flow: dense;
+}
+
+/* Message Types Card */
+.message-types-card {
+    grid-column: span 2;
+}
+
+.period-badge {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--cyan);
+    color: var(--bg-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+}
+
+.message-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.message-type {
+    background: var(--glass-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.message-type:hover {
+    transform: translateY(-5px);
+}
+
+.type-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.message-type h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.type-count {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cyan);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.type-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.type-examples span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Data Categories Card */
+.data-categories-card {
+    grid-column: span 3;
+}
+
+.data-category {
+    margin-bottom: 2rem;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.category-value {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--cyan);
+}
+
+.category-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.data-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.data-item span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    min-width: 150px;
+}
+
+.data-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--glass-white);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.data-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), var(--magenta));
+    transition: width 0.8s ease;
+}
+    /* Users Grid */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* User Segments */
+.user-segments-card {
+    grid-column: span 2;
+}
+
+.segment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.user-segment {
+    background: var(--glass-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
+}
+
+.user-segment:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan);
+}
+
+.segment-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.user-segment h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.segment-size {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--cyan);
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.segment-traits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.segment-traits span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 1rem;
+}
+
+.segment-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.segment-stats .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.segment-stats .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.segment-stats .stat-value {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Journey Patterns */
+.journey-patterns-card {
+    grid-column: span 2;
+}
+
+.pattern-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.pattern {
+    background: var(--glass-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.pattern h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+}
+
+.pattern-steps {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.pattern-steps .step {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: var(--glass-white);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+}
+
+.pattern-steps .arrow {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.pattern-percentage {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--magenta);
+    font-weight: 600;
+}
+
+/* Overview Grid Updates */
+.highlight-stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-icon {
+    font-size: 2rem;
+}
+
+.stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Venue List */
+.venue-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.venue-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: var(--glass-white);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.venue-item:hover {
+    transform: translateX(5px);
+}
+
+.venue-rank {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 30px;
+    text-align: center;
+    color: var(--cyan);
+}
+
+.venue-name {
+    flex: 1;
+    font-family: var(--font-mono);
+}
+
+.venue-activity {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--yellow);
+}
+
+/* Quick Insights */
+.quick-insight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--glass-white);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.quick-insight i {
+    font-size: 1.3rem;
+    color: var(--cyan);
+}
+
+.quick-insight p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Settings Grid */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .dashboard-grid {
+    .dashboard-grid,
+    .analytics-grid,
+    .users-grid {
         grid-template-columns: 1fr;
     }
     
     .chart-card,
     .heatmap-card,
-    .insights-card {
+    .insights-card,
+    .journey-card,
+    .message-types-card,
+    .data-categories-card,
+    .user-segments-card,
+    .journey-patterns-card {
         grid-column: span 1;
     }
     
