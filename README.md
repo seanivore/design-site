@@ -4,6 +4,45 @@
 
 This is a simple web asset showcase intended to pull a select portion of a project, polish it up, and then include that only. It is a 'walled garden' approach that allows one to revamp portfolio sites to showcase the most in-demand web assets at that time. 
 
+### Goal 
+To create extremely high-value, polished, B2B/B2C web development designer's showcase. 
+  - Show common website UX flows through series of instances of a project 
+  - Expand my current design portfolio, while also narrowing it down to specific needs of B2B/B2C tech companies 
+  - In at least one case, create high-fidelity product images for an iPhone app 
+  - For app UX/UI, start with an existing app, recreate UX/UI flow, then adjust to fit needs of imaginary project 
+
+### Projects Showcase:
+  - Modern form design patterns
+  - Micro-interactions and loading states
+  - Responsive layouts
+  - Accessibility considerations
+  - Clean, conversion-focused UX
+
+### Great Approach Because:
+  - Shows progression - Hiring managers can see you understand multi-step user journeys
+  - Demonstrates versatility - Two different animation styles, same high quality
+  - Practical value - These are exactly the types of pages companies need
+  - Easy to customize - The code structure allows for quick brand color swaps
+
+### Design Theme 
+
+Lean into "simple" to capitalize on making it impressive. Include interactive elements that wow because of smart design, not overly technical development demands. 
+
+Show what they want to see. Think only visually. 
+
+  - Visuals before everything --> they're always the real story 
+  - Highest bar --> pass the gut check 
+
+## Project Concept 
+
+The goal is to create a super-polished collection of high-demand digital assets that showcase web development, design, and user experience capabilities. This professional web developer's portfolio features one-page versions of websites, carefully curated and adjusted to fulfill job marketing needs. Within the portfolio's horizontal navigation, pages scroll vertically in a "walled garden" environment where links and inputs are simulated for display purposes. The collection emphasizes commonly sought-after elements like SaaS product landing pages, high-fidelity iOS apps, and administrative dashboards. Each project entry presents either a complete UX flow or selected key pages from the digital project.
+
+### Logic 
+
+When you come across web design portfolios online, unless it is for an agency, there is always a common theme: They have been scrubbed and polished after the fact. They are not the real story. They are examples of the designer's ability to code and implement design, sure, but they are being used to create a new story. 
+
+When going through my websites I'd like to do the same. Some just straight up do need some fixes, but we should look at them as themes that can be crafted into whatever type of websites will be most sought after by companies hiring designers. We might include a URL to see the full site for some of them, but in general I think I'd like to try to avoid needing to do that. The real URLs will be somewhere if someone is really digging, meaning this website can be nothing but perfect examples of work. Make up fictional companies to fill out the projects. 
+
 ### Projects Navigation 
 
 Each project is one or more vertical scrolling pages that work in a series or user flow. These are presented as full viewport width and fit content height so that it can be experienced as usual. 
@@ -37,14 +76,13 @@ Inform Jekyll about the configuration: `_config.yml`
 
 There are a few little improvements for each of the projects to be made to make them more engaging. I'm also considering adding some of my actual client projects where all the art is custom made. We tried to repurpose the artwork for something B2B or B2C but it is art and probably took 12 hours to prefect the client's art site, so doing the same just didn't make sense for this particular type of showcase portfolio. 
 
-## Important Files 
+## Project Directory Organization 
 
-ALL PROJECTS ARE IN THE FOLDER: `./projects`
-All PROJECT CSS IS IN THE FOLDER: `./assets/css`
-All PROJECT JS IS IN THE FOLDER: `./assets/js`
-All PROJECT IMAGES ARE IN THE FOLDER: `./assets/images`
-
-PROJECT PREPARATION WAS KEPT ORGANIZED IN THE FOLDER: `./assets/docs`
+1. Assets from original projects or projects in planning state are organized into `./assets/docs` directories 
+2. Determined what the project will be for the showcase, then choose a naming convention for all assets  
+3. Finalized HTML files for the project should be placed in the `./projects` directory 
+4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
+5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
 
 Find a full project directory tree in the `./CLAUDE.md` file where there are details on how to update the to main parts or the entire project as trends and styles change over time. 
 
