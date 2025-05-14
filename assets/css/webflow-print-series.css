@@ -66,6 +66,18 @@ a:hover {
     margin: 0 auto;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -84,6 +96,10 @@ a:hover {
 .nav-link {
     font-weight: 500;
     padding: var(--spacing-sm);
+}
+
+.nav-cart {
+    font-size: 1.2rem;
 }
 
 /* Header Section */

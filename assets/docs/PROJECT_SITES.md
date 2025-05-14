@@ -47,23 +47,16 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 ### Part 2 `./projects/autumn-lookbook-part-2.html`
 ### Part 3 `./projects/autumn-lookbook-part-3.html`
 
-**FYC**
-- If an image is used, say of just a model's shoes, to get a page token from SerpAPI: `https://serpapi.com/google-lens-api`
-- Then that token can be used to get the image in Google Lens "Visually Similar" image search: `https://serpapi.com/google-lens-visual-matches-api`
-- This would automate clicking part of the image and finding similar results in that style but for all different price points and shipping locations 
-
 ## PROJECT III: Webflow Store 
 ### Print Series Page `./projects/webflow-print-series.html`
 ### Product Page `./projects/webflow-product-page.html`
 
-**UPDATES** 
-- Add a 'Checkout' page that has the form and a 'Pay Now' button 
-- Add a 'Cart' page that has the cart items 
-- Add a 'Login' page that has the login form 
-- Add a 'Forgot Password' page that has the forgot password form 
-- It would be nice ot have more than one series page 
-- Create ~3 different product pages to show the versatility of the design 
-- Use the image of either the original print or the close-up in-frame image when hovering over a project image 
+#### Feedback 
+- When you click one of the other product images, of the three, the main image disappears but the lower two stay the same. You can't get back to the first image unless you refresh the page: `./projects/webflow-product-page.html`
+- Add a Bauhaus Icon to the left side of the header to mirror the print-series page: `./projects/webflow-product-page.html` --> `./assets/images/webflow-print-shop-nav-icons/bauhaus-navbar-icon-03-400px.webp`
+- Put the 'Shop' button on the left side of the header, to the right of the Bauhaus Icon, on both pages: `./projects/webflow-print-series.html` and `./projects/webflow-product-page.html` 
+- On both page's nav bar remove 'Lookbook' and replace it with a Cart icon. 
+- There is an 'About' link on the bottom of the pages; do we want to do a Login link instead? If so, should we make an simple login page? Login with Google, Apple, Stripe (or Link is that what they use now?) -- oh actually that makes me think about the fact that most checkout pages these days ARE stripe. `https://docs.stripe.com/checkout/quickstart?lang=python` maybe that helps? 
 
 ## PROJECT IV: Summer Lookbook
 ### Part 1 `./projects/summer-lookbook-part-1.html`
@@ -71,23 +64,8 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 ### Part 3 `./projects/summer-lookbook-part-3.html`
 ### Part 4 `./projects/summer-lookbook-part-4.html`
 
-**UPDATES**
-- It would be rad if we had tooltips for the images 
-- In Adobe Illustrator I can get exact X/Y coordinates for the image 
-- Then it could be more of a high-end magazine style lookbook, like Abercrombie & Fitch 
-
 ## PROJECT V: Interactive AI-Led Yoga & Meditation App 
 ### Interactive App `./projects/mindflow-app.html`
-### Wireframe Showcase `./projects/mindflow-showcase.html` 
-
-**UPDATES**
-- The app page is good to go 
-- The showcase page needs to be cleaned up and better organized 
-- mobile app landing pages with:
-  - App store download buttons
-  - Feature comparison tables
-  - Interactive product tours
-  - Testimonial carousels
 
 ## PROJECT VI: CSS Animation Data Visualization Dashboard 
 ### AI App Data Feed Dashboard `./projects/ai-admin-dashboard.html`
@@ -100,8 +78,16 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 - Adjust some metrics to make more intuitive sense 
 
 ----
+**FYC for Lookbook TO MAYBE DO LATER**
+- If an image is used, say of just a model's shoes, to get a page token from SerpAPI: `https://serpapi.com/google-lens-api`
+- Then that token can be used to get the image in Google Lens "Visually Similar" image search: `https://serpapi.com/google-lens-visual-matches-api`
+- This would automate clicking part of the image and finding similar results in that style but for all different price points and shipping locations 
+- It would be rad if we had tooltips for the images 
+- In Adobe Illustrator I can get exact X/Y coordinates for the image 
+- Then it could be more of a high-end magazine style lookbook, like Abercrombie & Fitch 
+----
 
-**OTHER PROJECTS**
+**OTHER PROJECTS TO MAYBE ADD LATER**
 
 ## PROJECT: Client Online Service Booking for Yoga Instructor 
 Custom Hand Illustrated Client Site; Small site and URL can be provided to probably good with just one page. We'll probably just want to make it look more like a feature page for signing up for the online PT service. 
