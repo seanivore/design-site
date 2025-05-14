@@ -64,16 +64,7 @@ I was playing with some math trying to figure out how the sequence of flipping c
 ## Development 
 Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 
-### PHASE 1: Preparing Project Files 
-
-- Preparing project pages 
-  - Review possible sites to include
-  - Identify which to include and how to include them 
-  - Pull together all their assets 
-  - Organize their assets into the project directory 
-
-- Adjust project pages to better fit portfolio entry concept  
-
+### PHASE 1 PROJECT PAGE ENTRIES COMPLETE  
 ### PHASE 2: Building the Project Section 
 
 - Build the project section navigation 
@@ -94,13 +85,13 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 ```plaintext 
 ├── CLAUDE.md                                <-- You are here
 ├── projects                                 <-- Project HTML files that we have updated or recreated
+│   ├── ai-admin-dashboard.html
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
 │   ├── autumn-lookbook-part-3.html
 │   ├── css-anim-saas-landing.html
 │   ├── css-saas-profile-setup.html
 │   ├── mindflow-app.html
-│   ├── mindflow-showcase.html
 │   ├── saas-css-anim-signup.html
 │   ├── summer-lookbook-part-1.html
 │   ├── summer-lookbook-part-2.html
@@ -110,6 +101,7 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   └── webflow-product-page.html
 ├── assets
 │   ├── css                                   <-- New HTML pages' CSS files
+│   │   ├── admin-dashboard.css
 │   │   ├── autumn-lookbook.css
 │   │   ├── css-anim-saas.css
 │   │   ├── css-saas-profile-setup.css
@@ -120,9 +112,10 @@ Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md`
 │   │   ├── webflow-product-page.css
 │   │   └── webflow-weekly-blogs.css
 │   ├── js                                     <-- New HTML pages' JS files
+│   │   ├── admin-dashboard.js
 │   │   ├── mindflow-app.js
 │   │   ├── saas-css-anim-signup.js
-│   │   └── saas-css-wave-anim.jsw
+│   │   └── saas-css-wave-anim.js
 │   ├── docs                                   <-- Planning projects 
 │   │   ├── 02-framer-autumn-lookbook
 │   │   ├── 04-weblfow-summer-lookbook

@@ -35,7 +35,7 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 
 ----
 
-# Projects 
+# Projects Ready For Showcase
 
 ## PROJECT I: CSS Animation Page 
 ### CSS Animation SaaS Landing Page `./projects/css-anim-saas-landing.html` 
@@ -63,7 +63,10 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 ## PROJECT VI: CSS Animation Data Visualization Dashboard 
 ### AI App Data Feed Dashboard `./projects/ai-admin-dashboard.html`
 
-**UPDATES**
+
+----
+
+**UPDATES FOR LATER**
 - Adjust header font 
 - Make more robust
 - Change User page to live tracking
