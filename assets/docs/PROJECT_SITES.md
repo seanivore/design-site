@@ -88,57 +88,15 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
   - Interactive product tours
   - Testimonial carousels
 
-## PROJECT VI: CSS Animation behind Admin Dashboard 
+## PROJECT VI: CSS Animation Data Visualization Dashboard 
+### AI App Data Feed Dashboard `./projects/ai-admin-dashboard.html`
 
-  1. CSS animation — "morphing blob shapes that react to scroll position" — morphing 3D blob behind frosted glass IS so on trend. I'd like to make sure we are sticking to my general vibe of using simple FX but in impressive ways.
-  2. On the frosted glass let's create a User Admin Dashboard for tracking the novel and massive amounts of AI collected data, with the blob behind data cards and charts. Dashboards are incredibly sought-after by companies.
-  3. Regarding the blob animation concern: we must be cautious, keep it subtle; thinking more "lava lamp behind frosted glass" than "aggressive 3D morphing." Simple but mesmerizing, just like the wave animation.
-
-We have the same starting point as our earlier 'PROJECT I' CSS animation page. 
-
-```
-./assets/docs/css-animated-wave/
-├── assets
-│   ├── css
-│   │   ├── home.css
-│   │   └── wave-animation.css
-│   └── js
-│       └── wave-animation.js
-└── index.html
-```
-
-### Data To Display in Dashboard 
-
-I was immediately reminded of the "Activity Check-in MVP" concept when thinking about the data to display in the dashboard. It collects a lot of never-before-collected data, thanks to AI. 
-
-You can find the MVP concept broken down, and then sorted in to types of data collection and visualization concepts, here: `./assets/docs/css-animated-wave/data-type-inspo/activity-check-in-app-data.md`
-
-I then asked the list to be recreated with information that doesn't require understanding the MVP concept to understand why we're showing certain data in certain ways. There is a lot of information that was provided at onces, so please review this and let me know if it is't valuable or if it isn't simple enough. REMEMBER: Visuals first always, for this project. Simple is the way. 
-
-### Dashboard Data & Visualization Concepts
-To showcase the power of a modern admin dashboard, especially one designed to handle rich, nuanced data from AI-driven insights, we'll conceptualize data displays around the following themes. These examples aim to be compelling and understandable, hinting at the depth of analysis possible without requiring specific knowledge of any single underlying data source. This approach allows for a visually rich dashboard demonstrating the ability to synthesize complex, multi-source data into actionable insights.
-
-**Key Data Visualization Categories & Potential Chart Applications:**
-
-1. User Engagement & Behavioral Rhythms:
-  - *Data Points:* Activity peaks and troughs, interaction frequency, feature adoption rates, daily/weekly routine mapping, session duration heatmaps.
-  - *Potential Charts:* Line charts (trends), Heat maps (activity density), Bar charts (segment comparisons), Sankey diagrams (user flow).
-2. Sentiment & Preference Dynamics:
-  - *Data Points:* Real-time sentiment scores, positive/negative interaction drivers, preference clustering, taste profile evolution, product/feature affinity mapping.
-  - *Potential Charts:* Gauge charts (current sentiment), Stacked bar charts (sentiment breakdown), Scatter plots (preference correlations), Radar charts (multi-faceted profiles).
-3. Contextual & Environmental Intelligence:
-  - *Data Points:* Venue/location atmosphere analytics (e.g., energy levels, busy scores derived from multiple inputs), popular interaction zones, real-time service demand, resource utilization patterns.
-  - *Potential Charts:* Bubble charts (venue popularity/attributes), Geospatial maps with heat overlays, Area charts (demand over time), Custom iconography on floor plans.
-4. Social Interaction & Influence Mapping:
-  - *Data Points:* Group activity patterns, communication nexuses, influence scores within cohorts, trend adoption velocity across networks.
-  - *Potential Charts:* Network graphs, Tree maps (hierarchical influence), Bar charts (influencer scores).
-5. Style & Consumption Trendspotting:
-  - *Data Points:* Emerging brand/product mentions, visual trend identification (from image/video content analysis), purchase intent signals, correlation between style choices and activity patterns.
-  - *Potential Charts:* Word clouds (trending terms/brands), Line charts (trend adoption curves), Donut charts (category breakdowns).
-6. Predictive Insights & Anomaly Detection:
-  - *Data Points:* Forecasted demand/activity, churn risk indicators, unusual behavior alerts, opportunity identification scores.
-  - *Potential Charts:* Line charts with forecast bands, Bullet charts (actual vs. target), Scatter plots with outlier highlighting.
-
+**UPDATES**
+- Adjust header font 
+- Make more robust
+- Change User page to live tracking
+- Highlight data gathering points 
+- Adjust some metrics to make more intuitive sense 
 
 ----
 
