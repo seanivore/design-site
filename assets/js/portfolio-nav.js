@@ -1,4 +1,4 @@
-// Portfolio Navigation - Add to all project pages
+// Portfolio Navigation - Clean rewrite
 const portfolioProjects = [
     {
         id: 'saas-landing',
@@ -10,7 +10,7 @@ const portfolioProjects = [
         ]
     },
     {
-        id: 'autumn-lookbook',
+        id: 'autumn-lookbook', 
         title: 'Fashion Lookbook Fall',
         pages: [
             'autumn-lookbook-part-1.html',
@@ -88,10 +88,8 @@ function initPortfolioNav() {
             });
             
             navItem.appendChild(dots);
-        }
-        
-        // Add navigation arrows for multi-page projects
-        if (project.pages.length > 1) {
+            
+            // Add navigation arrows
             const arrows = document.createElement('div');
             arrows.className = 'portfolio-nav-arrows';
             
@@ -128,18 +126,17 @@ function handleNavClick(index) {
     const nav = document.querySelector('.portfolio-nav');
     const shade = document.querySelector('.portfolio-shade');
     
-    if (index === portfolioCurrentProject && portfolioNavCollapsed) {
-        // Clicking the active collapsed project - show nav again
+    if (portfolioNavCollapsed && index === portfolioCurrentProject) {
+        // Clicking active project when collapsed - restore nav
         portfolioNavCollapsed = false;
         nav.classList.remove('collapsed');
-        shade.classList.remove('hidden');
-    } else if (index === portfolioCurrentProject && !portfolioNavCollapsed) {
-        // First click on active project, collapse nav
+    } else if (!portfolioNavCollapsed && index === portfolioCurrentProject) {
+        // Clicking active project when expanded - collapse nav  
         portfolioNavCollapsed = true;
         nav.classList.add('collapsed');
-        shade.classList.add('hidden');
-    } else {
-        // Switching to different project
+        shade.style.opacity = '0';
+    } else if (!portfolioNavCollapsed) {
+        // Clicking different project when expanded - switch projects
         switchPortfolioProject(index);
     }
 }

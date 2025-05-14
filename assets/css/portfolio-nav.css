@@ -1,4 +1,4 @@
-/* Portfolio Navigation - Add to all project pages */
+/* Portfolio Navigation - Clean rewrite */
 .portfolio-nav {
     position: fixed;
     bottom: 40px;
@@ -10,7 +10,6 @@
 }
 
 .portfolio-nav.collapsed {
-    gap: 0;
     bottom: 0;
     left: 0;
 }
@@ -21,11 +20,13 @@
     transition: all 0.4s ease;
 }
 
+/* Hide non-active items when collapsed */
 .portfolio-nav.collapsed .portfolio-nav-item:not(.active) {
     transform: translateX(-200px);
     opacity: 0;
 }
 
+/* Base circle style - all same size when neutral */
 .portfolio-nav-circle {
     width: 60px;
     height: 60px;
@@ -41,45 +42,33 @@
         inset 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Green border when nav is "on" */
-.portfolio-nav:not(.collapsed) .portfolio-nav-item.active .portfolio-nav-circle {
-    border-color: rgba(0, 255, 0, 0.6);
-}
-
-/* Red tint when nav is "off" */
-.portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-circle {
-    border-color: rgba(255, 0, 0, 0.4);
-    background: rgba(255, 200, 200, 0.15);
-}
-
+/* Hover state */
 .portfolio-nav-item:hover .portfolio-nav-circle {
     background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-.portfolio-nav-item.active .portfolio-nav-circle {
-    width: 90px;
-    height: 90px;
-    background: rgba(255, 255, 255, 0.3);
+/* Active state when nav is expanded - green border, same size */
+.portfolio-nav:not(.collapsed) .portfolio-nav-item.active .portfolio-nav-circle {
+    border-color: rgba(0, 255, 0, 0.6);
     border-width: 3px;
-    box-shadow: 
-        0 12px 48px rgba(0, 0, 0, 0.4),
-        inset 0 3px 6px rgba(255, 255, 255, 0.6),
-        inset 0 -3px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Giant size when collapsed */
+/* Collapsed state - giant circle with red tint */
 .portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-circle {
     width: 33vh;
     height: 33vh;
     max-width: 300px;
     max-height: 300px;
-    transform: translate(33%, -33%);
+    transform: translate(15%, -15%);
+    border-color: rgba(255, 0, 0, 0.4);
+    background: rgba(255, 200, 200, 0.15);
 }
 
+/* Project titles */
 .portfolio-nav-title {
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -100,14 +89,14 @@
     opacity: 1;
 }
 
-/* Hide title when collapsed */
 .portfolio-nav.collapsed .portfolio-nav-title {
     display: none;
 }
 
+/* Page dots */
 .portfolio-nav-dots {
     position: absolute;
-    top: -25px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -137,14 +126,14 @@
     background: rgba(255, 255, 255, 0.8);
 }
 
-/* Navigation arrows */
+/* Navigation arrows - positioned left of giant circle */
 .portfolio-nav-arrows {
     position: absolute;
     top: 50%;
+    left: -120px;
     transform: translateY(-50%);
     display: none;
     gap: 20px;
-    right: 110%;
 }
 
 .portfolio-nav.collapsed .portfolio-nav-item.active .portfolio-nav-arrows {
@@ -178,7 +167,7 @@
     color: rgba(0, 255, 0, 1);
 }
 
-/* Bounce animation for boundary hit */
+/* Bounce animation */
 @keyframes bounceLeft {
     0%, 100% { transform: translateX(0) translateY(-50%); }
     50% { transform: translateX(-10px) translateY(-50%); }
@@ -209,8 +198,4 @@
     opacity: 1;
     transition: opacity 0.5s ease;
     pointer-events: none;
-}
-
-.portfolio-shade.hidden {
-    opacity: 0;
 }
