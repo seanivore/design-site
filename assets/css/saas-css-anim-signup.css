@@ -180,7 +180,7 @@
 }
 
 .form-group label {
-    display: block;
+    display: flex;
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 0.95rem;

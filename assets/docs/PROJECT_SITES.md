@@ -47,9 +47,7 @@ To create extremely high-value, polished, B2B/B2C web development designer's sho
 ### Part 2 `./projects/autumn-lookbook-part-2.html`
 ### Part 3 `./projects/autumn-lookbook-part-3.html`
 
-**IMAGES**
-- All of the current images on the page are using Framer CDN links 
-- The local images are in the `./assets/docs/04-autumn-lookbook/images` directory 
+**FYC**
 - If an image is used, say of just a model's shoes, to get a page token from SerpAPI: `https://serpapi.com/google-lens-api`
 - Then that token can be used to get the image in Google Lens "Visually Similar" image search: `https://serpapi.com/google-lens-visual-matches-api`
 - This would automate clicking part of the image and finding similar results in that style but for all different price points and shipping locations 
