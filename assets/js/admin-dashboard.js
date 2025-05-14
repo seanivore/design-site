@@ -62,30 +62,45 @@ function initAllVisualizations() {
 function createBlobs() {
     const blobContainer = document.getElementById('blobContainer');
     
-    // Create 3 blobs
-    for (let i = 0; i < 3; i++) {
+    // Create 3 blobs with different colors
+    const colors = [
+        { primary: '#00FEFF', name: 'cyan' },
+        { primary: '#FF00A5', name: 'magenta' },
+        { primary: '#F0FF00', name: 'yellow' }
+    ];
+    
+    colors.forEach((color, i) => {
         const blob = document.createElement('div');
         blob.className = 'blob';
-        blob.style.borderRadius = generateBlobShape();
+        blob.style.background = `radial-gradient(circle, ${color.primary} 0%, transparent 70%)`;
+        
+        // Set random initial positions
+        if (i === 0) {
+            blob.style.top = '-300px';
+            blob.style.left = '-300px';
+        } else if (i === 1) {
+            blob.style.bottom = '-300px';
+            blob.style.right = '-300px';
+        } else {
+            blob.style.top = '50%';
+            blob.style.left = '50%';
+            blob.style.transform = 'translate(-50%, -50%)';
+        }
+        
+        // Set unique animation durations and delays for each blob
+        const morphDuration = 20 + Math.random() * 10;
+        const driftDuration = 60 + Math.random() * 20;
+        const colorDuration = 40 + Math.random() * 20;
+        
+        const morphDelay = -Math.random() * morphDuration;
+        const driftDelay = -Math.random() * driftDuration;
+        const colorDelay = -Math.random() * colorDuration;
+        
+        blob.style.animationDuration = `${morphDuration}s, ${driftDuration}s, ${colorDuration}s`;
+        blob.style.animationDelay = `${morphDelay}s, ${driftDelay}s, ${colorDelay}s`;
+        
         blobContainer.appendChild(blob);
-    }
-    
-    // Continuously morph blobs
-    setInterval(() => {
-        const blobs = document.querySelectorAll('.blob');
-        blobs.forEach(blob => {
-            blob.style.borderRadius = generateBlobShape();
-        });
-    }, 4000);
-}
-
-// Generate random blob shape
-function generateBlobShape() {
-    const randomValues = [];
-    for (let i = 0; i < 8; i++) {
-        randomValues.push(Math.floor(Math.random() * 50) + 25);
-    }
-    return `${randomValues[0]}% ${randomValues[1]}% ${randomValues[2]}% ${randomValues[3]}% / ${randomValues[4]}% ${randomValues[5]}% ${randomValues[6]}% ${randomValues[7]}%`;
+    });
 }
 
 // Initialize metric sparklines
