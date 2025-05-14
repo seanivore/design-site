@@ -1,4 +1,4 @@
-// Portfolio Navigation - Clean rewrite
+// Portfolio Navigation - Complete fresh rewrite
 const portfolioProjects = [
     {
         id: 'saas-landing',
@@ -10,7 +10,7 @@ const portfolioProjects = [
         ]
     },
     {
-        id: 'autumn-lookbook', 
+        id: 'autumn-lookbook',
         title: 'Fashion Lookbook Fall',
         pages: [
             'autumn-lookbook-part-1.html',
@@ -48,7 +48,7 @@ const portfolioProjects = [
     }
 ];
 
-let portfolioCurrentProject = 0;
+let portfolioCurrentProject = null;
 let portfolioCurrentPage = 0;
 let portfolioNavCollapsed = false;
 
@@ -126,18 +126,25 @@ function handleNavClick(index) {
     const nav = document.querySelector('.portfolio-nav');
     const shade = document.querySelector('.portfolio-shade');
     
-    if (portfolioNavCollapsed && index === portfolioCurrentProject) {
-        // Clicking active project when collapsed - restore nav
-        portfolioNavCollapsed = false;
-        nav.classList.remove('collapsed');
-    } else if (!portfolioNavCollapsed && index === portfolioCurrentProject) {
-        // Clicking active project when expanded - collapse nav  
+    if (!portfolioNavCollapsed) {
+        // Nav is ON, clicking any project collapses nav and goes to that project
+        portfolioCurrentProject = index;
+        portfolioCurrentPage = 0;
         portfolioNavCollapsed = true;
         nav.classList.add('collapsed');
-        shade.style.opacity = '0';
-    } else if (!portfolioNavCollapsed) {
-        // Clicking different project when expanded - switch projects
-        switchPortfolioProject(index);
+        shade.classList.add('hidden');
+        
+        // Update active states
+        updateActiveStates();
+        
+        // Navigate to project
+        const project = portfolioProjects[index];
+        window.location.href = `projects/${project.pages[0]}`;
+    } else if (index === portfolioCurrentProject) {
+        // Nav is OFF, clicking the giant circle turns nav back ON
+        portfolioNavCollapsed = false;
+        nav.classList.remove('collapsed');
+        shade.classList.remove('hidden');
     }
 }
 
@@ -163,16 +170,8 @@ function navigatePage(direction) {
         
         // Navigate to valid page
         portfolioCurrentPage = newPage;
-        switchPortfolioPage(portfolioCurrentProject, portfolioCurrentPage);
+        window.location.href = `projects/${project.pages[newPage]}`;
     }
-}
-
-function switchPortfolioProject(index) {
-    window.location.href = portfolioProjects[index].pages[0];
-}
-
-function switchPortfolioPage(projectIndex, pageIndex) {
-    window.location.href = portfolioProjects[projectIndex].pages[pageIndex];
 }
 
 function parsePortfolioLocation() {
@@ -185,24 +184,38 @@ function parsePortfolioLocation() {
             portfolioCurrentProject = projectIndex;
             portfolioCurrentPage = pageIndex;
             
-            // Update nav states
-            const navItems = document.querySelectorAll('.portfolio-nav-item');
-            navItems.forEach((item, i) => {
-                item.classList.toggle('active', i === projectIndex);
-            });
+            // Set collapsed state on page load
+            portfolioNavCollapsed = true;
+            const nav = document.querySelector('.portfolio-nav');
+            const shade = document.querySelector('.portfolio-shade');
+            nav.classList.add('collapsed');
+            shade.classList.add('hidden');
             
-            updatePortfolioDots();
+            updateActiveStates();
         }
     });
 }
 
-function updatePortfolioDots() {
-    const navItem = document.querySelectorAll('.portfolio-nav-item')[portfolioCurrentProject];
-    const dots = navItem.querySelectorAll('.portfolio-nav-dot');
-    
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === portfolioCurrentPage);
+function updateActiveStates() {
+    // Update nav item active states
+    const navItems = document.querySelectorAll('.portfolio-nav-item');
+    navItems.forEach((item, i) => {
+        item.classList.toggle('active', i === portfolioCurrentProject);
     });
+    
+    // Update dots for active project
+    updatePortfolioDots();
+}
+
+function updatePortfolioDots() {
+    if (portfolioCurrentProject !== null) {
+        const navItem = document.querySelectorAll('.portfolio-nav-item')[portfolioCurrentProject];
+        const dots = navItem.querySelectorAll('.portfolio-nav-dot');
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === portfolioCurrentPage);
+        });
+    }
 }
 
 // Initialize on page load
