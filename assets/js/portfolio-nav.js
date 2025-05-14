@@ -90,6 +90,32 @@ function initPortfolioNav() {
             navItem.appendChild(dots);
         }
         
+        // Add navigation arrows for multi-page projects
+        if (project.pages.length > 1) {
+            const arrows = document.createElement('div');
+            arrows.className = 'portfolio-nav-arrows';
+            
+            const leftArrow = document.createElement('div');
+            leftArrow.className = 'portfolio-nav-arrow';
+            leftArrow.innerHTML = '←';
+            leftArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigatePage(-1);
+            });
+            
+            const rightArrow = document.createElement('div');
+            rightArrow.className = 'portfolio-nav-arrow';
+            rightArrow.innerHTML = '→';
+            rightArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigatePage(1);
+            });
+            
+            arrows.appendChild(leftArrow);
+            arrows.appendChild(rightArrow);
+            navItem.appendChild(arrows);
+        }
+        
         navItem.addEventListener('click', () => handleNavClick(index));
         nav.appendChild(navItem);
     });
@@ -103,17 +129,10 @@ function handleNavClick(index) {
     const shade = document.querySelector('.portfolio-shade');
     
     if (index === portfolioCurrentProject && portfolioNavCollapsed) {
-        // Already selected, cycle through pages
-        const project = portfolioProjects[index];
-        if (project.pages.length > 1) {
-            portfolioCurrentPage = (portfolioCurrentPage + 1) % project.pages.length;
-            switchPortfolioPage(index, portfolioCurrentPage);
-        } else {
-            // Single page project, show nav again
-            portfolioNavCollapsed = false;
-            nav.classList.remove('collapsed');
-            shade.classList.remove('hidden');
-        }
+        // Clicking the active collapsed project - show nav again
+        portfolioNavCollapsed = false;
+        nav.classList.remove('collapsed');
+        shade.classList.remove('hidden');
     } else if (index === portfolioCurrentProject && !portfolioNavCollapsed) {
         // First click on active project, collapse nav
         portfolioNavCollapsed = true;
@@ -122,6 +141,14 @@ function handleNavClick(index) {
     } else {
         // Switching to different project
         switchPortfolioProject(index);
+    }
+}
+
+function navigatePage(direction) {
+    const project = portfolioProjects[portfolioCurrentProject];
+    if (project.pages.length > 1) {
+        portfolioCurrentPage = (portfolioCurrentPage + direction + project.pages.length) % project.pages.length;
+        switchPortfolioPage(portfolioCurrentProject, portfolioCurrentPage);
     }
 }
 
