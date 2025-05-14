@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     createBlobs();
     
     // Initialize charts
+    initMetricSparklines();
     initEngagementChart();
     initSentimentGauge();
     initHeatmap();
     initNetworkGraph();
+    initTrendSparklines();
     
     // Add real-time updates
     startRealTimeUpdates();
@@ -43,6 +45,72 @@ function generateBlobShape() {
     return `${randomValues[0]}% ${randomValues[1]}% ${randomValues[2]}% ${randomValues[3]}% / ${randomValues[4]}% ${randomValues[5]}% ${randomValues[6]}% ${randomValues[7]}%`;
 }
 
+// Initialize metric sparklines
+function initMetricSparklines() {
+    const sparklines = document.querySelectorAll('.metric-sparkline svg');
+    
+    sparklines.forEach((svg, index) => {
+        const width = 150;
+        const height = 30;
+        
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svg.setAttribute('preserveAspectRatio', 'none');
+        
+        // Generate random data points
+        const points = [];
+        for (let i = 0; i < 20; i++) {
+            points.push({
+                x: (width / 20) * i,
+                y: Math.random() * height
+            });
+        }
+        
+        // Create path
+        let path = `M ${points[0].x} ${points[0].y}`;
+        for (let i = 1; i < points.length; i++) {
+            path += ` L ${points[i].x} ${points[i].y}`;
+        }
+        
+        // Add the path
+        const pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        pathElement.setAttribute('d', path);
+        pathElement.setAttribute('fill', 'none');
+        pathElement.setAttribute('stroke', index % 2 === 0 ? '#00FEFF' : '#FF00A5');
+        pathElement.setAttribute('stroke-width', '2');
+        
+        // Add gradient fill
+        const pathFill = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        pathFill.setAttribute('d', path + ` L ${width} ${height} L 0 ${height} Z`);
+        pathFill.setAttribute('fill', `url(#gradient${index})`);
+        pathFill.setAttribute('opacity', '0.3');
+        
+        // Create gradient
+        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+        gradient.setAttribute('id', `gradient${index}`);
+        gradient.setAttribute('x1', '0%');
+        gradient.setAttribute('y1', '0%');
+        gradient.setAttribute('x2', '0%');
+        gradient.setAttribute('y2', '100%');
+        
+        const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+        stop1.setAttribute('offset', '0%');
+        stop1.setAttribute('stop-color', index % 2 === 0 ? '#00FEFF' : '#FF00A5');
+        
+        const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+        stop2.setAttribute('offset', '100%');
+        stop2.setAttribute('stop-color', 'transparent');
+        
+        gradient.appendChild(stop1);
+        gradient.appendChild(stop2);
+        defs.appendChild(gradient);
+        
+        svg.appendChild(defs);
+        svg.appendChild(pathFill);
+        svg.appendChild(pathElement);
+    });
+}
+
 // Initialize engagement chart
 function initEngagementChart() {
     const canvas = document.getElementById('engagementChart');
@@ -51,50 +119,108 @@ function initEngagementChart() {
     const ctx = canvas.getContext('2d');
     const width = canvas.width = canvas.offsetWidth;
     const height = canvas.height = canvas.offsetHeight;
+    const padding = 40;
+    const chartWidth = width - padding * 2;
+    const chartHeight = height - padding * 2;
     
-    // Create simple line chart
-    ctx.strokeStyle = '#00FEFF';
-    ctx.lineWidth = 3;
+    // Clear canvas
+    ctx.clearRect(0, 0, width, height);
+    
+    // Draw axes
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+    ctx.lineWidth = 1;
     ctx.beginPath();
+    ctx.moveTo(padding, padding);
+    ctx.lineTo(padding, height - padding);
+    ctx.lineTo(width - padding, height - padding);
+    ctx.stroke();
+    
+    // Add grid lines
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.setLineDash([5, 5]);
+    
+    // Horizontal grid lines and Y-axis labels
+    ctx.font = '10px input-mono';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    const ySteps = 5;
+    for (let i = 0; i <= ySteps; i++) {
+        const y = padding + (chartHeight / ySteps) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding, y);
+        ctx.lineTo(width - padding, y);
+        ctx.stroke();
+        
+        // Y-axis labels
+        const value = Math.round((ySteps - i) * 20);
+        ctx.fillText(`${value}k`, 5, y + 3);
+    }
+    
+    // Vertical grid lines and X-axis labels
+    const hours = 24;
+    for (let i = 0; i <= hours; i += 4) {
+        const x = padding + (chartWidth / hours) * i;
+        ctx.beginPath();
+        ctx.moveTo(x, padding);
+        ctx.lineTo(x, height - padding);
+        ctx.stroke();
+        
+        // X-axis labels
+        ctx.fillText(`${i}:00`, x - 15, height - padding + 20);
+    }
+    
+    ctx.setLineDash([]);
     
     // Generate sample data points
     const points = [];
     for (let i = 0; i < 24; i++) {
         points.push({
-            x: (width / 24) * i,
-            y: height - (Math.random() * height * 0.8 + height * 0.1)
+            x: padding + (chartWidth / 24) * i,
+            y: padding + chartHeight - (Math.random() * chartHeight * 0.7 + chartHeight * 0.2)
         });
     }
     
     // Draw smooth curve through points
+    ctx.beginPath();
+    ctx.strokeStyle = '#00FEFF';
+    ctx.lineWidth = 3;
     ctx.moveTo(points[0].x, points[0].y);
-    for (let i = 1; i < points.length; i++) {
-        const xc = (points[i].x + points[i - 1].x) / 2;
-        const yc = (points[i].y + points[i - 1].y) / 2;
-        ctx.quadraticCurveTo(points[i - 1].x, points[i - 1].y, xc, yc);
+    
+    for (let i = 0; i < points.length - 1; i++) {
+        const xc = (points[i].x + points[i + 1].x) / 2;
+        const yc = (points[i].y + points[i + 1].y) / 2;
+        ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
     }
+    
+    // Draw to last point
+    ctx.quadraticCurveTo(points[points.length - 2].x, points[points.length - 2].y, points[points.length - 1].x, points[points.length - 1].y);
     ctx.stroke();
     
     // Add gradient fill
-    const gradient = ctx.createLinearGradient(0, 0, 0, height);
+    const gradient = ctx.createLinearGradient(0, padding, 0, height - padding);
     gradient.addColorStop(0, 'rgba(0, 254, 255, 0.3)');
     gradient.addColorStop(1, 'rgba(0, 254, 255, 0)');
     ctx.fillStyle = gradient;
+    
+    // Create fill path
+    ctx.beginPath();
+    ctx.moveTo(points[0].x, points[0].y);
+    
+    for (let i = 0; i < points.length - 1; i++) {
+        const xc = (points[i].x + points[i + 1].x) / 2;
+        const yc = (points[i].y + points[i + 1].y) / 2;
+        ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+    }
+    
+    ctx.quadraticCurveTo(points[points.length - 2].x, points[points.length - 2].y, points[points.length - 1].x, points[points.length - 1].y);
+    ctx.lineTo(points[points.length - 1].x, height - padding);
+    ctx.lineTo(points[0].x, height - padding);
+    ctx.closePath();
     ctx.fill();
     
-    // Add grid lines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([5, 5]);
-    
-    // Horizontal lines
-    for (let i = 0; i < 5; i++) {
-        ctx.beginPath();
-        const y = (height / 5) * i;
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-        ctx.stroke();
-    }
+    // Add title
+    ctx.font = '12px input-mono';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    ctx.fillText('Activity Over Time', padding, padding - 10);
 }
 
 // Initialize sentiment gauge
@@ -160,28 +286,48 @@ function initHeatmap() {
     const heatmapGrid = document.getElementById('activityHeatmap');
     if (!heatmapGrid) return;
     
-    // Create grid cells
-    for (let i = 0; i < 200; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'heatmap-cell';
-        
-        // Random intensity
-        const intensity = Math.random();
-        let color;
-        
-        if (intensity > 0.8) {
-            color = '#F0FF00'; // Yellow for high activity
-        } else if (intensity > 0.6) {
-            color = '#00FEFF'; // Cyan for medium-high
-        } else if (intensity > 0.4) {
-            color = '#0B5964'; // Teal for medium
-        } else {
-            color = 'rgba(255, 255, 255, 0.05)'; // Very low
+    // Clear existing cells
+    heatmapGrid.innerHTML = '';
+    
+    // Create grid cells (24 hours x 7 days)
+    for (let day = 0; day < 7; day++) {
+        for (let hour = 0; hour < 24; hour++) {
+            const cell = document.createElement('div');
+            cell.className = 'heatmap-cell';
+            
+            // Random intensity with some patterns
+            let baseIntensity = Math.random();
+            
+            // Higher activity during business hours
+            if (hour >= 9 && hour <= 17) baseIntensity += 0.3;
+            
+            // Higher activity on weekends
+            if (day >= 5) baseIntensity += 0.2;
+            
+            // Lower activity late night
+            if (hour < 6 || hour > 22) baseIntensity -= 0.3;
+            
+            const intensity = Math.max(0, Math.min(1, baseIntensity));
+            let color;
+            
+            if (intensity > 0.8) {
+                color = '#F0FF00'; // Yellow for high activity
+            } else if (intensity > 0.6) {
+                color = '#00FEFF'; // Cyan for medium-high
+            } else if (intensity > 0.4) {
+                color = '#FF00A5'; // Pink for medium
+            } else {
+                color = 'rgba(255, 255, 255, 0.05)'; // Very low
+            }
+            
+            cell.style.background = color;
+            cell.style.opacity = intensity;
+            
+            // Add tooltip
+            cell.title = `${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][day]} ${hour}:00 - Activity: ${Math.round(intensity * 100)}%`;
+            
+            heatmapGrid.appendChild(cell);
         }
-        
-        cell.style.background = color;
-        cell.style.opacity = intensity;
-        heatmapGrid.appendChild(cell);
     }
     
     // Add hover effect
@@ -204,74 +350,183 @@ function initNetworkGraph() {
     const container = document.getElementById('networkGraph');
     if (!container) return;
     
+    // Clear existing content
+    container.innerHTML = '';
+    
     // Create SVG element
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', '100%');
     svg.setAttribute('height', '300');
     container.appendChild(svg);
     
+    const width = container.offsetWidth;
+    const height = 300;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    
     // Create nodes and links
     const nodes = [];
     const links = [];
     
-    // Generate random nodes
-    for (let i = 0; i < 15; i++) {
-        nodes.push({
-            id: i,
-            x: Math.random() * container.offsetWidth,
-            y: Math.random() * 300,
-            size: Math.random() * 20 + 10,
-            influence: Math.random()
-        });
-    }
+    // Create influence clusters
+    const clusters = [
+        { name: 'Influencers', color: '#FF00A5', x: centerX - 100, y: centerY - 50, count: 3 },
+        { name: 'Active Users', color: '#00FEFF', x: centerX + 100, y: centerY - 50, count: 5 },
+        { name: 'Regular Users', color: '#0B5964', x: centerX, y: centerY + 80, count: 7 }
+    ];
     
-    // Create random connections
-    for (let i = 0; i < 20; i++) {
-        const source = Math.floor(Math.random() * nodes.length);
-        const target = Math.floor(Math.random() * nodes.length);
-        if (source !== target) {
-            links.push({ source: nodes[source], target: nodes[target] });
+    // Generate nodes with cluster positions
+    let nodeId = 0;
+    clusters.forEach((cluster, clusterIndex) => {
+        for (let i = 0; i < cluster.count; i++) {
+            const angle = (Math.PI * 2 / cluster.count) * i;
+            const radius = 40 + Math.random() * 30;
+            nodes.push({
+                id: nodeId++,
+                x: cluster.x + Math.cos(angle) * radius,
+                y: cluster.y + Math.sin(angle) * radius,
+                size: clusterIndex === 0 ? 15 + Math.random() * 10 : 8 + Math.random() * 7,
+                color: cluster.color,
+                cluster: clusterIndex,
+                influence: 1 - clusterIndex * 0.3
+            });
+        }
+    });
+    
+    // Create connections between clusters
+    for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+            // Connect nodes within same cluster
+            if (nodes[i].cluster === nodes[j].cluster && Math.random() > 0.5) {
+                links.push({ source: nodes[i], target: nodes[j], strength: 0.8 });
+            }
+            // Connect nodes between different clusters (less frequently)
+            else if (nodes[i].cluster !== nodes[j].cluster && Math.random() > 0.85) {
+                links.push({ source: nodes[i], target: nodes[j], strength: 0.3 });
+            }
         }
     }
     
     // Draw links
+    const linkGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     links.forEach(link => {
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
         line.setAttribute('x1', link.source.x);
         line.setAttribute('y1', link.source.y);
         line.setAttribute('x2', link.target.x);
         line.setAttribute('y2', link.target.y);
-        line.setAttribute('stroke', 'rgba(255, 255, 255, 0.2)');
-        line.setAttribute('stroke-width', '1');
-        svg.appendChild(line);
+        line.setAttribute('stroke', 'rgba(255, 255, 255, 0.1)');
+        line.setAttribute('stroke-width', link.strength * 2);
+        linkGroup.appendChild(line);
     });
+    svg.appendChild(linkGroup);
     
     // Draw nodes
+    const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     nodes.forEach(node => {
+        const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        
+        // Outer glow
+        const glow = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        glow.setAttribute('cx', node.x);
+        glow.setAttribute('cy', node.y);
+        glow.setAttribute('r', node.size * 1.5);
+        glow.setAttribute('fill', node.color);
+        glow.setAttribute('opacity', '0.2');
+        glow.setAttribute('filter', 'blur(3px)');
+        group.appendChild(glow);
+        
+        // Main circle
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('cx', node.x);
         circle.setAttribute('cy', node.y);
         circle.setAttribute('r', node.size);
-        
-        // Color based on influence
-        const color = node.influence > 0.7 ? '#FF00A5' : 
-                     node.influence > 0.4 ? '#00FEFF' : '#0B5964';
-        
-        circle.setAttribute('fill', color);
-        circle.setAttribute('opacity', '0.8');
+        circle.setAttribute('fill', node.color);
+        circle.setAttribute('opacity', '0.9');
         
         // Add hover effect
         circle.addEventListener('mouseenter', function() {
-            this.setAttribute('r', node.size * 1.5);
-            this.setAttribute('opacity', '1');
+            circle.setAttribute('r', node.size * 1.3);
+            glow.setAttribute('r', node.size * 2);
+            circle.setAttribute('opacity', '1');
+            
+            // Show tooltip
+            const tooltip = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            tooltip.setAttribute('x', node.x);
+            tooltip.setAttribute('y', node.y - node.size - 10);
+            tooltip.setAttribute('text-anchor', 'middle');
+            tooltip.setAttribute('fill', 'white');
+            tooltip.setAttribute('font-family', 'input-mono');
+            tooltip.setAttribute('font-size', '10');
+            tooltip.textContent = `Influence: ${Math.round(node.influence * 100)}%`;
+            tooltip.setAttribute('id', 'tooltip');
+            svg.appendChild(tooltip);
         });
         
         circle.addEventListener('mouseleave', function() {
-            this.setAttribute('r', node.size);
-            this.setAttribute('opacity', '0.8');
+            circle.setAttribute('r', node.size);
+            glow.setAttribute('r', node.size * 1.5);
+            circle.setAttribute('opacity', '0.9');
+            
+            // Remove tooltip
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip) tooltip.remove();
         });
         
-        svg.appendChild(circle);
+        group.appendChild(circle);
+        nodeGroup.appendChild(group);
+    });
+    svg.appendChild(nodeGroup);
+    
+    // Add cluster labels
+    clusters.forEach(cluster => {
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', cluster.x);
+        label.setAttribute('y', cluster.y - 60);
+        label.setAttribute('text-anchor', 'middle');
+        label.setAttribute('fill', cluster.color);
+        label.setAttribute('font-family', 'input-mono');
+        label.setAttribute('font-size', '12');
+        label.setAttribute('opacity', '0.8');
+        label.textContent = cluster.name;
+        svg.appendChild(label);
+    });
+}
+
+// Initialize trend sparklines
+function initTrendSparklines() {
+    const sparklines = document.querySelectorAll('.trend-sparkline svg');
+    
+    sparklines.forEach((svg, index) => {
+        const width = 60;
+        const height = 20;
+        
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svg.setAttribute('preserveAspectRatio', 'none');
+        
+        // Generate trending data (upward trend)
+        const points = [];
+        for (let i = 0; i < 10; i++) {
+            points.push({
+                x: (width / 10) * i,
+                y: height - (i * 1.5 + Math.random() * 5)
+            });
+        }
+        
+        // Create path
+        let path = `M ${points[0].x} ${points[0].y}`;
+        for (let i = 1; i < points.length; i++) {
+            path += ` L ${points[i].x} ${points[i].y}`;
+        }
+        
+        // Add the path
+        const pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        pathElement.setAttribute('d', path);
+        pathElement.setAttribute('fill', 'none');
+        pathElement.setAttribute('stroke', '#F0FF00');
+        pathElement.setAttribute('stroke-width', '2');
+        
+        svg.appendChild(pathElement);
     });
 }
 

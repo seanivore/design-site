@@ -52,24 +52,36 @@
             <!-- Real-time Metrics Bar -->
             <section class="metrics-bar glass-card">
                 <div class="metric">
-                    <span class="metric-value">8,432</span>
-                    <span class="metric-label">Active Users</span>
-                    <span class="metric-change positive">+12%</span>
+                    <div class="metric-sparkline"><svg></svg></div>
+                    <div class="metric-content">
+                        <span class="metric-value">8,432</span>
+                        <span class="metric-label">Active Users</span>
+                        <span class="metric-change positive">+12%</span>
+                    </div>
                 </div>
                 <div class="metric">
-                    <span class="metric-value">92%</span>
-                    <span class="metric-label">Sentiment Score</span>
-                    <span class="metric-change positive">+3%</span>
+                    <div class="metric-sparkline"><svg></svg></div>
+                    <div class="metric-content">
+                        <span class="metric-value">92%</span>
+                        <span class="metric-label">Sentiment Score</span>
+                        <span class="metric-change positive">+3%</span>
+                    </div>
                 </div>
                 <div class="metric">
-                    <span class="metric-value">147k</span>
-                    <span class="metric-label">Interactions</span>
-                    <span class="metric-change positive">+28%</span>
+                    <div class="metric-sparkline"><svg></svg></div>
+                    <div class="metric-content">
+                        <span class="metric-value">147k</span>
+                        <span class="metric-label">Interactions</span>
+                        <span class="metric-change positive">+28%</span>
+                    </div>
                 </div>
                 <div class="metric">
-                    <span class="metric-value">3.2s</span>
-                    <span class="metric-label">Avg Response</span>
-                    <span class="metric-change negative">-0.4s</span>
+                    <div class="metric-sparkline"><svg></svg></div>
+                    <div class="metric-content">
+                        <span class="metric-value">3.2s</span>
+                        <span class="metric-label">Avg Response</span>
+                        <span class="metric-change negative">-0.4s</span>
+                    </div>
                 </div>
             </section>
             
@@ -105,16 +117,25 @@
                         </div>
                         <div class="sentiment-breakdown">
                             <div class="sentiment-item">
-                                <span class="dot positive"></span>
-                                <span>Positive: 68%</span>
+                                <span class="sentiment-label">Positive</span>
+                                <div class="sentiment-bar">
+                                    <div class="sentiment-fill positive" style="width: 68%"></div>
+                                </div>
+                                <span class="sentiment-value">68%</span>
                             </div>
                             <div class="sentiment-item">
-                                <span class="dot neutral"></span>
-                                <span>Neutral: 24%</span>
+                                <span class="sentiment-label">Neutral</span>
+                                <div class="sentiment-bar">
+                                    <div class="sentiment-fill neutral" style="width: 24%"></div>
+                                </div>
+                                <span class="sentiment-value">24%</span>
                             </div>
                             <div class="sentiment-item">
-                                <span class="dot negative"></span>
-                                <span>Negative: 8%</span>
+                                <span class="sentiment-label">Negative</span>
+                                <div class="sentiment-bar">
+                                    <div class="sentiment-fill negative" style="width: 8%"></div>
+                                </div>
+                                <span class="sentiment-value">8%</span>
                             </div>
                         </div>
                     </div>
@@ -132,12 +153,32 @@
                     </header>
                     <div class="card-content">
                         <div class="heatmap-container">
+                            <div class="heatmap-labels">
+                                <div class="heatmap-time-labels">
+                                    <span>6AM</span>
+                                    <span>9AM</span>
+                                    <span>12PM</span>
+                                    <span>3PM</span>
+                                    <span>6PM</span>
+                                    <span>9PM</span>
+                                    <span>12AM</span>
+                                </div>
+                                <div class="heatmap-day-labels">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+                                </div>
+                            </div>
                             <div class="heatmap-grid" id="activityHeatmap"></div>
                         </div>
                         <div class="heatmap-legend">
-                            <span class="legend-label">Low</span>
+                            <span class="legend-label">0%</span>
                             <div class="legend-gradient"></div>
-                            <span class="legend-label">High</span>
+                            <span class="legend-label">100%</span>
                         </div>
                     </div>
                 </section>
@@ -162,27 +203,37 @@
                         <div class="trend-list">
                             <div class="trend-item">
                                 <span class="trend-rank">1</span>
+                                <span class="trend-icon">🛍️</span>
                                 <span class="trend-name">sustainable fashion</span>
+                                <span class="trend-sparkline"><svg></svg></span>
                                 <span class="trend-change">↑ 245%</span>
                             </div>
                             <div class="trend-item">
                                 <span class="trend-rank">2</span>
+                                <span class="trend-icon">🧘</span>
                                 <span class="trend-name">ai-powered wellness</span>
+                                <span class="trend-sparkline"><svg></svg></span>
                                 <span class="trend-change">↑ 189%</span>
                             </div>
                             <div class="trend-item">
                                 <span class="trend-rank">3</span>
+                                <span class="trend-icon">🎮</span>
                                 <span class="trend-name">virtual experiences</span>
+                                <span class="trend-sparkline"><svg></svg></span>
                                 <span class="trend-change">↑ 167%</span>
                             </div>
                             <div class="trend-item">
                                 <span class="trend-rank">4</span>
+                                <span class="trend-icon">🧘</span>
                                 <span class="trend-name">mindful consumption</span>
+                                <span class="trend-sparkline"><svg></svg></span>
                                 <span class="trend-change">↑ 132%</span>
                             </div>
                             <div class="trend-item">
                                 <span class="trend-rank">5</span>
+                                <span class="trend-icon">🍸</span>
                                 <span class="trend-name">artisanal cocktails</span>
+                                <span class="trend-sparkline"><svg></svg></span>
                                 <span class="trend-change">↑ 98%</span>
                             </div>
                         </div>
@@ -197,24 +248,42 @@
                     </header>
                     <div class="card-content">
                         <div class="insight-item">
-                            <i class="fas fa-chart-line"></i>
+                            <div class="insight-icon activity">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
                             <div class="insight-text">
                                 <h3>Weekend Activity Surge Expected</h3>
                                 <p>85% probability of 3x activity increase at Downtown Hub this Saturday evening</p>
+                                <div class="insight-meta">
+                                    <span class="confidence">Confidence: 85%</span>
+                                    <button class="action-btn">Prepare</button>
+                                </div>
                             </div>
                         </div>
                         <div class="insight-item">
-                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="insight-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
                             <div class="insight-text">
                                 <h3>Anomaly Detected</h3>
                                 <p>Unusual sentiment pattern in North sector - investigate potential service issue</p>
+                                <div class="insight-meta">
+                                    <span class="confidence">Severity: High</span>
+                                    <button class="action-btn">Investigate</button>
+                                </div>
                             </div>
                         </div>
                         <div class="insight-item">
-                            <i class="fas fa-users"></i>
+                            <div class="insight-icon users">
+                                <i class="fas fa-users"></i>
+                            </div>
                             <div class="insight-text">
                                 <h3>Emerging User Segment</h3>
                                 <p>New cluster identified: "Tech-Forward Wellness Enthusiasts" - 2.3k users</p>
+                                <div class="insight-meta">
+                                    <span class="confidence">Size: 2.3k users</span>
+                                    <button class="action-btn">Explore</button>
+                                </div>
                             </div>
                         </div>
                     </div>
