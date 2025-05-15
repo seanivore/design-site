@@ -1,101 +1,106 @@
-/* Portfolio Navigation */
+/* Portfolio Navigation System */
+:root {
+    --nav-green: rgba(0, 255, 0, 0.7);
+    --nav-red: rgba(255, 0, 0, 0.7);
+    --nav-gray: rgba(50, 50, 50, 0.3);
+    --nav-circle-size: 10rem;
+    --nav-active-circle-size: 12rem;
+    --nav-gap: 2rem;
+    --title-font-size: 4rem;
+    --subtitle-font-size: 1.5rem;
+}
+
+/* Page layout - three vertical sections */
+body.nav-active {
+    overflow: hidden;
+}
+
+/* Navigation container - bottom third of screen */
 .portfolio-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 33vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    /* Increased spacing between icons */
-    height: 33.33vh;
-    /* Take up bottom third of viewport */
-    z-index: 9999;
+    gap: var(--nav-gap);
+    z-index: 100;
     transition: all 0.5s ease;
 }
 
-/* Navigation state classes */
+/* Navigation ON state - all circles visible */
 .portfolio-nav.nav-on {
-    /* ON state - show all icons centered in bottom third */
+    bottom: 0;
 }
 
+/* Navigation OFF state - only active circle visible */
 .portfolio-nav.nav-off {
-    /* OFF state - show only selected icon */
-    justify-content: flex-start;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
+    bottom: -25vh;
 }
 
+.portfolio-nav.nav-off .portfolio-nav-item:not(.active) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Individual navigation items */
 .portfolio-nav-item {
     position: relative;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: opacity 0.4s ease;
 }
 
-/* Hide all nav items except active one in OFF state */
-.portfolio-nav.nav-off .portfolio-nav-item:not(.active) {
-    display: none;
-}
-
-/* Base circle style */
+/* Navigation circles */
 .portfolio-nav-circle {
-    width: 8rem;
-    /* Bigger circles */
-    height: 8rem;
-    /* Bigger circles */
+    width: var(--nav-circle-size);
+    height: var(--nav-circle-size);
     border-radius: 50%;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(0, 255, 0, 0.6);
-    /* GREEN border by default */
-    transition: all 0.5s ease;
-    position: relative;
+    background: var(--nav-gray);
+    backdrop-filter: blur(10px);
+    border: 3px solid var(--nav-green);
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Hover state */
+/* Hover effect */
 .portfolio-nav-item:hover .portfolio-nav-circle {
-    background: rgba(255, 255, 255, 0.25);
-    transform: scale(1.05);
-    filter: brightness(1.2);
+    transform: scale(1.1);
+    background: rgba(80, 80, 80, 0.4);
 }
 
-/* Active state in ON mode - green border */
-.portfolio-nav.nav-on .portfolio-nav-item.active .portfolio-nav-circle {
-    border-color: rgba(0, 255, 0, 0.8);
-    border-width: 3px;
+/* Active state - red border and larger */
+.portfolio-nav-item.active .portfolio-nav-circle {
+    width: var(--nav-active-circle-size);
+    height: var(--nav-active-circle-size);
+    border-color: var(--nav-red);
+    border-width: 4px;
 }
 
-/* Active state in OFF mode - red border and large size */
-.portfolio-nav.nav-off .portfolio-nav-item.active .portfolio-nav-circle {
-    width: 20rem;
-    height: 20rem;
-    border-color: rgba(255, 0, 0, 0.8);
-    /* RED border for active */
-    border-width: 3px;
-    /* Position 1/3 off screen */
-    position: relative;
-    left: -6.66rem;
-    /* 1/3 of 20rem */
-    bottom: -6.66rem;
-    /* 1/3 of 20rem */
+/* OFF state positioning for active circle */
+.portfolio-nav.nav-off .portfolio-nav-item.active {
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
 }
 
-/* Main title display for ON state hover */
+/* Title display in middle third of screen */
 .portfolio-title-display {
     position: fixed;
-    top: 33.33vh;
-    /* Position in middle third */
+    top: 33vh;
     left: 0;
     width: 100%;
-    height: 33.33vh;
+    height: 34vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9997;
+    z-index: 99;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
     pointer-events: none;
 }
 
@@ -104,56 +109,49 @@
 }
 
 .portfolio-hover-title {
-    font-size: 5rem;
-    color: #fff;
-    text-align: center;
+    font-size: var(--title-font-size);
     font-weight: 700;
+    color: white;
+    text-align: center;
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
 }
 
 .portfolio-hover-subtitle {
-    font-size: 1.5rem;
+    font-size: var(--subtitle-font-size);
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
     margin: 1rem 0 0;
-    max-width: 60%;
+    max-width: 70%;
     font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Project titles for OFF state */
+/* Small title above each circle in OFF state */
 .portfolio-nav-title {
     position: absolute;
     top: -3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    padding: 10px 20px;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    font-size: 1rem;
-    color: #fff;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 500;
+    left: 0;
+    width: 100%;
     text-align: center;
+    font-size: 1rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Show title in OFF state */
-.portfolio-nav.nav-off .portfolio-nav-item .portfolio-nav-title {
+.portfolio-nav.nav-off .portfolio-nav-item.active .portfolio-nav-title {
     opacity: 1;
 }
 
-/* Page dots */
+/* Navigation dots for multi-page projects */
 .portfolio-nav-dots {
     position: absolute;
-    top: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -2rem;
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
-    z-index: 10000;
 }
 
 .portfolio-nav-dot {
@@ -165,60 +163,81 @@
 }
 
 .portfolio-nav-dot.active {
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
 }
 
-/* Page navigation circles for OFF state */
+/* Page navigation circles */
 .page-nav-circles {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0;
+    right: -3rem;
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
-    z-index: 10001;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.portfolio-nav.nav-off .page-nav-circles {
+.portfolio-nav.nav-off .portfolio-nav-item.active .page-nav-circles {
     opacity: 1;
 }
 
 .page-nav-circle {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(0, 255, 0, 0.6);
-    /* GREEN border */
+    background: var(--nav-gray);
+    border: 1px solid var(--nav-green);
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .page-nav-circle:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(80, 80, 80, 0.5);
 }
 
-/* Shade overlay - darker */
+/* Darkened overlay when nav is active */
 .portfolio-shade {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    /* Darker shade */
-    z-index: 9996;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 90;
+    transition: opacity 0.4s ease;
 }
 
 .portfolio-shade.hidden {
     opacity: 0;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    :root {
+        --nav-circle-size: 8rem;
+        --nav-active-circle-size: 10rem;
+        --nav-gap: 1.5rem;
+        --title-font-size: 3rem;
+        --subtitle-font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --nav-circle-size: 6rem;
+        --nav-active-circle-size: 8rem;
+        --nav-gap: 1rem;
+        --title-font-size: 2.5rem;
+        --subtitle-font-size: 1rem;
+    }
+
+    .portfolio-nav {
+        flex-wrap: wrap;
+    }
 }

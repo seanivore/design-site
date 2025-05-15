@@ -1,4 +1,4 @@
-// Portfolio Navigation - Fresh implementation
+// Portfolio Navigation System
 const portfolioProjects = [
     {
         id: 'saas-landing',
@@ -59,246 +59,253 @@ let currentProjectIndex = null;
 let currentPageIndex = 0;
 let navIsInOnState = true;
 
-// DOM elements
-let navElement;
-let shadeElement;
-let navItems = [];
-let projectTitle;
-let projectSubtitle;
-
 // Initialize the navigation
 function initPortfolioNav() {
-    // Create the overlay shade
-    shadeElement = document.createElement('div');
+    // Create the darkened overlay
+    const shadeElement = document.createElement('div');
     shadeElement.className = 'portfolio-shade';
     document.body.appendChild(shadeElement);
 
-    // Create title display elements for the ON state
+    // Create title display in the middle third
     const titleDisplay = document.createElement('div');
     titleDisplay.className = 'portfolio-title-display';
 
-    projectTitle = document.createElement('h2');
+    const projectTitle = document.createElement('h2');
     projectTitle.className = 'portfolio-hover-title';
 
-    projectSubtitle = document.createElement('p');
+    const projectSubtitle = document.createElement('p');
     projectSubtitle.className = 'portfolio-hover-subtitle';
 
     titleDisplay.appendChild(projectTitle);
     titleDisplay.appendChild(projectSubtitle);
     document.body.appendChild(titleDisplay);
 
-    // Create the main navigation container
-    navElement = document.createElement('nav');
+    // Create the main navigation container in the bottom third
+    const navElement = document.createElement('nav');
     navElement.className = 'portfolio-nav nav-on';
     document.body.appendChild(navElement);
 
-    // Create project nav items
+    // Create project navigation items
     portfolioProjects.forEach((project, index) => {
-        createNavItem(project, index);
+        const navItem = document.createElement('div');
+        navItem.className = 'portfolio-nav-item';
+        navItem.dataset.index = index;
+        navItem.dataset.id = project.id;
+
+        // Create the circular button
+        const circle = document.createElement('div');
+        circle.className = 'portfolio-nav-circle';
+
+        // Create project title that appears above the circle
+        const title = document.createElement('div');
+        title.className = 'portfolio-nav-title';
+        title.textContent = project.title;
+
+        // Add page dots for multi-page projects
+        if (project.pages.length > 1) {
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'portfolio-nav-dots';
+
+            for (let i = 0; i < project.pages.length; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'portfolio-nav-dot';
+                dot.dataset.pageIndex = i;
+                dotsContainer.appendChild(dot);
+            }
+
+            navItem.appendChild(dotsContainer);
+
+            // Add page navigation controls
+            const pageNavContainer = document.createElement('div');
+            pageNavContainer.className = 'page-nav-circles';
+
+            // Previous page button
+            const prevBtn = document.createElement('div');
+            prevBtn.className = 'page-nav-circle';
+            prevBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateToPrevPage();
+            });
+
+            // Next page button
+            const nextBtn = document.createElement('div');
+            nextBtn.className = 'page-nav-circle';
+            nextBtn.innerHTML = '<i class="fas fa-arrow-down"></i>';
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateToNextPage();
+            });
+
+            pageNavContainer.appendChild(prevBtn);
+            pageNavContainer.appendChild(nextBtn);
+            navItem.appendChild(pageNavContainer);
+        }
+
+        // Add hover effects to show project title in the middle third
+        navItem.addEventListener('mouseenter', () => {
+            if (navIsInOnState) {
+                projectTitle.textContent = project.title;
+                projectSubtitle.textContent = project.subtitle;
+                titleDisplay.classList.add('visible');
+            }
+        });
+
+        navItem.addEventListener('mouseleave', () => {
+            if (navIsInOnState) {
+                titleDisplay.classList.remove('visible');
+            }
+        });
+
+        // Handle navigation click
+        navItem.addEventListener('click', () => {
+            handleNavClick(index);
+        });
+
+        navItem.appendChild(circle);
+        navItem.appendChild(title);
+        navElement.appendChild(navItem);
     });
 
-    // Check URL to determine current page and state
+    // Set initial state based on URL
     determineStateFromURL();
+    updateNavigationState();
 
-    // Set initial state
-    updateNavState();
+    // Add nav-active class to body when navigation is active
+    document.body.classList.add('nav-active');
 }
 
-// Create a single nav item
-function createNavItem(project, index) {
-    const navItem = document.createElement('div');
-    navItem.className = 'portfolio-nav-item';
-    navItem.dataset.index = index;
-
-    // The circular button
-    const circle = document.createElement('div');
-    circle.className = 'portfolio-nav-circle';
-
-    // Small title above circle in OFF state
-    const title = document.createElement('div');
-    title.className = 'portfolio-nav-title';
-    title.textContent = project.title;
-
-    // Page dots for multi-page projects
-    if (project.pages.length > 1) {
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'portfolio-nav-dots';
-
-        for (let i = 0; i < project.pages.length; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'portfolio-nav-dot';
-            dot.dataset.pageIndex = i;
-            dotsContainer.appendChild(dot);
-        }
-
-        navItem.appendChild(dotsContainer);
-
-        // Page navigation arrows
-        const pageNavContainer = document.createElement('div');
-        pageNavContainer.className = 'page-nav-circles';
-
-        // Left arrow
-        const prevBtn = document.createElement('div');
-        prevBtn.className = 'page-nav-circle';
-        prevBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
-        prevBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateToPrevPage();
-        });
-
-        // Right arrow
-        const nextBtn = document.createElement('div');
-        nextBtn.className = 'page-nav-circle';
-        nextBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
-        nextBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateToNextPage();
-        });
-
-        pageNavContainer.appendChild(prevBtn);
-        pageNavContainer.appendChild(nextBtn);
-        navItem.appendChild(pageNavContainer);
-    }
-
-    // Hover event for the ON state
-    navItem.addEventListener('mouseenter', () => {
-        if (navIsInOnState) {
-            projectTitle.textContent = project.title;
-            projectSubtitle.textContent = project.subtitle;
-            document.querySelector('.portfolio-title-display').classList.add('visible');
-        }
-    });
-
-    navItem.addEventListener('mouseleave', () => {
-        if (navIsInOnState) {
-            document.querySelector('.portfolio-title-display').classList.remove('visible');
-        }
-    });
-
-    // Click event
-    navItem.addEventListener('click', () => {
-        handleNavItemClick(index);
-    });
-
-    navItem.appendChild(circle);
-    navItem.appendChild(title);
-    navElement.appendChild(navItem);
-    navItems.push(navItem);
-}
-
-// Handle nav item click
-function handleNavItemClick(index) {
+// Handle navigation item click
+function handleNavClick(index) {
     if (navIsInOnState) {
-        // We're in the ON state - switch to OFF and navigate to project
+        // Switch to OFF state and navigate to project
         currentProjectIndex = index;
         currentPageIndex = 0;
         navIsInOnState = false;
+        updateNavigationState();
 
-        // Update visual state immediately to prevent incorrect state
-        updateNavState();
-
-        // Navigate to the first page of the selected project
+        // Navigate to the project page
         const project = portfolioProjects[index];
-        const projectPath = isRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
-        window.location.href = projectPath;
+        const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
+        window.location.href = pageURL;
     } else if (index === currentProjectIndex) {
-        // We're in the OFF state and clicked the currently active project
-        // Switch back to ON state
+        // Clicked on active project, return to ON state
         navIsInOnState = true;
-        updateNavState();
+        updateNavigationState();
 
-        // If we're not on the projects.html page, navigate back to it
-        if (!isRootPage()) {
+        // Navigate back to projects page if not already there
+        if (!isOnRootPage()) {
             window.location.href = '../projects.html';
         }
+    } else {
+        // Clicked on different project while in OFF state
+        currentProjectIndex = index;
+        currentPageIndex = 0;
+        updateNavigationState();
+
+        // Navigate to the new project
+        const project = portfolioProjects[index];
+        const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
+        window.location.href = pageURL;
     }
 }
 
-// Check if we're on the root projects.html page
-function isRootPage() {
+// Check if we're on the main projects page
+function isOnRootPage() {
     const path = window.location.pathname;
     return path.endsWith('/projects.html') || path.endsWith('/projects');
 }
 
-// Update navigation visual state based on internal state
-function updateNavState() {
-    // Update navigation container class
-    navElement.className = navIsInOnState ? 'portfolio-nav nav-on' : 'portfolio-nav nav-off';
+// Update navigation visual state
+function updateNavigationState() {
+    const navElement = document.querySelector('.portfolio-nav');
+    const navItems = document.querySelectorAll('.portfolio-nav-item');
+    const shadeElement = document.querySelector('.portfolio-shade');
 
-    // Update shade visibility
+    // Update navigation container class
     if (navIsInOnState) {
+        navElement.className = 'portfolio-nav nav-on';
         shadeElement.classList.remove('hidden');
     } else {
+        navElement.className = 'portfolio-nav nav-off';
         shadeElement.classList.add('hidden');
     }
 
     // Update active project and page indicators
     navItems.forEach((item, index) => {
-        const isActive = index === currentProjectIndex;
-        item.classList.toggle('active', isActive);
+        if (index === currentProjectIndex) {
+            item.classList.add('active');
 
-        // Update page dots if this is the active project
-        if (isActive && currentProjectIndex !== null) {
+            // Update page dots if this is the active project
             const dots = item.querySelectorAll('.portfolio-nav-dot');
-            dots.forEach((dot, pageIndex) => {
-                dot.classList.toggle('active', pageIndex === currentPageIndex);
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === currentPageIndex);
             });
+        } else {
+            item.classList.remove('active');
         }
     });
 
     // Hide title display in OFF state
-    document.querySelector('.portfolio-title-display').classList.toggle('visible', false);
+    document.querySelector('.portfolio-title-display').classList.remove('visible');
 }
 
-// Determine state from current URL
+// Determine initial state from URL
 function determineStateFromURL() {
     const path = window.location.pathname;
-    const filename = path.split('/').pop();
 
-    // If we're on the projects.html page, force ON state
-    if (isRootPage()) {
+    // If we're on the projects.html page, start in ON state
+    if (isOnRootPage()) {
         navIsInOnState = true;
         currentProjectIndex = null;
         return;
     }
 
-    // Check if we're on a specific project page
-    let foundPage = false;
+    // We're on a project page, find which one
+    navIsInOnState = false;
 
-    portfolioProjects.forEach((project, projectIndex) => {
-        const pageIndex = project.pages.indexOf(filename);
+    // Extract the filename from the path
+    const filename = path.split('/').pop();
+
+    // Find the project and page index
+    for (let i = 0; i < portfolioProjects.length; i++) {
+        const pageIndex = portfolioProjects[i].pages.indexOf(filename);
         if (pageIndex !== -1) {
-            currentProjectIndex = projectIndex;
+            currentProjectIndex = i;
             currentPageIndex = pageIndex;
-            navIsInOnState = false;
-            foundPage = true;
+            return;
         }
-    });
-
-    // If not on a project page, default to ON state
-    if (!foundPage) {
-        navIsInOnState = true;
-        currentProjectIndex = null;
     }
+
+    // Default to first project if not found
+    currentProjectIndex = 0;
+    currentPageIndex = 0;
 }
 
-// Navigate to the next page in the current project
+// Navigate to the next page within the current project
 function navigateToNextPage() {
     if (currentProjectIndex === null) return;
 
     const project = portfolioProjects[currentProjectIndex];
-    currentPageIndex = (currentPageIndex + 1) % project.pages.length;
-    window.location.href = project.pages[currentPageIndex];
+    const totalPages = project.pages.length;
+
+    if (currentPageIndex < totalPages - 1) {
+        currentPageIndex++;
+        const pageURL = isOnRootPage() ? 'projects/' + project.pages[currentPageIndex] : project.pages[currentPageIndex];
+        window.location.href = pageURL;
+    }
 }
 
-// Navigate to the previous page in the current project
+// Navigate to the previous page within the current project
 function navigateToPrevPage() {
     if (currentProjectIndex === null) return;
 
-    const project = portfolioProjects[currentProjectIndex];
-    currentPageIndex = (currentPageIndex - 1 + project.pages.length) % project.pages.length;
-    window.location.href = project.pages[currentPageIndex];
+    if (currentPageIndex > 0) {
+        currentPageIndex--;
+        const pageURL = isOnRootPage() ? 'projects/' + project.pages[currentPageIndex] : project.pages[currentPageIndex];
+        window.location.href = pageURL;
+    }
 }
 
-// Initialize on DOM content loaded
+// Initialize the navigation when DOM is loaded
 document.addEventListener('DOMContentLoaded', initPortfolioNav);
