@@ -8,6 +8,7 @@
     --nav-gap: 2rem;
     --title-font-size: 4rem;
     --subtitle-font-size: 1.5rem;
+    --icon-size: 3rem;
 }
 
 /* Page layout - three vertical sections */
@@ -37,7 +38,7 @@ body.nav-active {
 
 /* Navigation OFF state - only active circle visible */
 .portfolio-nav.nav-off {
-    bottom: -25vh;
+    bottom: -20vh;
 }
 
 .portfolio-nav.nav-off .portfolio-nav-item:not(.active) {
@@ -64,6 +65,8 @@ body.nav-active {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: var(--icon-size);
 }
 
 /* Hover effect */
@@ -78,6 +81,7 @@ body.nav-active {
     height: var(--nav-active-circle-size);
     border-color: var(--nav-red);
     border-width: 4px;
+    font-size: calc(var(--icon-size) * 1.2);
 }
 
 /* OFF state positioning for active circle */
@@ -85,6 +89,7 @@ body.nav-active {
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
+    bottom: 10vh;
 }
 
 /* Title display in middle third of screen */
@@ -100,8 +105,12 @@ body.nav-active {
     align-items: center;
     z-index: 99;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
     pointer-events: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .portfolio-title-display.visible {
@@ -115,15 +124,17 @@ body.nav-active {
     text-align: center;
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.5px;
 }
 
 .portfolio-hover-subtitle {
     font-size: var(--subtitle-font-size);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
     margin: 1rem 0 0;
-    max-width: 70%;
+    max-width: 80%;
     font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.4;
 }
 
 /* Small title above each circle in OFF state */
@@ -133,10 +144,11 @@ body.nav-active {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-nav.nav-off .portfolio-nav-item.active .portfolio-nav-title {
@@ -225,6 +237,7 @@ body.nav-active {
         --nav-gap: 1.5rem;
         --title-font-size: 3rem;
         --subtitle-font-size: 1.2rem;
+        --icon-size: 2.5rem;
     }
 }
 
@@ -235,6 +248,7 @@ body.nav-active {
         --nav-gap: 1rem;
         --title-font-size: 2.5rem;
         --subtitle-font-size: 1rem;
+        --icon-size: 2rem;
     }
 
     .portfolio-nav {

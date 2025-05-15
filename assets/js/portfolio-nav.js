@@ -54,6 +54,16 @@ const portfolioProjects = [
     }
 ];
 
+// Icons for each project (using Font Awesome)
+const projectIcons = [
+    '<i class="fas fa-laptop-code"></i>',
+    '<i class="fas fa-tshirt"></i>',
+    '<i class="fas fa-store"></i>',
+    '<i class="fas fa-book-open"></i>',
+    '<i class="fas fa-spa"></i>',
+    '<i class="fas fa-chart-bar"></i>'
+];
+
 // State management
 let currentProjectIndex = null;
 let currentPageIndex = 0;
@@ -95,6 +105,9 @@ function initPortfolioNav() {
         // Create the circular button
         const circle = document.createElement('div');
         circle.className = 'portfolio-nav-circle';
+
+        // Add icon to the circle
+        circle.innerHTML = projectIcons[index] || `<span>${index + 1}</span>`;
 
         // Create project title that appears above the circle
         const title = document.createElement('div');
@@ -145,15 +158,17 @@ function initPortfolioNav() {
         // Add hover effects to show project title in the middle third
         navItem.addEventListener('mouseenter', () => {
             if (navIsInOnState) {
-                projectTitle.textContent = project.title;
-                projectSubtitle.textContent = project.subtitle;
-                titleDisplay.classList.add('visible');
+                const titleEl = document.querySelector('.portfolio-hover-title');
+                const subtitleEl = document.querySelector('.portfolio-hover-subtitle');
+                titleEl.textContent = project.title;
+                subtitleEl.textContent = project.subtitle;
+                document.querySelector('.portfolio-title-display').classList.add('visible');
             }
         });
 
         navItem.addEventListener('mouseleave', () => {
             if (navIsInOnState) {
-                titleDisplay.classList.remove('visible');
+                document.querySelector('.portfolio-title-display').classList.remove('visible');
             }
         });
 
