@@ -7,8 +7,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    /* More spacing between icons */
+    gap: 4rem;
+    /* Increased spacing between icons */
     height: 33.33vh;
     /* Take up bottom third of viewport */
     z-index: 9999;
@@ -40,8 +40,10 @@
 
 /* Base circle style */
 .portfolio-nav-circle {
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    /* Bigger circles */
+    height: 8rem;
+    /* Bigger circles */
     border-radius: 50%;
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);

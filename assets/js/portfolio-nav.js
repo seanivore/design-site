@@ -199,13 +199,25 @@ function handleNavItemClick(index) {
 
         // Navigate to the first page of the selected project
         const project = portfolioProjects[index];
-        window.location.href = project.pages[0];
+        const projectPath = isRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
+        window.location.href = projectPath;
     } else if (index === currentProjectIndex) {
         // We're in the OFF state and clicked the currently active project
         // Switch back to ON state
         navIsInOnState = true;
         updateNavState();
+
+        // If we're not on the projects.html page, navigate back to it
+        if (!isRootPage()) {
+            window.location.href = '../projects.html';
+        }
     }
+}
+
+// Check if we're on the root projects.html page
+function isRootPage() {
+    const path = window.location.pathname;
+    return path.endsWith('/projects.html') || path.endsWith('/projects');
 }
 
 // Update navigation visual state based on internal state
@@ -244,7 +256,7 @@ function determineStateFromURL() {
     const filename = path.split('/').pop();
 
     // If we're on the projects.html page, force ON state
-    if (filename === 'projects.html') {
+    if (isRootPage()) {
         navIsInOnState = true;
         currentProjectIndex = null;
         return;
