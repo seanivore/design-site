@@ -1,8 +1,8 @@
 /* Portfolio Navigation System */
 :root {
-    --nav-green: rgba(0, 255, 0, 0.7);
-    --nav-red: rgba(255, 0, 0, 0.7);
-    --nav-gray: rgba(50, 50, 50, 0.3);
+    --nav-green: rgba(0, 255, 0, 0.8);
+    --nav-red: rgba(255, 0, 0, 0.8);
+    --nav-gray: rgba(50, 50, 50, 0.5);
     --nav-circle-size: 10rem;
     --nav-active-circle-size: 20rem;
     --nav-gap: 2rem;
@@ -10,6 +10,8 @@
     --subtitle-font-size: 1.5rem;
     --icon-size: 3rem;
     --active-icon-size: 5rem;
+    --transition-speed: 0.4s;
+    --transition-function: ease;
 }
 
 /* Page layout - three vertical sections */
@@ -29,7 +31,7 @@ body.nav-active {
     align-items: center;
     gap: var(--nav-gap);
     z-index: 100;
-    transition: all 0.5s ease;
+    transition: bottom var(--transition-speed) var(--transition-function);
 }
 
 /* Navigation ON state - all circles visible */
@@ -45,13 +47,20 @@ body.nav-active {
 .portfolio-nav.nav-off .portfolio-nav-item:not(.active) {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
 /* Individual navigation items */
 .portfolio-nav-item {
     position: relative;
     cursor: pointer;
-    transition: opacity 0.4s ease;
+    transition: opacity var(--transition-speed) var(--transition-function);
+}
+
+/* Focus styles for accessibility */
+.portfolio-nav-item:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
 }
 
 /* Navigation circles */
@@ -60,20 +69,29 @@ body.nav-active {
     height: var(--nav-circle-size);
     border-radius: 50%;
     background: var(--nav-gray);
+    background: rgba(50, 50, 50, 0.7);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 3px solid var(--nav-green);
-    transition: all 0.4s ease;
+    transition: width var(--transition-speed) var(--transition-function),
+        height var(--transition-speed) var(--transition-function),
+        background var(--transition-speed) var(--transition-function),
+        border-color var(--transition-speed) var(--transition-function),
+        transform var(--transition-speed) var(--transition-function);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: var(--icon-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hover effect */
 .portfolio-nav-item:hover .portfolio-nav-circle {
     transform: scale(1.1);
-    background: rgba(80, 80, 80, 0.4);
+    background: rgba(80, 80, 80, 0.6);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Active state - red border and much larger */
@@ -83,6 +101,7 @@ body.nav-active {
     border-color: var(--nav-red);
     border-width: 4px;
     font-size: var(--active-icon-size);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 /* OFF state positioning for active circle - bottom left */
@@ -106,12 +125,13 @@ body.nav-active {
     align-items: center;
     z-index: 99;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-speed) var(--transition-function);
     pointer-events: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .portfolio-title-display.visible {
@@ -132,9 +152,11 @@ body.nav-active {
     z-index: 98;
     pointer-events: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 2rem;
+    transition: opacity var(--transition-speed) var(--transition-function);
 }
 
 .portfolio-initial-title h1 {
@@ -186,7 +208,7 @@ body.nav-active {
     font-size: 1.2rem;
     color: white;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-speed) var(--transition-function);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -203,6 +225,16 @@ body.nav-active {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+    opacity: 0;
+    transition: opacity var(--transition-speed) var(--transition-function);
+}
+
+.portfolio-nav.nav-on .portfolio-nav-item:hover .portfolio-nav-dots {
+    opacity: 1;
+}
+
+.portfolio-nav.nav-off .portfolio-nav-item.active .portfolio-nav-dots {
+    opacity: 1;
 }
 
 .portfolio-nav-dot {
@@ -210,23 +242,25 @@ body.nav-active {
     height: 0.5rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
-    transition: background 0.3s ease;
+    transition: background var(--transition-speed) var(--transition-function);
 }
 
 .portfolio-nav-dot.active {
     background: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* Page navigation circles */
 .page-nav-circles {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    width: 6rem;
+    z-index: 200;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-speed) var(--transition-function);
 }
 
 .portfolio-nav.nav-off .portfolio-nav-item.active .page-nav-circles {
@@ -238,17 +272,27 @@ body.nav-active {
     height: 2.5rem;
     border-radius: 50%;
     background: var(--nav-gray);
-    border: 1px solid var(--nav-green);
+    border: 2px solid var(--nav-green);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1rem;
     cursor: pointer;
+    z-index: 201;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .page-nav-circle:hover {
-    background: rgba(80, 80, 80, 0.5);
+    background: rgba(80, 80, 80, 0.8);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Focus styles for accessibility */
+.page-nav-circle:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 /* Darkened overlay when nav is active */
@@ -260,12 +304,13 @@ body.nav-active {
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 90;
-    transition: opacity 0.4s ease;
+    transition: opacity var(--transition-speed) var(--transition-function);
 }
 
 .portfolio-shade.hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
 /* Responsive adjustments */
@@ -299,5 +344,16 @@ body.nav-active {
     .portfolio-nav.nav-off .portfolio-nav-item.active {
         left: 2vw;
         bottom: 2vh;
+    }
+}
+
+/* Print styles - hide navigation when printing */
+@media print {
+
+    .portfolio-nav,
+    .portfolio-shade,
+    .portfolio-title-display,
+    .portfolio-initial-title {
+        display: none !important;
     }
 }

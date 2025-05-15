@@ -73,52 +73,102 @@ let currentProjectIndex = null;
 let currentPageIndex = 0;
 let navIsInOnState = true;
 
+// Cache for DOM elements
+let domCache = {};
+
 // Initialize the navigation
 function initPortfolioNav() {
-    // Create the darkened overlay
-    const shadeElement = document.createElement('div');
-    shadeElement.className = 'portfolio-shade';
-    document.body.appendChild(shadeElement);
+    try {
+        // Create the darkened overlay
+        const shadeElement = document.createElement('div');
+        shadeElement.className = 'portfolio-shade';
+        document.body.appendChild(shadeElement);
 
-    // Create initial title display that shows on page load
-    const initialTitle = document.createElement('div');
-    initialTitle.className = 'portfolio-initial-title';
+        // Create initial title display that shows on page load
+        const initialTitle = document.createElement('div');
+        initialTitle.className = 'portfolio-initial-title';
 
-    const initialTitleHeading = document.createElement('h1');
-    initialTitleHeading.textContent = initialPageTitle;
+        const initialTitleHeading = document.createElement('h1');
+        initialTitleHeading.textContent = initialPageTitle;
 
-    const initialSubtitle = document.createElement('p');
-    initialSubtitle.textContent = initialPageSubtitle;
+        const initialSubtitle = document.createElement('p');
+        initialSubtitle.textContent = initialPageSubtitle;
 
-    initialTitle.appendChild(initialTitleHeading);
-    initialTitle.appendChild(initialSubtitle);
-    document.body.appendChild(initialTitle);
+        initialTitle.appendChild(initialTitleHeading);
+        initialTitle.appendChild(initialSubtitle);
+        document.body.appendChild(initialTitle);
 
-    // Create title display in the middle third (for hover)
-    const titleDisplay = document.createElement('div');
-    titleDisplay.className = 'portfolio-title-display';
+        // Create title display in the middle third (for hover)
+        const titleDisplay = document.createElement('div');
+        titleDisplay.className = 'portfolio-title-display';
 
-    const projectTitle = document.createElement('h2');
-    projectTitle.className = 'portfolio-hover-title';
+        const projectTitle = document.createElement('h2');
+        projectTitle.className = 'portfolio-hover-title';
 
-    const projectSubtitle = document.createElement('p');
-    projectSubtitle.className = 'portfolio-hover-subtitle';
+        const projectSubtitle = document.createElement('p');
+        projectSubtitle.className = 'portfolio-hover-subtitle';
 
-    titleDisplay.appendChild(projectTitle);
-    titleDisplay.appendChild(projectSubtitle);
-    document.body.appendChild(titleDisplay);
+        titleDisplay.appendChild(projectTitle);
+        titleDisplay.appendChild(projectSubtitle);
+        document.body.appendChild(titleDisplay);
 
-    // Create the main navigation container in the bottom third
-    const navElement = document.createElement('nav');
-    navElement.className = 'portfolio-nav nav-on';
-    document.body.appendChild(navElement);
+        // Create the main navigation container in the bottom third
+        const navElement = document.createElement('nav');
+        navElement.className = 'portfolio-nav nav-on';
+        document.body.appendChild(navElement);
 
-    // Create project navigation items
-    portfolioProjects.forEach((project, index) => {
+        // Cache common DOM elements
+        cacheDOMElements();
+
+        // Create project navigation items
+        portfolioProjects.forEach((project, index) => {
+            createNavItem(project, index, titleDisplay, projectTitle, projectSubtitle);
+        });
+
+        // Set initial state based on URL
+        determineStateFromURL();
+        updateNavigationState();
+
+        // Add nav-active class to body when navigation is active
+        document.body.classList.add('nav-active');
+
+        // Listen for popstate events (browser back/forward)
+        window.addEventListener('popstate', function () {
+            determineStateFromURL();
+            updateNavigationState();
+        });
+    } catch (error) {
+        console.error("Error initializing portfolio navigation:", error);
+    }
+}
+
+// Cache frequently accessed DOM elements
+function cacheDOMElements() {
+    domCache = {
+        navElement: document.querySelector('.portfolio-nav'),
+        shadeElement: document.querySelector('.portfolio-shade'),
+        titleDisplay: document.querySelector('.portfolio-title-display'),
+        initialTitle: document.querySelector('.portfolio-initial-title'),
+        projectTitle: document.querySelector('.portfolio-hover-title'),
+        projectSubtitle: document.querySelector('.portfolio-hover-subtitle')
+    };
+}
+
+// Create a single navigation item
+function createNavItem(project, index, titleDisplay, projectTitle, projectSubtitle) {
+    try {
+        const navElement = document.querySelector('.portfolio-nav');
+        if (!navElement) throw new Error("Navigation container not found");
+
         const navItem = document.createElement('div');
         navItem.className = 'portfolio-nav-item';
         navItem.dataset.index = index;
         navItem.dataset.id = project.id;
+
+        // Add ARIA attributes for accessibility
+        navItem.setAttribute('role', 'button');
+        navItem.setAttribute('aria-label', project.title);
+        navItem.tabIndex = 0; // Make focusable
 
         // Create the circular button
         const circle = document.createElement('div');
@@ -133,7 +183,7 @@ function initPortfolioNav() {
         title.textContent = project.title;
 
         // Add page dots for multi-page projects
-        if (project.pages.length > 1) {
+        if (project.pages && project.pages.length > 1) {
             const dotsContainer = document.createElement('div');
             dotsContainer.className = 'portfolio-nav-dots';
 
@@ -146,7 +196,7 @@ function initPortfolioNav() {
 
             navItem.appendChild(dotsContainer);
 
-            // Add page navigation controls
+            // Add page navigation controls (appearing on top of active circle)
             const pageNavContainer = document.createElement('div');
             pageNavContainer.className = 'page-nav-circles';
 
@@ -154,18 +204,42 @@ function initPortfolioNav() {
             const prevBtn = document.createElement('div');
             prevBtn.className = 'page-nav-circle';
             prevBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
+            prevBtn.setAttribute('role', 'button');
+            prevBtn.setAttribute('aria-label', 'Previous page');
+            prevBtn.tabIndex = 0;
+
             prevBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navigateToPrevPage();
+            });
+
+            // Keyboard support
+            prevBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    navigateToPrevPage();
+                }
             });
 
             // Next page button
             const nextBtn = document.createElement('div');
             nextBtn.className = 'page-nav-circle';
             nextBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
+            nextBtn.setAttribute('role', 'button');
+            nextBtn.setAttribute('aria-label', 'Next page');
+            nextBtn.tabIndex = 0;
+
             nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navigateToNextPage();
+            });
+
+            // Keyboard support
+            nextBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    navigateToNextPage();
+                }
             });
 
             pageNavContainer.appendChild(prevBtn);
@@ -176,19 +250,38 @@ function initPortfolioNav() {
         // Add hover effects to show project title in the middle third
         navItem.addEventListener('mouseenter', () => {
             if (navIsInOnState) {
-                const titleEl = document.querySelector('.portfolio-hover-title');
-                const subtitleEl = document.querySelector('.portfolio-hover-subtitle');
-                titleEl.textContent = project.title;
-                subtitleEl.textContent = project.subtitle;
-                document.querySelector('.portfolio-title-display').classList.add('visible');
-                document.querySelector('.portfolio-initial-title').style.opacity = 0;
+                const cachedTitleEl = domCache.projectTitle || document.querySelector('.portfolio-hover-title');
+                const cachedSubtitleEl = domCache.projectSubtitle || document.querySelector('.portfolio-hover-subtitle');
+                const cachedTitleDisplay = domCache.titleDisplay || document.querySelector('.portfolio-title-display');
+                const cachedInitialTitle = domCache.initialTitle || document.querySelector('.portfolio-initial-title');
+
+                if (cachedTitleEl && cachedSubtitleEl) {
+                    cachedTitleEl.textContent = project.title;
+                    cachedSubtitleEl.textContent = project.subtitle;
+                }
+
+                if (cachedTitleDisplay) {
+                    cachedTitleDisplay.classList.add('visible');
+                }
+
+                if (cachedInitialTitle) {
+                    cachedInitialTitle.style.opacity = 0;
+                }
             }
         });
 
         navItem.addEventListener('mouseleave', () => {
             if (navIsInOnState) {
-                document.querySelector('.portfolio-title-display').classList.remove('visible');
-                document.querySelector('.portfolio-initial-title').style.opacity = 1;
+                const cachedTitleDisplay = domCache.titleDisplay || document.querySelector('.portfolio-title-display');
+                const cachedInitialTitle = domCache.initialTitle || document.querySelector('.portfolio-initial-title');
+
+                if (cachedTitleDisplay) {
+                    cachedTitleDisplay.classList.remove('visible');
+                }
+
+                if (cachedInitialTitle) {
+                    cachedInitialTitle.style.opacity = 1;
+                }
             }
         });
 
@@ -197,155 +290,232 @@ function initPortfolioNav() {
             handleNavClick(index);
         });
 
+        // Keyboard support
+        navItem.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleNavClick(index);
+            }
+        });
+
         navItem.appendChild(circle);
         navItem.appendChild(title);
         navElement.appendChild(navItem);
-    });
-
-    // Set initial state based on URL
-    determineStateFromURL();
-    updateNavigationState();
-
-    // Add nav-active class to body when navigation is active
-    document.body.classList.add('nav-active');
+    } catch (error) {
+        console.error("Error creating navigation item:", error);
+    }
 }
 
 // Handle navigation item click
 function handleNavClick(index) {
-    if (navIsInOnState) {
-        // Switch to OFF state and navigate to project
-        currentProjectIndex = index;
-        currentPageIndex = 0;
-        navIsInOnState = false;
-        updateNavigationState();
+    try {
+        if (navIsInOnState) {
+            // Switch to OFF state and navigate to project
+            currentProjectIndex = index;
+            currentPageIndex = 0;
+            navIsInOnState = false;
 
-        // Navigate to the project page
-        const project = portfolioProjects[index];
-        const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
-        window.location.href = pageURL;
-    } else if (index === currentProjectIndex) {
-        // Clicked on active project, return to ON state
-        navIsInOnState = true;
-        updateNavigationState();
+            // Navigate to the project page
+            const project = portfolioProjects[index];
+            if (!project || !project.pages || project.pages.length === 0) {
+                console.error("Invalid project or no pages defined");
+                return;
+            }
 
-        // Navigate back to projects page if not already there
-        if (!isOnRootPage()) {
-            window.location.href = '../projects.html';
+            const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
+
+            // Apply state changes before navigation
+            updateNavigationState();
+            window.location.href = pageURL;
+        } else if (index === currentProjectIndex) {
+            // Clicked on active project, return to ON state
+            navIsInOnState = true;
+            updateNavigationState();
+
+            // Navigate back to projects page if not already there
+            if (!isOnRootPage()) {
+                window.location.href = '../projects.html';
+            }
+        } else {
+            // Clicked on different project while in OFF state
+            currentProjectIndex = index;
+            currentPageIndex = 0;
+
+            // Navigate to the new project
+            const project = portfolioProjects[index];
+            if (!project || !project.pages || project.pages.length === 0) {
+                console.error("Invalid project or no pages defined");
+                return;
+            }
+
+            const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
+
+            // Apply state changes before navigation
+            updateNavigationState();
+            window.location.href = pageURL;
         }
-    } else {
-        // Clicked on different project while in OFF state
-        currentProjectIndex = index;
-        currentPageIndex = 0;
-        updateNavigationState();
-
-        // Navigate to the new project
-        const project = portfolioProjects[index];
-        const pageURL = isOnRootPage() ? 'projects/' + project.pages[0] : project.pages[0];
-        window.location.href = pageURL;
+    } catch (error) {
+        console.error("Error handling navigation click:", error);
     }
 }
 
 // Check if we're on the main projects page
 function isOnRootPage() {
-    const path = window.location.pathname;
-    return path.endsWith('/projects.html') || path.endsWith('/projects');
+    try {
+        const path = window.location.pathname;
+        // Remove query string and hash from the path
+        const cleanPath = path.split(/[?#]/)[0];
+        return cleanPath.endsWith('/projects.html') || cleanPath.endsWith('/projects') || cleanPath.endsWith('/projects/');
+    } catch (error) {
+        console.error("Error checking if on root page:", error);
+        return false;
+    }
 }
 
 // Update navigation visual state
 function updateNavigationState() {
-    const navElement = document.querySelector('.portfolio-nav');
-    const navItems = document.querySelectorAll('.portfolio-nav-item');
-    const shadeElement = document.querySelector('.portfolio-shade');
-    const initialTitle = document.querySelector('.portfolio-initial-title');
+    try {
+        const navElement = domCache.navElement || document.querySelector('.portfolio-nav');
+        const shadeElement = domCache.shadeElement || document.querySelector('.portfolio-shade');
+        const initialTitle = domCache.initialTitle || document.querySelector('.portfolio-initial-title');
+        const titleDisplay = domCache.titleDisplay || document.querySelector('.portfolio-title-display');
 
-    // Update navigation container class
-    if (navIsInOnState) {
-        navElement.className = 'portfolio-nav nav-on';
-        shadeElement.classList.remove('hidden');
-        if (initialTitle) {
-            initialTitle.style.opacity = 1;
+        if (!navElement) {
+            console.error("Navigation element not found");
+            return;
         }
-    } else {
-        navElement.className = 'portfolio-nav nav-off';
-        shadeElement.classList.add('hidden');
-        if (initialTitle) {
-            initialTitle.style.opacity = 0;
-        }
-    }
 
-    // Update active project and page indicators
-    navItems.forEach((item, index) => {
-        if (index === currentProjectIndex) {
-            item.classList.add('active');
-
-            // Update page dots if this is the active project
-            const dots = item.querySelectorAll('.portfolio-nav-dot');
-            dots.forEach((dot, dotIndex) => {
-                dot.classList.toggle('active', dotIndex === currentPageIndex);
-            });
+        // Update navigation container class
+        if (navIsInOnState) {
+            navElement.className = 'portfolio-nav nav-on';
+            if (shadeElement) shadeElement.classList.remove('hidden');
+            if (initialTitle) initialTitle.style.opacity = 1;
         } else {
-            item.classList.remove('active');
+            navElement.className = 'portfolio-nav nav-off';
+            if (shadeElement) shadeElement.classList.add('hidden');
+            if (initialTitle) initialTitle.style.opacity = 0;
         }
-    });
 
-    // Hide title display in OFF state
-    document.querySelector('.portfolio-title-display').classList.remove('visible');
+        // Update active project and page indicators
+        const navItems = document.querySelectorAll('.portfolio-nav-item');
+        navItems.forEach((item, index) => {
+            if (index === currentProjectIndex) {
+                item.classList.add('active');
+                item.setAttribute('aria-pressed', 'true');
+
+                // Update page dots if this is the active project
+                const dots = item.querySelectorAll('.portfolio-nav-dot');
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle('active', dotIndex === currentPageIndex);
+                    if (dotIndex === currentPageIndex) {
+                        dot.setAttribute('aria-current', 'true');
+                    } else {
+                        dot.removeAttribute('aria-current');
+                    }
+                });
+            } else {
+                item.classList.remove('active');
+                item.setAttribute('aria-pressed', 'false');
+            }
+        });
+
+        // Hide title display in OFF state
+        if (titleDisplay) titleDisplay.classList.remove('visible');
+    } catch (error) {
+        console.error("Error updating navigation state:", error);
+    }
 }
 
 // Determine initial state from URL
 function determineStateFromURL() {
-    const path = window.location.pathname;
+    try {
+        const path = window.location.pathname;
+        // Remove query string and hash
+        const cleanPath = path.split(/[?#]/)[0];
 
-    // If we're on the projects.html page, start in ON state
-    if (isOnRootPage()) {
-        navIsInOnState = true;
-        currentProjectIndex = null;
-        return;
-    }
-
-    // We're on a project page, find which one
-    navIsInOnState = false;
-
-    // Extract the filename from the path
-    const filename = path.split('/').pop();
-
-    // Find the project and page index
-    for (let i = 0; i < portfolioProjects.length; i++) {
-        const pageIndex = portfolioProjects[i].pages.indexOf(filename);
-        if (pageIndex !== -1) {
-            currentProjectIndex = i;
-            currentPageIndex = pageIndex;
+        // If we're on the projects.html page, start in ON state
+        if (isOnRootPage()) {
+            navIsInOnState = true;
+            currentProjectIndex = null;
             return;
         }
-    }
 
-    // Default to first project if not found
-    currentProjectIndex = 0;
-    currentPageIndex = 0;
+        // We're on a project page, find which one
+        navIsInOnState = false;
+
+        // Extract the filename from the path
+        const filename = cleanPath.split('/').pop();
+
+        // Find the project and page index
+        let found = false;
+        for (let i = 0; i < portfolioProjects.length; i++) {
+            if (!portfolioProjects[i].pages) continue;
+
+            const pageIndex = portfolioProjects[i].pages.indexOf(filename);
+            if (pageIndex !== -1) {
+                currentProjectIndex = i;
+                currentPageIndex = pageIndex;
+                found = true;
+                break;
+            }
+        }
+
+        // Default to first project if not found
+        if (!found) {
+            currentProjectIndex = 0;
+            currentPageIndex = 0;
+            console.warn(`Page "${filename}" not found in any project, defaulting to first project`);
+        }
+    } catch (error) {
+        console.error("Error determining state from URL:", error);
+        // Set safe defaults
+        navIsInOnState = true;
+        currentProjectIndex = null;
+        currentPageIndex = 0;
+    }
 }
 
 // Navigate to the next page within the current project
 function navigateToNextPage() {
-    if (currentProjectIndex === null) return;
+    try {
+        if (currentProjectIndex === null || currentProjectIndex >= portfolioProjects.length) return;
 
-    const project = portfolioProjects[currentProjectIndex];
-    const totalPages = project.pages.length;
+        const project = portfolioProjects[currentProjectIndex];
+        if (!project || !project.pages || !project.pages.length) return;
 
-    if (currentPageIndex < totalPages - 1) {
-        currentPageIndex++;
-        const pageURL = isOnRootPage() ? 'projects/' + project.pages[currentPageIndex] : project.pages[currentPageIndex];
-        window.location.href = pageURL;
+        const totalPages = project.pages.length;
+
+        if (currentPageIndex < totalPages - 1) {
+            currentPageIndex++;
+            const pageURL = isOnRootPage() ?
+                'projects/' + project.pages[currentPageIndex] :
+                project.pages[currentPageIndex];
+
+            window.location.href = pageURL;
+        }
+    } catch (error) {
+        console.error("Error navigating to next page:", error);
     }
 }
 
 // Navigate to the previous page within the current project
 function navigateToPrevPage() {
-    if (currentProjectIndex === null) return;
+    try {
+        if (currentProjectIndex === null || currentProjectIndex >= portfolioProjects.length) return;
 
-    if (currentPageIndex > 0) {
-        currentPageIndex--;
-        const pageURL = isOnRootPage() ? 'projects/' + project.pages[currentPageIndex] : project.pages[currentPageIndex];
-        window.location.href = pageURL;
+        const project = portfolioProjects[currentProjectIndex];
+        if (!project || !project.pages || !project.pages.length) return;
+
+        if (currentPageIndex > 0) {
+            currentPageIndex--;
+            const pageURL = isOnRootPage() ?
+                'projects/' + project.pages[currentPageIndex] :
+                project.pages[currentPageIndex];
+
+            window.location.href = pageURL;
+        }
+    } catch (error) {
+        console.error("Error navigating to previous page:", error);
     }
 }
 
