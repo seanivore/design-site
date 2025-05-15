@@ -16,7 +16,8 @@
 
 /* Page layout - three vertical sections */
 body.nav-active {
-    overflow: hidden;
+    /* Only prevent scrolling when navigation is in ON state on the main page */
+    /* overflow: hidden; */
 }
 
 /* Navigation container - bottom third of screen */
@@ -48,6 +49,7 @@ body.nav-active {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    /* Better for screen readers */
 }
 
 /* Individual navigation items */
@@ -69,9 +71,11 @@ body.nav-active {
     height: var(--nav-circle-size);
     border-radius: 50%;
     background: var(--nav-gray);
+    /* Fallback for browsers that don't support backdrop-filter */
     background: rgba(50, 50, 50, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
     border: 3px solid var(--nav-green);
     transition: width var(--transition-speed) var(--transition-function),
         height var(--transition-speed) var(--transition-function),
@@ -83,6 +87,7 @@ body.nav-active {
     align-items: center;
     color: white;
     font-size: var(--icon-size);
+    /* Improve text rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -129,9 +134,11 @@ body.nav-active {
     pointer-events: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     padding: 2rem;
+    /* Fallback for browsers that don't support backdrop-filter */
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    /* Safari support */
 }
 
 .portfolio-title-display.visible {
@@ -152,9 +159,11 @@ body.nav-active {
     z-index: 98;
     pointer-events: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    /* Fallback for browsers that don't support backdrop-filter */
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    /* Safari support */
     padding: 2rem;
     transition: opacity var(--transition-speed) var(--transition-function);
 }
@@ -311,6 +320,7 @@ body.nav-active {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    /* Better for screen readers */
 }
 
 /* Responsive adjustments */

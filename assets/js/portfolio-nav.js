@@ -132,10 +132,24 @@ function initPortfolioNav() {
         // Add nav-active class to body when navigation is active
         document.body.classList.add('nav-active');
 
+        // Only prevent scrolling on the main projects page (where all project circles are visible)
+        if (isOnRootPage()) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
         // Listen for popstate events (browser back/forward)
         window.addEventListener('popstate', function () {
             determineStateFromURL();
             updateNavigationState();
+
+            // Update overflow when navigation state changes
+            if (isOnRootPage() && navIsInOnState) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
         });
     } catch (error) {
         console.error("Error initializing portfolio navigation:", error);
@@ -315,6 +329,9 @@ function handleNavClick(index) {
             currentPageIndex = 0;
             navIsInOnState = false;
 
+            // Allow scrolling on project pages
+            document.body.style.overflow = 'auto';
+
             // Navigate to the project page
             const project = portfolioProjects[index];
             if (!project || !project.pages || project.pages.length === 0) {
@@ -330,6 +347,12 @@ function handleNavClick(index) {
         } else if (index === currentProjectIndex) {
             // Clicked on active project, return to ON state
             navIsInOnState = true;
+
+            // Prevent scrolling on main projects page
+            if (isOnRootPage()) {
+                document.body.style.overflow = 'hidden';
+            }
+
             updateNavigationState();
 
             // Navigate back to projects page if not already there
@@ -340,6 +363,9 @@ function handleNavClick(index) {
             // Clicked on different project while in OFF state
             currentProjectIndex = index;
             currentPageIndex = 0;
+
+            // Keep scrolling enabled
+            document.body.style.overflow = 'auto';
 
             // Navigate to the new project
             const project = portfolioProjects[index];
@@ -390,10 +416,18 @@ function updateNavigationState() {
             navElement.className = 'portfolio-nav nav-on';
             if (shadeElement) shadeElement.classList.remove('hidden');
             if (initialTitle) initialTitle.style.opacity = 1;
+
+            // Only prevent scrolling on the main projects page when in ON state
+            if (isOnRootPage()) {
+                document.body.style.overflow = 'hidden';
+            }
         } else {
             navElement.className = 'portfolio-nav nav-off';
             if (shadeElement) shadeElement.classList.add('hidden');
             if (initialTitle) initialTitle.style.opacity = 0;
+
+            // Always allow scrolling in OFF state (project pages)
+            document.body.style.overflow = 'auto';
         }
 
         // Update active project and page indicators
