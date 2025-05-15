@@ -64,6 +64,10 @@ const projectIcons = [
     '<i class="fas fa-chart-bar"></i>'
 ];
 
+// Initial page title that displays on load
+const initialPageTitle = "Web Asset Showcase";
+const initialPageSubtitle = "In-demand digital products your B2B/B2C needs.";
+
 // State management
 let currentProjectIndex = null;
 let currentPageIndex = 0;
@@ -76,7 +80,21 @@ function initPortfolioNav() {
     shadeElement.className = 'portfolio-shade';
     document.body.appendChild(shadeElement);
 
-    // Create title display in the middle third
+    // Create initial title display that shows on page load
+    const initialTitle = document.createElement('div');
+    initialTitle.className = 'portfolio-initial-title';
+
+    const initialTitleHeading = document.createElement('h1');
+    initialTitleHeading.textContent = initialPageTitle;
+
+    const initialSubtitle = document.createElement('p');
+    initialSubtitle.textContent = initialPageSubtitle;
+
+    initialTitle.appendChild(initialTitleHeading);
+    initialTitle.appendChild(initialSubtitle);
+    document.body.appendChild(initialTitle);
+
+    // Create title display in the middle third (for hover)
     const titleDisplay = document.createElement('div');
     titleDisplay.className = 'portfolio-title-display';
 
@@ -135,7 +153,7 @@ function initPortfolioNav() {
             // Previous page button
             const prevBtn = document.createElement('div');
             prevBtn.className = 'page-nav-circle';
-            prevBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            prevBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
             prevBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navigateToPrevPage();
@@ -144,7 +162,7 @@ function initPortfolioNav() {
             // Next page button
             const nextBtn = document.createElement('div');
             nextBtn.className = 'page-nav-circle';
-            nextBtn.innerHTML = '<i class="fas fa-arrow-down"></i>';
+            nextBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
             nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navigateToNextPage();
@@ -163,12 +181,14 @@ function initPortfolioNav() {
                 titleEl.textContent = project.title;
                 subtitleEl.textContent = project.subtitle;
                 document.querySelector('.portfolio-title-display').classList.add('visible');
+                document.querySelector('.portfolio-initial-title').style.opacity = 0;
             }
         });
 
         navItem.addEventListener('mouseleave', () => {
             if (navIsInOnState) {
                 document.querySelector('.portfolio-title-display').classList.remove('visible');
+                document.querySelector('.portfolio-initial-title').style.opacity = 1;
             }
         });
 
@@ -236,14 +256,21 @@ function updateNavigationState() {
     const navElement = document.querySelector('.portfolio-nav');
     const navItems = document.querySelectorAll('.portfolio-nav-item');
     const shadeElement = document.querySelector('.portfolio-shade');
+    const initialTitle = document.querySelector('.portfolio-initial-title');
 
     // Update navigation container class
     if (navIsInOnState) {
         navElement.className = 'portfolio-nav nav-on';
         shadeElement.classList.remove('hidden');
+        if (initialTitle) {
+            initialTitle.style.opacity = 1;
+        }
     } else {
         navElement.className = 'portfolio-nav nav-off';
         shadeElement.classList.add('hidden');
+        if (initialTitle) {
+            initialTitle.style.opacity = 0;
+        }
     }
 
     // Update active project and page indicators

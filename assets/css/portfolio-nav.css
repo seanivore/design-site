@@ -4,11 +4,12 @@
     --nav-red: rgba(255, 0, 0, 0.7);
     --nav-gray: rgba(50, 50, 50, 0.3);
     --nav-circle-size: 10rem;
-    --nav-active-circle-size: 12rem;
+    --nav-active-circle-size: 20rem;
     --nav-gap: 2rem;
     --title-font-size: 4rem;
     --subtitle-font-size: 1.5rem;
     --icon-size: 3rem;
+    --active-icon-size: 5rem;
 }
 
 /* Page layout - three vertical sections */
@@ -75,21 +76,21 @@ body.nav-active {
     background: rgba(80, 80, 80, 0.4);
 }
 
-/* Active state - red border and larger */
+/* Active state - red border and much larger */
 .portfolio-nav-item.active .portfolio-nav-circle {
     width: var(--nav-active-circle-size);
     height: var(--nav-active-circle-size);
     border-color: var(--nav-red);
     border-width: 4px;
-    font-size: calc(var(--icon-size) * 1.2);
+    font-size: var(--active-icon-size);
 }
 
-/* OFF state positioning for active circle */
+/* OFF state positioning for active circle - bottom left */
 .portfolio-nav.nav-off .portfolio-nav-item.active {
-    transform: translateX(-50%);
     position: absolute;
-    left: 50%;
-    bottom: 10vh;
+    left: 5vw;
+    bottom: 5vh;
+    transform: none;
 }
 
 /* Title display in middle third of screen */
@@ -115,6 +116,44 @@ body.nav-active {
 
 .portfolio-title-display.visible {
     opacity: 1;
+}
+
+/* Initial title display that shows on page load */
+.portfolio-initial-title {
+    position: fixed;
+    top: 33vh;
+    left: 0;
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+    pointer-events: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+}
+
+.portfolio-initial-title h1 {
+    font-size: var(--title-font-size);
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.portfolio-initial-title p {
+    font-size: var(--subtitle-font-size);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 1rem 0 0;
+    max-width: 80%;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.4;
 }
 
 .portfolio-hover-title {
@@ -181,8 +220,8 @@ body.nav-active {
 /* Page navigation circles */
 .page-nav-circles {
     position: absolute;
-    top: 0;
-    right: -3rem;
+    top: 1rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -195,8 +234,8 @@ body.nav-active {
 }
 
 .page-nav-circle {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     background: var(--nav-gray);
     border: 1px solid var(--nav-green);
@@ -204,7 +243,7 @@ body.nav-active {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -233,25 +272,32 @@ body.nav-active {
 @media (max-width: 1200px) {
     :root {
         --nav-circle-size: 8rem;
-        --nav-active-circle-size: 10rem;
+        --nav-active-circle-size: 16rem;
         --nav-gap: 1.5rem;
         --title-font-size: 3rem;
         --subtitle-font-size: 1.2rem;
         --icon-size: 2.5rem;
+        --active-icon-size: 4rem;
     }
 }
 
 @media (max-width: 768px) {
     :root {
         --nav-circle-size: 6rem;
-        --nav-active-circle-size: 8rem;
+        --nav-active-circle-size: 12rem;
         --nav-gap: 1rem;
         --title-font-size: 2.5rem;
         --subtitle-font-size: 1rem;
         --icon-size: 2rem;
+        --active-icon-size: 3rem;
     }
 
     .portfolio-nav {
         flex-wrap: wrap;
+    }
+
+    .portfolio-nav.nav-off .portfolio-nav-item.active {
+        left: 2vw;
+        bottom: 2vh;
     }
 }
