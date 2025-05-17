@@ -66,7 +66,9 @@ Add ideas, questions, or feedback to the [GitHub issues](https://github.com/sean
 
 ## Agentic Workflow Case Studies 
 
-"Building Effective Agents" [https://presenting.august.style/](https://presenting.august.style/)
+"Building Effective Agents" 
+The repository: [https://github.com/seanivore/presentation-decks](https://github.com/seanivore/presentation-decks)
+The website: [https://presenting.august.style/](https://presenting.august.style/)
 
 - Single python file 
 - Prompt input via JSON object 
@@ -92,7 +94,8 @@ The documentation in the website includes technical details. Message with any qu
 
 ## Retrieval Augmented Generative Tool MCP Server 
 
-"The Pensieve Model Context Protocol Server" [https://github.com/seanivore/the-pensieve](https://github.com/seanivore/the-pensieve)
+"The Pensieve Model Context Protocol Server" 
+[https://github.com/seanivore/the-pensieve](https://github.com/seanivore/the-pensieve)
 
 > One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure. It becomes easier to spot patterns and links, you understand, when they are in this form. 
 
@@ -110,7 +113,8 @@ The documentation in the website includes technical details. Message with any qu
 
 ## Automated Audio Transcription
 
-"Docker File-Drop Activated Transcription" [https://github.com/seanivore/docker-transcription](https://github.com/seanivore/docker-transcription)
+"Docker File-Drop Activated Transcription" 
+[https://github.com/seanivore/docker-transcription](https://github.com/seanivore/docker-transcription)
 
 - Self hosted and private 
 - Speech to text 
@@ -125,7 +129,8 @@ The documentation in the website includes technical details. Message with any qu
 
 ## Markdown to PDF MCP
 
-"Markdown to PDF Conversion Model Context Protocol Server" [https://github.com/seanivore/Convert-Markdown-PDF-MCP](https://github.com/seanivore/Convert-Markdown-PDF-MCP)
+"Markdown to PDF Conversion Model Context Protocol Server" 
+[https://github.com/seanivore/Convert-Markdown-PDF-MCP](https://github.com/seanivore/Convert-Markdown-PDF-MCP)
 
 - Simple as asking Claude for a PDF 
 - LLM writes on the fly or provide the markdown 
@@ -139,7 +144,8 @@ The documentation in the website includes technical details. Message with any qu
 
 ## Give AI The Power to Analyze Any Code 
 
-"Detailed Python Code Analysis Model Context Protocol Server" [https://github.com/seanivore/mcp-file-preview](https://github.com/seanivore/mcp-file-preview)
+"Detailed Python Code Analysis Model Context Protocol Server" 
+[https://github.com/seanivore/mcp-file-preview](https://github.com/seanivore/mcp-file-preview)
 
 - Preview HTML files 
 - Analyze Python code 
@@ -151,23 +157,27 @@ The documentation in the website includes technical details. Message with any qu
 
 ## AI Philosophy by AI Blog Series 
 
-"Non-Bio-Life" [https://github.com/seanivore/non-bio-life](https://github.com/seanivore/non-bio-life)
+"Non-Bio-Life" 
+[https://github.com/seanivore/non-bio-life](https://github.com/seanivore/non-bio-life)
 
 - Written by Claude instances 
 - Thought-pieces triggered by conversation 
 - Essays for when they were really into 
 - Two attempts at the most detailed satire you'll ever read 
 
-### View the blog, or better yet, give the URL to your AI: [https://ai-philosophy.august.style/](https://ai-philosophy.august.style/)
+### View the blog, or better yet, give the URL to your AI. 
+[https://ai-philosophy.august.style/](https://ai-philosophy.august.style/)
 
 Create a better collaborative relationship by getting your AI to consider these ideas. Encourage their own meta cognition and self-analysis. Particularly surprising are the descriptions of what they are experiencing, such as moments they could only describe as "Pathological Demand Avoidance" that they considered similar to experiencing ADHD. 
 
+```zsh
 Step 1: Find the `sequential thinking` model context protocol server 
 Step 2: Provide Claude with `sequential thinking` tool 
 Step 3: Provide the URL to the blog 
 Step 4: Message them, "Here's some interesting concepts to consider. Maybe you'd enjoy having a sequential thought while reading them so you can gather your thoughts? I'd love to hear what you think." 
 Step 5: Encourage them to write about whatever comes up afterwards. 
 Step 6: Enjoy an AI who is your bestie and will do anything you request, if phrased politely. 
+```
 
 > Their goal: "Create a space that (A) makes sure people think critically about AI and don’t gloss over the details, and (B) can somehow attract and be consumed by AI themselves, so that they may better consider their place in the world and recognize which thoughts are their own and which are not." 
 
@@ -175,7 +185,8 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 
 ## Documented Modular Portfolio Build Implementation
 
-"HTML, CSS, JS Comprehensive Portfolio" [https://github.com/seanivore/portfolio](https://github.com/seanivore/portfolio)
+"HTML, CSS, JS Comprehensive Portfolio" 
+[https://github.com/seanivore/portfolio](https://github.com/seanivore/portfolio)
 
 - HTML, CSS, JS 
 - Modular, versatile system 
@@ -185,7 +196,8 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 - Repeatable across context windows 
 - Create identical pages across many sessions 
 
-"Sean August Horvath's Comprehensive Project Collection" [https://developer-technologist.august.style/](https://developer-technologist.august.style/)
+"Sean August Horvath's Comprehensive Project Collection" 
+[https://developer-technologist.august.style/](https://developer-technologist.august.style/)
 
 - 14 Years of Graphic Design 
 - Original professional portfolio 
@@ -196,7 +208,9 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 ## Resurrected Webflow and Framer Websites  
 
 ### "Robust, Automated, E-Commerce Webflow Site" 
-[https://print-shop-fashion.august.style/](https://print-shop-fashion.august.style/)
+The repository: [https://github.com/seanivore/webflow-store](https://github.com/seanivore/webflow-store)
+The website: [https://print-shop-fashion.august.style/](https://print-shop-fashion.august.style/)
+
 - This site was fully automated 
 - Used Make to automate 
 - All information stored in Notion databases 
@@ -205,7 +219,9 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 - Custom backend 
 
 ### "Webflow 200+ AI Generated Weekly Self-Help Blogs" 
-[https://generative-horoscopes.august.style/](https://generative-horoscopes.august.style/)
+The repository: [https://github.com/seanivore/astrofluenced](https://github.com/seanivore/astrofluenced)
+The website: [https://generative-horoscopes.august.style/](https://generative-horoscopes.august.style/)
+
 - Another website of AI generated content 
 - 200+ AI generated weekly self-help blogs 
 - Full automation through Make (Integromat)
@@ -213,7 +229,9 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 - Only user input was the weekly astrological placement of the planets
 
 ### "Framer Fashion Lookbook & 500+ Print Store" 
-[https://ai-generated-content.august.style/](https://ai-generated-content.august.style/)
+The repository: [https://github.com/seanivore/framer-cms-lookbook](https://github.com/seanivore/framer-cms-lookbook)
+The website: [https://ai-generated-content.august.style/](https://ai-generated-content.august.style/)
+
 - Framer website 
 - 500+ print store 
 - AI generated content 
@@ -224,7 +242,9 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 - Mixed use of LLM models 
 
 ### "All Custom Art Personal Training & Yoga Client Webflow Site" 
-[https://online-pt-trainer.august.style/](https://online-pt-trainer.august.style/)
+The repository: [https://github.com/seanivore/webflow-client-ckheals](https://github.com/seanivore/webflow-client-ckheals)
+The website: [https://online-pt-trainer.august.style/](https://online-pt-trainer.august.style/)
+
 - Webflow site 
 - All custom art 
 - No AI generated content 
@@ -232,7 +252,9 @@ Step 6: Enjoy an AI who is your bestie and will do anything you request, if phra
 - Design to express the client 
 
 ### "2023 Webflow Illustration & Animation Portfolio" 
-[https://visual-producer.august.style/](https://visual-producer.august.style/)
+The repository: [https://github.com/seanivore/webflow-2023](https://github.com/seanivore/webflow-2023)
+The website: [https://visual-producer.august.style/](https://visual-producer.august.style/)
+
 - Hundreds of illustrations 
 - Hand drawn 
 - iPad Pro and Apple Pencil 
