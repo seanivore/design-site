@@ -34,13 +34,13 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
   - Profile Setup Page `./projects/saas-css-anim-profile-setup.html` 
 
 2. AI Generated Fashion Magazine
-   Luxury Looks Pull From Historic Art Movements & Are Designed for Relatable Archetypes
+   Archetype-Focused Luxury Looks Inspired by Historic Art Movements
   - Part 1 `./projects/autumn-lookbook-part-1.html`
   - Part 2 `./projects/autumn-lookbook-part-2.html`
   - Part 3 `./projects/autumn-lookbook-part-3.html`
 
 3. Webflow E-Commerce 500+ Product Store 
-   Single-Edition Prints Showcasing 30+ Art Movements with AI Staged Photographs 
+   AI-Staged Photography Showcasing 30+ Art Movements In Single-Edition Prints
   - Mid-Century Modern Print Series Page `./projects/webflow-print-series.html`
   - Bauhaus Print Product Page `./projects/webflow-product-page.html`
 
