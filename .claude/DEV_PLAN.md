@@ -44,19 +44,19 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
   - Mid-Century Modern Print Series Page `./projects/webflow-print-series.html`
   - Bauhaus Print Product Page `./projects/webflow-product-page.html`
 
-4. Fashion Guide With Solution Oriented Styles 
-   Google Lens API Integration Is Steps Away from Implementation
+4. Solution-Oriented Fashion Guide 
+   Guided with Google Lens API Integration
   - Section 1 `./projects/summer-lookbook-part-1.html`
   - Section 2 `./projects/summer-lookbook-part-2.html`
   - Section 3 `./projects/summer-lookbook-part-3.html`
   - Section 4 `./projects/summer-lookbook-part-4.html`
 
 5. AI-Guided Yoga & Meditation App 
-   Interaction Is Handled By the AI & No Typing Required 
+   Interaction Handled By the AI; No Typing Required 
   - Interactive App `./projects/mindflow-app.html`
 
 6. AI-Data Visualization Dashboard 
-   CSS Animated Charts For Rarely Captured Data Before AI-Led Teen Planning App 
+   CSS Animated Charts Display AI-Led Teen Planning App Data 
   - `./projects/ai-admin-dashboard.html`
 
 ### Interactive Homepage 
