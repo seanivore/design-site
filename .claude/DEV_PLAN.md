@@ -8,16 +8,14 @@ THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 ### PHASE 1 Project Page Entries ✅
 ### PHASE 2: Build Project Section ✅
 ### PHASE 3: Build Homepage ✅
-**PUBLISH EARLY VERSION**
+**PUBLISH EARLY VERSION** ✅
 ### PHASE 4: Navigation Update ✅
-**PUBLISHED SO I CAN USE IT**
+**PUBLISH SO I CAN USE IT** ✅
 ### PHASE 5: Interactive Homepage 
 ### PHASE 6: "Even More Updates" 
 
 ## Current Updates 
 
-1. Our interactive app project, `./projects/mindflow-app.html`, seems to be blocking the functionality of the navigation bar. Find the navigation bar located in the HTML at the bottom of the file. I think it has something to do with a JS conflict, though there is no JS conflict issue with our technically similar admin dashboard project. The app's JS can be seen in `./assets/js/mindflow-app.js`. It appears, but nothing on the bar can be clicked. 
-2. Update the navigation bar to be responsive on mobile by making it double tall, placing the project info on the bottom, making the project info text smaller, etc. Currently it goes off the screen before the last project's button which of course means the project details are not visible at all. The navigation bar is added to every project page, so if you're able to do this using the current CSS classes, we won't need to update them all. I'm not sure if that'll be possible or not. If not please update all the pages listed in the `./projects` directory as well as `./index.html`. 
 
 ### Ready Project Pages 
 
