@@ -1,97 +1,87 @@
 # Web Asset Showcase 
 
-## Overview
+## Concept
 
-This is a simple web asset showcase intended to pull a select portion of a project, polish it up, and then include that only. It is a 'walled garden' approach that allows one to revamp portfolio sites to showcase the most in-demand web assets at that time. 
+Showcase web development, design, and user experience capabilities through a collection of high-demand digital assets by pulling from actual past projects but creating a walled garden UX/UI. This is effective without waisting the viewer's time. 
 
-### Goal 
-To create extremely high-value, polished, B2B/B2C web development designer's showcase. 
-  - Show common website UX flows through series of instances of a project 
-  - Expand my current design portfolio, while also narrowing it down to specific needs of B2B/B2C tech companies 
-  - In at least one case, create high-fidelity product images for an iPhone app 
-  - For app UX/UI, start with an existing app, recreate UX/UI flow, then adjust to fit needs of imaginary project 
-
-### Projects Showcase:
-  - Modern form design patterns
+### Goals
+  - Show common website UX flows & modern design patterns
+  - Expand current portfolio, while targeting B2B/B2C 
   - Micro-interactions and loading states
-  - Responsive layouts
-  - Accessibility considerations
-  - Clean, conversion-focused UX
+  - Responsive layouts & accessibility considerations
 
-### Great Approach Because:
-  - Shows progression - Hiring managers can see you understand multi-step user journeys
-  - Demonstrates versatility - Two different animation styles, same high quality
-  - Practical value - These are exactly the types of pages companies need
-  - Easy to customize - The code structure allows for quick brand color swaps
-
-### Design Theme 
-
-Lean into "simple" to capitalize on making it impressive. Include interactive elements that wow because of smart design, not overly technical development demands. 
-
-Show what they want to see. Think only visually. 
-
-  - Visuals before everything --> they're always the real story 
-  - Highest bar --> pass the gut check 
-
-## Project Concept 
-
-The goal is to create a super-polished collection of high-demand digital assets that showcase web development, design, and user experience capabilities. This professional web developer's portfolio features one-page versions of websites, carefully curated and adjusted to fulfill job marketing needs. Within the portfolio's horizontal navigation, pages scroll vertically in a "walled garden" environment where links and inputs are simulated for display purposes. The collection emphasizes commonly sought-after elements like SaaS product landing pages, high-fidelity iOS apps, and administrative dashboards. Each project entry presents either a complete UX flow or selected key pages from the digital project.
-
-### Logic 
-
-When you come across web design portfolios online, unless it is for an agency, there is always a common theme: They have been scrubbed and polished after the fact. They are not the real story. They are examples of the designer's ability to code and implement design, sure, but they are being used to create a new story. 
-
-When going through my websites I'd like to do the same. Some just straight up do need some fixes, but we should look at them as themes that can be crafted into whatever type of websites will be most sought after by companies hiring designers. We might include a URL to see the full site for some of them, but in general I think I'd like to try to avoid needing to do that. The real URLs will be somewhere if someone is really digging, meaning this website can be nothing but perfect examples of work. Make up fictional companies to fill out the projects. 
-
-### Projects Navigation 
-
-Each project is one or more vertical scrolling pages that work in a series or user flow. These are presented as full viewport width and fit content height so that it can be experienced as usual. 
-
-Hovering, fixed over the projects is a navigation bar with glassmorphism circular icons for each project entry. Clicking the icon on the right or left will move to the next or previous project much like a video cut transition. 
-
-When a project is selected there is space to add details about the project, however the primary intention of this project is VISUAL FIRST, VISUAL ABOVE EVERYTHING ELSE. This helps with curation because if the project visual isn't enough on it's own then it should not be included. 
-
-### Home & About Page 
-
-The only other section is a very simple home page that provides little more than your name, a social media style bio, a couple sentences about you, and then just select, maybe three, social or contact links. 
-
-The overall intention of this page is also visual. It should prepare the viewer for the experience without providing anything that could distract them from proceeding to convert as you would like; e.g. click to the project page. Just like Optimizely: Remove the exists and users can only go where you want. Add a gut check and they'll convert, guaranteed. 
+### Value
+  - Shows understanding of multi-step user journeys
+  - High quality in different styles demonstrate versatility 
+  - Practical value shows just what they need
+  - Code structure allows for quick brand color swaps
 
 ## Design 
 
-Specific to the project. The homepage in this case is an old school computer with nothing but a blinking cursor prompt, with a quirky AI concierge on the other side. 
+### Themes 
+- Capitalize on simplicity
+- Think visual-first
+- Interactive elements create smart design
+- Impress without excessive development 
+- UX is a walled garden for practical value
+- Good is the enemy of great so use a gut check
+
+### Navigation-centric Layout
+
+The navigation creates a UX that makes it seem like the home page and each project are sitting side by side. This is achieved using a bar that is 100 vw and fixed 1/3rd up from the bottom of the viewport; this is where it is always present to allow moving between projects and their pages. 
+
+The right side of the bar has buttons with icons for the home page and each project. The projects with multiple pages use a normal project button for the first page, then have attached, narrower, icon-free buttons for each other page. 
+
+The right side of the bar displays the project name with single-sentence description; for the home page it shows the website name instead. This description section is designed to appear on an inset window with white text on a shaded glassmorphism background. 
+
+The bar itself has an an almost completely solid opacity and uses a charcoal-colored linear gradient. This gradient creates a UX that feels like the bar has a horizontal middle that is "closer" to the user. This is achieved by using different shades of the same color, using a lighter shade for the highlight above the mid-line, and a darker shade just under the mid-line. 
+
+The buttons use almost exactly the same linear-gradient as the bar, but the visual effect is more pronounced. The is achieved by using shades even more extreme in their distance from the primary color. Additionally, the button is made to have a UX that seems like it is not a solid part of the bar, just like real-life buttons. This part is achieved by using a very thin stroke that is an almost back shade of the primary color. The top of the button's stroke is a shade that is slightly lighter than the bottom stroke. 
+
+The button for the page you are on uses the linear-gradient in a similar way, only it is flipped 180 degrees; this inward curve makes the UX of 'pressing' the button more tactile. 
+
+Again, this ever-present bar is on every page to join the user throughout the experience. The UX as a whole feels like a single, cohesive experience of moving between pages that are all sitting side by side. 
+
+### Home Page 
+
+Is technically an extremely simple about page and a contact page. Nothing more than the following which is all centered horizontally and almost vertically, nudged up to not be blocked by the navigation bar. It all exists on the page above the navigation bar. 
+
+- Full name 
+- Social-style bio
+- Icons for email, LinkedIn, and GitHub
+
+The background is a piece of art set to hide the overflow and stay 100 vw and 100 vh. The text is all in white; legibility is ensured by placing a black 100 vw and 100 vh overlay over the top of the image, set to 50% opacity. 
 
 ## Development 
 
-The intentional theme we stood by in building this was that simple can be better when simple is done perfectly. We didn't go beyond HTML, CSS, and JS for animations and transitions. We actually ended up nixing our original interactive CSS animation homepage because it was too laggy and trying to create it in a way that performed perfectly, while not overly complicated and totally achievable, it broke the mold of simple done best. It speaks to the largest demographic of users because, even non-visual users, can imagine their own branding on top of the projects. 
+Simple HTML, CSS, and JS. No frameworks. 
 
-### Implementation and Deployment 
+### Deployment 
 
-The project is deployed via GitHub Pages using Jekyll to build the site, which has a custom domain of `https://design.august.style`. Since none of the pages are markdown, this requires just two files. 
+GitHub Pages and Jekyll to build the site, which has a custom domain of `https://design.august.style`. Since none of the pages are markdown, this requires just two files. 
 
-Tell GitHub the Custom Domain: `CNAME` 
-Inform Jekyll about the configuration: `_config.yml` 
+Tell GitHub the Custom Domain by having it written on an extension-less file named: `CNAME` 
+Inform Jekyll about the configuration with a basic a file named: `_config.yml` 
 
-## Future 
-
-There are a few little improvements for each of the projects to be made to make them more engaging. I'm also considering adding some of my actual client projects where all the art is custom made. We tried to repurpose the artwork for something B2B or B2C but it is art and probably took 12 hours to prefect the client's art site, so doing the same just didn't make sense for this particular type of showcase portfolio. 
-
-## Project Directory Organization 
+### Directory Organization 
 
 1. Assets from original projects or projects in planning state are organized into `./assets/docs` directories 
 2. Determined what the project will be for the showcase, then choose a naming convention for all assets  
 3. Finalized HTML files for the project should be placed in the `./projects` directory 
 4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
 5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
-
-Find a full project directory tree in the `./CLAUDE.md` file where there are details on how to update the to main parts or the entire project as trends and styles change over time. 
+6. Full project directory tree in the `./CLAUDE.md` file. 
 
 ## Copy This Repo 
 
 ```zsh
 git clone https://github.com/august-style/design-site.git
 ```
-Or create a fork. Any ideas or questions are welcome; please add them to the GitHub issues. 
+Or create a fork. 
+
+### Contributions 
+
+Any ideas or questions are welcome; please add them to the GitHub issues. 
 
 ## OTHER SEANIVORE PROJECTS
 
