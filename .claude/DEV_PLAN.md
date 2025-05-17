@@ -2,8 +2,7 @@
 PROJECT DIRECTORY: `/Users/seanivore/Development/design-site/...`
 THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 
---> Find project status updates in `memory` MCP at "Portfolio Strategy: Show What They Want", "Sean's Portfolio Vision" 
---> Logic and design brief: `./README.md` 
+--> Review project concept and logic via `memory` MCP tool entity "Portfolio Strategy: Show What They Want" and "Sean's Portfolio Vision" 
 
 ## Development 
 ### PHASE 1 Project Page Entries ✅
@@ -17,13 +16,7 @@ THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 
 ## Current Updates 
 
-The current JS implementation is too messy to fix, isn't responsive, and breaks our "simple first" approach. You'll find the updated approach and necessary design changes in the `./README.md` file. 
-
-1. Review the `./README.md` file for the updated approach and necessary design changes. 
-2. Start with the `./index.html` file. It will need a CSS file in the assets directory. 
-3. Simply copy the nav to each of the ready project pages below. 
-4. Delete the `./assets/js/portfolio-nav.js` and `./assets/css/portfolio-nav.css` files. 
-5. Confirm we don't need the `./projects.html` file and then delete that as well. 
+1. Our interactive app project, `./projects/mindflow-app.html`, seems to be blocking the functionality of the navigation bar. Find the navigation bar located in the HTML at the bottom of the file. I think it has something to do with a JS conflict, though there is no JS conflict issue with our technically similar admin dashboard project. The app's JS can be seen in `./assets/js/mindflow-app.js`. It appears, but nothing on the bar can be clicked. 
 
 ### Ready Project Pages 
 

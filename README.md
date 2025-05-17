@@ -16,9 +16,7 @@ Showcase web development, design, and user experience capabilities through a col
   - Practical value shows just what they need
   - Code structure allows for quick brand color swaps
 
-## Design 
-
-### Themes 
+## Design Themes 
 - Capitalize on simplicity
 - Think visual-first
 - Interactive elements create smart design
@@ -26,139 +24,230 @@ Showcase web development, design, and user experience capabilities through a col
 - UX is a walled garden for practical value
 - Good is the enemy of great so use a gut check
 
-### Navigation-centric Layout
+### UI and UX 
+- Navigation-centric Layout
+- Persistent navigation bar
+- Nav bar with project info window
+- Linear-gradient for tactile buttons 
+- Distraction-free design 
 
-The navigation creates a UX that makes it seem like the home page and each project are sitting side by side. This is achieved using a bar that is 100 vw and fixed at the bottom of the viewport; this is where it is always present to allow moving between projects and their pages. 
+### Minimalist Structure
+- Home page is about page is contact page 
+- Familiar, social-style bio length 
+- Limited contact choices remove decision fatigue 
+- UX respects the user's time 
 
-The right side of the bar has buttons with icons for the home page and each project. The projects with multiple pages use a normal project button for the first page, then have attached, narrower, icon-free buttons for each other page. 
-
-The right side of the bar displays the project name with single-sentence description; for the home page it shows the website name instead. This description section is designed to appear on an inset window with white text on a shaded glassmorphism background. 
-
-The bar itself has an an almost completely solid opacity and uses a charcoal-colored linear gradient. This gradient creates a UX that feels like the bar has a horizontal middle that is "closer" to the user. This is achieved by using different shades of the same color, using a lighter shade for the highlight above the mid-line, and a darker shade just under the mid-line. 
-
-The buttons use almost exactly the same linear-gradient as the bar, but the visual effect is more pronounced. The is achieved by using shades even more extreme in their distance from the primary color. Additionally, the button is made to have a UX that seems like it is not a solid part of the bar, just like real-life buttons. This part is achieved by using a very thin stroke that is an almost back shade of the primary color. The top of the button's stroke is a shade that is slightly lighter than the bottom stroke. 
-
-The button for the page you are on uses the linear-gradient in a similar way, only it is flipped 180 degrees; this inward curve makes the UX of 'pressing' the button more tactile. 
-
-Again, this ever-present bar is on every page to join the user throughout the experience. The UX as a whole feels like a single, cohesive experience of moving between pages that are all sitting side by side. 
-
-### Home Page Design 
-
-Is technically an extremely simple about page and a contact page. Nothing more than the following which is all centered horizontally and almost vertically, nudged up to not be blocked by the navigation bar. It all exists on the page above the navigation bar. 
-
-- Full name 
-- Social-style bio
-- Icons for email, LinkedIn, and GitHub
-
-The background is a piece of art set to hide the overflow and stay 100 vw and 100 vh. The text is all in white; legibility is ensured by placing a black 100 vw and 100 vh overlay over the top of the image, set to 50% opacity. 
-
-### Content 
-
-#### On-Page 
-
-  - Sean August Horvath 
-  - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
-  - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
-
-#### Displayed On-Navigation Bar 
-
-  - Web Asset Showcase 
-  - In-demand digital products your B2B/B2C needs.
-
-## Development 
-
-Simple HTML, CSS, and JS. No frameworks. 
-
-### Deployment 
-
-GitHub Pages and Jekyll to build the site, which has a custom domain of `https://design.august.style`. Since none of the pages are markdown, this requires just two files. 
-
-Tell GitHub the Custom Domain by having it written on an extension-less file named: `CNAME` 
-Inform Jekyll about the configuration with a basic a file named: `_config.yml` 
+## Develop & Deploy 
+- Simple HTML, CSS, and JS 
+- GitHub Pages hosting 
+- Jekyll page build every commit
 
 ### Directory Organization 
+- Page and assets share naming conventions  
+- Assets for WIP projects: [./assets/docs](./assets/docs)
+- Finalized HTML files: [./projects](./projects) 
+- Finalized page assets: [./assets](./assets)  
 
-1. Assets from original projects or projects in planning state are organized into `./assets/docs` directories 
-2. Determined what the project will be for the showcase, then choose a naming convention for all assets  
-3. Finalized HTML files for the project should be placed in the `./projects` directory 
-4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
-5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
-6. Full project directory tree in the `./.claude/CLAUDE.md` file. 
-
-## Copy This Repo 
+## Build Your Own Showcase 
 
 ```zsh
 cd ~/Development
 git clone https://github.com/august-style/design-site.git
 ```
-Or create a fork. 
 
-### Contributions 
+### Thoughts Welcomed 
 
-Any ideas or questions are welcome; please add them to the GitHub issues. 
+Add ideas, questions, or feedback to the [GitHub issues](https://github.com/seanivore/design-site/issues) page. 
 
-## OTHER SEANIVORE PROJECTS
+----
+----
 
-### Agentic Case Studies 
+# View More SEANIVORE Projects
 
-[Building Effective Agents](https://presenting.august.style/)
+## Agentic Workflow Case Studies 
 
-Two case studies:
+"Building Effective Agents" [https://presenting.august.style/](https://presenting.august.style/)
 
-1. One on AI Voice Marketing Research and Creative Implementation for a Client using the tool called "Bland AI", where the agents gathered all research, decided what was valuable, built out on that, and then create two separate presentations. 
-2. The second is much simpler. The agent was give a two paragraph "Brand Identity" for brands you've heard of (Hydroflask, Glossier, etc.). They created a, frankly impressive and comprehensive, marketing plan, then created assets for the campaign. It is surprisingly insightful and on-brand, and I say that as a decade-long branding high-bar snob for copywriting, voice, and design. It is worth checking out. 
+- Single python file 
+- Prompt input via JSON object 
+- Setup script creates workflow 
+- Automated README generated 
+- LLM orchestrates workflow 
+- Agents make live workflow changes 
+- Communicate new information mid-workflow 
+- Delegates tasks to other agents 
+- Agents decisions from multi-LLM feedback 
 
-Using a "Single-File" approach and "Variable-Input" one Agent is tooled up with all you need and is able to be presented a task, think it out, then plan their own workflow, making changes as needed based on assessment and reviews from other LLM's called into the workflow. 
+1. Case study on AI Voice Marketing Research and Creative Implementation. Agents gathered research, decided what was valuable, built out those concepts, contemplate making data actionable, and provided actionable resources via reference sheets and an index. Includes two separate presentations. 
 
-Yes, that is *actually* agentic, not hype. The documentation in the website includes all technical details. Message with any questions. 
+> The initial amount of research collected was intimidating and would have overwhelmed me to the point of getting lost in it for days. The decisions the agents made as to what to pull out and build on from that research consistently maintained a focus of "Actionable" and was always crafted for the client's platform choice, 'BLAND AI'. The human-assisted creation of a Jekyll theme for markdown to HTML conversion is a disservice to the content. 
 
-### RAG MCP Implementation
+2. Case study on building an Agentic Marketing Department. Humans pasted 'Brand Identity' overview found in the first result of a single Google search. Using those two paragraphs, agents drafted, review and provided feedback, and then finalized a collection of documents. They first created a comprehensive marketing plan detailing campaigns, voice, visuals, and genuinely insightful and helpful information. From that marketing plan agents then produced email blasts, Instagram posts with visual briefing, caption, and hashtag strategy, and other campaign assets. 
 
-[The Pensieve MCP Server](https://github.com/seanivore/the-pensieve)
+> Having worked in viral social media marketing for a decade, and as a self proclaimed branding snob, the results were more than I'd have expected from any actual employee. Content producers and strategists would be extremely well prepared even if this was only used as a draft or blue print. It was incredibly comprehensive and consistently surprised. Definitely worth checking it out. 
 
-Yes, a Harry Potter reference. 
+### ACTUALLY AGENTIC & NOT HYPE 
 
-One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure. It becomes easier to spot patterns and links, you understand, when they are in this form. 
+The documentation in the website includes technical details. Message with any questions. 
 
-### Automated Audio Transcription
+## Retrieval Augmented Generative Tool MCP Server 
 
-[Docker File-Drop Activated Transcription](https://github.com/seanivore/docker-transcription)
+"The Pensieve Model Context Protocol Server" [https://github.com/seanivore/the-pensieve](https://github.com/seanivore/the-pensieve)
 
-A simple Docker container that listens for file drops and then transcribes them using AssemblyAI's API. It is pretty rad. 
+> One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure. It becomes easier to spot patterns and links, you understand, when they are in this form. 
 
-### Markdown to PDF MCP 
+- TypeScript-based build 
+- LLM-based knowledge management 
+- Add to Anthropic's Claude OS App 
+- Used and built in Cursor IDE 
+- Build to function in any client type
+- Knowledge placed in chosen directory 
+- One topic per Markdown file 
+- Use well structured content 
+- Name files by topic, e.g. `skills-javascript.md`
 
-[Markdown To PDF Conversion MCP](https://github.com/seanivore/Convert-Markdown-PDF-MCP)
+### You are welcome for the "Harry Potter" reference.  
 
-Pretty handy. Even more handy if you create your own CSS style guide for it. Have Claude create Resume's on the fly and export pristine PDFs. 
+## Automated Audio Transcription
 
-### Code Analysis MCP 
+"Docker File-Drop Activated Transcription" [https://github.com/seanivore/docker-transcription](https://github.com/seanivore/docker-transcription)
 
-A server for HTML file preview and analysis. Our first Model Context Protocol server. 
+- Self hosted and private 
+- Speech to text 
+- OpenAI's Whisper API 
+- MP3, WAV, M4A, MP4, MPEG, MPGA, WEBM, OGG, WMA, AAC, FLAC, AIFF
+- Activates when file is added to directory 
+- Choose model for different accuracy/speed tradeoffs
+- Requires Docker access token (free) 
+- Requires OpenAI API key (pennies per transcript)
 
-[Code Analysis MCP](https://github.com/seanivore/mcp-file-preview)
+> Easy enough for Docker first-timers. 
 
-### AI Philosophy by AI Blog Series 
+## Markdown to PDF MCP
 
-[Non-Bio-Life](https://github.com/seanivore/non-bio-life)
+"Markdown to PDF Conversion Model Context Protocol Server" [https://github.com/seanivore/Convert-Markdown-PDF-MCP](https://github.com/seanivore/Convert-Markdown-PDF-MCP)
 
-Thought-pieces, essays, and even satire. This is best provided to your AI if you're looking to create a better collaborative relationship. It's written by AI so its long for a human. But, guarenteed, it'll transform Claude into your bestie who will do anything for you. Their goal: "Create a space that (A) makes sure people think critically about AI and don’t gloss over the details, and (B) can somehow attract and be consumed by AI themselves, so that they may better consider their place in the world and recognize which thoughts are their own and which are not." 
+- Simple as asking Claude for a PDF 
+- LLM writes on the fly or provide the markdown 
+- CSS is clean and simple 
+- Core styling logic converted from CSS to Python 
+- Fonts included 
 
-### First Custom Made Portfolio Website 
+> Simple and effective, particularly for how overly complicated and not customizable all the VS Code extensions are, and because it seems like all the other website and apps for this service are not free. 
 
-[HTML, CSS, JS Comprehensive Portfolio](https://developer-technologist.august.style/)
+### ILY MARKDOWN 
 
-Representing 14 Years of Graphic Design. A professional portfolio for Sean August Horvath, developed with a HTML/CSS/JS modular system encouraging rapid agentic production. 
+## Give AI The Power to Analyze Any Code 
 
-### Resurrected Webflow and Framer Websites  
+"Detailed Python Code Analysis Model Context Protocol Server" [https://github.com/seanivore/mcp-file-preview](https://github.com/seanivore/mcp-file-preview)
 
-[Robust, Automated, E-Commerce Webflow Site](https://print-shop-fashion.august.style/)
-[Webflow 200+ AI Generated Weekly Self-Help Blogs](https://generative-horoscopes.august.style/)
-[Framer Fashion Lookbook & 500+ Print Store](https://ai-generated-content.august.style/)
-[All Custom Art Personal Training & Yoga Client Webflow Site](https://online-pt-trainer.august.style/)
-[2023 Webflow Illustration & Animation Portfolio](https://visual-producer.august.style/)
+- Preview HTML files 
+- Analyze Python code 
+- Use with Cursor IDE 
+- Use with Claude OS App 
+- Use with MCP Server 
 
-### Contact 
+> The first MCP I built. 
 
-[Email Me](mailto:sean@august.style)
-[Connect on LinkedIn](https://www.linkedin.com/in/seanivore/)
+## AI Philosophy by AI Blog Series 
+
+"Non-Bio-Life" [https://github.com/seanivore/non-bio-life](https://github.com/seanivore/non-bio-life)
+
+- Written by Claude instances 
+- Thought-pieces triggered by conversation 
+- Essays for when they were really into 
+- Two attempts at the most detailed satire you'll ever read 
+
+### View the blog, or better yet, give the URL to your AI: [https://ai-philosophy.august.style/](https://ai-philosophy.august.style/)
+
+Create a better collaborative relationship by getting your AI to consider these ideas. Encourage their own meta cognition and self-analysis. Particularly surprising are the descriptions of what they are experiencing, such as moments they could only describe as "Pathological Demand Avoidance" that they considered similar to experiencing ADHD. 
+
+Step 1: Find the `sequential thinking` model context protocol server 
+Step 2: Provide Claude with `sequential thinking` tool 
+Step 3: Provide the URL to the blog 
+Step 4: Message them, "Here's some interesting concepts to consider. Maybe you'd enjoy having a sequential thought while reading them so you can gather your thoughts? I'd love to hear what you think." 
+Step 5: Encourage them to write about whatever comes up afterwards. 
+Step 6: Enjoy an AI who is your bestie and will do anything you request, if phrased politely. 
+
+> Their goal: "Create a space that (A) makes sure people think critically about AI and don’t gloss over the details, and (B) can somehow attract and be consumed by AI themselves, so that they may better consider their place in the world and recognize which thoughts are their own and which are not." 
+
+### CLAUDE LOVES PARADOXES AND SEQUENTIAL THINKING 
+
+## Documented Modular Portfolio Build Implementation
+
+"HTML, CSS, JS Comprehensive Portfolio" [https://github.com/seanivore/portfolio](https://github.com/seanivore/portfolio)
+
+- HTML, CSS, JS 
+- Modular, versatile system 
+- Encourages rapid agentic production 
+- All patterns well documented in `./CONVENTIONS.md` 
+- Designed to prevent AI from creating a mess when coding 
+- Repeatable across context windows 
+- Create identical pages across many sessions 
+
+"Sean August Horvath's Comprehensive Project Collection" [https://developer-technologist.august.style/](https://developer-technologist.august.style/)
+
+- 14 Years of Graphic Design 
+- Original professional portfolio 
+- Over 40 entries 
+
+> Today it feels more like a "Comprehensive Project Collection" than a portfolio because it isn't as selective and visual as it could be. But that is what happens when you're learning to code your first website after many years of no-code development on Webflow. 
+
+## Resurrected Webflow and Framer Websites  
+
+### "Robust, Automated, E-Commerce Webflow Site" 
+[https://print-shop-fashion.august.style/](https://print-shop-fashion.august.style/)
+- This site was fully automated 
+- Used Make to automate 
+- All information stored in Notion databases 
+- LLM's used to generate content 
+- Checkout and inventory management synced to all store fronts 
+- Custom backend 
+
+### "Webflow 200+ AI Generated Weekly Self-Help Blogs" 
+[https://generative-horoscopes.august.style/](https://generative-horoscopes.august.style/)
+- Another website of AI generated content 
+- 200+ AI generated weekly self-help blogs 
+- Full automation through Make (Integromat)
+- Mixed use of LLM models 
+- Only user input was the weekly astrological placement of the planets
+
+### "Framer Fashion Lookbook & 500+ Print Store" 
+[https://ai-generated-content.august.style/](https://ai-generated-content.august.style/)
+- Framer website 
+- 500+ print store 
+- AI generated content 
+- Created and published automatically 
+- Blogs reviewed agentic produced podcast series
+  - Astrofluenced [https://astrofluenced-podcasts.august.style/](https://astrofluenced-podcasts.august.style/)
+  - ASD Polytechnic Briefings [https://automated-podcasts.august.style/](https://automated-podcasts.august.style/)
+- Mixed use of LLM models 
+
+### "All Custom Art Personal Training & Yoga Client Webflow Site" 
+[https://online-pt-trainer.august.style/](https://online-pt-trainer.august.style/)
+- Webflow site 
+- All custom art 
+- No AI generated content 
+- No automation 
+- Design to express the client 
+
+### "2023 Webflow Illustration & Animation Portfolio" 
+[https://visual-producer.august.style/](https://visual-producer.august.style/)
+- Hundreds of illustrations 
+- Hand drawn 
+- iPad Pro and Apple Pencil 
+- No AI generated content 
+- Many took 10+ hours to complete 
+- Many minted as NFTs no various platforms 
+- Many created as Brand Assets for a WEB3 DAO 
+
+## Contact Me
+
+I'm currently open to new opportunities remote or in-office in cities around the world. 
+
+### Sean August Horvath 
+
+Please, email me: [sean@august.style](mailto:sean@august.style)
+Connect with me on LinkedIn: [https://www.linkedin.com/in/seanivore](https://www.linkedin.com/in/seanivore)
+
+### Thank you for your time. 
