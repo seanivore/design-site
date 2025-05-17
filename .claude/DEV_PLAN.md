@@ -6,12 +6,12 @@ THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 --> Logic and design brief: `./README.md` 
 
 ## Development 
-### PHASE 1 PROJECT PAGE ENTRIES COMPLETE  
-### PHASE 2: Building the Project Section 
-### PHASE 3: Building the Homepage 
+### PHASE 1 Project Page Entries ✅
+### PHASE 2: Build Project Section ✅
+### PHASE 3: Build Homepage ✅
 **PUBLISH EARLY VERSION**
 ### PHASE 4: Navigation Update ✅
-**PUBLISHED SO I CAN USE IT** 
+**PUBLISHED SO I CAN USE IT**
 ### PHASE 5: Interactive Homepage 
 ### PHASE 6: "Even More Updates" 
 
@@ -28,13 +28,13 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
 ### Ready Project Pages 
 
 1. SaaS Product Sales 
-   CSS Animation & Micro-Interactions with a Modular, Versatile Design 
+   CSS Animation, Micro-Interactions, & Modular Build 
   - Landing Page `./projects/css-anim-saas-landing.html` 
   - Signup Page `./projects/saas-css-anim-signup.html` 
   - Profile Setup Page `./projects/saas-css-anim-profile-setup.html` 
 
 2. AI Generated Fashion Magazine
-   Archetype-Focused Luxury Looks Inspired by Historic Art Movements
+   Art History Inspired Luxury Designed for Relatable Archetypes
   - Part 1 `./projects/autumn-lookbook-part-1.html`
   - Part 2 `./projects/autumn-lookbook-part-2.html`
   - Part 3 `./projects/autumn-lookbook-part-3.html`
