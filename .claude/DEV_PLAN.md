@@ -40,7 +40,7 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
   - Part 3 `./projects/autumn-lookbook-part-3.html`
 
 3. Webflow E-Commerce 500+ Product Store 
-   AI-Staged Photography Showcasing 30+ Art Movements In Single-Edition Prints
+   AI-Staged Photography of Historically Accurate Single-Edition Prints
   - Mid-Century Modern Print Series Page `./projects/webflow-print-series.html`
   - Bauhaus Print Product Page `./projects/webflow-product-page.html`
 
