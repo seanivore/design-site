@@ -44,8 +44,8 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
   - Mid-Century Modern Print Series Page `./projects/webflow-print-series.html`
   - Bauhaus Print Product Page `./projects/webflow-product-page.html`
 
-4. Solution-Oriented Fashion Guide 
-   Guided with Google Lens API Integration
+4. Solution-Oriented Fashion
+   Google Lens API Integration to Buy The Look
   - Section 1 `./projects/summer-lookbook-part-1.html`
   - Section 2 `./projects/summer-lookbook-part-2.html`
   - Section 3 `./projects/summer-lookbook-part-3.html`
