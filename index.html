@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean August Horvath - Digital Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portfolio-nav-new.css">
     <style>
         * {
             margin: 0;
@@ -29,6 +31,7 @@
             max-width: 600px;
             position: relative;
             z-index: 10;
+            padding-bottom: calc(2rem + var(--nav-bar-height, 60px));
         }
 
         h1 {
@@ -138,15 +141,19 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-30px);
             }
         }
     </style>
 </head>
+
 <body>
     <div class="bg-animation">
         <div class="bg-circle"></div>
@@ -157,10 +164,10 @@
     <div class="container">
         <h1>Sean August Horvath</h1>
         <p class="bio">
-            Graphic Designer with 14 years experience in production, social media strategy, and user experience. 
+            Graphic Designer with 14 years experience in production, social media strategy, and user experience.
             I'm passionate about using design to make complexity accessible and engaging.
         </p>
-        
+
         <div class="links">
             <a href="https://linkedin.com/in/seanivore" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin"></i>
@@ -177,5 +184,8 @@
             <a href="projects.html" class="btn primary">PROJECTS</a>
         </div>
     </div>
+
+    <script src="assets/js/portfolio-nav-new.js"></script>
 </body>
+
 </html>
