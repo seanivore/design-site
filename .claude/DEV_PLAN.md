@@ -51,13 +51,13 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
   - Section 3 `./projects/summer-lookbook-part-3.html`
   - Section 4 `./projects/summer-lookbook-part-4.html`
 
-5. AI-Guided Yoga & Meditation App 
-   Interaction Handled By the AI; No Typing Required 
+5. Yoga & Meditation App
+   AI-Managed User Interface to Journal Without Typing 
   - Interactive App `./projects/mindflow-app.html`
 
-6. AI-Data Visualization Dashboard 
-   CSS Animated Charts Display AI-Led Teen Planning App Data 
-  - `./projects/ai-admin-dashboard.html`
+6. Dashboard For When AI Is The App's UI
+   Visualizing Insights From Massive Data Sets With Animated Charts
+  - Admin Dashboard `./projects/ai-admin-dashboard.html`
 
 ### Interactive Homepage 
 
