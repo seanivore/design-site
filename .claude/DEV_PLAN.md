@@ -21,8 +21,9 @@ The current JS implementation is too messy to fix, isn't responsive, and breaks 
 
 1. Review the `./README.md` file for the updated approach and necessary design changes. 
 2. Start with the `./index.html` file. It will need a CSS file in the assets directory. 
-3. Simply copy the nav to each of the ready project pages. 
+3. Simply copy the nav to each of the ready project pages below. 
 4. Delete the `./assets/js/portfolio-nav.js` and `./assets/css/portfolio-nav.css` files. 
+5. Confirm we don't need the `./projects.html` file and then delete that as well. 
 
 ### Ready Project Pages 
 
