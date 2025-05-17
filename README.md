@@ -227,6 +227,8 @@ The website: [https://generative-horoscopes.august.style/](https://generative-ho
 - Full automation through Make (Integromat)
 - Mixed use of LLM models 
 - Only user input was the weekly astrological placement of the planets
+- Rebuilt locally using GitHub Pages 
+- Required many python scripts written on the fly to rebuild the site 
 
 ### "Framer Fashion Lookbook & 500+ Print Store" 
 The repository: [https://github.com/seanivore/framer-cms-lookbook](https://github.com/seanivore/framer-cms-lookbook)
