@@ -13,6 +13,11 @@
     --transition-speed: 0.3s;
 }
 
+/* Add padding to body for navigation */
+body {
+    padding-bottom: var(--nav-bar-height);
+}
+
 /* Navigation bar - fixed at bottom */
 .portfolio-nav-bar {
     position: fixed;
@@ -126,6 +131,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: var(--nav-bar-mobile-height);
+    }
+
     .portfolio-nav-bar {
         height: var(--nav-bar-mobile-height);
         flex-direction: column;
