@@ -28,7 +28,7 @@ Showcase web development, design, and user experience capabilities through a col
 
 ### Navigation-centric Layout
 
-The navigation creates a UX that makes it seem like the home page and each project are sitting side by side. This is achieved using a bar that is 100 vw and fixed 1/3rd up from the bottom of the viewport; this is where it is always present to allow moving between projects and their pages. 
+The navigation creates a UX that makes it seem like the home page and each project are sitting side by side. This is achieved using a bar that is 100 vw and fixed at the bottom of the viewport; this is where it is always present to allow moving between projects and their pages. 
 
 The right side of the bar has buttons with icons for the home page and each project. The projects with multiple pages use a normal project button for the first page, then have attached, narrower, icon-free buttons for each other page. 
 
@@ -83,11 +83,12 @@ Inform Jekyll about the configuration with a basic a file named: `_config.yml`
 3. Finalized HTML files for the project should be placed in the `./projects` directory 
 4. Their assets like CSS, JS, images, etc. should be placed in appropriate subdirectories in the `./assets` directory 
 5. Once all projects are adjusted, start the `./index.html` file and delete the temporary docs project folders 
-6. Full project directory tree in the `./CLAUDE.md` file. 
+6. Full project directory tree in the `./.claude/CLAUDE.md` file. 
 
 ## Copy This Repo 
 
 ```zsh
+cd ~/Development
 git clone https://github.com/august-style/design-site.git
 ```
 Or create a fork. 
