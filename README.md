@@ -42,7 +42,7 @@ The button for the page you are on uses the linear-gradient in a similar way, on
 
 Again, this ever-present bar is on every page to join the user throughout the experience. The UX as a whole feels like a single, cohesive experience of moving between pages that are all sitting side by side. 
 
-### Home Page 
+### Home Page Design 
 
 Is technically an extremely simple about page and a contact page. Nothing more than the following which is all centered horizontally and almost vertically, nudged up to not be blocked by the navigation bar. It all exists on the page above the navigation bar. 
 
@@ -51,6 +51,19 @@ Is technically an extremely simple about page and a contact page. Nothing more t
 - Icons for email, LinkedIn, and GitHub
 
 The background is a piece of art set to hide the overflow and stay 100 vw and 100 vh. The text is all in white; legibility is ensured by placing a black 100 vw and 100 vh overlay over the top of the image, set to 50% opacity. 
+
+### Content 
+
+#### On-Page 
+
+  - Sean August Horvath 
+  - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
+  - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
+
+#### Displayed On-Navigation Bar 
+
+  - Web Asset Showcase 
+  - In-demand digital products your B2B/B2C needs.
 
 ## Development 
 

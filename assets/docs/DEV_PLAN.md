@@ -3,38 +3,26 @@ PROJECT DIRECTORY: `/Users/seanivore/Development/design-site/...`
 THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 
 --> Find project status updates in `memory` MCP at "Portfolio Strategy: Show What They Want", "Sean's Portfolio Vision" 
---> Detailed scope, design brief, development overview, and project directory organization: `./CLAUDE.md` 
+--> Logic and design brief: `./README.md` 
 
 ## Development 
 ### PHASE 1 PROJECT PAGE ENTRIES COMPLETE  
 ### PHASE 2: Building the Project Section 
 ### PHASE 3: Building the Homepage 
 **PUBLISH EARLY VERSION**
-### PHASE 4: Updates 
+### PHASE 4: Navigation Update <-- We are here. 
+**PUBLISHED SO I CAN USE IT** 
+### PHASE 5: Interactive Homepage 
+### PHASE 6: "Even More Updates" 
 
-## Project Section Navigation Fix
+## Current Updates 
 
-This has been constructed but I was having trouble communicating the Project Navigation logic through chat and needed to write it all out as I did below. Aside from some size changes, the aesthetics are pretty solid. 
+The current JS implementation is too messy to fix, isn't responsive, and breaks our "simple first" approach. You'll find the updated approach and necessary design changes in the `./README.md` file. 
 
-### Displayed Project Information 
-
-Nothing but the title and a subtitle. We are sticking to our ALL VISUAL roots. No description should be necessary otherwise we should rethink the project's inclusion. The names should cut straight to the high-value digital asset; call it out. 
-
-`/Users/seanivore/Development/design-site/projects.html`
-`/Users/seanivore/Development/design-site/assets/js/portfolio-nav.js`
-`/Users/seanivore/Development/design-site/assets/css/portfolio-nav.css`
-
-Every project page has this in the head: 
-
-```html
-<link rel="stylesheet" href="../assets/css/portfolio-nav.css">
-``` 
-
-And this at the bottom of the body. 
-
-```html
-<script src="../assets/js/portfolio-nav.js"></script>
-```
+1. Review the `./README.md` file for the updated approach and necessary design changes. 
+2. Start with the `./index.html` file. It will need a CSS file in the assets directory. 
+3. Simply copy the nav to each of the ready project pages. 
+4. Delete the `./assets/js/portfolio-nav.js` and `./assets/css/portfolio-nav.css` files. 
 
 ### Ready Project Pages 
 
@@ -70,78 +58,9 @@ And this at the bottom of the body.
    CSS Animated Charts For Rarely Captured Data Before AI-Led Teen Planning App 
   - `./projects/ai-admin-dashboard.html`
 
-### Project Section Navigation 
+### Interactive Homepage 
 
-PROJECT NAVIGATION BAR 
-  - Contains icons for each project 
-  - Extends 100% width 
-  - Fixed in viewport even when projects are changed via the icons 
-  - There is a PROJECT NAVIGATION BAR "ON" and "OFF" state for UX purposes
-
-PROJECT ICONS 
-  - 6 round, glass-effect circles 
-  - Each circle represents a project 
-
-PROJECT NAVIGATION BAR "ON" STATE
-  - Black 70% opacity layer over first project; entire viewport
-  - Project icons are about 6rem x 6rem 
-  - They are vertically in the middle of the lower half of the view portfolio; prominent 
-  - They are centered horizontally with a few REM spacing between them; enough to still have decent padding on the sides 
-  - They all have a GREEN stroke boarder 
-  - When you hover over an icon, it grows a tiny bit and brightens and the name of the project appears above it 
-  - The project name is prominent, bold, taking up the 2nd fourth of the viewport vertically with text almost as large as that space 
-
-PAGE LOAD 
-  - The Project Navigation Bar is "ON" 
-
-SELECT A PROJECT 
-  - When an icon is clicked that project is selected
-  - The user can choose any of the six projects 
-  - The Project Navigation Bar is "OFF" 
-
-PROJECT NAVIGATION BAR "OFF" STATE 
-  - All other 5 icons disappear completely 
-  - The black 70% opacity layer is gone so the user can now see the project they have selected 
-  - The selected icon is now 20rem x 20rem; very large 
-  - The selected icon now has a red stroke boarder
-  - The selected icon is positioned so that the left 1/3 and bottom 1/3 of the circle is bleed off screen helping manage the size 
-  - On top of the selected icon are two small 3rem x 3rem round circles 
-  - These are project page navigation circles 
-  - These circles have arrow icons left and right 
-  - Obviously these are only present if the project has more than one page 
-  - The project page navigation circles have a GREEN stroke boarder 
-  - The altering of green and red indicates to the user which element to use at that time 
-  - the project page navigation circles are mostly on top of the large selected icon, with maybe half of the right circle off the right edge of the selected icon 
-  - Above the large selected icon are small circular dots that represent the pages of the project, they are 0.5rem x 0.5rem 
-  - Since the project was just selected the first dot is bright white, while the others are faded and semi transparent still 
-  - In small 1rem font, the name of the project is displayed above the project page indicator dots 
-  - Since the large selected icon is now in red stroke, it is intuitively the option to click to END the viewing of the project and END the OFF state of the Project Navigation Bar; the user can click anywhere on the large selected icon to end the project 
-
-EXITING A PROJECT 
-  - The use has clicked the large selected icon with the red stroke this is partially off screen 
-  - Red is to END the project view which means 
-  - The project navigation bar is now "ON" 
-  - The icons, page shade, and everything returns to the original state from when the page loaded 
-
-WHY THIS IS LOGICAL AND ERROR PROOF 
-  - The user cannot change projects while in a project 
-  - While in the project the user can scroll up and down and click the buttons of the project or use the navigation circles to go to the next or previous page 
-  - The red and green are intuitive and make it easy to understand which element to use 
-  - The change is size of icons is dramatic indicating what is happening 
-
-And I created a visual example of the navigation UI here: `/Users/seanivore/Development/design-site/assets/images/NAV_INSPO.png` 
-
-## About Section (Homepage)
-
-Written in the middle of a 100vw x 100vh panel is my bio. The font is bold and black, and the background is off white. This is covered completely by a grid of rectangles that make up an interactive CSS animation. 
-
-  - Sean August Horvath 
-  - Graphic Designer with 14 years experience in production, social media strategy, and user experience. I'm passionate about using design to make complexity accessible and engaging.
-  - Icons: [LinkedIn](https://linkedin.com/in/seanivore) | [GitHub](https://github.com/seanivore) | [Envelope](mailto:sean@august.style) 
-
-### UI Navigation 
-
-This is fine for now. I just need the website functional to use in applications 
+A simple chat UI that calls Claude, presents them with a role to play as a riddle-master, or paranoid gatekeeper, or one of many other personas that create a brief moment of `gut check` fun, hopefully laughter, before admitting the viewer into the project section. 
 
 ## Directory Structure 
 
@@ -202,7 +121,7 @@ This is fine for now. I just need the website functional to use in applications
 
 Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md` 
 
-## Second Round Updates 
+## Even More Updates 
 
 ### Analytics Dashboard 
 

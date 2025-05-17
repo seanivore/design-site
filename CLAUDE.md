@@ -22,16 +22,6 @@ Each project has a `./assets` directory that contains the CSS, JS, and images fo
 
 *High-demand means always changing. We'll need to update, and curate, the project entries over time. Once the section is built, protocol for updating it will be outlined here.* 
 
-### About 
-
-The `index.html` serves as an interactive homepage with about information and just a bit of fun that leads the viewer to the project section. 
-
-Our homepage is a simple chat UI that calls Claude, presents them with a role to play as a riddle-master, or paranoid gatekeeper, or one of many other personas that create a brief moment of `gut check` fun, hopefully laughter, before admitting the viewer into the project section. 
-
-### Updating the (About) Homepage 
-
-*The homepage AI character is built in a modular way that allows for easy updates to adjusting behavior and personality. The process for updating these details will be outlined here.* 
-
 ## Project Directory Structure 
 
 ```plaintext
