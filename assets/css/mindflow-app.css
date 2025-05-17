@@ -10,32 +10,32 @@
     --primary-light: #336699;
     --purple: #996699;
     --blue: #666699;
-    
+
     /* Glass Effect Colors */
     --glass-white: rgba(255, 255, 255, 0.08);
     --glass-border: rgba(255, 255, 255, 0.15);
     --glass-shadow: rgba(0, 0, 0, 0.1);
-    
+
     /* UI Colors */
     --background: #0A0B0F;
     --surface: #12141A;
     --text-primary: #FFFFFF;
     --text-secondary: rgba(255, 255, 255, 0.7);
     --text-tertiary: rgba(255, 255, 255, 0.5);
-    
+
     /* Spacing */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-full: 50%;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
@@ -112,8 +112,10 @@ body {
 
 /* App Content */
 .app-content {
-    height: calc(100% - 88px); /* Minus status bar and tab nav */
-    padding-top: 44px; /* Account for status bar */
+    height: calc(100% - 88px);
+    /* Minus status bar and tab nav */
+    padding-top: 44px;
+    /* Account for status bar */
     position: relative;
     overflow: hidden;
 }
@@ -238,6 +240,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -289,7 +292,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: var(--spacing-md);
-    height: 64px; /* Fixed height to prevent shifting */
+    height: 64px;
+    /* Fixed height to prevent shifting */
 }
 
 .keyboard-btn {
@@ -317,7 +321,7 @@ body {
 }
 
 /* Remove any accidental links or external navigation */
-a {
+.app-content a {
     pointer-events: none;
     text-decoration: none;
     color: inherit;
@@ -333,20 +337,43 @@ a {
     transition: all var(--transition-fast);
 }
 
-.wave:nth-child(1) { height: 12px; }
-.wave:nth-child(2) { height: 18px; }
-.wave:nth-child(3) { height: 24px; }
-.wave:nth-child(4) { height: 16px; }
-.wave:nth-child(5) { height: 20px; }
+.wave:nth-child(1) {
+    height: 12px;
+}
 
-.voice-btn.recording ~ .voice-waves .wave {
+.wave:nth-child(2) {
+    height: 18px;
+}
+
+.wave:nth-child(3) {
+    height: 24px;
+}
+
+.wave:nth-child(4) {
+    height: 16px;
+}
+
+.wave:nth-child(5) {
+    height: 20px;
+}
+
+.voice-btn.recording~.voice-waves .wave {
     animation: wave 0.6s ease-in-out infinite;
     opacity: 1;
 }
 
 @keyframes wave {
-    0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
-    50% { transform: scaleY(1.2); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scaleY(0.5);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scaleY(1.2);
+        opacity: 1;
+    }
 }
 
 .voice-btn {
@@ -388,7 +415,8 @@ a {
     flex-direction: column;
     gap: var(--spacing-lg);
     overflow-y: auto;
-    height: calc(100% - 60px); /* Account for header */
+    height: calc(100% - 60px);
+    /* Account for header */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -441,8 +469,15 @@ a {
 }
 
 @keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
 }
 
 .action-buttons {
@@ -528,8 +563,17 @@ a {
 }
 
 @keyframes pulseBreath {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.1); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 .breath-inner {
@@ -544,8 +588,15 @@ a {
 }
 
 @keyframes breatheText {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
 }
 
 .session-timer {
@@ -593,29 +644,71 @@ a {
     animation: frequency 1s ease-in-out infinite;
 }
 
-.frequency-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
-.frequency-bar:nth-child(2) { height: 30px; animation-delay: 0.1s; }
-.frequency-bar:nth-child(3) { height: 25px; animation-delay: 0.2s; }
-.frequency-bar:nth-child(4) { height: 35px; animation-delay: 0.3s; }
-.frequency-bar:nth-child(5) { height: 28px; animation-delay: 0.4s; }
-.frequency-bar:nth-child(6) { height: 32px; animation-delay: 0.5s; }
-.frequency-bar:nth-child(7) { height: 22px; animation-delay: 0.6s; }
-.frequency-bar:nth-child(8) { height: 26px; animation-delay: 0.7s; }
+.frequency-bar:nth-child(1) {
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.frequency-bar:nth-child(2) {
+    height: 30px;
+    animation-delay: 0.1s;
+}
+
+.frequency-bar:nth-child(3) {
+    height: 25px;
+    animation-delay: 0.2s;
+}
+
+.frequency-bar:nth-child(4) {
+    height: 35px;
+    animation-delay: 0.3s;
+}
+
+.frequency-bar:nth-child(5) {
+    height: 28px;
+    animation-delay: 0.4s;
+}
+
+.frequency-bar:nth-child(6) {
+    height: 32px;
+    animation-delay: 0.5s;
+}
+
+.frequency-bar:nth-child(7) {
+    height: 22px;
+    animation-delay: 0.6s;
+}
+
+.frequency-bar:nth-child(8) {
+    height: 26px;
+    animation-delay: 0.7s;
+}
 
 @keyframes frequency {
-    0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
-    50% { opacity: 1; transform: scaleY(1); }
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
 
 /* Reflection Screen */
 .reflection-content {
     padding: var(--spacing-lg);
-    padding-bottom: 100px; /* Account for tab navigation */
+    padding-bottom: 100px;
+    /* Account for tab navigation */
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
     overflow-y: auto;
-    height: calc(100% - 60px); /* Account for header */
+    height: calc(100% - 60px);
+    /* Account for header */
 }
 
 .screen-title {
@@ -713,17 +806,22 @@ a {
 
 .contribution-grid {
     display: grid;
-    grid-template-columns: repeat(52, 8px); /* 52 weeks */
-    grid-template-rows: repeat(7, 8px); /* 7 days */
+    grid-template-columns: repeat(52, 8px);
+    /* 52 weeks */
+    grid-template-rows: repeat(7, 8px);
+    /* 7 days */
     gap: 2px;
-    width: max-content; /* Let it expand to natural width */
+    width: max-content;
+    /* Let it expand to natural width */
     height: auto;
-    overflow-x: auto; /* Horizontal scroll */
+    overflow-x: auto;
+    /* Horizontal scroll */
     overflow-y: hidden;
-    max-width: 100%; /* Constrain to parent */
+    max-width: 100%;
+    /* Constrain to parent */
 }
 
-.contribution-grid > div {
+.contribution-grid>div {
     width: 8px;
     height: 8px;
     background: var(--glass-white);
@@ -750,11 +848,25 @@ a {
     border-radius: 2px;
 }
 
-.cell.level-0 { background: var(--glass-white); }
-.cell.level-1 { background: rgba(178, 114, 159, 0.3); }
-.cell.level-2 { background: rgba(178, 114, 159, 0.5); }
-.cell.level-3 { background: rgba(178, 114, 159, 0.7); }
-.cell.level-4 { background: var(--primary-dark); }
+.cell.level-0 {
+    background: var(--glass-white);
+}
+
+.cell.level-1 {
+    background: rgba(178, 114, 159, 0.3);
+}
+
+.cell.level-2 {
+    background: rgba(178, 114, 159, 0.5);
+}
+
+.cell.level-3 {
+    background: rgba(178, 114, 159, 0.7);
+}
+
+.cell.level-4 {
+    background: var(--primary-dark);
+}
 
 .voice-journal h3 {
     font-size: 16px;
@@ -785,7 +897,8 @@ a {
     border-top: 1px solid var(--glass-border);
     display: flex;
     padding: var(--spacing-sm) var(--spacing-md);
-    padding-bottom: 34px; /* Account for home indicator */
+    padding-bottom: 34px;
+    /* Account for home indicator */
 }
 
 .tab-btn {
@@ -829,6 +942,7 @@ a {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -836,8 +950,13 @@ a {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Pixel Perfect Details */
@@ -976,7 +1095,9 @@ a {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Custom scrollbar for contribution graph */

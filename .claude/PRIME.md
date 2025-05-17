@@ -1,8 +1,9 @@
 # Context Priming 
 
-Review the following files to understand the context of the project:
+Review the following to understand the context of the project:
 
 - `./claude/CLAUDE.md`
-- `./claude/DEV_PLAN.md`
-- `./README.md`
 
+- The original project state updates in `memory` MCP by searching for: 
+  - `Portfolio Strategy: Show What They Want`
+  - `Sean's Portfolio Vision`
