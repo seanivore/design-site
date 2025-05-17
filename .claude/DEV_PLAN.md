@@ -10,7 +10,7 @@ THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 ### PHASE 2: Building the Project Section 
 ### PHASE 3: Building the Homepage 
 **PUBLISH EARLY VERSION**
-### PHASE 4: Navigation Update <-- We are here. 
+### PHASE 4: Navigation Update ✅
 **PUBLISHED SO I CAN USE IT** 
 ### PHASE 5: Interactive Homepage 
 ### PHASE 6: "Even More Updates" 

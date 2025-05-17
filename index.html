@@ -64,40 +64,6 @@
             transform: scale(1.2);
         }
 
-        .nav-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .btn {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #fff;
-            color: #111;
-        }
-
-        .btn.primary {
-            background: #fff;
-            color: #111;
-        }
-
-        .btn.primary:hover {
-            background: transparent;
-            color: #fff;
-        }
-
         /* Background animation */
         .bg-animation {
             position: fixed;
@@ -179,13 +145,85 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-
-        <div class="nav-buttons">
-            <a href="projects.html" class="btn primary">PROJECTS</a>
-        </div>
     </div>
 
-    <script src="assets/js/portfolio-nav-new.js"></script>
+    <!-- Static Navigation Bar -->
+    <div class="portfolio-nav-bar">
+        <!-- Left side: Navigation buttons -->
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn active" title="Home">
+                <i class="fas fa-house"></i>
+            </a>
+
+            <!-- SaaS Product Sales -->
+            <div class="project-btn-group">
+                <a href="projects/css-anim-saas-landing.html" class="nav-btn" title="SaaS Product Sales">
+                    <i class="fas fa-laptop-code"></i>
+                </a>
+                <a href="projects/saas-css-anim-signup.html" class="nav-btn sub-page" title="SaaS Signup">
+                    <i class="fas fa-user-plus"></i>
+                </a>
+                <a href="projects/css-saas-profile-setup.html" class="nav-btn sub-page" title="SaaS Profile">
+                    <i class="fas fa-user-gear"></i>
+                </a>
+            </div>
+
+            <!-- AI Generated Fashion Magazine -->
+            <div class="project-btn-group">
+                <a href="projects/autumn-lookbook-part-1.html" class="nav-btn" title="AI Fashion Magazine">
+                    <i class="fas fa-tshirt"></i>
+                </a>
+                <a href="projects/autumn-lookbook-part-2.html" class="nav-btn sub-page" title="Part 2">
+                    <i class="fas fa-2"></i>
+                </a>
+                <a href="projects/autumn-lookbook-part-3.html" class="nav-btn sub-page" title="Part 3">
+                    <i class="fas fa-3"></i>
+                </a>
+            </div>
+
+            <!-- Webflow E-Commerce -->
+            <div class="project-btn-group">
+                <a href="projects/webflow-print-series.html" class="nav-btn" title="Webflow E-Commerce">
+                    <i class="fas fa-store"></i>
+                </a>
+                <a href="projects/webflow-product-page.html" class="nav-btn sub-page" title="Product Page">
+                    <i class="fas fa-tag"></i>
+                </a>
+            </div>
+
+            <!-- Fashion Guide -->
+            <div class="project-btn-group">
+                <a href="projects/summer-lookbook-part-1.html" class="nav-btn" title="Fashion Guide">
+                    <i class="fas fa-book-open"></i>
+                </a>
+                <a href="projects/summer-lookbook-part-2.html" class="nav-btn sub-page" title="Part 2">
+                    <i class="fas fa-2"></i>
+                </a>
+                <a href="projects/summer-lookbook-part-3.html" class="nav-btn sub-page" title="Part 3">
+                    <i class="fas fa-3"></i>
+                </a>
+                <a href="projects/summer-lookbook-part-4.html" class="nav-btn sub-page" title="Part 4">
+                    <i class="fas fa-4"></i>
+                </a>
+            </div>
+
+            <!-- Yoga App -->
+            <a href="projects/mindflow-app.html" class="nav-btn" title="AI-Guided Yoga & Meditation App">
+                <i class="fas fa-spa"></i>
+            </a>
+
+            <!-- Dashboard -->
+            <a href="projects/ai-admin-dashboard.html" class="nav-btn" title="AI-Data Visualization Dashboard">
+                <i class="fas fa-chart-bar"></i>
+            </a>
+        </div>
+
+        <!-- Right side: Project info -->
+        <div class="nav-project-info">
+            <div class="nav-project-title">Web Asset Showcase</div>
+            <div class="nav-project-desc">In-demand digital products your B2B/B2C needs.</div>
+        </div>
+    </div>
 </body>
 
 </html>

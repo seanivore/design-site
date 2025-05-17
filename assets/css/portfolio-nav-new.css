@@ -8,7 +8,7 @@
     --nav-border-highlight: #444;
     --nav-text-color: #fff;
     --nav-btn-width: 60px;
-    --nav-btn-small-width: 40px;
+    --nav-btn-small-width: 30px;
     --transition-speed: 0.3s;
 }
 
@@ -31,7 +31,7 @@
     border-top: 1px solid var(--nav-border-color);
 }
 
-/* Project info section - left side */
+/* Project info section - right side */
 .nav-project-info {
     display: flex;
     align-items: center;
@@ -41,8 +41,11 @@
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    max-width: 60%;
-    border-top-right-radius: 5px;
+    max-width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+    border-top-left-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-project-title {
@@ -59,17 +62,18 @@
     white-space: nowrap;
 }
 
-/* Navigation buttons - right side */
+/* Navigation buttons - left side */
 .nav-buttons {
     display: flex;
     height: 100%;
     align-items: center;
+    margin-left: 5px;
 }
 
 .nav-btn {
     width: var(--nav-btn-width);
     height: calc(var(--nav-bar-height) - 6px);
-    margin: 3px 3px 3px 0;
+    margin: 3px 0 3px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +111,16 @@
 
 .nav-btn.sub-page {
     width: var(--nav-btn-small-width);
+    margin-left: -1px;
     border-left: none;
+    font-size: 0.85rem;
+    font-family: system-ui, sans-serif;
+}
+
+/* Group buttons to make them look connected */
+.project-btn-group {
+    display: flex;
+    margin-right: 3px;
 }
 
 /* Responsive adjustments */
@@ -125,7 +138,7 @@
     }
 
     .nav-btn.sub-page {
-        width: 35px;
+        width: 25px;
     }
 }
 
