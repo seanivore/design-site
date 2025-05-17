@@ -24,11 +24,12 @@ Each project has a `./assets` directory that contains the CSS, JS, and images fo
 
 ## Project Directory Structure 
 
-```plaintext
-├── CLAUDE.md                        <-- You are here
-├── README.md                        <-- Project overview 
-├── index.html                       <-- Interactive AI gatekeeper homepage
-├── projects                         <-- Showcase projects 
+```plaintext 
+├── ./claude/
+│   ├── CLAUDE.md                            <-- You are here.
+│   └── DEV_PLAN.md
+├── index.html
+├── projects                                 <-- Project HTML files that we have updated or recreated
 │   ├── ai-admin-dashboard.html
 │   ├── autumn-lookbook-part-1.html
 │   ├── autumn-lookbook-part-2.html
@@ -43,39 +44,40 @@ Each project has a `./assets` directory that contains the CSS, JS, and images fo
 │   ├── summer-lookbook-part-4.html
 │   ├── webflow-print-series.html
 │   └── webflow-product-page.html
-├── assets                           <-- Showcase project assets 
-│   ├── css                          <-- New HTML Projects' CSS files 
+├── assets
+│   ├── css                                   <-- New HTML pages' CSS files
 │   │   ├── admin-dashboard.css
 │   │   ├── autumn-lookbook.css
 │   │   ├── css-anim-saas.css
 │   │   ├── css-saas-profile-setup.css
 │   │   ├── mindflow-app.css
+│   │   ├── portfolio-nav-new.css
 │   │   ├── saas-css-anim-signup.css
 │   │   ├── summer-lookbook.css
 │   │   ├── webflow-print-series.css
-│   │   ├── webflow-product-page.css
-│   │   └── webflow-weekly-blogs.css
-│   ├── docs
-│   │   ├── css-animated-wave         <-- CSS wave animation landing page 
-│   │   ├── DEV_PLAN.md               <-- Project planning document 
-│   │   ├── slideshow-decks           <-- two horizontally scrolling slideshows 
-│   │   ├── weekly-blog-webflow       <-- holistic alignment blog series  
-│   │   └── yoga-service-webflow      <-- yoga service website 
+│   │   └── webflow-product-page.css
+│   ├── js                                     <-- New HTML pages' JS files
+│   │   ├── admin-dashboard.js
+│   │   ├── mindflow-app.js
+│   │   ├── saas-css-anim-signup.js
+│   │   └── saas-css-wave-anim.js
+│   ├── docs                                   <-- Planning projects 
+│   │   ├── css-animated-wave
+│   │   ├── slideshow-decks
+│   │   ├── 05-app-data-dashboards
+│   │   ├── weekly-blog-webflow
+│   │   ├── yoga-service-webflow
 │   ├── images
-│   │   ├── autumn-lookbook
-│   │   ├── DESIGN_INSPO              <-- Conceptual inspo.
-│   │   ├── mindflow-profile.webp
-│   │   ├── NAV_INSPO                 <-- Navigation inspiration images 
-│   │   ├── summer-lookbook 
-│   │   ├── webflow-print-series      <-- Webflow print series images 
-│   │   ├── bauhaus-nav-icons 
-│   │   ├── webflow-product-page      <-- Webflow product page images 
-│   │   └── yoga-services             <-- Yoga services images 
-│   └── js                            <-- New HTML Projects' JS files 
-│       ├── admin-dashboard.js
-│       ├── mindflow-app.js
-│       ├── saas-css-anim-signup.js
-│       └── saas-css-wave-anim.js
-├── _config.yml                       <-- Config file for Jekyll 
-└── CNAME                             <-- GitHub Pages custom domain name
-```
+│   │   ├── autumn-lookbook                    <-- p=part, s=section, ABC=look, v123=outfit
+│   │   ├── bauhaus-nav-icons
+│   │   ├── DESIGN_INSPO
+│   │   ├── yoga-services 
+│   │   ├── summer-lookbook                    <-- 12 sections, images depend on section
+│   │   ├── webflow-print-series               <-- Mid Century Modern prints and icon
+│   │   ├── webflow-product-page               <-- Primary Brutalist staged images and many related images
+│   │   └── mindflow-profile.webp              <-- Profile avatar for the mindflow app
+│   └── setup-scripts                          <-- utility scripts we used to putting together webflow sites
+├── CNAME                                      <-- GitHub Pages URL
+├── _config.yml                                <-- Jekyll config file
+└── README.md
+``` 

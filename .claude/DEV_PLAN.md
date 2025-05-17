@@ -60,7 +60,10 @@ A simple chat UI that calls Claude, presents them with a role to play as a riddl
 ## Directory Structure 
 
 ```plaintext 
-├── CLAUDE.md                                <-- You are here
+├── ./claude/
+│   ├── CLAUDE.md
+│   └── DEV_PLAN.md                          <-- You are here.
+├── index.html
 ├── projects                                 <-- Project HTML files that we have updated or recreated
 │   ├── ai-admin-dashboard.html
 │   ├── autumn-lookbook-part-1.html
@@ -83,38 +86,36 @@ A simple chat UI that calls Claude, presents them with a role to play as a riddl
 │   │   ├── css-anim-saas.css
 │   │   ├── css-saas-profile-setup.css
 │   │   ├── mindflow-app.css
+│   │   ├── portfolio-nav-new.css
 │   │   ├── saas-css-anim-signup.css
 │   │   ├── summer-lookbook.css
 │   │   ├── webflow-print-series.css
-│   │   ├── webflow-product-page.css
-│   │   └── webflow-weekly-blogs.css
+│   │   └── webflow-product-page.css
 │   ├── js                                     <-- New HTML pages' JS files
 │   │   ├── admin-dashboard.js
 │   │   ├── mindflow-app.js
 │   │   ├── saas-css-anim-signup.js
 │   │   └── saas-css-wave-anim.js
 │   ├── docs                                   <-- Planning projects 
-│   │   ├── 02-framer-autumn-lookbook
-│   │   ├── 04-weblfow-summer-lookbook
+│   │   ├── css-animated-wave
+│   │   ├── slideshow-decks
 │   │   ├── 05-app-data-dashboards
-│   │   ├── 06-webflow-service-yoga
-│   │   ├── 07-webflow-weekly-blogs
-│   │   ├── 08-css-wave
-│   │   ├── CSS_RIPPLE_ANIMATION.md            <-- CSS animation idea for homepage
-│   │   └── PROJECT_SITES.md                   <-- Content for the projects section
+│   │   ├── weekly-blog-webflow
+│   │   ├── yoga-service-webflow
 │   ├── images
-│   │   ├── autumn-lookbook                    <-- j=portrait, jwide=landscape
-│   │   ├── mindflow-app-avatar-profile.webp   <-- avatar for the mindflow app profile page 
+│   │   ├── autumn-lookbook                    <-- p=part, s=section, ABC=look, v123=outfit
+│   │   ├── bauhaus-nav-icons
+│   │   ├── DESIGN_INSPO
+│   │   ├── yoga-services 
 │   │   ├── summer-lookbook                    <-- 12 sections, images depend on section
 │   │   ├── webflow-print-series               <-- Mid Century Modern prints and icon
-│   │   └── webflow-product-page               <-- Primary Brutalist staged images and many related images
+│   │   ├── webflow-product-page               <-- Primary Brutalist staged images and many related images
+│   │   └── mindflow-profile.webp              <-- Profile avatar for the mindflow app
 │   └── setup-scripts                          <-- utility scripts we used to putting together webflow sites
 ├── CNAME                                      <-- GitHub Pages URL
 ├── _config.yml                                <-- Jekyll config file
 └── README.md
 ```
-
-Websites for the Projects Section --> `./assets/docs/PROJECT_SITES.md` 
 
 ## Even More Updates 
 
