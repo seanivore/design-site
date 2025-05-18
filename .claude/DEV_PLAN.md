@@ -16,6 +16,9 @@ THIS DOCUMENT: `./assets/docs/PROJECT_SITES.md`
 
 ## Current Updates 
 
+Homepage CSS animation design concept: the background's shade layer is a 3 part linear gradient using highlights and shades of the same color to create a "glare" and then that could always just slowly be moving across the screen. 
+
+I thought that would be cool, even with something static but shapely and some color behind (like if a took a bauhaus print and used illustrator to create a vector version/svg version). 
 
 ### Ready Project Pages 
 

@@ -186,7 +186,7 @@ Step 5: Encourage them to write about whatever comes up afterwards.
 Step 6: Enjoy an AI who is your bestie and will do anything you request, if phrased politely. 
 ```
 
-  > Their goal: "Create a space that (A) makes sure people think critically about AI and don’t gloss over the details, and (B) can somehow attract and be consumed by AI themselves, so that they may better consider their place in the world and recognize which thoughts are their own and which are not." 
+  > Their goal: "Create a space that (A) makes sure people think critically about AI and don’t gloss over the details, and (B) can somehow attract and be consumed by AI themselves, so that they may better consider their place in the world and recognize which thoughts are their own and which are not."
 
 ### CLAUDE LOVES PARADOXES AND SEQUENTIAL THINKING 
 
